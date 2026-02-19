@@ -1,0 +1,77 @@
+{
+    "additional_cooling_fan_speed": [
+        "10"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - adjustedV2"
+    ],
+    "fan_max_speed_BRASS": [
+        "75"
+    ],
+    "filament_cost": [
+        "23"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
+    "filament_max_volumetric_speed": [
+        "16"
+    ],
+    "filament_settings_id": [
+        "Elegoo Rapid PETG"
+    ],
+    "filament_vendor": [
+        "ELEGOO"
+    ],
+    "filament_z_hop": [
+        "0.4"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "70"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "70"
+    ],
+    "idle_temperature": [
+        "175"
+    ],
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Elegoo Rapid PETG",
+    "nozzle_temperature_BRASS": [
+        "240"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "245"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "245"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "235"
+    ],
+    "nozzle_temperature_range_high": [
+        "270"
+    ],
+    "nozzle_temperature_range_low": [
+        "240"
+    ],
+    "overhang_fan_speed": [
+        "100"
+    ],
+    "temperature_vitrification": [
+        "80"
+    ],
+    "textured_plate_temp": [
+        "70"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "70"
+    ],
+    "version": "1.3.2602.11"
+}

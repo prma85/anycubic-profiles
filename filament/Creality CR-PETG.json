@@ -1,0 +1,79 @@
+{
+    "additional_cooling_fan_speed": [
+        "10"
+    ],
+    "close_fan_the_first_x_layers": [
+        "2"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle Hardened Steel"
+    ],
+    "fan_max_speed_BRASS": [
+        "50"
+    ],
+    "filament_cost": [
+        "21"
+    ],
+    "filament_density": [
+        "1.23"
+    ],
+    "filament_deretraction_speed": [
+        "30"
+    ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
+    "filament_max_volumetric_speed": [
+        "14"
+    ],
+    "filament_retraction_speed": [
+        "40"
+    ],
+    "filament_settings_id": [
+        "Creality CR-PETG"
+    ],
+    "filament_vendor": [
+        "Creality "
+    ],
+    "filament_z_hop": [
+        "0.4"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "80"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "85"
+    ],
+    "idle_temperature": [
+        "175"
+    ],
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
+    "name": "Creality CR-PETG",
+    "nozzle_temperature_BRASS": [
+        "240"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "245"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "235"
+    ],
+    "nozzle_temperature_range_high": [
+        "250"
+    ],
+    "overhang_fan_speed": [
+        "100"
+    ],
+    "temperature_vitrification": [
+        "80"
+    ],
+    "textured_plate_temp": [
+        "70"
+    ],
+    "version": "1.3.2503.03"
+}

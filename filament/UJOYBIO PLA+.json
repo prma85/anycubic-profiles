@@ -1,0 +1,61 @@
+{
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle Hardened Steel"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "filament_cost": [
+        "27"
+    ],
+    "filament_density": [
+        "1.25"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
+    "filament_max_volumetric_speed": [
+        "20"
+    ],
+    "filament_retraction_minimum_travel": [
+        "1.5"
+    ],
+    "filament_retraction_speed": [
+        "35"
+    ],
+    "filament_settings_id": [
+        "UJOYBIO PLA+"
+    ],
+    "filament_vendor": [
+        "UJOYBIO"
+    ],
+    "from": "User",
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
+    "name": "UJOYBIO PLA+",
+    "nozzle_temperature_BRASS": [
+        "210"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "205"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "205"
+    ],
+    "nozzle_temperature_range_high": [
+        "220"
+    ],
+    "nozzle_temperature_range_low": [
+        "200"
+    ],
+    "version": "1.3.2503.03"
+}

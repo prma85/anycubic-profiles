@@ -1,0 +1,64 @@
+{
+    "additional_cooling_fan_speed": [
+        "10"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle Hardened Steel"
+    ],
+    "fan_max_speed_BRASS": [
+        "75"
+    ],
+    "filament_cost": [
+        "19"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_flow_ratio": [
+        "0.99"
+    ],
+    "filament_max_volumetric_speed": [
+        "18"
+    ],
+    "filament_settings_id": [
+        "TECBEARS Rapid PETG"
+    ],
+    "filament_vendor": [
+        "TECBEARS"
+    ],
+    "filament_z_hop": [
+        "0.2"
+    ],
+    "from": "User",
+    "hot_plate_temp_initial_layer": [
+        "80"
+    ],
+    "idle_temperature": [
+        "175"
+    ],
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
+    "name": "TECBEARS Rapid PETG",
+    "nozzle_temperature_BRASS": [
+        "240"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "245"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "235"
+    ],
+    "nozzle_temperature_range_high": [
+        "270"
+    ],
+    "nozzle_temperature_range_low": [
+        "230"
+    ],
+    "temperature_vitrification": [
+        "80"
+    ],
+    "version": "1.3.2503.03"
+}
