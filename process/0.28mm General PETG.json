@@ -98,7 +98,7 @@
     "tree_support_tip_diameter": "1.3",
     "tree_support_top_rate": "12%",
     "version": "2.3.0.03",
-    "wall_generator": "arachne",
+    "wall_generator": "classic",
     "wall_loops": "3",
     "bridge_no_support": "0",
     "support_remove_small_overhang": "1"

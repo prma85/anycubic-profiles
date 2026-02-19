@@ -43,5 +43,7 @@
     "wall_sequence": "inner-outer-inner wall",
     "bridge_no_support": "1",
     "support_remove_small_overhang": "1",
-    "elefant_foot_compensation": "0.2"
+    "elefant_foot_compensation": "0.2",
+    "reduce_crossing_walls": "1",
+    "top_surface_speed": "110"
 }
