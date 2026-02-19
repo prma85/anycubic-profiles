@@ -11,7 +11,7 @@
     ],
     "default_acceleration": "5000",
     "default_jerk": "6",
-    "elefant_foot_compensation": "0.15",
+    "elefant_foot_compensation": "0.2",
     "enable_support": "1",
     "filename_format": "S1_{input_filename_base}_{filament_type[0]}_{print_time}.gcode",
     "filter_out_gap_fill": "0.7",
@@ -70,9 +70,9 @@
     "support_base_pattern_spacing": "5",
     "support_bottom_interface_spacing": "0.2",
     "support_bottom_z_distance": "0.28",
-    "support_interface_bottom_layers": "0",
+    "support_interface_bottom_layers": "3",
     "support_interface_pattern": "rectilinear",
-    "support_interface_spacing": "0.22",
+    "support_interface_spacing": "0.2",
     "support_interface_top_layers": "3",
     "support_line_width": "0.45",
     "support_object_first_layer_gap": "0.25",
@@ -100,5 +100,7 @@
     "wall_generator": "arachne",
     "wall_loops": "3",
     "wipe_before_external_loop": "1",
-    "wipe_on_loops": "1"
+    "wipe_on_loops": "1",
+    "bridge_no_support": "1",
+    "support_remove_small_overhang": "1"
 }

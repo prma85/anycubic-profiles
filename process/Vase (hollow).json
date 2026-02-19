@@ -11,7 +11,7 @@
     ],
     "default_acceleration": "13000",
     "default_jerk": "6",
-    "elefant_foot_compensation": "0.15",
+    "elefant_foot_compensation": "0.2",
     "filename_format": "S1_{input_filename_base}_{filament_type[0]}_{print_time}.gcode",
     "filter_out_gap_fill": "0.7",
     "flush_into_infill": "1",
@@ -100,5 +100,7 @@
     "wall_generator": "arachne",
     "wall_loops": "4",
     "wipe_before_external_loop": "1",
-    "wipe_on_loops": "1"
+    "wipe_on_loops": "1",
+    "enable_support": "0",
+    "support_remove_small_overhang": "0"
 }
