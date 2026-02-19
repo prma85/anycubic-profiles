@@ -95,7 +95,7 @@
     "tree_support_top_rate": "20%",
     "tree_support_wall_count": "1",
     "version": "2.3.0.03",
-    "wall_generator": "arachne",
+    "wall_generator": "classic",
     "wall_loops": "3",
     "wipe_before_external_loop": "1",
     "wipe_on_loops": "1",

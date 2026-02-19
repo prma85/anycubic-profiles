@@ -26,7 +26,7 @@
     "raft_first_layer_expansion": "10",
     "seam_gap": "0",
     "sparse_infill_pattern": "crosshatch",
-    "sparse_infill_speed": "130",
+    "sparse_infill_speed": "200",
     "support_base_pattern": "rectilinear",
     "support_bottom_z_distance": "0.24",
     "support_interface_bottom_layers": "3",
