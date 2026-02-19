@@ -10,7 +10,7 @@
     "from": "User",
     "gap_infill_speed": "210",
     "infill_combination": "1",
-    "inherits": "0.20mm Standard @Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "0.08mm Standard @Anycubic Kobra S1 0.4 nozzle",
     "initial_layer_infill_speed": "100",
     "inner_wall_speed": "120",
     "internal_solid_infill_speed": "150",
