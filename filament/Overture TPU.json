@@ -27,9 +27,9 @@
         "1"
     ],
     "compatible_printers": [
-        "Bambu Lab X1 Carbon 0.4 nozzle",
-        "Bambu Lab X1 0.4 nozzle",
-        "Bambu Lab X1 Carbon 0.4 nozzle(Overture_DigitalBlue_TPU.3mf)"
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Brass",
+        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
     ],
     "compatible_printers_condition": "",
     "compatible_prints": [],

@@ -18,9 +18,9 @@
     "brim_type": "auto_brim",
     "brim_width": "5",
     "compatible_printers": [
-        "Bambu Lab X1 Carbon 0.4 nozzle",
-        "Bambu Lab X1 0.4 nozzle",
-        "Bambu Lab X1 Carbon 0.4 nozzle(Overture_Clear_HighSpeedTPU.3mf)"
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Brass",
+        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
     ],
     "compatible_printers_condition": "",
     "counterbore_hole_bridging": "none",

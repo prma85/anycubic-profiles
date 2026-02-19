@@ -5,7 +5,8 @@
     "bridge_speed": "30",
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
-        "Anycubic Kobra S1 0.4 nozzle - adjustedV2"
+        "Anycubic Kobra S1 0.4 nozzle - Brass",
+        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
     ],
     "default_acceleration": "8500",
     "default_jerk": "6",
