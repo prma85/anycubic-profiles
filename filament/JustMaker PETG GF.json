@@ -102,7 +102,7 @@
         "250"
     ],
     "nozzle_temperature_BRASS": [
-        "250"
+        "245"
     ],
     "nozzle_temperature_HS": [
         "230"
@@ -111,7 +111,7 @@
         "255"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "255"
+        "250"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "235"
@@ -130,6 +130,9 @@
     ],
     "pressure_advance": [
         "0.04"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
     ],
     "slow_down_layer_time": [
         "12"

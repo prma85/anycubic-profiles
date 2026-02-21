@@ -44,13 +44,13 @@
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
     "name": "Improved PETG HS @ AC KS1 0.4 nozzle",
     "nozzle_temperature_BRASS": [
-        "245"
+        "235"
     ],
     "nozzle_temperature_initial_layer": [
         "235"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "250"
+        "240"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "235"
@@ -59,10 +59,13 @@
         "270"
     ],
     "nozzle_temperature_range_low": [
-        "240"
+        "230"
     ],
     "pressure_advance": [
         "0.064"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
     ],
     "temperature_vitrification": [
         "80"

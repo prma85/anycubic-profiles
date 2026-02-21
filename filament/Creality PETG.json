@@ -19,9 +19,6 @@
     "filament_deretraction_speed": [
         "30"
     ],
-    "filament_flow_ratio": [
-        "0.98"
-    ],
     "filament_max_volumetric_speed": [
         "14"
     ],
@@ -38,11 +35,8 @@
         "0.4"
     ],
     "from": "User",
-    "hot_plate_temp": [
-        "80"
-    ],
     "hot_plate_temp_initial_layer": [
-        "85"
+        "80"
     ],
     "idle_temperature": [
         "175"
@@ -50,13 +44,13 @@
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
     "name": "Creality PETG",
     "nozzle_temperature_BRASS": [
-        "240"
+        "235"
     ],
     "nozzle_temperature_initial_layer": [
         "235"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "245"
+        "240"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "235"
@@ -64,11 +58,11 @@
     "nozzle_temperature_range_high": [
         "250"
     ],
-    "nozzle_temperature_range_low": [
-        "240"
-    ],
     "overhang_fan_speed": [
         "100"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
     ],
     "temperature_vitrification": [
         "80"

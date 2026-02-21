@@ -1,4 +1,7 @@
 {
+    "fan_max_speed_BRASS": [
+        "70"
+    ],
     "filament_cost": [
         "25"
     ],
@@ -21,11 +24,17 @@
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "eSun Transparent PETG",
+    "nozzle_temperature_initial_layer_BRASS": [
+        "235"
+    ],
     "nozzle_temperature_range_high": [
-        "271"
+        "270"
     ],
     "pressure_advance": [
         "0.058"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
     ],
     "temperature_vitrification": [
         "76"

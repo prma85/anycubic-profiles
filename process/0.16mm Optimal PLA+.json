@@ -65,7 +65,7 @@
     "support_interface_spacing": "0.25",
     "support_object_xy_distance": "0.8",
     "support_on_build_plate_only": "1",
-    "support_threshold_angle": "55",
+    "support_threshold_angle": "40",
     "support_top_z_distance": "0.28",
     "thick_internal_bridges": "1",
     "top_bottom_infill_wall_overlap": "25%",

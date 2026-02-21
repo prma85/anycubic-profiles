@@ -15,6 +15,9 @@
     "inherits": "Anycubic PLA @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Overture PLA Pro",
+    "nozzle_temperature_range_high": [
+        "220"
+    ],
     "pressure_advance": [
         "0.03"
     ],

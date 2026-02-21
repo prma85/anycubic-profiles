@@ -41,11 +41,8 @@
         "0.4"
     ],
     "from": "User",
-    "hot_plate_temp": [
-        "80"
-    ],
     "hot_plate_temp_initial_layer": [
-        "85"
+        "80"
     ],
     "idle_temperature": [
         "175"
@@ -53,13 +50,13 @@
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
     "name": "Creality CR-PETG",
     "nozzle_temperature_BRASS": [
-        "240"
+        "235"
     ],
     "nozzle_temperature_initial_layer": [
         "235"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "245"
+        "240"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "235"
@@ -69,6 +66,9 @@
     ],
     "overhang_fan_speed": [
         "100"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
     ],
     "temperature_vitrification": [
         "80"

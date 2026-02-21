@@ -14,7 +14,6 @@
     "default_acceleration": "4500",
     "default_jerk": "6",
     "elefant_foot_compensation": "0.2",
-    "enable_support": "0",
     "filter_out_gap_fill": "0.7",
     "flush_into_infill": "1",
     "from": "User",
@@ -46,7 +45,6 @@
     "outer_wall_speed": "60",
     "overhang_4_4_speed": "22",
     "overhang_reverse": "1",
-    "overhang_reverse_internal_only": "1",
     "overhang_reverse_threshold": "0%",
     "prime_tower_brim_width": "1",
     "prime_tower_width": "10",
@@ -72,7 +70,7 @@
     "support_line_width": "0.5",
     "support_object_xy_distance": "1",
     "support_on_build_plate_only": "1",
-    "support_threshold_angle": "55",
+    "support_threshold_angle": "40",
     "support_top_z_distance": "0.32",
     "top_shell_thickness": "0.8",
     "top_surface_jerk": "6",
@@ -88,9 +86,6 @@
     "tree_support_tip_diameter": "0.9",
     "tree_support_top_rate": "12%",
     "version": "2.3.0.03",
-    "wall_generator": "classic",
     "wall_loops": "3",
-    "wall_sequence": "inner-outer-inner wall",
-    "bridge_no_support": "0",
-    "support_remove_small_overhang": "1"
+    "wall_sequence": "inner-outer-inner wall"
 }

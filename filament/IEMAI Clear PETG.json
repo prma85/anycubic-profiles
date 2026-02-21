@@ -29,11 +29,8 @@
         "0.2"
     ],
     "from": "User",
-    "hot_plate_temp": [
-        "80"
-    ],
     "hot_plate_temp_initial_layer": [
-        "85"
+        "80"
     ],
     "idle_temperature": [
         "175"
@@ -42,19 +39,22 @@
     "is_custom_defined": "0",
     "name": "IEMAI Clear PETG",
     "nozzle_temperature_BRASS": [
-        "250"
+        "235"
     ],
     "nozzle_temperature_initial_layer": [
         "250"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "255"
+        "240"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "235"
     ],
     "pressure_advance": [
         "0.034"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
     ],
     "temperature_vitrification": [
         "80"

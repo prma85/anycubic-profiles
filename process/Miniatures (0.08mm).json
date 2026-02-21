@@ -64,7 +64,7 @@
     "support_line_width": "0.22",
     "support_on_build_plate_only": "1",
     "support_speed": "45",
-    "support_threshold_angle": "45",
+    "support_threshold_angle": "40",
     "support_top_z_distance": "0.12",
     "top_bottom_infill_wall_overlap": "30%",
     "top_shell_layers": "8",

@@ -8,7 +8,7 @@
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
     ],
     "fan_max_speed_BRASS": [
-        "75"
+        "65"
     ],
     "filament_cost": [
         "23"
@@ -64,6 +64,9 @@
     ],
     "overhang_fan_speed": [
         "100"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
     ],
     "temperature_vitrification": [
         "80"

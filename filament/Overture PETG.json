@@ -2,6 +2,9 @@
     "chamber_temperature": [
         "50"
     ],
+    "fan_max_speed_BRASS": [
+        "80"
+    ],
     "filament_cost": [
         "25"
     ],
@@ -24,8 +27,20 @@
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Overture PETG",
+    "nozzle_temperature_initial_layer_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_range_high": [
+        "250"
+    ],
+    "nozzle_temperature_range_low": [
+        "230"
+    ],
     "pressure_advance": [
         "0.05"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
     ],
     "temperature_vitrification": [
         "75"
