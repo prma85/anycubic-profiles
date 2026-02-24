@@ -10,6 +10,9 @@
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
     ],
+    "enable_pressure_advance": [
+        "0"
+    ],
     "fan_max_speed_BRASS": [
         "50"
     ],
@@ -28,17 +31,17 @@
     "filament_max_volumetric_speed": [
         "14"
     ],
+    "filament_retraction_length": [
+        "1.5"
+    ],
     "filament_retraction_speed": [
-        "40"
+        "50"
     ],
     "filament_settings_id": [
-        "Creality CR-PETG"
+        "Creality PETG CR"
     ],
     "filament_vendor": [
         "Creality "
-    ],
-    "filament_z_hop": [
-        "0.4"
     ],
     "from": "User",
     "hot_plate_temp_initial_layer": [
@@ -48,15 +51,15 @@
         "175"
     ],
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
-    "name": "Creality CR-PETG",
+    "name": "Creality PETG CR",
     "nozzle_temperature_BRASS": [
-        "235"
+        "245"
     ],
     "nozzle_temperature_initial_layer": [
         "235"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "240"
+        "250"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "235"
