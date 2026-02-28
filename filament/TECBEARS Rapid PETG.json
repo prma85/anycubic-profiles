@@ -25,6 +25,9 @@
     "filament_retraction_length": [
         "1.5"
     ],
+    "filament_retraction_speed": [
+        "50"
+    ],
     "filament_settings_id": [
         "TECBEARS Rapid PETG"
     ],

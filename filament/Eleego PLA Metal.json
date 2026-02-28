@@ -16,17 +16,20 @@
     "filament_deretraction_speed": [
         "25"
     ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
     "filament_max_volumetric_speed": [
-        "12"
+        "10"
     ],
     "filament_retraction_minimum_travel": [
         "1.5"
     ],
     "filament_retraction_speed": [
-        "35"
+        "40"
     ],
     "filament_settings_id": [
-        "Eleego Metal PLA"
+        "Eleego PLA Metal"
     ],
     "filament_vendor": [
         "ELEGOO"
@@ -39,7 +42,7 @@
         "60"
     ],
     "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
-    "name": "Eleego Metal PLA",
+    "name": "Eleego PLA Metal",
     "nozzle_temperature_initial_layer": [
         "205"
     ],
@@ -49,11 +52,17 @@
     "nozzle_temperature_initial_layer_HS": [
         "205"
     ],
+    "nozzle_temperature_range_high": [
+        "230"
+    ],
     "nozzle_temperature_range_low": [
-        "220"
+        "200"
     ],
     "pressure_advance": [
         "0.03"
+    ],
+    "slow_down_min_speed": [
+        "40"
     ],
     "version": "1.3.2503.03"
 }
