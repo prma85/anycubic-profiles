@@ -2,9 +2,6 @@
     "additional_cooling_fan_speed": [
         "10"
     ],
-    "chamber_temperature": [
-        "50"
-    ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",

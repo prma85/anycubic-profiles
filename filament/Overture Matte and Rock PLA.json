@@ -1,9 +1,9 @@
 {
+    "activate_chamber_temp_control": [
+        "1"
+    ],
     "additional_cooling_fan_speed": [
         "10"
-    ],
-    "chamber_temperature": [
-        "50"
     ],
     "fan_cooling_layer_time_BRASS": [
         "100"
