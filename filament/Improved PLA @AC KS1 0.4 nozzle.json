@@ -61,19 +61,7 @@
     "nozzle_temperature": [
         "200"
     ],
-    "nozzle_temperature_BRASS": [
-        "200"
-    ],
-    "nozzle_temperature_HS": [
-        "200"
-    ],
     "nozzle_temperature_initial_layer": [
-        "200"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "200"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
         "200"
     ],
     "version": "1.3.2503.03"

@@ -1,4 +1,10 @@
 {
+    "activate_air_filtration": [
+        "1"
+    ],
+    "activate_chamber_temp_control": [
+        "1"
+    ],
     "additional_cooling_fan_speed": [
         "10"
     ],
@@ -6,6 +12,15 @@
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "fan_max_speed": [
+        "40"
     ],
     "fan_max_speed_BRASS": [
         "70"
@@ -20,7 +35,16 @@
         "0.98"
     ],
     "filament_max_volumetric_speed": [
-        "18"
+        "14"
+    ],
+    "filament_minimal_purge_on_wipe_tower": [
+        "10"
+    ],
+    "filament_retract_lift_below": [
+        "249"
+    ],
+    "filament_retract_lift_enforce": [
+        "All Surfaces"
     ],
     "filament_settings_id": [
         "Improved PETG HS @ AC KS1 0.4 nozzle"
@@ -30,6 +54,9 @@
     ],
     "filament_z_hop": [
         "0.6"
+    ],
+    "filament_z_hop_types": [
+        "Slope Lift"
     ],
     "from": "User",
     "hot_plate_temp": [
@@ -52,9 +79,6 @@
     "nozzle_temperature_initial_layer_HS": [
         "235"
     ],
-    "nozzle_temperature_range_high": [
-        "270"
-    ],
     "nozzle_temperature_range_low": [
         "230"
     ],
@@ -63,9 +87,6 @@
     ],
     "reduce_fan_stop_start_freq": [
         "0"
-    ],
-    "temperature_vitrification": [
-        "80"
     ],
     "textured_plate_temp": [
         "70"

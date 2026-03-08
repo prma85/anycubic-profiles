@@ -8,6 +8,9 @@
     "during_print_exhaust_fan_speed": [
         "70"
     ],
+    "enable_pressure_advance": [
+        "0"
+    ],
     "fan_cooling_layer_time_BRASS": [
         "80"
     ],
@@ -20,17 +23,17 @@
     "filament_cost": [
         "25.4"
     ],
-    "filament_density": [
-        "1.31"
-    ],
     "filament_end_gcode": [
         "; filament end gcode \n\n"
     ],
+    "filament_flow_ratio": [
+        "0.95"
+    ],
     "filament_max_volumetric_speed": [
-        "22"
+        "15"
     ],
     "filament_settings_id": [
-        "Polymaker PLA Pro"
+        "Polymaker PolyLite PLA"
     ],
     "filament_start_gcode": [
         "; filament start gcode\n{if  (bed_temperature[current_extruder] >45)||(bed_temperature_initial_layer[current_extruder] >45)}M106 P3 S255\n{elsif(bed_temperature[current_extruder] >35)||(bed_temperature_initial_layer[current_extruder] >35)}M106 P3 S180\n{endif}\n\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}"
@@ -47,12 +50,15 @@
     ],
     "inherits": "Anycubic PLA @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
-    "name": "Polymaker PLA Pro",
+    "name": "Polymaker PolyLite PLA",
     "nozzle_temperature_BRASS": [
         "220"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
         "220"
+    ],
+    "nozzle_temperature_range_high": [
+        "230"
     ],
     "slow_down_layer_time_HS": [
         "4"
