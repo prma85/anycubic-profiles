@@ -39,8 +39,14 @@
     "nozzle_temperature_BRASS": [
         "210"
     ],
+    "nozzle_temperature_HS": [
+        "215"
+    ],
     "nozzle_temperature_initial_layer_BRASS": [
         "215"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "220"
     ],
     "temperature_vitrification": [
         "63"
