@@ -6,7 +6,7 @@
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "Elegoo PLA",
-    "inherits": "Anycubic PLA @Anycubic Kobra S1 0.6 nozzle",
+    "inherits": "Elegoo PLA @AC KS1 0.4mm",
     "version": "1.3.2602.11",
     "filament_settings_id": [
         "Elegoo PLA @AC KS1 0.6mm"
@@ -28,68 +28,17 @@
     "bed_type": [
         "High Temp Plate"
     ],
-    "complete_print_exhaust_fan_speed": [
-        "100"
-    ],
-    "filament_cost": [
-        "28"
-    ],
-    "filament_deretraction_speed": [
-        "0"
-    ],
     "filament_flow_ratio": [
         "0.98"
     ],
     "filament_load_time": [
         "42"
     ],
-    "filament_retract_lift_below": [
-        "249"
-    ],
-    "filament_retract_restart_extra": [
-        "0"
-    ],
-    "filament_retract_when_changing_layer": [
-        "1"
-    ],
-    "filament_retraction_length": [
-        "0.8"
-    ],
-    "filament_retraction_minimum_travel": [
-        "1"
-    ],
-    "filament_retraction_speed": [
-        "40"
-    ],
     "filament_unload_time": [
         "0"
     ],
-    "filament_wipe": [
-        "1"
-    ],
-    "filament_wipe_distance": [
-        "1"
-    ],
-    "filament_z_hop": [
-        "0.4"
-    ],
-    "hot_plate_temp": [
-        "65"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "65"
-    ],
-    "nozzle_temperature_range_high": [
-        "225"
-    ],
-    "nozzle_temperature_range_low": [
-        "220"
-    ],
     "pressure_advance": [
         "0.035"
-    ],
-    "slow_down_min_speed": [
-        "30"
     ],
     "fan_cooling_layer_time_HS": [
         "100"
@@ -100,12 +49,6 @@
     "fan_min_speed_HS": [
         "100"
     ],
-    "nozzle_temperature_HS": [
-        "225"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "225"
-    ],
     "nozzle_temperature_range_high_HS": [
         "240"
     ],
@@ -114,12 +57,6 @@
     ],
     "slow_down_layer_time_HS": [
         "12"
-    ],
-    "nozzle_temperature_BRASS": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "220"
     ],
     "filament_change_length": [
         "10"

@@ -6,7 +6,7 @@
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "UJOYBIO PLA+",
-    "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "UJOYBIO PLA+ @AC KS1 0.4mm",
     "version": "1.3.2503.03",
     "filament_settings_id": [
         "UJOYBIO PLA+ @AC KS1 0.6mm"
@@ -21,54 +21,6 @@
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
-    ],
-    "complete_print_exhaust_fan_speed": [
-        "100"
-    ],
-    "during_print_exhaust_fan_speed": [
-        "100"
-    ],
-    "filament_cost": [
-        "27"
-    ],
-    "filament_deretraction_speed": [
-        "25"
-    ],
-    "filament_max_volumetric_speed": [
-        "12"
-    ],
-    "filament_retraction_minimum_travel": [
-        "1.5"
-    ],
-    "filament_retraction_speed": [
-        "40"
-    ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "65"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "205"
-    ],
-    "nozzle_temperature_range_high": [
-        "220"
-    ],
-    "nozzle_temperature_range_low": [
-        "200"
-    ],
-    "nozzle_temperature_HS": [
-        "205"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "210"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "205"
-    ],
-    "nozzle_temperature_BRASS": [
-        "200"
     ],
     "filament_change_length": [
         "10"

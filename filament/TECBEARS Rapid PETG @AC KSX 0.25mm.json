@@ -6,7 +6,7 @@
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "TECBEARS Rapid PETG",
-    "inherits": "Anycubic PETG @Anycubic Kobra X 0.25 nozzle",
+    "inherits": "TECBEARS Rapid PETG @AC KSX 0.4mm",
     "version": "1.3.2503.03",
     "filament_settings_id": [
         "TECBEARS Rapid PETG @AC KSX 0.25mm"
@@ -20,18 +20,6 @@
     "compatible_printers": [
         "Anycubic Kobra X 0.25 nozzle"
     ],
-    "activate_air_filtration": [
-        "1"
-    ],
-    "activate_chamber_temp_control": [
-        "1"
-    ],
-    "additional_cooling_fan_speed": [
-        "10"
-    ],
-    "bed_type": [
-        "High Temp Plate"
-    ],
     "fan_cooling_layer_time": [
         "20"
     ],
@@ -41,74 +29,8 @@
     "fan_min_speed": [
         "15"
     ],
-    "filament_cost": [
-        "19"
-    ],
-    "filament_density": [
-        "1.27"
-    ],
-    "filament_deretraction_speed": [
-        "25"
-    ],
-    "filament_end_gcode": [
-        "; filament end gcode "
-    ],
-    "filament_flow_ratio": [
-        "0.95"
-    ],
-    "filament_load_time": [
-        "42"
-    ],
     "filament_max_volumetric_speed": [
         "7"
-    ],
-    "filament_minimal_purge_on_wipe_tower": [
-        "10"
-    ],
-    "filament_retract_before_wipe": [
-        "0%"
-    ],
-    "filament_retract_lift_below": [
-        "249"
-    ],
-    "filament_retract_lift_enforce": [
-        "All Surfaces"
-    ],
-    "filament_retract_when_changing_layer": [
-        "1"
-    ],
-    "filament_retraction_length": [
-        "1.5"
-    ],
-    "filament_retraction_minimum_travel": [
-        "2"
-    ],
-    "filament_retraction_speed": [
-        "50"
-    ],
-    "filament_start_gcode": [
-        "; filament start gcode\n"
-    ],
-    "filament_unload_time": [
-        "0"
-    ],
-    "filament_wipe": [
-        "1"
-    ],
-    "filament_wipe_distance": [
-        "2"
-    ],
-    "filament_z_hop": [
-        "0.2"
-    ],
-    "filament_z_hop_types": [
-        "Slope Lift"
-    ],
-    "hot_plate_temp": [
-        "70"
-    ],
-    "idle_temperature": [
-        "175"
     ],
     "nozzle_temperature": [
         "220"
@@ -121,21 +43,6 @@
     ],
     "nozzle_temperature_range_low": [
         "220"
-    ],
-    "pressure_advance": [
-        "0.064"
-    ],
-    "reduce_fan_stop_start_freq": [
-        "0"
-    ],
-    "slow_down_min_speed": [
-        "50"
-    ],
-    "temperature_vitrification": [
-        "80"
-    ],
-    "textured_plate_temp": [
-        "70"
     ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"

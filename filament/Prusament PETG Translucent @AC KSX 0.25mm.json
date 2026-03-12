@@ -6,7 +6,7 @@
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "Prusament PETG Translucent",
-    "inherits": "Anycubic PETG @Anycubic Kobra X 0.25 nozzle",
+    "inherits": "Prusament PETG Translucent @AC KSX 0.4mm",
     "version": "1.3.2602.11",
     "filament_settings_id": [
         "Prusament PETG Translucent @AC KSX 0.25mm"
@@ -20,9 +20,6 @@
     "compatible_printers": [
         "Anycubic Kobra X 0.25 nozzle"
     ],
-    "bed_type": [
-        "High Temp Plate"
-    ],
     "fan_cooling_layer_time": [
         "20"
     ],
@@ -32,62 +29,8 @@
     "fan_min_speed": [
         "15"
     ],
-    "filament_cost": [
-        "23"
-    ],
-    "filament_density": [
-        "1.27"
-    ],
-    "filament_deretraction_speed": [
-        "0"
-    ],
-    "filament_end_gcode": [
-        "; filament end gcode "
-    ],
-    "filament_load_time": [
-        "42"
-    ],
     "filament_max_volumetric_speed": [
         "4"
-    ],
-    "filament_retract_before_wipe": [
-        "0%"
-    ],
-    "filament_retract_when_changing_layer": [
-        "1"
-    ],
-    "filament_retraction_length": [
-        "0.8"
-    ],
-    "filament_retraction_minimum_travel": [
-        "2"
-    ],
-    "filament_retraction_speed": [
-        "30"
-    ],
-    "filament_start_gcode": [
-        "; filament start gcode\n{if (bed_temperature[current_extruder] >60)||(bed_temperature_initial_layer[current_extruder] >60)}M106 P3 S100\n{elsif (bed_temperature[current_extruder] >45)||(bed_temperature_initial_layer[current_extruder] >45)}M106 P3 S60\n{endif}"
-    ],
-    "filament_unload_time": [
-        "0"
-    ],
-    "filament_wipe": [
-        "1"
-    ],
-    "filament_wipe_distance": [
-        "2"
-    ],
-    "filament_z_hop": [
-        "0.2"
-    ],
-    "hot_plate_temp": [
-        "70"
-    ],
-    "nozzle_temperature": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "220"
     ],
     "nozzle_temperature_range_high": [
         "225"
@@ -98,22 +41,7 @@
     "pressure_advance": [
         "0.029"
     ],
-    "temperature_vitrification": [
-        "76"
-    ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "225"
-    ],
-    "nozzle_temperature_BRASS": [
-        "220"
-    ],
-    "nozzle_temperature_HS": [
-        "225"
     ]
 }

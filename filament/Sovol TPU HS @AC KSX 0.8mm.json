@@ -6,7 +6,7 @@
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "Sovol TPU HS",
-    "inherits": "Anycubic TPU @Anycubic Kobra X 0.8 nozzle",
+    "inherits": "Sovol TPU HS @AC KSX 0.4mm",
     "version": "1.3.2602.11",
     "filament_settings_id": [
         "Sovol TPU HS @AC KSX 0.8mm"
@@ -23,48 +23,6 @@
     "activate_air_filtration": [
         "0"
     ],
-    "bed_type": [
-        "High Temp Plate"
-    ],
-    "complete_print_exhaust_fan_speed": [
-        "70"
-    ],
-    "during_print_exhaust_fan_speed": [
-        "70"
-    ],
-    "enable_pressure_advance": [
-        "1"
-    ],
-    "filament_cost": [
-        "35"
-    ],
-    "filament_end_gcode": [
-        "; filament end gcode "
-    ],
-    "filament_flow_ratio": [
-        "1.029"
-    ],
-    "filament_load_time": [
-        "42"
-    ],
-    "filament_max_volumetric_speed": [
-        "5"
-    ],
-    "filament_retraction_length": [
-        "1.1"
-    ],
-    "filament_retraction_speed": [
-        "30"
-    ],
-    "filament_unload_time": [
-        "0"
-    ],
-    "hot_plate_temp": [
-        "50"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "50"
-    ],
     "nozzle_temperature_range_high": [
         "225"
     ],
@@ -74,26 +32,8 @@
     "pressure_advance": [
         "0.108"
     ],
-    "slow_down_min_speed": [
-        "10"
-    ],
-    "temperature_vitrification": [
-        "30"
-    ],
-    "textured_plate_temp": [
-        "55"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "55"
-    ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
-    ],
-    "fan_max_speed_BRASS": [
-        "60"
-    ],
-    "fan_min_speed_BRASS": [
-        "40"
     ],
     "nozzle_temperature_HS": [
         "225"

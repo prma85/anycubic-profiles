@@ -6,7 +6,7 @@
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "iBoss Matte PLA+",
-    "inherits": "Anycubic PLA Matte @Anycubic Kobra X 0.4 nozzle",
+    "inherits": "iBoss Matte PLA+ @AC KSX 0.4mm",
     "version": "1.3.2503.03",
     "filament_settings_id": [
         "iBoss Matte PLA+ @AC KSX 0.25mm"
@@ -20,74 +20,8 @@
     "compatible_printers": [
         "Anycubic Kobra X 0.25 nozzle"
     ],
-    "activate_air_filtration": [
-        "1"
-    ],
-    "bed_type": [
-        "High Temp Plate"
-    ],
-    "complete_print_exhaust_fan_speed": [
-        "100"
-    ],
-    "during_print_exhaust_fan_speed": [
-        "100"
-    ],
-    "filament_cost": [
-        "25"
-    ],
-    "filament_deretraction_speed": [
-        "25"
-    ],
-    "filament_end_gcode": [
-        "; filament end gcode "
-    ],
-    "filament_load_time": [
-        "42"
-    ],
     "filament_max_volumetric_speed": [
         "6"
-    ],
-    "filament_retract_before_wipe": [
-        "0%"
-    ],
-    "filament_retract_lift_above": [
-        "0.3"
-    ],
-    "filament_retract_lift_below": [
-        "249"
-    ],
-    "filament_retract_lift_enforce": [
-        "All Surfaces"
-    ],
-    "filament_retract_restart_extra": [
-        "0"
-    ],
-    "filament_retract_when_changing_layer": [
-        "1"
-    ],
-    "filament_retraction_length": [
-        "0.5"
-    ],
-    "filament_retraction_minimum_travel": [
-        "1.5"
-    ],
-    "filament_retraction_speed": [
-        "35"
-    ],
-    "filament_unload_time": [
-        "0"
-    ],
-    "filament_wipe": [
-        "1"
-    ],
-    "filament_wipe_distance": [
-        "1"
-    ],
-    "filament_z_hop": [
-        "0.4"
-    ],
-    "filament_z_hop_types": [
-        "Slope Lift"
     ],
     "nozzle_temperature_range_high": [
         "225"
@@ -95,26 +29,8 @@
     "nozzle_temperature_range_low": [
         "210"
     ],
-    "slow_down_layer_time": [
-        "8"
-    ],
-    "temperature_vitrification": [
-        "45"
-    ],
-    "textured_plate_temp": [
-        "55"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "55"
-    ],
-    "nozzle_temperature_BRASS": [
-        "210"
-    ],
     "nozzle_temperature_initial_layer_HS": [
         "225"
-    ],
-    "nozzle_temperature_HS": [
-        "215"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
         "220"
