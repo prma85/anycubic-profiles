@@ -1,187 +1,42 @@
-# Anycubic Kobra S1/Kobra X - Quick Reference Card
+# Anycubic Kobra S1/Kobra X - Quick Reference
 
-**Printers:** Anycubic Kobra S1 + Kobra X | **Nozzle:** 0.4mm Brass | **Default:** `0.20mm Quite-HQ @ AC Base`
+Default profile: 0.20mm Quite-HQ @ AC Base
 
-Process migration note (Mar/2026): custom process profiles now use suffix `@ AC Base`, and 0.4mm process `compatible_printers` include Kobra X.
+## Fast Selection
 
----
+- Balanced daily use: 0.20mm Quite-HQ @ AC Base
+- Best quality: 0.16mm HQ @ AC Base or 0.12mm HQ @ AC Base
+- Fast output: 0.24mm General PETG @ AC Base or 0.28mm ExtraDraft @ AC Base
+- Tiny detail: 0.08mm HQ @ AC 0.25mm
+- Flexible: 0.20mm Optimal TPU @ AC Base
+- Functional/strong: Tools & Home Improvements @ AC Base
 
-## 🚀 QUICK START (3 Steps)
+## Process Families
 
-1. **Pick Filament** → Check `filament/README.md` or select by brand/material
-2. **Pick Process** → Use `0.20mm Quit-HQ` (default) OR choose by goal below
-3. **Slice & Print** → Adjust nozzle temp ±5°C if needed based on results
+- Base: @ AC Base
+- 0.6: @ AC 0.6mm
+- 0.25: @ AC 0.25mm
 
----
+## 0.25 HQ vs Optimal (Quick Rule)
 
-## 📝 SELECT PROFILE BY GOAL
+HQ and Optimal differ only on speed/acceleration-oriented keys:
+- default_acceleration
+- outer_wall_acceleration, outer_wall_speed
+- inner_wall_acceleration, inner_wall_speed
+- gap_infill_speed, internal_solid_infill_speed, sparse_infill_speed
 
-| Goal                     | Profile                        | Speed  | Quality    | Time     |
-| ------------------------ | ------------------------------ | ------ | ---------- | -------- |
-| 🎯 **Balanced (BEST)**   | `0.20mm Quite-HQ @ AC Base`               | ⚡⚡   | ⭐⭐⭐⭐   | 1x       |
-| 👁️ **Maximum Detail**    | `0.16mm HQ @ AC Base` or `0.12mm HQ @ AC Base`     | ⚡     | ⭐⭐⭐⭐⭐ | 1.5-2x   |
-| 🏃 **Fast Print**        | `0.24mm General PETG @ AC Base` or `0.28mm ExtraDraft @ AC Base` | ⚡⚡⚡ | ⭐⭐⭐     | 0.6-0.7x |
-| 🔷 **Tiny Miniatures**   | `Miniatures (0.08mm)`          | ⚡     | ⭐⭐⭐⭐⭐ | 3-4x     |
-| ⚙️ **Strong/Functional** | `Tools & Home Improvements @ AC Base`    | ⚡⚡   | ⭐⭐⭐     | 1x       |
-| 🪜 **Flexible (TPU)**    | `0.20mm Optimal TPU @ AC Base`           | ⚡     | ⭐⭐⭐     | 2x       |
-| 🎨 **Shiny Finish**      | `0.16mm Optimal Silk PLA @ AC Base`      | ⚡⚡   | ⭐⭐⭐⭐   | 1.5x     |
+## PETG vs Regular (Quick Rule)
 
----
+PETG process variants generally add/adjust:
+- explicit bridge tuning (bridge_speed, bridge_flow)
+- support release spacing (support_object_xy_distance, support Z gaps)
+- selected throughput reductions for stability
 
-## 🌡️ TEMPERATURE BY MATERIAL (Nozzle / Bed)
+## Where to read details
 
-| Material | Temp          | Bed         | Notes                   |
-| -------- | ------------- | ----------- | ----------------------- |
-| PLA      | 200-220°C     | 60°C        | Standard, versatile     |
-| PLA+     | 210-230°C     | 60°C        | Run hotter than PLA     |
-| **PETG** | **230-250°C** | **70-80°C** | **Slow outer walls!**   |
-| PETG HS  | 240-260°C     | 75-85°C     | Even hotter             |
-| TPU      | 200-220°C     | 20-30°C     | Print 20-40 mm/s        |
-| PLA Silk | 200-220°C     | 60°C        | Glossy finish           |
-| PLA-CF   | 205-225°C     | 60°C        | **Use hardened nozzle** |
-
----
-
-## 🔧 NOZZLE SELECTION
-
-🔵 **Brass** (Default)
-
-- ✅ All standard prints: PLA, PLA+, PETG, TPU, Silk
-- ❌ Avoid: Carbon fiber (PLA-CF), Glass-filled PETG
-- Cost: Low
-
-🟡 **Hardened Steel** (For Abrasives)
-
-- ✅ PLA-CF, Glass-filled PETG
-- ⚠️ May need +5°C hotter
-- Cost: Higher, lasts longer
-
----
-
-## ⚠️ COMMON ISSUES
-
-| Problem                  | Cause           | Solution                        |
-| ------------------------ | --------------- | ------------------------------- |
-| **Stringing**            | Temp too high   | -5°C or more retraction         |
-| **Under-extrusion**      | Nozzle too cool | +5°C                            |
-| **First layer issues**   | Bed not level   | Re-level bed + clean with IPA   |
-| **Curling edges (PETG)** | Nozzle too hot  | -10°C or lower bed by 5°C       |
-| **Warping**              | PETG specific   | Level bed, use brim, lower temp |
-| **TPU not printing**     | Too fast        | Reduce to 20-30 mm/s            |
-
----
-
-## 🎁 FILAMENT BY TYPE (Quick Pick)
-
-**PLA:** Creality, Overture, Polymaker, Prusament, Generic
-**PLA+:** Creality, Elegoo, Overture, Sunlu
-**PETG:** Creality, Overture, Prusament, Sovol, AzureFilm
-**Silk:** Geetech, Generic, iBOSS, JustMaker
-**TPU:** Overture, Sovol (requires slow printing)
-
-_See `filament/README.md` for complete list of 40+ options_
-
----
-
-## 📦 PROFILE LAYERS (Organization)
-
-**By Height:**
-
-- `0.08-0.12mm` → Ultra-fine detail
-- `0.16mm` → Excellent detail (action figures)
-- `0.20mm` → **Standard (default here!)**
-- `0.24-0.28mm` → Fast production
-
-**By Purpose:**
-
-- Quit-HQ → Office use (⭐ DEFAULT)
-- HQ → High quality
-- Optimal → Balanced
-- General → Material-specific
-- Draft → Speed focused
-
-Migration rules:
-- Base process profiles use suffix `@ AC Base`.
-- Existing 0.6-only presets remain nozzle-specific (`@0.6mm`).
-- Added missing 0.4 base versions: `Book Nook @ AC Base` and `Disney plates @ AC Base`.
-- For those new 0.4 profiles, layer-related overrides were removed to inherit defaults from `0.28mm Standard @Anycubic Kobra S1 0.4 nozzle`.
-- 0.4 profile compatibility includes:
-	- `Anycubic Kobra S1 0.4 nozzle`
-	- `Anycubic Kobra S1 0.4 nozzle - Brass`
-	- `Anycubic Kobra S1 0.4 nozzle - Hardened Steel`
-	- `Anycubic Kobra X 0.4 nozzle`
-
----
-
-## 🛎️ BEFORE YOU PRINT
-
-✅ Bed leveled? (Do every 5-10 prints)
-✅ Filament dry? (Especially PETG, TPU)
-✅ Build plate clean? (IPA + lint-free cloth)
-✅ Temperature set correctly? (Check material table above)
-✅ Nozzle clean? (Brush if needed)
-
----
-
-## 📞 SETTINGS TO ADJUST IF NEEDED
-
-**Nozzle Temperature:** ±5°C (test on small print first)
-**Bed Temperature:** ±5°C (for adhesion)
-**Print Speed:** Only if profile feels wrong (check issue table)
-**Retraction:** Only in filament-specific profile
-
----
-
-## 💾 YOUR SETUP
-
-| Item      | Value                      | Notes                       |
-| --------- | -------------------------- | --------------------------- |
-| Printer   | Anycubic Kobra S1 + Kobra X          | Shared process base strategy    |
-| Nozzle    | 0.4mm Brass                | Have hardened steel backup  |
-| Bed       | PEI Spring Steel 220×250mm | Self-leveling               |
-| Slicer    | Anycubic Slicer Next       | OrcaSlice-based             |
-| Location  | Office                     | Quiet-HQ default preferred  |
-| Filaments | 40+ profiles               | 8 material types, 17 brands |
-| Processes | 50+ profiles               | Base (`@ AC Base`) + 0.6mm specialty variants |
-
----
-
-## 🔗 WHERE TO FIND THINGS
-
-| Need               | File/Folder          |
-| ------------------ | -------------------- |
-| Main guide         | `README.md`          |
-| Pick filament      | `filament/README.md` |
-| AI assistant notes | `COPILOT_CONTEXT.md` |
-| Filament profiles  | `filament/*.json`    |
-| Process profiles   | `process/*.json`     |
-| Machine configs    | `machine/*.json`     |
-
----
-
-## 🆘 NEED HELP?
-
-1. **Issue?** → See "COMMON ISSUES" table above
-2. **Pick filament?** → Read `filament/README.md`
-3. **Pick profile?** → Use "SELECT PROFILE BY GOAL" above or `README.md`
-4. **Need detail?** → Read main `README.md` or `COPILOT_CONTEXT.md`
-5. **New filament?** → Copy similar filament + adjust temps
-
----
-
-## ✅ MERGED PROFILES (New!)
-
-**0.24mm PETG** - Unified from Draft + General PETG
-
-- ✅ Better than Draft (more optimized)
-- ✅ Better than General (faster)
-- ✅ Use for: Fast PETG printing with quality
-
-**0.28mm PETG** - Unified from Draft + General PETG
-
-- ✅ Use for: Fastest PETG prints
-- ✅ Still maintains acceptable quality
-
----
-
-**Printer Ready! Print confidently with 40+ filaments and 45+ processes configured.** 🎉
+- Main guide: README.md
+- Process details: process/README.md
+- Filament details: filament/README.md
+- S1 vs X strategy: S1_VS_X_UNIFICATION.md
+- Copilot overview: copilot-instructions.md
+- Copilot authoring rules: .github/copilot-instructions.md
