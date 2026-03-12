@@ -6,7 +6,7 @@
         "18"
     ],
     "filament_settings_id": [
-        "AzureFilm PETG"
+        "AzureFilm PETG @0.4mm"
     ],
     "filament_vendor": [
         "AzureFilm"
@@ -20,7 +20,7 @@
     ],
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
-    "name": "AzureFilm PETG",
+    "name": "AzureFilm PETG @0.4mm",
     "nozzle_temperature_BRASS": [
         "240"
     ],

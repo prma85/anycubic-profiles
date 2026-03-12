@@ -9,7 +9,7 @@
         "10"
     ],
     "close_fan_the_first_x_layers": [
-        "4"
+        "3"
     ],
     "complete_print_exhaust_fan_speed": [
         "70"
@@ -27,7 +27,7 @@
         "30"
     ],
     "fan_max_speed": [
-        "70"
+        "60"
     ],
     "fan_max_speed_BRASS": [
         "70"
@@ -36,7 +36,7 @@
         "60"
     ],
     "fan_min_speed": [
-        "0"
+        "30"
     ],
     "fan_min_speed_BRASS": [
         "10"
@@ -58,6 +58,9 @@
     ],
     "filament_retract_before_wipe": [
         "0%"
+    ],
+    "filament_retract_lift_enforce": [
+        "All Surfaces"
     ],
     "filament_retract_restart_extra": [
         "0.02"
@@ -91,6 +94,9 @@
     ],
     "filament_z_hop": [
         "0.2"
+    ],
+    "filament_z_hop_types": [
+        "Slope Lift"
     ],
     "from": "User",
     "hot_plate_temp": [
@@ -136,6 +142,9 @@
     ],
     "pressure_advance": [
         "0.042"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
     ],
     "slow_down_layer_time": [
         "12"

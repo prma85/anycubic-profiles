@@ -3,7 +3,7 @@
     "bottom_surface_pattern": "monotonicline",
     "from": "User",
     "infill_wall_overlap": "25%",
-    "inherits": "0.28mm Standard @Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "0.3mm Standard @Anycubic Kobra S1 0.6 nozzle",
     "initial_layer_infill_speed": "90",
     "initial_layer_line_width": "0.58",
     "initial_layer_min_bead_width": "90%",

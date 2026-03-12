@@ -1,17 +1,7 @@
 {
-    "default_print_profile": "0.40mm Standard @Anycubic Kobra S1 0.8 nozzle",
     "from": "User",
     "inherits": "Anycubic Kobra S1 0.8 nozzle",
-    "max_layer_height": [
-        "0.56"
-    ],
-    "min_layer_height": [
-        "0.16"
-    ],
     "name": "Anycubic Kobra S1 0.8 nozzle - Brass",
-    "nozzle_diameter": [
-        "0.8"
-    ],
     "printer_settings_id": "Anycubic Kobra S1 0.8 nozzle - Brass",
     "retraction_length": [
         "1"

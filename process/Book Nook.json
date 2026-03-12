@@ -7,9 +7,9 @@
     "brim_type": "outer_only",
     "brim_width": "3",
     "compatible_printers": [
-        "Anycubic Kobra S1 0.4 nozzle",
-        "Anycubic Kobra S1 0.4 nozzle - Brass",
-        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+        "Anycubic Kobra S1 0.6 nozzle",
+        "Anycubic Kobra S1 0.6 nozzle - Brass",
+        "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
     ],
     "default_acceleration": "5000",
     "default_jerk": "0",
@@ -20,7 +20,7 @@
     "from": "User",
     "gap_fill_target": "nowhere",
     "infill_jerk": "6",
-    "inherits": "0.16mm Standard @Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "0.3mm Standard @Anycubic Kobra S1 0.6 nozzle",
     "initial_layer_acceleration": "1500",
     "initial_layer_infill_speed": "105",
     "initial_layer_jerk": "6",
