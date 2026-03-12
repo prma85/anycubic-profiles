@@ -6,7 +6,8 @@
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
-        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel",
+        "Anycubic Kobra X 0.4 nozzle"
     ],
     "default_acceleration": "4000",
     "detect_thin_wall": "1",
@@ -20,7 +21,7 @@
     "initial_layer_speed": "30",
     "inner_wall_speed": "150",
     "internal_solid_infill_speed": "200",
-    "name": "Door corner",
+    "name": "Door corner @ AC Base",
     "outer_wall_acceleration": "2000",
     "outer_wall_speed": "60",
     "overhang_1_4_speed": "60",
@@ -30,7 +31,7 @@
     "precise_outer_wall": "1",
     "prime_tower_width": "10",
     "prime_volume": "10",
-    "print_settings_id": "Door corner",
+    "print_settings_id": "Door corner @ AC Base",
     "raft_first_layer_density": "30%",
     "seam_gap": "0",
     "sparse_infill_density": "12%",

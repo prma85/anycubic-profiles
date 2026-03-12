@@ -1,6 +1,8 @@
-# Anycubic Kobra S1 - Quick Reference Card
+# Anycubic Kobra S1/Kobra X - Quick Reference Card
 
-**Printer:** Anycubic Kobra S1 | **Nozzle:** 0.4mm Brass | **Default:** `0.20mm Quit-HQ @AC KS1`
+**Printers:** Anycubic Kobra S1 + Kobra X | **Nozzle:** 0.4mm Brass | **Default:** `0.20mm Quite-HQ @ AC Base`
+
+Process migration note (Mar/2026): custom process profiles now use suffix `@ AC Base`, and 0.4mm process `compatible_printers` include Kobra X.
 
 ---
 
@@ -16,13 +18,13 @@
 
 | Goal                     | Profile                        | Speed  | Quality    | Time     |
 | ------------------------ | ------------------------------ | ------ | ---------- | -------- |
-| 🎯 **Balanced (BEST)**   | `0.20mm Quit-HQ`               | ⚡⚡   | ⭐⭐⭐⭐   | 1x       |
-| 👁️ **Maximum Detail**    | `0.16mm HQ` or `0.12mm HQ`     | ⚡     | ⭐⭐⭐⭐⭐ | 1.5-2x   |
-| 🏃 **Fast Print**        | `0.24mm PETG` or `0.28mm PETG` | ⚡⚡⚡ | ⭐⭐⭐     | 0.6-0.7x |
+| 🎯 **Balanced (BEST)**   | `0.20mm Quite-HQ @ AC Base`               | ⚡⚡   | ⭐⭐⭐⭐   | 1x       |
+| 👁️ **Maximum Detail**    | `0.16mm HQ @ AC Base` or `0.12mm HQ @ AC Base`     | ⚡     | ⭐⭐⭐⭐⭐ | 1.5-2x   |
+| 🏃 **Fast Print**        | `0.24mm General PETG @ AC Base` or `0.28mm ExtraDraft @ AC Base` | ⚡⚡⚡ | ⭐⭐⭐     | 0.6-0.7x |
 | 🔷 **Tiny Miniatures**   | `Miniatures (0.08mm)`          | ⚡     | ⭐⭐⭐⭐⭐ | 3-4x     |
-| ⚙️ **Strong/Functional** | `Tools & Home Improvements`    | ⚡⚡   | ⭐⭐⭐     | 1x       |
-| 🪜 **Flexible (TPU)**    | `0.20mm Optimal TPU`           | ⚡     | ⭐⭐⭐     | 2x       |
-| 🎨 **Shiny Finish**      | `0.16mm Optimal Silk PLA`      | ⚡⚡   | ⭐⭐⭐⭐   | 1.5x     |
+| ⚙️ **Strong/Functional** | `Tools & Home Improvements @ AC Base`    | ⚡⚡   | ⭐⭐⭐     | 1x       |
+| 🪜 **Flexible (TPU)**    | `0.20mm Optimal TPU @ AC Base`           | ⚡     | ⭐⭐⭐     | 2x       |
+| 🎨 **Shiny Finish**      | `0.16mm Optimal Silk PLA @ AC Base`      | ⚡⚡   | ⭐⭐⭐⭐   | 1.5x     |
 
 ---
 
@@ -98,6 +100,17 @@ _See `filament/README.md` for complete list of 40+ options_
 - General → Material-specific
 - Draft → Speed focused
 
+Migration rules:
+- Base process profiles use suffix `@ AC Base`.
+- Existing 0.6-only presets remain nozzle-specific (`@0.6mm`).
+- Added missing 0.4 base versions: `Book Nook @ AC Base` and `Disney plates @ AC Base`.
+- For those new 0.4 profiles, layer-related overrides were removed to inherit defaults from `0.28mm Standard @Anycubic Kobra S1 0.4 nozzle`.
+- 0.4 profile compatibility includes:
+	- `Anycubic Kobra S1 0.4 nozzle`
+	- `Anycubic Kobra S1 0.4 nozzle - Brass`
+	- `Anycubic Kobra S1 0.4 nozzle - Hardened Steel`
+	- `Anycubic Kobra X 0.4 nozzle`
+
 ---
 
 ## 🛎️ BEFORE YOU PRINT
@@ -123,13 +136,13 @@ _See `filament/README.md` for complete list of 40+ options_
 
 | Item      | Value                      | Notes                       |
 | --------- | -------------------------- | --------------------------- |
-| Printer   | Anycubic Kobra S1          | + Kobra 3/2/X compatible    |
+| Printer   | Anycubic Kobra S1 + Kobra X          | Shared process base strategy    |
 | Nozzle    | 0.4mm Brass                | Have hardened steel backup  |
 | Bed       | PEI Spring Steel 220×250mm | Self-leveling               |
 | Slicer    | Anycubic Slicer Next       | OrcaSlice-based             |
 | Location  | Office                     | Quiet-HQ default preferred  |
 | Filaments | 40+ profiles               | 8 material types, 17 brands |
-| Processes | 45+ profiles               | 8 layer heights + specialty |
+| Processes | 50+ profiles               | Base (`@ AC Base`) + 0.6mm specialty variants |
 
 ---
 

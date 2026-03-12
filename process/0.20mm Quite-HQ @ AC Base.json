@@ -3,7 +3,9 @@
     "brim_type": "no_brim",
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
-        "Anycubic Kobra S1 0.4 nozzle Hardened Steel"
+        "Anycubic Kobra S1 0.4 nozzle - Brass",
+        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel",
+        "Anycubic Kobra X 0.4 nozzle"
     ],
     "default_acceleration": "4000",
     "from": "User",
@@ -13,13 +15,13 @@
     "initial_layer_infill_speed": "100",
     "inner_wall_speed": "150",
     "internal_solid_infill_speed": "200",
-    "name": "0.20mm Quite-HQ",
+    "name": "0.20mm Quite-HQ @ AC Base",
     "outer_wall_acceleration": "2000",
     "outer_wall_speed": "60",
     "precise_outer_wall": "1",
     "prime_tower_width": "10",
     "prime_volume": "10",
-    "print_settings_id": "0.20mm Quite-HQ",
+    "print_settings_id": "0.20mm Quite-HQ @ AC Base",
     "seam_gap": "0",
     "support_base_pattern": "rectilinear",
     "support_bottom_z_distance": "0.3",

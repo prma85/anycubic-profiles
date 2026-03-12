@@ -89,5 +89,11 @@
     "wall_loops": "3",
     "wall_sequence": "inner-outer-inner wall",
     "xy_contour_compensation": "-0.05",
-    "xy_hole_compensation": "0.05"
+    "xy_hole_compensation": "0.05",
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.6 nozzle",
+        "Anycubic Kobra S1 0.6 nozzle - Brass",
+        "Anycubic Kobra S1 0.6 nozzle - Hardened Steel",
+        "Anycubic Kobra X 0.6 nozzle"
+    ]
 }

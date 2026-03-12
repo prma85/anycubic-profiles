@@ -8,7 +8,8 @@
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
-        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel",
+        "Anycubic Kobra X 0.4 nozzle"
     ],
     "default_acceleration": "6000",
     "default_jerk": "6",
@@ -42,7 +43,7 @@
     "line_width": "0.46",
     "max_travel_detour_distance": "300",
     "max_volumetric_extrusion_rate_slope": "300",
-    "name": "Tools & Home Improvements",
+    "name": "Tools & Home Improvements @ AC Base",
     "only_one_wall_top": "0",
     "outer_wall_acceleration": "3000",
     "outer_wall_jerk": "6",
@@ -57,7 +58,7 @@
     "prime_tower_brim_width": "1",
     "prime_tower_width": "20",
     "prime_volume": "7",
-    "print_settings_id": "Tools & Home Improvements",
+    "print_settings_id": "Tools & Home Improvements @ AC Base",
     "raft_first_layer_density": "30%",
     "reduce_crossing_wall": "1",
     "scarf_joint_speed": "55%",
