@@ -63,25 +63,25 @@
     "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",
     "name": "JustMaker Silk PLA",
     "nozzle_temperature": [
-        "200"
+        "210"
     ],
     "nozzle_temperature_BRASS": [
         "225"
     ],
     "nozzle_temperature_HS": [
-        "200"
+        "230"
     ],
     "nozzle_temperature_initial_layer": [
-        "200"
+        "210"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
         "230"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "200"
+        "235"
     ],
     "nozzle_temperature_range_high": [
-        "230"
+        "235"
     ],
     "nozzle_temperature_range_low": [
         "210"

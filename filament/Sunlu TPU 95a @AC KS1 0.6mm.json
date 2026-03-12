@@ -1,25 +1,58 @@
 {
-    "from": "User",
-    "inherits": "Sunlu TPU 95a @AC KS1 Base",
-    "is_custom_defined": "0",
-    "name": "Sunlu TPU 95a",
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "filament_cost": [
+        "35"
+    ],
+    "filament_flow_ratio": [
+        "1.029"
+    ],
+    "filament_max_volumetric_speed": [
+        "5"
+    ],
+    "filament_retraction_length": [
+        "1.1"
+    ],
     "filament_settings_id": [
         "Sunlu TPU 95a @AC KS1 0.6mm"
     ],
+    "filament_vendor": [
+        "SUNLU"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "50"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "50"
+    ],
+    "inherits": "Sunlu TPU 95a @AC KS1 Base",
+    "is_custom_defined": "0",
+    "name": "Sunlu TPU 95a",
+    "nozzle_temperature_BRASS": [
+        "210"
+    ],
+    "nozzle_temperature_range_high": [
+        "230"
+    ],
+    "pressure_advance": [
+        "0.108"
+    ],
+    "textured_plate_temp": [
+        "55"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "55"
+    ],
+    "version": "1.3.2602.11",
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
     ],
-    "version": "1.3.2602.11",
-    "filament_vendor": [
-        "SUNLU"
-    ],
-    "filament_flow_ratio": [
-        "1"
-    ],
-    "filament_max_volumetric_speed": [
-        "3.2"
+    "nozzle_temperature_HS": [
+        "215"
     ],
     "nozzle_temperature": [
         "220"
@@ -27,55 +60,13 @@
     "nozzle_temperature_initial_layer": [
         "220"
     ],
-    "pressure_advance": [
-        "0.03"
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
     ],
-    "filament_retraction_length": [
-        "0.4"
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
     ],
-    "filament_retraction_speed": [
-        "nil"
-    ],
-    "filament_deretraction_speed": [
-        "nil"
-    ],
-    "filament_z_hop": [
-        "nil"
-    ],
-    "filament_retract_restart_extra": [
-        "nil"
-    ],
-    "fan_min_speed": [
-        "100"
-    ],
-    "fan_max_speed": [
-        "100"
-    ],
-    "fan_cooling_layer_time": [
-        "80"
-    ],
-    "additional_cooling_fan_speed": [
-        "100"
-    ],
-    "close_fan_the_first_x_layers": [
-        "1"
-    ],
-    "cool_plate_temp": [
-        "35"
-    ],
-    "cool_plate_temp_initial_layer": [
-        "35"
-    ],
-    "hot_plate_temp": [
-        "35"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "35"
-    ],
-    "textured_plate_temp": [
-        "35"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "35"
+    "nozzle_temperature_range_low": [
+        "210"
     ]
 }

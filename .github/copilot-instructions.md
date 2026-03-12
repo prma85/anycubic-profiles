@@ -39,6 +39,18 @@ Do not mix responsibilities between layers unless explicitly required.
 ### Filament
 - Keep existing KS1/KSX and nozzle suffix conventions.
 - Do not collapse KS1 and KSX filament profiles into a single file.
+- Filament architecture must follow:
+	- `@AC KS1 Base` is source of truth (0.4).
+	- `@AC KS1 0.6mm` = full clone of base + 0.6 deltas.
+	- `@AC KS1 0.8mm` = clone of KS1 0.6 + 0.8 deltas.
+	- `@AC KS1 0.25mm` = clone of base + system 0.25 values only where lower.
+	- `@AC KSX 0.4mm` inherits from KS1 Base.
+	- `@AC KSX 0.6/0.8/0.25` inherit from corresponding KS1 variants.
+	- `.info` must be plain key-value and include `sync_info = create` and aligned `setting_id`.
+	- Deltas must be type/printer-specific (no global constants):
+		- KS1 rules derived from Kobra S1 with S1 Max fallback.
+		- KSX rules derived from Kobra X system profiles.
+	- `filament_change_length` must only be added/kept when the matching system transition contains it.
 
 ### Machine
 - Keep overrides minimal.
@@ -97,6 +109,13 @@ After changes, verify:
 - Inheritance targets exist.
 - Compatibility lists match intended nozzle and printer scope.
 - HQ/Optimal and PETG rules remain consistent.
+- For filament variants:
+	- `0.6` variant key count must not be lower than base key count.
+	- `nozzle_temperature_*_BRASS` and `nozzle_temperature_*_HS` keys must exist on `0.6` and `0.8`.
+	- HS temperature keys should be `BRASS + 5` unless user explicitly overrides.
+	- `0.6` and `0.8` generic nozzle temperatures must not be below `nozzle_temperature_range_low`.
+	- `nozzle_temperature_range_high` must exist on generated `0.6`/`0.8` and satisfy:
+		- `nozzle_temperature_initial_layer_HS <= nozzle_temperature_range_high`.
 
 ## External Analysis Context
 

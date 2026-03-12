@@ -20,6 +20,30 @@
 
 ## What Changed: Migration Overview
 
+### March 2026 Correction Update (v2.1)
+
+After validating real-world UI behavior, the variant architecture was corrected with stricter rules:
+
+- `@AC KS1 0.6mm` is now rebuilt as a full clone of `@AC KS1 Base` (no missing fields), then nozzle deltas are applied.
+- `@AC KS1 0.8mm` is rebuilt from `@AC KS1 0.6mm` using 0.6->0.8 deltas.
+- `@AC KS1 0.25mm` is rebuilt from `@AC KS1 Base` using system 0.25 values only when lower.
+- `@AC KSX 0.4mm` inherits from `@AC KS1 Base`.
+- `@AC KSX 0.6mm`, `@AC KSX 0.8mm`, `@AC KSX 0.25mm` inherit from corresponding KS1 variants.
+- Filament `.info` files are plain key-value with `sync_info = create` and `setting_id` aligned to `filament_settings_id`.
+
+### March 2026 Rule Hardening (v2.2)
+
+Authoritative generation behavior now enforced in files:
+
+- Deltas are applied per filament type and per printer context, not globally.
+- KS1 delta derivation uses system `Kobra S1` with fallback/blending from `Kobra S1 Max` when needed.
+- KSX deltas are derived from `Kobra X` system profiles.
+- `filament_flow_ratio` and `pressure_advance` are changed only according to system-observed transition deltas for that type/printer.
+- `fan_max_speed_*` and `fan_min_speed_*` are changed only when system transition for that type/printer shows change.
+- `filament_change_length` is only added/preserved when the corresponding system transition includes it.
+- `nozzle_temperature_range_high` is always present on generated 0.6/0.8 variants.
+- Safety constraint is enforced: `nozzle_temperature_initial_layer_HS <= nozzle_temperature_range_high`.
+
 ### The Problem We Solved
 
 Previously, all filament profiles were calibrated for **Kobra S1 with 0.4mm brass nozzle only**. This created friction when using:
@@ -61,9 +85,9 @@ Profiles without a size suffix (ending in `@AC KS1 Base`) are the **0.4mm brass 
 | Size | Filament Count | Best For | Printer | Status |
 |------|---|---|---|---|
 | **0.4mm** (Base) | 52 profiles | General purpose, detail | Both | ✓ Original |
-| **0.6mm** | 39 profiles | Speed, quality, production | Both | ✓ New (v2.0) |
-| **0.25mm** | 29 profiles | Fine details, miniatures | Both | ✓ New (v2.0) |
-| **0.8mm** | 29 profiles | Fast prototype, structural | Both | ✓ New (v2.0) |
+| **0.6mm** | 52 profiles | Speed, quality, production | Both | ✓ Rebuilt (v2.1) |
+| **0.25mm** | 45 profiles | Fine details, miniatures | Both | ✓ Rebuilt (v2.1) |
+| **0.8mm** | 51 profiles | Fast prototype, structural | Both | ✓ Rebuilt (v2.1) |
 | **1.0mm** | Planned | Heavy layers, rapid draft | Both | ⏳ Future |
 
 ### Coverage by Nozzle Size
@@ -81,7 +105,7 @@ Source of truth for custom calibration. All materials available.
 - Nylon (3 variants)
 - Specialty (4 variants: resin-filled, composite, etc.)
 
-#### 0.6mm (39 Profiles) ✓ Recommended for Speed
+#### 0.6mm (52 Profiles) ✓ Recommended for Speed
 **Physics basis:** Larger orifice = higher flow rates + lower pressure advance (thicker extrusion beads, less drag-induced wave patterns)
 
 **Materials included:**
@@ -92,11 +116,11 @@ Source of truth for custom calibration. All materials available.
 - Specialty (2) = **Nylon, composite**
 
 **Key profile characteristics:**
-- Nozzle temp: +5-15°C higher than system baseline (wider nozzle = reduced heat loss)
-- Pressure advance: 40-50% reduction (less precision-based drag)
-- Flow rate: system-calibrated per material (not custom-reduced)
+- Full base clone first, then targeted overrides.
+- Numeric changes are applied only when the matching system transition for that filament type/printer shows a change.
+- Temperature keys are kept safety-consistent (`_BRASS`, `_HS`, and bounded initial layer values).
 
-#### 0.25mm (29 Profiles) ⏳ Fine Detail Mode
+#### 0.25mm (45 Profiles) ⏳ Fine Detail Mode
 **Physics basis:** Tiny orifice = ultra-precise extrusion, high pressure advance (detects minute vibrations)
 
 **Materials included (conservative selection):**
@@ -111,7 +135,7 @@ Source of truth for custom calibration. All materials available.
 - Layer height: Limited to 0.10-0.15mm for quality
 - Print speed: 50-60% of 0.4mm (precision over speed)
 
-#### 0.8mm (29 Profiles) ⚡ Fast Prototyping
+#### 0.8mm (51 Profiles) ⚡ Fast Prototyping
 **Physics basis:** Large orifice = minimal extrusion precision, lower melting temps needed
 
 **Materials included:**
@@ -146,7 +170,7 @@ Use this to find exactly which profiles exist for your printer + nozzle combinat
 | **ASA** | ✗ | ✓ | ✓ | ✗ | 5 | Engineering plastic; requires precision |
 | **Nylon** | ✗ | ✓ | ✓ | ✗ | 3 | Abrasive; hardened steel needed |
 | **Other** | ✗ | ✓ | ✓ | ✗ | 4 | Specialty/experimental materials |
-| | | **52** | **39** | **29** | **29** | **149 total KS1 profiles** |
+| | | **52** | **52** | **45** | **51** | **200 total KS1 profiles** |
 
 #### Anycubic Kobra X (KSX)
 
@@ -160,9 +184,9 @@ Use this to find exactly which profiles exist for your printer + nozzle combinat
 | **ASA** | ✗ | ✓ | ✓ | ✗ | 5 | Same as KS1 |
 | **Nylon** | ✗ | ✓ | ✓ | ✗ | 3 | Same as KS1 |
 | **Other** | ✗ | ✓ | ✓ | ✗ | 4 | Same as KS1 |
-| | | **52** | **39** | **29** | **29** | **149 total KSX profiles** |
+| | | **52** | **52** | **45** | **51** | **200 total KSX profiles** |
 
-**Total inventory: 298 filament profiles (149 KS1 + 149 KSX)**
+**Total inventory: 400 filament profiles (200 KS1 + 200 KSX)**
 
 ---
 
@@ -202,85 +226,40 @@ Creality PLA @AC KSX 0.6mm (0.6mm, KSX)
 └─ Overrides: [X-specific deltas vs KS1]
 ```
 
-### Three Smart Override Rules (Physics-Based)
+### Three Smart Override Rules (System-Driven)
 
-We applied different strategies for each nozzle size to respect your existing calibrations while embracing system baselines:
+Generation logic is deterministic and transition-based:
 
-#### Rule 1: 0.6mm - Direct System Application ✓
-**Strategy:** Use system baselines directly — they're proven to work.
+#### Rule 1: 0.6mm - Full Clone + Transition Deltas
+**Strategy:** Build `@AC KS1 0.6mm` from a full clone of `@AC KS1 Base`.
 
-**Why:** Your manually-calibrated JustMaker PETG GF @AC KS1 0.6mm shows system values are accurate. Physics also confirms larger nozzles can use higher temps and lower pressure advance.
+**Applied constraints:**
+- Keep all base keys to avoid UI omissions.
+- Apply only the changes observed in system `0.4 -> 0.6` for the matching filament type and printer context.
+- Add/keep `filament_change_length` only when that system transition includes it.
+- Ensure `nozzle_temperature_range_high` exists and thermal keys remain consistent.
 
-**Implementation:**
-- Copy effective system values (from Anycubic system profile for 0.6mm)
-- Apply to all 39 profiles uniformly
-- Inherits from corresponding 0.4mm Base profile
-- System provides: nozzle_temperature, pressure_advance, fan speeds
+#### Rule 2: 0.25mm - Lower-Only Safety Merge
+**Strategy:** Build `@AC KS1 0.25mm` from base and apply conservative 0.25 updates.
 
-**Example (Creality PLA 0.6mm):**
-```json
-{
-  "inherits": "Creality PLA @AC KS1 Base",
-  "compatible_printers": ["Anycubic Kobra S1 0.6 nozzle"],
-  "nozzle_temperature": ["220"],          // System S1 0.6 for PLA
-  "pressure_advance": ["0.015"],          // S1 0.6 system value
-  "filament_max_volumetric_speed": ["12"], // System-calibrated
-  ...
-}
-```
+**Applied constraints:**
+- Prefer lower-only behavior for sensitive parameters where required by the architecture.
+- Do not introduce increases that are not supported by the corresponding system transition.
+- Keep inheritance-first structure and explicit compatibility mapping.
 
-#### Rule 2: 0.25mm - Selective Smart Filtering ⚠️
-**Strategy:** Only use system values if they're **lower** than your 0.4mm custom settings (don't aggressively reduce).
+#### Rule 3: 0.8mm - Build From 0.6 + Transition Deltas
+**Strategy:** Build `@AC KS1 0.8mm` from `@AC KS1 0.6mm`, then apply `0.6 -> 0.8` transition deltas.
 
-**Why:** Small nozzles are sensitive. Your 0.4mm calibrations are conservative and proven. Only adopt system values if they represent an improvement (lower flow = less back-pressure).
-
-**Implementation:**
-- For each numeric field: compare system 0.25 vs custom 0.4 value
-- Only include field if system 0.25 < custom 0.4 (improvement)
-- Skip if system would be more aggressive
-- Conservative: inherits 0.4mm baseline if no safe improvement available
-
-**Example (Creality PLA 0.25mm):**
-```json
-{
-  "inherits": "Creality PLA @AC KS1 Base",
-  "compatible_printers": ["Anycubic Kobra S1 0.25 nozzle"],
-  "nozzle_temperature": ["200"],          // System 0.25 if lower than 0.4
-  "pressure_advance": ["0.055"],          // System 0.25 only if < 0.4
-  // Skips: filament_flow_ratio, volumetric_speed (not improvements)
-  ...
-}
-```
-
-#### Rule 3: 0.8mm - Conservative Comparison Against 0.6mm ⬆️
-**Strategy:** Only use system values if they're **>= your 0.6mm overlay values** (ensure smooth progression).
-
-**Why:** 0.8mm needs enough flow/PA to exceed 0.6mm, otherwise there's a contradiction in the extrusion physics. Progression should be: 0.4 → 0.6 → 0.8 (increasing or stable, never dropping).
-
-**Implementation:**
-- For each numeric field: compare system 0.8 vs KS1 0.6 overlay value
-- Only include field if system 0.8 >= KS1 0.6 value
-- Avoids contradictory settings between nozzle sizes
-- Falls back to inheritance chain if system is worse
-
-**Example (Creality PLA 0.8mm):**
-```json
-{
-  "inherits": "Creality PLA @AC KS1 Base",
-  "compatible_printers": ["Anycubic Kobra S1 0.8 nozzle"],
-  "nozzle_temperature": ["220"],          // System 0.8 if >= 0.6 value
-  "pressure_advance": ["0.05"],           // System 0.8 only if >= 0.6
-  "filament_max_volumetric_speed": ["12"], // Same as system 0.4
-  ...
-}
-```
+**Applied constraints:**
+- No global constants; values are resolved by filament type and printer context.
+- Preserve key completeness and `HS = BRASS + 5` relationship unless explicitly overridden.
+- Enforce `nozzle_temperature_initial_layer_HS <= nozzle_temperature_range_high`.
 
 ### System Data Quality Notes
 
-⚠️ **Known issue with Kobra X 0.4mm system baseline:**
-- Nozzle temperature for ABS = 205°C (physiologically wrong, should be 250-260°C)
-
-**Decision:** KSX 0.6/0.8/0.25 inherit from **KS1 equivalents**, NOT from KSX 0.4 baseline. This avoids propagating the error.
+System profiles differ by printer and are sometimes sparse by nozzle/type. To avoid propagating bad or missing values:
+- KS1 delta derivation uses `Kobra S1` with `Kobra S1 Max` fallback/blending when needed.
+- KSX variants inherit from KS1 same-nozzle variants, then receive X-specific transition overrides.
 
 ---
 
@@ -288,34 +267,34 @@ We applied different strategies for each nozzle size to respect your existing ca
 
 ### Temperature Strategy by Nozzle Size
 
-| Size | Delta vs 0.4mm | Rationale | Materials |
-|---|---|---|---|
-| **0.25mm** | -10 to -20°C | Tiny mass dissipates heat faster; lower temp prevents oozing | PLA 200°C, PETG 230°C |
-| **0.4mm** | 0° (baseline) | Standard reference point | All materials |
-| **0.6mm** | +5 to +15°C | Larger mass absorbs heat; higher temp improves flow | PLA 220°C, PETG 245°C |
-| **0.8mm** | +10 to +20°C | Largest mass; needs highest temps for consistency | PLA 220°C, PETG 250°C |
+| Size | Strategy | Constraint |
+|---|---|---|
+| **0.25mm** | conservative merge from base | lower-only where required by rule set |
+| **0.4mm** | source of truth | base calibration preserved |
+| **0.6mm** | apply system transition | type/printer-specific, no global offset |
+| **0.8mm** | apply system transition from 0.6 | type/printer-specific, no blanket escalation |
 
-**Important:** These are general tendencies. Your custom 0.4mm profiles may already include optimal base temperatures; nozzle variants inherit these and adjust via system baselines.
+Important: fixed temperature offsets are not authoritative. Final temperatures come from the transition logic plus safety bounds.
 
 ### Pressure Advance (PA) Strategy
 
-| Size | PA Adjustment | Physics Explanation |
-|---|---|---|
-| **0.25mm** | PA ×1.5 to ×2.0 | Tiny diameter = high sensitivity to vibrations & pressure waves |
-| **0.4mm** | PA ×1.0 (baseline) | Standard reference; your calibrations are here |
-| **0.6mm** | PA ×0.4 to ×0.6 | Wider extrusion = less drag-induced oscillation; fewer micro-vibrations |
-| **0.8mm** | PA ×0.3 to ×0.5 | Largest extrusion = minimal vibration impact; bead width dominates |
+| Size | PA source |
+|---|---|
+| **0.25mm** | selective conservative merge from base/system |
+| **0.4mm** | base profile calibration |
+| **0.6mm** | system-observed `0.4 -> 0.6` transition per type/printer |
+| **0.8mm** | system-observed `0.6 -> 0.8` transition per type/printer |
 
-**Why PA changes:** Pressure advance compensates for pressure spikes during speed changes. Wider nozzles create wider beads with less precise control → lower PA. Narrower nozzles require tighter control → higher PA.
+PA is not scaled by fixed multipliers in this architecture.
 
 ### Flow Rate / Volumetric Speed
 
-| Size | Approach | Rationale |
-|---|---|---|
-| **0.25mm** | Use system if lower | Avoid over-aggressive flow restrictions |
-| **0.4mm** | Your custom values | Existing calibrations stand |
-| **0.6mm** | Use system directly | Proven to work; physics supports it |
-| **0.8mm** | Use system if ≥ 0.6mm | Ensure smooth layer-to-layer progression |
+| Size | Approach |
+|---|---|
+| **0.25mm** | lower-only/conservative merge where applicable |
+| **0.4mm** | keep custom base values |
+| **0.6mm** | transition-driven updates by type/printer |
+| **0.8mm** | transition-driven updates by type/printer |
 
 ---
 

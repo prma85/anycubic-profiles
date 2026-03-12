@@ -51,7 +51,7 @@
         "245"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "235"
+        "250"
     ],
     "nozzle_temperature_range_high": [
         "250"
@@ -76,5 +76,14 @@
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+    ],
+    "nozzle_temperature_HS": [
+        "245"
+    ],
+    "nozzle_temperature": [
+        "235"
+    ],
+    "nozzle_temperature_range_low": [
+        "235"
     ]
 }

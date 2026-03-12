@@ -1,23 +1,91 @@
 {
-    "from": "User",
-    "inherits": "Overture Matte and Rock PLA @AC KS1 Base",
-    "is_custom_defined": "0",
-    "name": "Overture Matte and Rock PLA",
-    "filament_settings_id": [
-        "Overture Matte and Rock PLA @AC KS1 0.8mm"
+    "activate_chamber_temp_control": [
+        "1"
     ],
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.8 nozzle"
+    "additional_cooling_fan_speed": [
+        "10"
     ],
-    "version": "1.3.2602.11",
-    "filament_vendor": [
-        "Overture"
+    "fan_cooling_layer_time_BRASS": [
+        "100"
+    ],
+    "fan_max_speed_BRASS": [
+        "100"
+    ],
+    "fan_min_speed_BRASS": [
+        "120"
+    ],
+    "filament_cost": [
+        "25"
     ],
     "filament_flow_ratio": [
         "0.98"
     ],
     "filament_max_volumetric_speed": [
-        "12"
+        "18"
+    ],
+    "filament_settings_id": [
+        "Overture Matte and Rock PLA @AC KS1 0.8mm"
+    ],
+    "filament_start_gcode": [
+        "; filament start gcode\n{if (bed_temperature[current_extruder] >60)||(bed_temperature_initial_layer[current_extruder] >60)}M106 P3 S100\n{elsif (bed_temperature[current_extruder] >45)||(bed_temperature_initial_layer[current_extruder] >45)}M106 P3 S60\n{endif}"
+    ],
+    "filament_vendor": [
+        "Overture"
+    ],
+    "filament_z_hop": [
+        "0.6"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "55"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "inherits": "Overture Matte and Rock PLA @AC KS1 0.6mm",
+    "is_custom_defined": "0",
+    "name": "Overture Matte and Rock PLA",
+    "nozzle_temperature_BRASS": [
+        "200"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "205"
+    ],
+    "nozzle_temperature_range_high": [
+        "230"
+    ],
+    "nozzle_temperature_range_low": [
+        "190"
+    ],
+    "pressure_advance": [
+        "0.065"
+    ],
+    "slow_down_layer_time_BRASS": [
+        "8"
+    ],
+    "slow_down_min_speed": [
+        "60"
+    ],
+    "temperature_vitrification": [
+        "75"
+    ],
+    "textured_plate_temp": [
+        "55"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
+    ],
+    "version": "1.3.2602.11",
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.8 nozzle",
+        "Anycubic Kobra S1 0.8 nozzle - Brass",
+        "Anycubic Kobra S1 0.8 nozzle - Hardened Steel"
+    ],
+    "nozzle_temperature_HS": [
+        "205"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "210"
     ],
     "nozzle_temperature": [
         "220"
@@ -25,52 +93,7 @@
     "nozzle_temperature_initial_layer": [
         "220"
     ],
-    "pressure_advance": [
-        "0.05"
-    ],
-    "filament_retraction_length": [
-        "1.2"
-    ],
-    "filament_retraction_speed": [
-        "nil"
-    ],
-    "filament_deretraction_speed": [
-        "nil"
-    ],
-    "filament_z_hop": [
-        "nil"
-    ],
-    "filament_retract_restart_extra": [
-        "nil"
-    ],
-    "fan_min_speed": [
-        "100"
-    ],
-    "fan_max_speed": [
-        "100"
-    ],
-    "fan_cooling_layer_time": [
-        "100"
-    ],
-    "close_fan_the_first_x_layers": [
-        "1"
-    ],
-    "cool_plate_temp": [
-        "35"
-    ],
-    "cool_plate_temp_initial_layer": [
-        "35"
-    ],
-    "hot_plate_temp": [
-        "55"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "55"
-    ],
-    "textured_plate_temp": [
-        "55"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "55"
+    "filament_change_length": [
+        "10"
     ]
 }

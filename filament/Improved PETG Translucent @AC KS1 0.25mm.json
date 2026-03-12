@@ -1,13 +1,46 @@
 {
-    "from": "User",
-    "inherits": "Improved PETG Translucent @AC KS1 Base",
-    "is_custom_defined": "0",
-    "name": "Improved PETG Translucent",
+    "filament_cost": [
+        "39"
+    ],
     "filament_settings_id": [
         "Improved PETG Translucent @AC KS1 0.25mm"
     ],
+    "from": "User",
+    "hot_plate_temp": [
+        "70"
+    ],
+    "inherits": "Improved PETG Translucent @AC KS1 Base",
+    "is_custom_defined": "0",
+    "name": "Improved PETG Translucent",
+    "nozzle_temperature_initial_layer_BRASS": [
+        "235"
+    ],
+    "pressure_advance": [
+        "0.059"
+    ],
+    "version": "1.3.2602.11",
     "compatible_printers": [
         "Anycubic Kobra S1 0.25 nozzle"
     ],
-    "version": "1.3.2602.11"
+    "nozzle_temperature_initial_layer_HS": [
+        "240"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "nozzle_temperature_range_low": [
+        "220"
+    ],
+    "nozzle_temperature_range_high": [
+        "240"
+    ]
 }

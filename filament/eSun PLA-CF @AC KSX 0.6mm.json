@@ -16,28 +16,28 @@
     "filament_vendor": [
         "Esun"
     ],
-    "filament_max_volumetric_speed": [
-        "13"
+    "nozzle_temperature": [
+        "220"
     ],
-    "pressure_advance": [
-        "0.036"
+    "nozzle_temperature_initial_layer": [
+        "220"
     ],
-    "filament_retraction_length": [
-        "nil"
+    "nozzle_temperature_BRASS": [
+        "220"
     ],
-    "additional_cooling_fan_speed": [
-        "0"
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
     ],
-    "hot_plate_temp": [
-        "60"
+    "nozzle_temperature_HS": [
+        "225"
     ],
-    "hot_plate_temp_initial_layer": [
-        "60"
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
     ],
-    "textured_plate_temp": [
-        "60"
+    "nozzle_temperature_range_low": [
+        "220"
     ],
-    "textured_plate_temp_initial_layer": [
-        "60"
+    "nozzle_temperature_range_high": [
+        "225"
     ]
 }

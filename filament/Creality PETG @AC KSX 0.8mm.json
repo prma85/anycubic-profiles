@@ -13,19 +13,49 @@
     "filament_vendor": [
         "Creality "
     ],
-    "filament_flow_ratio": [
-        "0.96"
+    "fan_min_speed": [
+        "15"
     ],
-    "filament_max_volumetric_speed": [
-        "8"
+    "fan_max_speed": [
+        "80"
     ],
-    "filament_retraction_length": [
-        "0.8"
+    "fan_cooling_layer_time": [
+        "20"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "60"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "80"
     ],
     "cool_plate_temp": [
         "70"
     ],
     "cool_plate_temp_initial_layer": [
         "70"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
+    ],
+    "nozzle_temperature_range_low": [
+        "220"
+    ],
+    "nozzle_temperature_range_high": [
+        "225"
     ]
 }

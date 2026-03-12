@@ -39,7 +39,7 @@
         "ASA"
     ],
     "filament_vendor": [
-        "Generico"
+        "Anycubic"
     ],
     "from": "User",
     "full_fan_speed_layer": [
@@ -71,5 +71,23 @@
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "255"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "260"
+    ],
+    "nozzle_temperature": [
+        "255"
+    ],
+    "nozzle_temperature_BRASS": [
+        "255"
+    ],
+    "nozzle_temperature_HS": [
+        "260"
+    ],
+    "nozzle_temperature_range_high": [
+        "260"
     ]
 }

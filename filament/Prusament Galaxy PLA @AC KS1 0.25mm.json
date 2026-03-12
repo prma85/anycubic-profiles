@@ -1,0 +1,67 @@
+{
+    "additional_cooling_fan_speed": [
+        "80"
+    ],
+    "filament_cost": [
+        "29"
+    ],
+    "filament_max_volumetric_speed": [
+        "11"
+    ],
+    "filament_settings_id": [
+        "Prusament Galaxy PLA @AC KS1 0.25mm"
+    ],
+    "filament_vendor": [
+        "Prusament"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "inherits": "Prusament Galaxy PLA @AC KS1 Base",
+    "is_custom_defined": "0",
+    "name": "Prusament Galaxy PLA",
+    "nozzle_temperature_range_high": [
+        "250"
+    ],
+    "pressure_advance": [
+        "0.0265"
+    ],
+    "temperature_vitrification": [
+        "70"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
+    ],
+    "version": "1.3.2602.11",
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.25 nozzle"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
+    ],
+    "nozzle_temperature_range_low": [
+        "220"
+    ]
+}

@@ -15,7 +15,7 @@
         "0"
     ],
     "filament_flow_ratio": [
-        "0.9702"
+        "0.95"
     ],
     "filament_max_volumetric_speed": [
         "20"
@@ -82,7 +82,7 @@
         "200"
     ],
     "pressure_advance": [
-        "0.028"
+        "0.008"
     ],
     "temperature_vitrification": [
         "57"
@@ -92,5 +92,20 @@
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
+    ],
+    "nozzle_temperature_HS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "filament_change_length": [
+        "10"
     ]
 }

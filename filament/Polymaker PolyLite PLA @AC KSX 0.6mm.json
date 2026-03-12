@@ -1,40 +1,49 @@
 {
-    "from": "User",
-    "inherits": "Polymaker PolyLite PLA @AC KS1 0.6mm",
-    "is_custom_defined": "0",
     "name": "Polymaker PolyLite PLA",
-    "filament_settings_id": [
-        "Polymaker PolyLite PLA @AC KSX 0.6mm"
-    ],
+    "is_custom_defined": "0",
+    "version": "1.3.2602.11",
     "compatible_printers": [
         "Anycubic Kobra X 0.6 nozzle"
     ],
-    "version": "1.3.2602.11",
+    "inherits": "Polymaker PolyLite PLA @AC KS1 0.6mm",
+    "filament_settings_id": [
+        "Polymaker PolyLite PLA @AC KSX 0.6mm"
+    ],
+    "from": "User",
     "filament_vendor": [
         "Polymaker"
     ],
-    "filament_max_volumetric_speed": [
-        "13"
-    ],
-    "pressure_advance": [
-        "0.036"
-    ],
-    "filament_retraction_length": [
-        "nil"
-    ],
-    "additional_cooling_fan_speed": [
-        "0"
-    ],
-    "hot_plate_temp": [
-        "60"
+    "fan_min_speed": [
+        "80"
     ],
     "hot_plate_temp_initial_layer": [
         "60"
     ],
-    "textured_plate_temp": [
-        "60"
+    "additional_cooling_fan_speed": [
+        "0"
     ],
-    "textured_plate_temp_initial_layer": [
-        "60"
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
+    ],
+    "nozzle_temperature_range_low": [
+        "220"
+    ],
+    "nozzle_temperature_range_high": [
+        "225"
     ]
 }
