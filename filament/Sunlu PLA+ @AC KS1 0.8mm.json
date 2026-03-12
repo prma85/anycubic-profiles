@@ -1,24 +1,94 @@
 {
-    "filament_flow_ratio": [
-        "0.931"
-    ],
+    "type": "filament",
+    "from": "User",
+    "setting_id": "GFSA04",
+    "filament_id": "GFPLA+",
+    "is_custom_defined": "0",
+    "instantiation": "true",
+    "name": "Sunlu PLA+",
+    "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
+    "version": "1.3.2602.11",
     "filament_settings_id": [
         "Sunlu PLA+ @AC KS1 0.8mm"
     ],
     "filament_vendor": [
         "Sunlu"
     ],
-    "from": "User",
-    "inherits": "Sunlu PLA+ @AC KS1 0.6mm",
-    "is_custom_defined": "0",
-    "name": "Sunlu PLA+",
-    "pressure_advance": [
-        "0.044"
+    "filament_type": [
+        "PLA"
     ],
-    "version": "1.3.2602.11",
     "compatible_printers": [
         "Anycubic Kobra S1 0.8 nozzle",
         "Anycubic Kobra S1 0.8 nozzle - Brass",
         "Anycubic Kobra S1 0.8 nozzle - Hardened Steel"
+    ],
+    "additional_cooling_fan_speed": [
+        "10"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "filament_cost": [
+        "18"
+    ],
+    "filament_density": [
+        "1.23"
+    ],
+    "filament_flow_ratio": [
+        "0.931"
+    ],
+    "filament_max_volumetric_speed": [
+        "17"
+    ],
+    "filament_retraction_length": [
+        "0.3"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_range_high": [
+        "225"
+    ],
+    "nozzle_temperature_range_low": [
+        "195"
+    ],
+    "pressure_advance": [
+        "0.044"
+    ],
+    "temperature_vitrification": [
+        "53"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
+    ],
+    "nozzle_temperature_HS": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_BRASS": [
+        "210"
+    ],
+    "filament_change_length": [
+        "10"
     ]
 }

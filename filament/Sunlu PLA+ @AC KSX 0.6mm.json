@@ -1,31 +1,128 @@
 {
-    "name": "Sunlu PLA+",
+    "type": "filament",
+    "from": "User",
+    "setting_id": "GFSA04",
+    "filament_id": "GFPLA+",
     "is_custom_defined": "0",
+    "instantiation": "true",
+    "name": "Sunlu PLA+",
+    "inherits": "Anycubic PLA+ @Anycubic Kobra X 0.4 nozzle",
     "version": "1.3.2602.11",
-    "compatible_printers": [
-        "Anycubic Kobra X 0.6 nozzle"
-    ],
-    "inherits": "Sunlu PLA+ @AC KS1 0.6mm",
     "filament_settings_id": [
         "Sunlu PLA+ @AC KSX 0.6mm"
     ],
-    "from": "User",
     "filament_vendor": [
         "Sunlu"
     ],
-    "fan_min_speed": [
-        "80"
+    "filament_type": [
+        "PLA"
     ],
-    "additional_cooling_fan_speed": [
+    "compatible_printers": [
+        "Anycubic Kobra X 0.6 nozzle"
+    ],
+    "activate_air_filtration": [
+        "1"
+    ],
+    "bed_type": [
+        "High Temp Plate"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "filament_cost": [
+        "18"
+    ],
+    "filament_density": [
+        "1.23"
+    ],
+    "filament_deretraction_speed": [
         "0"
     ],
-    "nozzle_temperature_BRASS": [
+    "filament_end_gcode": [
+        "; filament end gcode "
+    ],
+    "filament_flow_ratio": [
+        "0.911"
+    ],
+    "filament_load_time": [
+        "42"
+    ],
+    "filament_max_volumetric_speed": [
+        "17"
+    ],
+    "filament_retract_before_wipe": [
+        "0%"
+    ],
+    "filament_retract_lift_below": [
+        "249"
+    ],
+    "filament_retract_restart_extra": [
+        "0"
+    ],
+    "filament_retraction_length": [
+        "0.3"
+    ],
+    "filament_retraction_minimum_travel": [
+        "1"
+    ],
+    "filament_retraction_speed": [
+        "30"
+    ],
+    "filament_unload_time": [
+        "0"
+    ],
+    "filament_z_hop": [
+        "0.4"
+    ],
+    "nozzle_temperature": [
         "220"
     ],
-    "nozzle_temperature_HS": [
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_range_high": [
         "225"
     ],
     "nozzle_temperature_range_low": [
         "220"
+    ],
+    "pressure_advance": [
+        "0.009"
+    ],
+    "temperature_vitrification": [
+        "53"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "100"
+    ],
+    "fan_max_speed_HS": [
+        "100"
+    ],
+    "fan_min_speed_HS": [
+        "100"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
+    ],
+    "nozzle_temperature_range_high_HS": [
+        "240"
+    ],
+    "nozzle_temperature_range_low_HS": [
+        "190"
+    ],
+    "slow_down_layer_time_HS": [
+        "8"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "filament_change_length": [
+        "10"
     ]
 }

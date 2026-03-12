@@ -23,13 +23,11 @@
 
 ### March 2026 Correction Update (v2.1)
 
-After validating real-world UI behavior, the variant architecture was corrected with stricter rules:
+After validating real-world UI behavior, the older user-to-user variant chain was removed and the architecture was corrected with stricter rules:
 
-- `@AC KS1 0.6mm` is now rebuilt as a full clone of `@AC KS1 Base` (no missing fields), then nozzle deltas are applied.
-- `@AC KS1 0.8mm` is rebuilt from `@AC KS1 0.6mm` using 0.6->0.8 deltas.
-- `@AC KS1 0.25mm` is rebuilt from `@AC KS1 Base` using system 0.25 values only when lower.
-- `@AC KSX 0.4mm` inherits from `@AC KS1 Base`.
-- `@AC KSX 0.6mm`, `@AC KSX 0.8mm`, `@AC KSX 0.25mm` inherit from corresponding KS1 variants.
+- `@AC KS1 0.4mm` is the 0.4mm custom overlay family.
+- `@AC KS1 0.6mm`, `@AC KS1 0.8mm`, and `@AC KS1 0.25mm` are rebuilt from their own effective 0.4mm tuning plus nozzle-specific deltas.
+- `@AC KSX 0.4mm`, `@AC KSX 0.6mm`, `@AC KSX 0.8mm`, and `@AC KSX 0.25mm` inherit directly from Kobra X system/OTA parents, not KS1 user files.
 - Filament `.info` files are plain key-value with `sync_info = create` and `setting_id` aligned to `filament_settings_id`.
 
 ### March 2026 Rule Hardening (v2.2)
@@ -56,6 +54,15 @@ Custom profiles are maintained as minimal overlays:
 - HS derivation rule: `+5` is only for `nozzle_temperature_HS` and `nozzle_temperature_initial_layer_HS` when deriving from generic/BRASS values.
 - No `+5` derivation is applied to `nozzle_temperature_range_low` or `nozzle_temperature_range_high`.
 
+### March 2026 Runtime Compatibility Fix (v2.4)
+
+Slicer logs showed that user-to-user filament inheritance was not reliably resolved during startup import.
+
+- Custom filament files now inherit directly from resolvable system/OTA parents.
+- Effective custom overrides are stored in each file so runtime behavior stays intact.
+- This avoids `can not find parent for config ...` import failures that were hiding 0.6mm and 0.8mm presets in the UI.
+- Editing guidance remains: treat `@AC KS1 0.4mm` and `@AC KSX 0.4mm` as the conceptual source overlays for shared tuning, but runtime files must stay flattened to system parents.
+
 ### The Problem We Solved
 
 Previously, all filament profiles were calibrated for **Kobra S1 with 0.4mm brass nozzle only**. This created friction when using:
@@ -79,14 +86,14 @@ Each nozzle size exists for **both printer models**:
 [Material] @AC [Printer] [Nozzle Size]
 
 Examples:
-  - Creality PLA @AC KS1 Base                     (0.4mm, S1 - source of truth)
-  - Creality PLA @AC KS1 0.6mm                    (0.6mm, S1 - inherits from Base)
-  - Creality PLA @AC KSX 0.6mm                    (0.6mm, X - inherits from KS1 0.6mm)
+   - Creality PLA @AC KS1 0.4mm                    (0.4mm, S1 custom overlay)
+   - Creality PLA @AC KS1 0.6mm                    (0.6mm, S1 direct system parent + custom deltas)
+   - Creality PLA @AC KSX 0.6mm                    (0.6mm, X direct system parent + custom deltas)
   - Creality PLA @AC KS1 0.25mm                   (0.25mm, S1)
   - Creality PLA @AC KSX 0.25mm                   (0.25mm, X)
 ```
 
-Profiles without a size suffix (ending in `@AC KS1 Base`) are the **0.4mm brass nozzle originals** that serve as inheritance sources.
+Profiles ending in `@AC KS1 0.4mm` or `@AC KSX 0.4mm` are the **0.4mm custom overlays** for each printer family.
 
 ---
 
@@ -96,7 +103,7 @@ Profiles without a size suffix (ending in `@AC KS1 Base`) are the **0.4mm brass 
 
 | Size | Filament Count | Best For | Printer | Status |
 |------|---|---|---|---|
-| **0.4mm** (Base) | 52 profiles | General purpose, detail | Both | ✓ Original |
+| **0.4mm** | 52 profiles | General purpose, detail | Both | ✓ Custom overlay |
 | **0.6mm** | 52 profiles | Speed, quality, production | Both | ✓ Rebuilt (v2.1) |
 | **0.25mm** | 45 profiles | Fine details, miniatures | Both | ✓ Rebuilt (v2.1) |
 | **0.8mm** | 51 profiles | Fast prototype, structural | Both | ✓ Rebuilt (v2.1) |
@@ -104,8 +111,8 @@ Profiles without a size suffix (ending in `@AC KS1 Base`) are the **0.4mm brass 
 
 ### Coverage by Nozzle Size
 
-#### 0.4mm Base (Original - 52 Profiles)
-Source of truth for custom calibration. All materials available.
+#### 0.4mm Overlay (52 Profiles)
+Source of truth for custom calibration per printer family. All materials available.
 
 **Material families:**
 - PLA (10 variants: standard, silk, galaxy, stone, etc.)

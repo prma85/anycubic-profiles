@@ -1,34 +1,107 @@
 {
+    "type": "filament",
     "from": "User",
-    "inherits": "Improved PETG Translucent @AC KS1 Base",
+    "setting_id": "GFSA04",
+    "filament_id": "GFPETG",
     "is_custom_defined": "0",
+    "instantiation": "true",
     "name": "Improved PETG Translucent",
+    "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",
+    "version": "1.3.2602.11",
     "filament_settings_id": [
         "Improved PETG Translucent @AC KSX 0.4mm"
+    ],
+    "filament_vendor": [
+        "Anycubic"
+    ],
+    "filament_type": [
+        "PETG"
     ],
     "compatible_printers": [
         "Anycubic Kobra X 0.4 nozzle"
     ],
-    "version": "1.3.2602.11",
-    "fan_min_speed": [
-        "15"
+    "bed_type": [
+        "High Temp Plate"
     ],
-    "fan_max_speed": [
-        "80"
+    "filament_cost": [
+        "39"
     ],
-    "fan_cooling_layer_time": [
-        "20"
+    "filament_density": [
+        "1.27"
     ],
-    "during_print_exhaust_fan_speed": [
-        "60"
+    "filament_deretraction_speed": [
+        "0"
     ],
-    "complete_print_exhaust_fan_speed": [
-        "80"
+    "filament_end_gcode": [
+        "; filament end gcode "
     ],
-    "cool_plate_temp": [
+    "filament_load_time": [
+        "42"
+    ],
+    "filament_max_volumetric_speed": [
+        "12"
+    ],
+    "filament_retract_before_wipe": [
+        "0%"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "0.8"
+    ],
+    "filament_retraction_minimum_travel": [
+        "2"
+    ],
+    "filament_retraction_speed": [
+        "30"
+    ],
+    "filament_start_gcode": [
+        "; filament start gcode\n"
+    ],
+    "filament_unload_time": [
+        "0"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "filament_wipe_distance": [
+        "2"
+    ],
+    "hot_plate_temp": [
         "70"
     ],
-    "cool_plate_temp_initial_layer": [
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_range_high": [
+        "240"
+    ],
+    "overhang_fan_threshold": [
+        "10%"
+    ],
+    "pressure_advance": [
+        "0.064"
+    ],
+    "slow_down_layer_time": [
+        "12"
+    ],
+    "temperature_vitrification": [
         "70"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "240"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
     ]
 }

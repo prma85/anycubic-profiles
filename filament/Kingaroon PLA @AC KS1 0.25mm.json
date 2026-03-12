@@ -1,13 +1,112 @@
 {
+    "type": "filament",
+    "from": "User",
+    "setting_id": "GFSA04",
+    "filament_id": "GFPLA",
+    "is_custom_defined": "0",
+    "instantiation": "true",
+    "name": "Kingaroon PLA",
+    "inherits": "Anycubic PLA @Anycubic Kobra S1 0.25 nozzle",
+    "version": "0.0.0.00",
     "filament_settings_id": [
         "Kingaroon PLA @AC KS1 0.25mm"
     ],
-    "from": "User",
-    "inherits": "Kingaroon PLA @AC KS1 Base",
-    "is_custom_defined": "0",
-    "name": "Kingaroon PLA",
-    "version": "0.0.0.00",
+    "filament_vendor": [
+        "Generic"
+    ],
+    "filament_type": [
+        "PLA"
+    ],
     "compatible_printers": [
-        "Anycubic Kobra S1 0.25 nozzle"
+        "Anycubic Kobra S1 0.25 nozzle",
+        "Anycubic Kobra S1 0.25 nozzle - Brass",
+        "Anycubic Kobra S1 0.25 nozzle - Hardened Steel"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "filament_cost": [
+        "22"
+    ],
+    "filament_deretraction_speed": [
+        "0"
+    ],
+    "filament_max_volumetric_speed": [
+        "12"
+    ],
+    "filament_retract_lift_below": [
+        "249"
+    ],
+    "filament_retract_restart_extra": [
+        "0"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "0.8"
+    ],
+    "filament_retraction_minimum_travel": [
+        "1"
+    ],
+    "filament_retraction_speed": [
+        "40"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "filament_wipe_distance": [
+        "1"
+    ],
+    "filament_z_hop": [
+        "0.4"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_range_high": [
+        "220"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "100"
+    ],
+    "fan_max_speed_HS": [
+        "100"
+    ],
+    "fan_min_speed_HS": [
+        "100"
+    ],
+    "nozzle_temperature_HS": [
+        "210"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "215"
+    ],
+    "nozzle_temperature_range_high_HS": [
+        "240"
+    ],
+    "nozzle_temperature_range_low_HS": [
+        "190"
+    ],
+    "slow_down_layer_time_HS": [
+        "12"
+    ],
+    "nozzle_temperature_BRASS": [
+        "205"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "210"
     ]
 }

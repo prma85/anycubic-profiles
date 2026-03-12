@@ -1,15 +1,154 @@
 {
+    "type": "filament",
+    "from": "User",
+    "setting_id": "GFSA04",
+    "filament_id": "GFPETG",
+    "is_custom_defined": "0",
+    "instantiation": "true",
+    "name": "iBOSS Glitter PETG",
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.25 nozzle",
+    "version": "1.3.2503.03",
     "filament_settings_id": [
         "iBOSS Glitter PETG @AC KS1 0.25mm"
     ],
     "filament_vendor": [
         "iBoss"
     ],
-    "from": "User",
-    "inherits": "iBOSS Glitter PETG @AC KS1 Base",
-    "name": "iBOSS Glitter PETG",
-    "version": "1.3.2503.03",
+    "filament_type": [
+        "PETG"
+    ],
     "compatible_printers": [
-        "Anycubic Kobra S1 0.25 nozzle"
+        "Anycubic Kobra S1 0.25 nozzle",
+        "Anycubic Kobra S1 0.25 nozzle - Brass",
+        "Anycubic Kobra S1 0.25 nozzle - Hardened Steel"
+    ],
+    "activate_air_filtration": [
+        "1"
+    ],
+    "additional_cooling_fan_speed": [
+        "10"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "cool_plate_temp": [
+        "35"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "35"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "fan_max_speed": [
+        "40"
+    ],
+    "fan_min_speed": [
+        "30"
+    ],
+    "filament_density": [
+        "1.27"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode "
+    ],
+    "filament_max_volumetric_speed": [
+        "10"
+    ],
+    "filament_minimal_purge_on_wipe_tower": [
+        "10"
+    ],
+    "filament_retract_before_wipe": [
+        "0%"
+    ],
+    "filament_retract_lift_below": [
+        "249"
+    ],
+    "filament_retract_lift_enforce": [
+        "All Surfaces"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "0.8"
+    ],
+    "filament_retraction_minimum_travel": [
+        "2"
+    ],
+    "filament_retraction_speed": [
+        "30"
+    ],
+    "filament_start_gcode": [
+        "; filament start gcode\n"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "filament_wipe_distance": [
+        "2"
+    ],
+    "filament_z_hop": [
+        "0.6"
+    ],
+    "filament_z_hop_types": [
+        "Slope Lift"
+    ],
+    "hot_plate_temp": [
+        "70"
+    ],
+    "idle_temperature": [
+        "175"
+    ],
+    "nozzle_temperature": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "235"
+    ],
+    "nozzle_temperature_range_high": [
+        "250"
+    ],
+    "nozzle_temperature_range_low": [
+        "230"
+    ],
+    "overhang_fan_speed": [
+        "90"
+    ],
+    "pressure_advance": [
+        "0.064"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
+    ],
+    "temperature_vitrification": [
+        "80"
+    ],
+    "textured_plate_temp": [
+        "70"
+    ],
+    "adaptive_pressure_advance_model": [
+        "0,0,0\n0,0,0"
+    ],
+    "dont_slow_down_outer_wall": [
+        "1"
+    ],
+    "fan_max_speed_BRASS": [
+        "75"
+    ],
+    "nozzle_temperature_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "240"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "245"
+    ],
+    "nozzle_temperature_HS": [
+        "240"
     ]
 }

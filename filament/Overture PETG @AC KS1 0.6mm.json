@@ -1,28 +1,146 @@
 {
-    "fan_max_speed_BRASS": [
-        "60"
-    ],
-    "filament_flow_ratio": [
-        "0.97"
-    ],
+    "type": "filament",
+    "from": "User",
+    "setting_id": "GFSA04",
+    "filament_id": "GFPETG",
+    "is_custom_defined": "0",
+    "instantiation": "true",
+    "name": "Overture PETG",
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.6 nozzle",
+    "version": "1.3.2602.11",
     "filament_settings_id": [
         "Overture PETG @AC KS1 0.6mm"
     ],
     "filament_vendor": [
         "Overture"
     ],
-    "from": "User",
-    "inherits": "Overture PETG @AC KS1 Base",
-    "is_custom_defined": "0",
-    "name": "Overture PETG",
-    "pressure_advance": [
-        "0.01"
+    "filament_type": [
+        "PETG"
     ],
-    "version": "1.3.2602.11",
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
+    ],
+    "activate_air_filtration": [
+        "1"
+    ],
+    "additional_cooling_fan_speed": [
+        "10"
+    ],
+    "bed_type": [
+        "High Temp Plate"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "enable_pressure_advance": [
+        "0"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "0"
+    ],
+    "filament_cost": [
+        "25"
+    ],
+    "filament_density": [
+        "1.25"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode \nM106 P3 S0\n"
+    ],
+    "filament_flow_ratio": [
+        "0.97"
+    ],
+    "filament_load_time": [
+        "42"
+    ],
+    "filament_max_volumetric_speed": [
+        "10"
+    ],
+    "filament_minimal_purge_on_wipe_tower": [
+        "10"
+    ],
+    "filament_retract_lift_below": [
+        "249"
+    ],
+    "filament_retract_lift_enforce": [
+        "All Surfaces"
+    ],
+    "filament_start_gcode": [
+        "; filament start gcode\n{if (bed_temperature[current_extruder] >80)||(bed_temperature_initial_layer[current_extruder] >80)}M106 P3 S255\n{elsif (bed_temperature[current_extruder] >60)||(bed_temperature_initial_layer[current_extruder] >60)}M106 P3 S180\n{endif}\n\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}"
+    ],
+    "filament_unload_time": [
+        "0"
+    ],
+    "filament_z_hop": [
+        "0.6"
+    ],
+    "filament_z_hop_types": [
+        "Slope Lift"
+    ],
+    "hot_plate_temp": [
+        "65"
+    ],
+    "idle_temperature": [
+        "175"
+    ],
+    "nozzle_temperature_range_high": [
+        "255"
+    ],
+    "nozzle_temperature_range_low": [
+        "230"
+    ],
+    "overhang_fan_speed": [
+        "90"
+    ],
+    "pressure_advance": [
+        "0.01"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
+    ],
+    "temperature_vitrification": [
+        "85"
+    ],
+    "textured_plate_temp": [
+        "70"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "70"
+    ],
+    "adaptive_pressure_advance_model": [
+        "0,0,0\n0,0,0"
+    ],
+    "dont_slow_down_outer_wall": [
+        "1"
+    ],
+    "fan_max_speed_BRASS": [
+        "60"
+    ],
+    "nozzle_temperature_BRASS": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "255"
+    ],
+    "nozzle_temperature_HS": [
+        "255"
+    ],
+    "fan_min_speed_BRASS": [
+        "0"
+    ],
+    "fan_min_speed_HS": [
+        "20"
     ],
     "filament_change_length": [
         "10"

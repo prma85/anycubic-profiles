@@ -40,18 +40,16 @@ Do not mix responsibilities between layers unless explicitly required.
 - Keep existing KS1/KSX and nozzle suffix conventions.
 - Do not collapse KS1 and KSX filament profiles into a single file.
 - Filament architecture must follow:
-	- `@AC KS1 Base` is source of truth (0.4).
-	- `@AC KS1 0.6mm` = full clone of base + 0.6 deltas.
-	- `@AC KS1 0.8mm` = clone of KS1 0.6 + 0.8 deltas.
-	- `@AC KS1 0.25mm` = clone of base + system 0.25 values only where lower.
-	- `@AC KSX 0.4mm` inherits from KS1 Base.
-	- `@AC KSX 0.6/0.8/0.25` inherit from corresponding KS1 variants.
+		- Runtime constraint: do not use user-to-user filament inheritance.
+		- Every custom filament JSON must inherit directly from a system/OTA parent that the slicer can resolve at startup.
+		- Variant files must carry their effective custom overrides explicitly when flattening a previous user inheritance chain.
+		- `@AC KS1 0.4mm` is the shared 0.4 editing reference, but runtime files must not depend on user-parent loading order.
 	- `.info` must be plain key-value and include `sync_info = create` and aligned `setting_id`.
 	- Deltas must be type/printer-specific (no global constants):
 		- KS1 rules derived from Kobra S1 with S1 Max fallback.
 		- KSX rules derived from Kobra X system profiles.
 	- `filament_change_length` must only be added/kept when the matching system transition contains it.
-	- Keep `@AC KS1 Base` profiles minimal:
+	- Keep `@AC KS1 0.4mm` profiles minimal:
 		- Remove keys that are identical to inherited effective values (parent or parent-parent chain).
 		- Keep keys that differ from inherited effective values.
 		- Never remove `version`.
@@ -106,6 +104,7 @@ When creating or editing PETG variants:
 When editing JSON profiles:
 - Keep IDs coherent and unique.
 - Keep parent inheritance valid.
+- For filament profiles, parent must be a directly resolvable system/OTA preset, not another user filament preset.
 - Prefer removing redundant keys to rely on parent defaults.
 - Avoid introducing unrelated formatting changes.
 

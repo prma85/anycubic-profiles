@@ -1,25 +1,128 @@
 {
-    "fan_max_speed_BRASS": [
-        "50"
-    ],
+    "type": "filament",
+    "from": "User",
+    "setting_id": "GFSA04",
+    "filament_id": "GFPETG",
+    "is_custom_defined": "0",
+    "instantiation": "true",
+    "name": "eSun PETG Translucent",
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.6 nozzle",
+    "version": "1.3.2602.11",
     "filament_settings_id": [
         "eSun PETG Translucent @AC KS1 0.6mm"
     ],
     "filament_vendor": [
         "eSun"
     ],
-    "from": "User",
-    "inherits": "eSun PETG Translucent @AC KS1 Base",
-    "is_custom_defined": "0",
-    "name": "eSun PETG Translucent",
-    "pressure_advance": [
-        "0.048"
+    "filament_type": [
+        "PETG"
     ],
-    "version": "1.3.2602.11",
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
+    ],
+    "bed_type": [
+        "High Temp Plate"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "70"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "70"
+    ],
+    "fan_min_speed": [
+        "30"
+    ],
+    "filament_cost": [
+        "25"
+    ],
+    "filament_density": [
+        "1.27"
+    ],
+    "filament_deretraction_speed": [
+        "0"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode "
+    ],
+    "filament_load_time": [
+        "42"
+    ],
+    "filament_retract_before_wipe": [
+        "0%"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "1.1"
+    ],
+    "filament_retraction_minimum_travel": [
+        "2"
+    ],
+    "filament_retraction_speed": [
+        "30"
+    ],
+    "filament_start_gcode": [
+        "; filament start gcode\n{if (bed_temperature[current_extruder] >60)||(bed_temperature_initial_layer[current_extruder] >60)}M106 P3 S100\n{elsif (bed_temperature[current_extruder] >45)||(bed_temperature_initial_layer[current_extruder] >45)}M106 P3 S60\n{endif}"
+    ],
+    "filament_unload_time": [
+        "0"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "filament_wipe_distance": [
+        "2"
+    ],
+    "filament_z_hop": [
+        "0.6"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "75"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_range_high": [
+        "270"
+    ],
+    "nozzle_temperature_range_low": [
+        "220"
+    ],
+    "overhang_fan_speed": [
+        "90"
+    ],
+    "pressure_advance": [
+        "0.048"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
+    ],
+    "temperature_vitrification": [
+        "76"
+    ],
+    "adaptive_pressure_advance_model": [
+        "0,0,0\n0,0,0"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "240"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "fan_max_speed_BRASS": [
+        "50"
     ],
     "filament_change_length": [
         "10"

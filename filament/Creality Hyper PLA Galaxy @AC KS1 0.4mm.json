@@ -1,0 +1,121 @@
+{
+    "type": "filament",
+    "from": "User",
+    "setting_id": "GFSA04",
+    "filament_id": "GFPETG",
+    "is_custom_defined": "0",
+    "instantiation": "true",
+    "name": "Creality Hyper PLA Galaxy",
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
+    "version": "1.3.2503.03",
+    "filament_settings_id": [
+        "Creality Hyper PLA Galaxy @AC KS1 0.4mm"
+    ],
+    "filament_vendor": [
+        "Creality"
+    ],
+    "filament_type": [
+        "PETG"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Brass",
+        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+    ],
+    "activate_air_filtration": [
+        "1"
+    ],
+    "activate_chamber_temp_control": [
+        "1"
+    ],
+    "additional_cooling_fan_speed": [
+        "80"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "fan_max_speed": [
+        "40"
+    ],
+    "filament_cost": [
+        "26"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
+    "filament_max_volumetric_speed": [
+        "20"
+    ],
+    "filament_minimal_purge_on_wipe_tower": [
+        "10"
+    ],
+    "filament_retract_lift_below": [
+        "249"
+    ],
+    "filament_retract_lift_enforce": [
+        "All Surfaces"
+    ],
+    "filament_retraction_minimum_travel": [
+        "1.5"
+    ],
+    "filament_retraction_speed": [
+        "35"
+    ],
+    "filament_z_hop": [
+        "0.6"
+    ],
+    "filament_z_hop_types": [
+        "Slope Lift"
+    ],
+    "hot_plate_temp": [
+        "50"
+    ],
+    "idle_temperature": [
+        "175"
+    ],
+    "nozzle_temperature": [
+        "205"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "205"
+    ],
+    "nozzle_temperature_range_high": [
+        "230"
+    ],
+    "nozzle_temperature_range_low": [
+        "205"
+    ],
+    "pressure_advance": [
+        "0.064"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
+    ],
+    "textured_plate_temp": [
+        "50"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "50"
+    ],
+    "fan_max_speed_BRASS": [
+        "70"
+    ],
+    "nozzle_temperature_BRASS": [
+        "210"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "205"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "210"
+    ],
+    "nozzle_temperature_HS": [
+        "215"
+    ]
+}

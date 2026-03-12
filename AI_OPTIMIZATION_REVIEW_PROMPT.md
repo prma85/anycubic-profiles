@@ -43,9 +43,10 @@ Please assess whether these machine deltas are still optimal and identify any co
 Filament system is multi-nozzle and printer-aware.
 
 High-level model:
-- KS1 0.4 custom profiles are the primary source family.
+- KS1 0.4 custom profiles are the primary editing reference for shared tuning.
 - 0.25 / 0.6 / 0.8 variants exist with nozzle-specific tuning.
 - KSX variants exist separately from KS1 due machine/cooling differences.
+- Runtime constraint: custom filament JSONs are flattened to inherit directly from system/OTA parents because the slicer does not reliably resolve user-to-user filament parent chains at startup.
 - Profiles should stay minimal overlays: remove keys identical to inherited effective values; keep only intentional deltas.
 - Keep `version` even when equal to parent.
 
@@ -93,6 +94,11 @@ Please verify that no unintended extra differences remain.
 
 ### 4) S1 vs X unification strategy
 
+For filament profiles, use this runtime-safe rule set:
+- `@AC KS1 0.4mm` and `@AC KSX 0.4mm` are the editable 0.4 overlay families.
+- Every custom filament JSON must inherit directly from a resolvable system or OTA parent.
+- KSX filament files must inherit from Kobra X parents, never KS1 user files.
+
 Intentional approach:
 - Filaments are separated by printer/nozzle (KS1 vs KSX).
 - Processes are shared across printers for same nozzle size via compatible_printers.
@@ -127,6 +133,7 @@ Please provide:
 
 - Preserve current naming conventions unless there is a strong reason to change.
 - Preserve inheritance-first architecture.
+- For runtime filament compatibility, prefer direct system-parent inheritance over user-to-user filament inheritance.
 - Prefer reducing overrides rather than adding new hard-coded values.
 - For temperature derivation, allow `+5` only for `nozzle_temperature_HS` and `nozzle_temperature_initial_layer_HS` when deriving from generic/BRASS values.
 - Do not derive `nozzle_temperature_range_low/high` with `+5`; inherit parent ranges unless a true custom deviation is required.

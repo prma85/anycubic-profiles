@@ -1,0 +1,55 @@
+{
+    "type": "filament",
+    "from": "User",
+    "setting_id": "GFSA04",
+    "filament_id": "GFPETG",
+    "is_custom_defined": "0",
+    "instantiation": "true",
+    "name": "Improved PETG Translucent",
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
+    "version": "1.3.2602.11",
+    "filament_settings_id": [
+        "Improved PETG Translucent @AC KS1 0.4mm"
+    ],
+    "filament_vendor": [
+        "Anycubic"
+    ],
+    "filament_type": [
+        "PETG"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Brass",
+        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+    ],
+    "filament_cost": [
+        "39"
+    ],
+    "hot_plate_temp": [
+        "70"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_range_high": [
+        "240"
+    ],
+    "pressure_advance": [
+        "0.064"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "240"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ]
+}
