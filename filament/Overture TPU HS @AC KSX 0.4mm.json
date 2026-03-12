@@ -1,0 +1,19 @@
+{
+    "from": "User",
+    "inherits": "Overture TPU HS @AC KS1 Base",
+    "is_custom_defined": "0",
+    "name": "Overture TPU HS",
+    "filament_settings_id": [
+        "Overture TPU HS @AC KSX 0.4mm"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra X 0.4 nozzle"
+    ],
+    "version": "1.5.0.61",
+    "filament_type": [
+        "TPU"
+    ],
+    "filament_vendor": [
+        "Generic"
+    ]
+}

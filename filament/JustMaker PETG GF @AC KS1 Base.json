@@ -1,0 +1,165 @@
+{
+    "activate_air_filtration": [
+        "0"
+    ],
+    "adaptive_pressure_advance_model": [
+        "0,0,0\n0,0,0"
+    ],
+    "additional_cooling_fan_speed": [
+        "10"
+    ],
+    "close_fan_the_first_x_layers": [
+        "3"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "70"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "70"
+    ],
+    "fan_cooling_layer_time": [
+        "30"
+    ],
+    "fan_cooling_layer_time_BRASS": [
+        "30"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "30"
+    ],
+    "fan_max_speed": [
+        "60"
+    ],
+    "fan_max_speed_BRASS": [
+        "70"
+    ],
+    "fan_max_speed_HS": [
+        "60"
+    ],
+    "fan_min_speed": [
+        "30"
+    ],
+    "fan_min_speed_BRASS": [
+        "10"
+    ],
+    "fan_min_speed_HS": [
+        "30"
+    ],
+    "filament_cost": [
+        "25"
+    ],
+    "filament_density": [
+        "1.27"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_flow_ratio": [
+        "1"
+    ],
+    "filament_retract_before_wipe": [
+        "0%"
+    ],
+    "filament_retract_lift_enforce": [
+        "All Surfaces"
+    ],
+    "filament_retract_restart_extra": [
+        "0.02"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "0.6"
+    ],
+    "filament_retraction_minimum_travel": [
+        "4"
+    ],
+    "filament_retraction_speed": [
+        "25"
+    ],
+    "filament_settings_id": [
+        "JustMaker PETG GF @AC KS1 Base"
+    ],
+    "filament_type": [
+        "PETG"
+    ],
+    "filament_vendor": [
+        "JustMaker"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "filament_wipe_distance": [
+        "2"
+    ],
+    "filament_z_hop": [
+        "0.2"
+    ],
+    "filament_z_hop_types": [
+        "Slope Lift"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "70"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "75"
+    ],
+    "idle_temperature": [
+        "175"
+    ],
+    "inherits": "Anycubic PETG-CF @Anycubic Kobra S1 0.4 nozzle",
+    "name": "JustMaker PETG GF",
+    "nozzle_temperature": [
+        "250"
+    ],
+    "nozzle_temperature_BRASS": [
+        "245"
+    ],
+    "nozzle_temperature_HS": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "255"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "255"
+    ],
+    "nozzle_temperature_range_high": [
+        "270"
+    ],
+    "nozzle_temperature_range_low": [
+        "240"
+    ],
+    "overhang_fan_speed": [
+        "90"
+    ],
+    "overhang_fan_threshold": [
+        "10%"
+    ],
+    "pressure_advance": [
+        "0.042"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
+    ],
+    "slow_down_layer_time": [
+        "12"
+    ],
+    "slow_down_layer_time_BRASS": [
+        "12"
+    ],
+    "temperature_vitrification": [
+        "80"
+    ],
+    "textured_plate_temp": [
+        "70"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "75"
+    ],
+    "version": "1.3.2503.03"
+}

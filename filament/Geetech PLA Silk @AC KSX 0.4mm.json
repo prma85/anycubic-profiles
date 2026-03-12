@@ -1,0 +1,34 @@
+{
+    "from": "User",
+    "inherits": "Geetech PLA Silk @AC KS1 Base",
+    "is_custom_defined": "0",
+    "name": "Geetech PLA Silk",
+    "filament_settings_id": [
+        "Geetech PLA Silk @AC KSX 0.4mm"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra X 0.4 nozzle"
+    ],
+    "version": "1.3.2602.11",
+    "filament_vendor": [
+        "Geetech"
+    ],
+    "fan_min_speed": [
+        "80"
+    ],
+    "additional_cooling_fan_speed": [
+        "0"
+    ],
+    "activate_air_filtration": [
+        "0"
+    ],
+    "hot_plate_temp": [
+        "65"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "65"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ]
+}

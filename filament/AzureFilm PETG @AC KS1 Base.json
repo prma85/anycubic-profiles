@@ -1,0 +1,40 @@
+{
+    "filament_cost": [
+        "19"
+    ],
+    "filament_max_volumetric_speed": [
+        "18"
+    ],
+    "filament_settings_id": [
+        "AzureFilm PETG @AC KS1 Base"
+    ],
+    "filament_vendor": [
+        "AzureFilm"
+    ],
+    "from": "User",
+    "hot_plate_temp": [
+        "70"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "70"
+    ],
+    "inherits": "Improved PETG @AC KS1 Base",
+    "is_custom_defined": "0",
+    "name": "AzureFilm PETG",
+    "nozzle_temperature_BRASS": [
+        "240"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "240"
+    ],
+    "nozzle_temperature_range_high": [
+        "265"
+    ],
+    "nozzle_temperature_range_low": [
+        "240"
+    ],
+    "pressure_advance": [
+        "0.036"
+    ],
+    "version": "1.3.2602.11"
+}
