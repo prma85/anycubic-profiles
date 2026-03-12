@@ -341,5 +341,10 @@
     "textured_plate_temp_initial_layer": [
         "35"
     ],
-    "version": "1.5.0.61"
+    "version": "1.5.0.61",
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Brass",
+        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+    ]
 }

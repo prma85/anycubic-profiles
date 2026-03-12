@@ -7,7 +7,9 @@
         "Improved PLA @AC KS1 0.6mm"
     ],
     "compatible_printers": [
-        "Anycubic Kobra S1 0.6 nozzle"
+        "Anycubic Kobra S1 0.6 nozzle",
+        "Anycubic Kobra S1 0.6 nozzle - Brass",
+        "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
     ],
     "version": "1.3.2503.03",
     "filament_vendor": [

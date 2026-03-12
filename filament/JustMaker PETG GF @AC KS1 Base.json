@@ -1,15 +1,9 @@
 {
-    "activate_air_filtration": [
-        "0"
-    ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
     ],
     "additional_cooling_fan_speed": [
         "10"
-    ],
-    "close_fan_the_first_x_layers": [
-        "3"
     ],
     "complete_print_exhaust_fan_speed": [
         "70"
@@ -32,17 +26,11 @@
     "fan_max_speed_BRASS": [
         "70"
     ],
-    "fan_max_speed_HS": [
-        "60"
-    ],
     "fan_min_speed": [
         "30"
     ],
     "fan_min_speed_BRASS": [
         "10"
-    ],
-    "fan_min_speed_HS": [
-        "30"
     ],
     "filament_cost": [
         "25"
@@ -54,7 +42,7 @@
         "25"
     ],
     "filament_flow_ratio": [
-        "1"
+        "0.96"
     ],
     "filament_retract_before_wipe": [
         "0%"
@@ -102,14 +90,11 @@
     "hot_plate_temp": [
         "70"
     ],
-    "hot_plate_temp_initial_layer": [
-        "75"
-    ],
     "idle_temperature": [
         "175"
     ],
     "inherits": "Anycubic PETG-CF @Anycubic Kobra S1 0.4 nozzle",
-    "name": "JustMaker PETG GF",
+    "name": "JustMaker PETG GF @AC KS1 Base",
     "nozzle_temperature": [
         "250"
     ],
@@ -117,28 +102,16 @@
         "245"
     ],
     "nozzle_temperature_HS": [
-        "250"
+        "240"
     ],
     "nozzle_temperature_initial_layer": [
         "255"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "250"
-    ],
     "nozzle_temperature_initial_layer_HS": [
-        "255"
-    ],
-    "nozzle_temperature_range_high": [
-        "270"
-    ],
-    "nozzle_temperature_range_low": [
-        "240"
+        "245"
     ],
     "overhang_fan_speed": [
         "90"
-    ],
-    "overhang_fan_threshold": [
-        "10%"
     ],
     "pressure_advance": [
         "0.042"
@@ -152,14 +125,14 @@
     "slow_down_layer_time_BRASS": [
         "12"
     ],
+    "slow_down_layer_time_HS": [
+        "12"
+    ],
     "temperature_vitrification": [
         "80"
     ],
     "textured_plate_temp": [
         "70"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "75"
     ],
     "version": "1.3.2503.03"
 }
