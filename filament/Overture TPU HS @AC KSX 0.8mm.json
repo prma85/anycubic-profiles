@@ -39,8 +39,5 @@
     ],
     "nozzle_temperature_range_high": [
         "225"
-    ],
-    "filament_change_length": [
-        "10"
     ]
 }

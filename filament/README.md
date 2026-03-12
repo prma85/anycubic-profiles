@@ -13,8 +13,9 @@
 3. [Filament Inventory by Printer & Nozzle](#filament-inventory-by-printer--nozzle)
 4. [Generation Rules & Inheritance Strategy](#generation-rules--inheritance-strategy)
 5. [Main Differences Between Variants](#main-differences-between-variants)
-6. [How to Update Values](#how-to-update-values)
-7. [Quick Reference: Selection Guide](#quick-reference-selection-guide)
+6. [Editing Workflow Reminder](#editing-workflow-reminder)
+7. [How to Update Values](#how-to-update-values)
+8. [Quick Reference: Selection Guide](#quick-reference-selection-guide)
 
 ---
 
@@ -43,6 +44,17 @@ Authoritative generation behavior now enforced in files:
 - `filament_change_length` is only added/preserved when the corresponding system transition includes it.
 - `nozzle_temperature_range_high` is always present on generated 0.6/0.8 variants.
 - Safety constraint is enforced: `nozzle_temperature_initial_layer_HS <= nozzle_temperature_range_high`.
+
+### March 2026 Override-Minimization Cleanup (v2.3)
+
+Custom profiles are maintained as minimal overlays:
+
+- For each profile, keys identical to inherited effective values are removed.
+- Keys that differ from inherited effective values are preserved.
+- `version` is always retained, even if equal to parent.
+- 0.4 base profiles remain source-of-truth overlays, not full copies of parent data.
+- HS derivation rule: `+5` is only for `nozzle_temperature_HS` and `nozzle_temperature_initial_layer_HS` when deriving from generic/BRASS values.
+- No `+5` derivation is applied to `nozzle_temperature_range_low` or `nozzle_temperature_range_high`.
 
 ### The Problem We Solved
 
@@ -295,6 +307,20 @@ PA is not scaled by fixed multipliers in this architecture.
 | **0.4mm** | keep custom base values |
 | **0.6mm** | transition-driven updates by type/printer |
 | **0.8mm** | transition-driven updates by type/printer |
+
+---
+
+## Editing Workflow Reminder
+
+Use this order to avoid drift and duplicated overrides:
+
+1. Update `@AC KS1 Base` when the change should affect all nozzle variants.
+2. Update `@AC KS1 0.6mm` / `0.8mm` / `0.25mm` only for nozzle-specific behavior.
+3. Keep child profiles minimal: only explicit differences from inherited effective values.
+4. Keep `version` in every profile, even if same as parent.
+5. After edits, run validation for inheritance integrity and thermal safety (`HS initial <= range high`).
+
+Practical rule: if a value is shared across nozzle sizes, put it in base. If it is nozzle-specific, keep it in that nozzle profile only.
 
 ---
 

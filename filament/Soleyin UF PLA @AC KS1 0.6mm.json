@@ -1,18 +1,6 @@
 {
-    "additional_cooling_fan_speed": [
-        "10"
-    ],
-    "during_print_exhaust_fan_speed": [
-        "50"
-    ],
     "filament_flow_ratio": [
         "0.921"
-    ],
-    "filament_max_volumetric_speed": [
-        "15"
-    ],
-    "filament_retraction_length": [
-        "0.6"
     ],
     "filament_settings_id": [
         "Soleyin UF PLA @AC KS1 0.6mm"
@@ -21,18 +9,9 @@
         "Soleyin"
     ],
     "from": "User",
-    "hot_plate_temp": [
-        "50"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "50"
-    ],
     "inherits": "Soleyin UF PLA @AC KS1 Base",
     "is_custom_defined": "0",
     "name": "Soleyin UF PLA",
-    "nozzle_temperature_range_high": [
-        "225"
-    ],
     "pressure_advance": [
         "0.002"
     ],
@@ -41,27 +20,6 @@
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
-    ],
-    "nozzle_temperature": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "220"
-    ],
-    "nozzle_temperature_BRASS": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "220"
-    ],
-    "nozzle_temperature_HS": [
-        "225"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "225"
-    ],
-    "nozzle_temperature_range_low": [
-        "220"
     ],
     "filament_change_length": [
         "10"

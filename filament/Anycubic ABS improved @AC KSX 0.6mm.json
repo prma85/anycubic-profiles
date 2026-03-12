@@ -25,9 +25,6 @@
     "fan_cooling_layer_time": [
         "100"
     ],
-    "during_print_exhaust_fan_speed": [
-        "0"
-    ],
     "complete_print_exhaust_fan_speed": [
         "0"
     ],

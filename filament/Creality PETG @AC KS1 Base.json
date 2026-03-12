@@ -1,7 +1,4 @@
 {
-    "additional_cooling_fan_speed": [
-        "10"
-    ],
     "close_fan_the_first_x_layers": [
         "2"
     ],
@@ -13,9 +10,6 @@
     ],
     "filament_deretraction_speed": [
         "30"
-    ],
-    "filament_max_volumetric_speed": [
-        "10"
     ],
     "filament_retraction_length": [
         "1.5"
@@ -36,16 +30,10 @@
     "hot_plate_temp_initial_layer": [
         "80"
     ],
-    "idle_temperature": [
-        "175"
-    ],
     "inherits": "Improved PETG @AC KS1 Base",
     "name": "Creality PETG",
     "nozzle_temperature_BRASS": [
         "240"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "235"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
         "245"
@@ -59,17 +47,8 @@
     "overhang_fan_speed": [
         "100"
     ],
-    "reduce_fan_stop_start_freq": [
-        "0"
-    ],
     "slow_down_min_speed": [
         "40"
-    ],
-    "temperature_vitrification": [
-        "80"
-    ],
-    "textured_plate_temp": [
-        "70"
     ],
     "version": "1.3.2503.03",
     "compatible_printers": [
@@ -79,9 +58,6 @@
     ],
     "nozzle_temperature_HS": [
         "245"
-    ],
-    "nozzle_temperature": [
-        "235"
     ],
     "nozzle_temperature_range_low": [
         "235"

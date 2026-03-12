@@ -26,9 +26,6 @@
     "filament_end_gcode": [
         "; filament end gcode \nM106 P3 S0\n"
     ],
-    "filament_flow_ratio": [
-        "0.95"
-    ],
     "filament_retract_before_wipe": [
         "nil"
     ],
@@ -75,20 +72,11 @@
     "nozzle_temperature_initial_layer_BRASS": [
         "250"
     ],
-    "nozzle_temperature_range_high": [
-        "255"
-    ],
-    "nozzle_temperature_range_low": [
-        "230"
-    ],
     "pressure_advance": [
         "0.02"
     ],
     "temperature_vitrification": [
         "85"
-    ],
-    "textured_plate_temp": [
-        "70"
     ],
     "textured_plate_temp_initial_layer": [
         "70"

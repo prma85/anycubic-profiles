@@ -1,7 +1,4 @@
 {
-    "filament_cost": [
-        "19"
-    ],
     "filament_max_volumetric_speed": [
         "15"
     ],
@@ -12,27 +9,9 @@
         "AzureFilm"
     ],
     "from": "User",
-    "hot_plate_temp": [
-        "70"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "70"
-    ],
     "inherits": "AzureFilm PETG @AC KS1 Base",
     "is_custom_defined": "0",
     "name": "AzureFilm PETG",
-    "nozzle_temperature_BRASS": [
-        "240"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "240"
-    ],
-    "nozzle_temperature_range_high": [
-        "265"
-    ],
-    "nozzle_temperature_range_low": [
-        "240"
-    ],
     "pressure_advance": [
         "0.026"
     ],
@@ -41,18 +20,6 @@
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
-    ],
-    "nozzle_temperature_HS": [
-        "245"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "245"
-    ],
-    "nozzle_temperature": [
-        "240"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "240"
     ],
     "filament_change_length": [
         "10"

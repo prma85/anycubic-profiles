@@ -1,45 +1,6 @@
 {
-    "additional_cooling_fan_speed": [
-        "100"
-    ],
-    "complete_print_exhaust_fan_speed": [
-        "100"
-    ],
-    "during_print_exhaust_fan_speed": [
-        "100"
-    ],
-    "fan_min_speed_BRASS": [
-        "50"
-    ],
-    "filament_cost": [
-        "24"
-    ],
-    "filament_deretraction_speed": [
-        "0"
-    ],
-    "filament_flow_ratio": [
-        "0.97"
-    ],
     "filament_max_volumetric_speed": [
         "0"
-    ],
-    "filament_retract_lift_below": [
-        "249"
-    ],
-    "filament_retract_restart_extra": [
-        "0"
-    ],
-    "filament_retract_when_changing_layer": [
-        "1"
-    ],
-    "filament_retraction_length": [
-        "0.8"
-    ],
-    "filament_retraction_minimum_travel": [
-        "1"
-    ],
-    "filament_retraction_speed": [
-        "40"
     ],
     "filament_settings_id": [
         "JustMaker Silk PLA @AC KS1 0.25mm"
@@ -47,54 +8,9 @@
     "filament_vendor": [
         "JustMaker"
     ],
-    "filament_wipe": [
-        "1"
-    ],
-    "filament_wipe_distance": [
-        "1"
-    ],
-    "filament_z_hop": [
-        "0.4"
-    ],
     "from": "User",
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
     "inherits": "JustMaker Silk PLA @AC KS1 Base",
     "name": "JustMaker Silk PLA",
-    "nozzle_temperature": [
-        "210"
-    ],
-    "nozzle_temperature_BRASS": [
-        "225"
-    ],
-    "nozzle_temperature_HS": [
-        "230"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "210"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "230"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "235"
-    ],
-    "nozzle_temperature_range_high": [
-        "235"
-    ],
-    "nozzle_temperature_range_low": [
-        "210"
-    ],
-    "pressure_advance": [
-        "0.04"
-    ],
-    "textured_plate_temp": [
-        "45"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "50"
-    ],
     "version": "1.3.2503.03",
     "compatible_printers": [
         "Anycubic Kobra S1 0.25 nozzle"

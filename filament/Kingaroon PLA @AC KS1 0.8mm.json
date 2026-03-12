@@ -3,46 +3,13 @@
         "Kingaroon PLA @AC KS1 0.8mm"
     ],
     "from": "User",
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
     "inherits": "Kingaroon PLA @AC KS1 0.6mm",
     "is_custom_defined": "0",
     "name": "Kingaroon PLA",
-    "nozzle_temperature_BRASS": [
-        "205"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "210"
-    ],
-    "nozzle_temperature_range_high": [
-        "220"
-    ],
-    "nozzle_temperature_range_low": [
-        "190"
-    ],
     "version": "0.0.0.00",
     "compatible_printers": [
         "Anycubic Kobra S1 0.8 nozzle",
         "Anycubic Kobra S1 0.8 nozzle - Brass",
         "Anycubic Kobra S1 0.8 nozzle - Hardened Steel"
-    ],
-    "nozzle_temperature_HS": [
-        "210"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "215"
-    ],
-    "nozzle_temperature": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "220"
-    ],
-    "filament_change_length": [
-        "10"
     ]
 }

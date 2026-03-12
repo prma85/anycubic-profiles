@@ -2,9 +2,6 @@
     "additional_cooling_fan_speed": [
         "0"
     ],
-    "close_fan_the_first_x_layers": [
-        "3"
-    ],
     "cool_plate_temp": [
         "0"
     ],
@@ -23,9 +20,6 @@
     "filament_cost": [
         "23"
     ],
-    "filament_density": [
-        "1.27"
-    ],
     "filament_deretraction_speed": [
         "0"
     ],
@@ -35,12 +29,6 @@
     "filament_max_volumetric_speed": [
         "9"
     ],
-    "filament_retract_before_wipe": [
-        "0%"
-    ],
-    "filament_retract_lift_below": [
-        "249"
-    ],
     "filament_retract_restart_extra": [
         "0"
     ],
@@ -49,9 +37,6 @@
     ],
     "filament_retraction_minimum_travel": [
         "1"
-    ],
-    "filament_retraction_speed": [
-        "30"
     ],
     "filament_settings_id": [
         "Sunlu PETG @AC KS1 Base"
@@ -64,9 +49,6 @@
     ],
     "filament_vendor": [
         "Sunlu"
-    ],
-    "filament_wipe_distance": [
-        "2"
     ],
     "filament_z_hop": [
         "0.4"
@@ -89,15 +71,6 @@
     ],
     "nozzle_temperature_range_high": [
         "280"
-    ],
-    "nozzle_temperature_range_low": [
-        "230"
-    ],
-    "overhang_fan_speed": [
-        "90"
-    ],
-    "overhang_fan_threshold": [
-        "10%"
     ],
     "pressure_advance": [
         "0.029"

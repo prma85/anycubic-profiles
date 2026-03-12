@@ -36,9 +36,6 @@
         "0.6"
     ],
     "from": "User",
-    "hot_plate_temp": [
-        "55"
-    ],
     "hot_plate_temp_initial_layer": [
         "60"
     ],
@@ -54,9 +51,6 @@
     "nozzle_temperature_range_high": [
         "230"
     ],
-    "nozzle_temperature_range_low": [
-        "190"
-    ],
     "pressure_advance": [
         "0.05"
     ],
@@ -68,9 +62,6 @@
     ],
     "temperature_vitrification": [
         "75"
-    ],
-    "textured_plate_temp": [
-        "55"
     ],
     "textured_plate_temp_initial_layer": [
         "60"

@@ -33,9 +33,6 @@
         "0.2"
     ],
     "from": "User",
-    "hot_plate_temp": [
-        "70"
-    ],
     "idle_temperature": [
         "175"
     ],

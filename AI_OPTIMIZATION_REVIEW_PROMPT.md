@@ -46,6 +46,8 @@ High-level model:
 - KS1 0.4 custom profiles are the primary source family.
 - 0.25 / 0.6 / 0.8 variants exist with nozzle-specific tuning.
 - KSX variants exist separately from KS1 due machine/cooling differences.
+- Profiles should stay minimal overlays: remove keys identical to inherited effective values; keep only intentional deltas.
+- Keep `version` even when equal to parent.
 
 Please review:
 - temperature and flow consistency across nozzle sizes
@@ -126,5 +128,7 @@ Please provide:
 - Preserve current naming conventions unless there is a strong reason to change.
 - Preserve inheritance-first architecture.
 - Prefer reducing overrides rather than adding new hard-coded values.
+- For temperature derivation, allow `+5` only for `nozzle_temperature_HS` and `nozzle_temperature_initial_layer_HS` when deriving from generic/BRASS values.
+- Do not derive `nozzle_temperature_range_low/high` with `+5`; inherit parent ranges unless a true custom deviation is required.
 - Explain trade-offs explicitly (quality, strength, speed, reliability).
 - If suggesting value changes, cite why using both print physics and observed profile patterns.

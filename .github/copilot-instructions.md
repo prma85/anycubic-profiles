@@ -51,6 +51,14 @@ Do not mix responsibilities between layers unless explicitly required.
 		- KS1 rules derived from Kobra S1 with S1 Max fallback.
 		- KSX rules derived from Kobra X system profiles.
 	- `filament_change_length` must only be added/kept when the matching system transition contains it.
+	- Keep `@AC KS1 Base` profiles minimal:
+		- Remove keys that are identical to inherited effective values (parent or parent-parent chain).
+		- Keep keys that differ from inherited effective values.
+		- Never remove `version`.
+	- Temperature specificity rule:
+		- `+5` offset applies only to `nozzle_temperature_HS` and `nozzle_temperature_initial_layer_HS` when deriving HS from generic/BRASS.
+		- Do not apply `+5` to `nozzle_temperature_range_low` or `nozzle_temperature_range_high`.
+		- If parent chain already defines range keys, prefer inheriting unless custom range values are intentionally different.
 
 ### Machine
 - Keep overrides minimal.
@@ -110,12 +118,13 @@ After changes, verify:
 - Compatibility lists match intended nozzle and printer scope.
 - HQ/Optimal and PETG rules remain consistent.
 - For filament variants:
-	- `0.6` variant key count must not be lower than base key count.
+	- `0.6` variant key count must not be lower than base key count before redundancy cleanup.
 	- `nozzle_temperature_*_BRASS` and `nozzle_temperature_*_HS` keys must exist on `0.6` and `0.8`.
 	- HS temperature keys should be `BRASS + 5` unless user explicitly overrides.
 	- `0.6` and `0.8` generic nozzle temperatures must not be below `nozzle_temperature_range_low`.
 	- `nozzle_temperature_range_high` must exist on generated `0.6`/`0.8` and satisfy:
 		- `nozzle_temperature_initial_layer_HS <= nozzle_temperature_range_high`.
+	- For all filament profiles, remove keys that are identical to inherited effective values except required metadata (including `version`).
 
 ## External Analysis Context
 
