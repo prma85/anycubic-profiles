@@ -1,12 +1,12 @@
 # Copilot Instructions - User 651589 Anycubic Profiles
 
-Last updated: 2026-03-11
+Last updated: 2026-03-12
 
 ## Purpose
 
 These instructions guide AI-assisted edits to custom Anycubic Slicer profiles in user/651589.
 
-Primary objective:
+Primary objectives:
 - Preserve inheritance-driven architecture.
 - Apply small, auditable overrides.
 - Keep S1 and X behavior unified where intended.
@@ -15,16 +15,15 @@ Primary objective:
 
 Before editing profiles, read:
 - ../copilot-instructions.md (high-level map)
-- ../README.md (repository-level architecture)
+- ../README.md (repository architecture)
 - ../filament/README.md (filament strategy)
 - ../process/README.md (process families and tuning rules)
-- ../S1_VS_X_UNIFICATION.md (why filaments split and process can unify)
 
 ## Folder Responsibilities
 
-- machine/: printer/nozzle hardware overlays
+- machine/: printer and nozzle hardware overlays
 - filament/: material behavior calibration
-- process/: quality/speed/use-case presets
+- process/: quality, speed, and use-case presets
 
 Do not mix responsibilities between layers unless explicitly required.
 
@@ -37,39 +36,32 @@ Do not mix responsibilities between layers unless explicitly required.
 - Keep .json and .info pairs synchronized.
 
 ### Filament
-- Keep existing KS1/KSX and nozzle suffix conventions.
-- Do not collapse KS1 and KSX filament profiles into a single file.
-- Filament architecture must follow:
-		- Runtime constraint: do not use user-to-user filament inheritance.
-		- Every custom filament JSON must inherit directly from a system/OTA parent that the slicer can resolve at startup.
-		- Variant files must carry their effective custom overrides explicitly when flattening a previous user inheritance chain.
-		- `@AC KS1 0.4mm` is the shared 0.4 editing reference, but runtime files must not depend on user-parent loading order.
-	- `.info` must be plain key-value and include `sync_info = create` and aligned `setting_id`.
-	- Deltas must be type/printer-specific (no global constants):
-		- KS1 rules derived from Kobra S1 with S1 Max fallback.
-		- KSX rules derived from Kobra X system profiles.
-	- `filament_change_length` must only be added/kept when the matching system transition contains it.
-	- Keep `@AC KS1 0.4mm` profiles minimal:
-		- Remove keys that are identical to inherited effective values (parent or parent-parent chain).
-		- Keep keys that differ from inherited effective values.
-		- Never remove `version`.
-	- Temperature specificity rule:
-		- `+5` offset applies only to `nozzle_temperature_HS` and `nozzle_temperature_initial_layer_HS` when deriving HS from generic/BRASS.
-		- Do not apply `+5` to `nozzle_temperature_range_low` or `nozzle_temperature_range_high`.
-		- If parent chain already defines range keys, prefer inheriting unless custom range values are intentionally different.
+- Keep KS1 and KSX nozzle suffix conventions.
+- Do not collapse KS1 and KSX filament profiles into one file.
+- Use one-level user inheritance:
+  - KS1 0.25, 0.6, 0.8 must inherit matching KS1 0.4.
+  - KSX 0.25, 0.6, 0.8 must inherit matching KSX 0.4.
+  - KSX must never inherit KS1 user filaments.
+- Keep child variants minimal:
+  - Remove keys identical to inherited effective values.
+  - Keep only intentional differences.
+  - Never remove version.
+- .info must be plain key-value with sync_info=create and aligned setting_id.
+- Deltas must remain type-specific and printer-aware.
+- filament_change_length must only be added or kept when justified by system transitions.
 
 ### Machine
-- Keep overrides minimal.
+- Keep machine overrides minimal.
 - Avoid duplicating system values unless intentional for lock-in.
 
 ## Compatibility Rules
 
 For process profiles:
 - Include Kobra X in compatible_printers for the same nozzle size.
-- Keep S1 brass/hardened variants listed where used.
+- Keep S1 brass and hardened variants listed where used.
 
 For filament profiles:
-- Keep printer-specific compatibility due thermal/cooling differences.
+- Keep printer-specific compatibility due thermal and cooling differences.
 
 ## 0.25 HQ vs Optimal Rule
 
@@ -87,15 +79,15 @@ Any additional differences should be treated as regression unless explicitly req
 
 ## 0.6 Safety Rule
 
-For 0.6 profiles:
+For 0.6 process profiles:
 - Ensure support_bottom_z_distance >= effective layer height.
 
 ## Regular vs PETG Intent
 
-PETG process variants intentionally diverge from regular profiles in bridge/support behavior and selected speeds.
+PETG process variants intentionally diverge from regular profiles in bridge and support behavior.
 
 When creating or editing PETG variants:
-- Preserve explicit bridge tuning (for example, bridge_speed and bridge_flow).
+- Preserve explicit bridge tuning.
 - Preserve support release spacing where defined.
 - Do not force PETG to match regular profile speeds blindly.
 
@@ -103,31 +95,27 @@ When creating or editing PETG variants:
 
 When editing JSON profiles:
 - Keep IDs coherent and unique.
-- Keep parent inheritance valid.
-- For filament profiles, parent must be a directly resolvable system/OTA preset, not another user filament preset.
+- Keep inheritance targets valid.
 - Prefer removing redundant keys to rely on parent defaults.
-- Avoid introducing unrelated formatting changes.
+- Avoid unrelated formatting churn.
 
 ## Validation Checklist
 
 After changes, verify:
 - JSON syntax is valid.
-- Name/filename/info alignment is correct.
+- Name, filename, and info alignment are correct.
 - Inheritance targets exist.
 - Compatibility lists match intended nozzle and printer scope.
 - HQ/Optimal and PETG rules remain consistent.
 - For filament variants:
-	- `0.6` variant key count must not be lower than base key count before redundancy cleanup.
-	- `nozzle_temperature_*_BRASS` and `nozzle_temperature_*_HS` keys must exist on `0.6` and `0.8`.
-	- HS temperature keys should be `BRASS + 5` unless user explicitly overrides.
-	- `0.6` and `0.8` generic nozzle temperatures must not be below `nozzle_temperature_range_low`.
-	- `nozzle_temperature_range_high` must exist on generated `0.6`/`0.8` and satisfy:
-		- `nozzle_temperature_initial_layer_HS <= nozzle_temperature_range_high`.
-	- For all filament profiles, remove keys that are identical to inherited effective values except required metadata (including `version`).
+  - All non-0.4 variants inherit matching 0.4 parent.
+  - BRASS and HS temperature key intent remains intact where required.
+  - HS initial temperature does not exceed range high.
+  - Keys identical to inherited values are removed except required metadata.
 
 ## External Analysis Context
 
 If preparing data for external AI analysis with zipped inputs:
 - user.zip = custom overlays (user/651589/*)
 - anycubic.zip = system defaults (system/Anycubic/*)
-- Treat inherits in user.zip as references to files in anycubic.zip when parent is not present in user.zip.
+- Resolve inherits in user.zip by checking user.zip first, then anycubic.zip.

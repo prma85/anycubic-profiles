@@ -1,0 +1,7 @@
+build
+coverage
+**/*.json
+README.md
+.env.sample
+.env
+lint/*
