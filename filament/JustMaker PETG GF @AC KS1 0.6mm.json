@@ -15,15 +15,15 @@
         "25"
     ],
     "filament_settings_id": [
-        "JustMaler PETG GF @AC KS1 Base"
+        "JustMaker PETG GF @AC KS1 0.6mm"
     ],
     "filament_z_hop": [
         "0.2"
     ],
     "from": "User",
-    "inherits": "Anycubic PETG-CF @Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "JustMaker PETG GF @AC KS1 Base",
     "is_custom_defined": "0",
-    "name": "JustMaler PETG GF",
+    "name": "JustMaker PETG GF",
     "nozzle_temperature_HS": [
         "245"
     ],
