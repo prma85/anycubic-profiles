@@ -1,31 +1,25 @@
 {
-    "from": "User",
-    "inherits": "Kingaroon PLA Silk @AC KS1 Base",
-    "is_custom_defined": "0",
     "name": "Kingaroon PLA Silk",
-    "filament_settings_id": [
-        "Kingaroon PLA Silk @AC KSX 0.4mm"
-    ],
+    "is_custom_defined": "0",
+    "version": "0.0.0.00",
     "compatible_printers": [
         "Anycubic Kobra X 0.4 nozzle"
     ],
-    "version": "0.0.0.00",
+    "inherits": "Kingaroon PLA Silk @AC KS1 Base",
+    "filament_settings_id": [
+        "Kingaroon PLA Silk @AC KSX 0.4mm"
+    ],
+    "from": "User",
     "fan_min_speed": [
         "80"
     ],
-    "additional_cooling_fan_speed": [
-        "0"
-    ],
-    "activate_air_filtration": [
-        "0"
-    ],
-    "hot_plate_temp": [
-        "65"
+    "nozzle_temperature": [
+        "220"
     ],
     "hot_plate_temp_initial_layer": [
         "65"
     ],
-    "nozzle_temperature": [
-        "220"
+    "additional_cooling_fan_speed": [
+        "0"
     ]
 }
