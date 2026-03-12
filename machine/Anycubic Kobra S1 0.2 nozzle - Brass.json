@@ -1,18 +1,18 @@
 {
-    "default_print_profile": "0.40mm @AC KS1 0.8 mm Nozzle",
+    "default_print_profile": "0.08mm Standard @Anycubic Kobra S1 0.25 nozzle",
     "from": "User",
-    "inherits": "Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "Anycubic Kobra S1 0.25 nozzle",
     "max_layer_height": [
         "0.14"
     ],
     "min_layer_height": [
         "0.04"
     ],
-    "name": "Anycubic Kobra S1 0.2 nozzle - Brass",
+    "name": "Anycubic Kobra S1 0.25 nozzle - Brass",
     "nozzle_diameter": [
         "0.25"
     ],
-    "printer_settings_id": "Anycubic Kobra S1 0.2 nozzle - Brass",
+    "printer_settings_id": "Anycubic Kobra S1 0.25 nozzle - Brass",
     "retraction_length": [
         "0.4"
     ],

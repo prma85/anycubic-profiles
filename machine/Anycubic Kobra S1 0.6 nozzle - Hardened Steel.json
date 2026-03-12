@@ -1,7 +1,7 @@
 {
-    "default_print_profile": "0.40mm @AC KS1 0.8 mm Nozzle",
+    "default_print_profile": "0.30mm Standard @Anycubic Kobra S1 0.6 nozzle",
     "from": "User",
-    "inherits": "Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "Anycubic Kobra S1 0.6 nozzle",
     "max_layer_height": [
         "0.42"
     ],
@@ -9,10 +9,10 @@
         "0.12"
     ],
     "name": "Anycubic Kobra S1 0.6 nozzle - Hardened Steel",
+    "nozzle_type": "hardened_steel",
     "nozzle_diameter": [
         "0.6"
     ],
-    "nozzle_type": "hardened_steel",
     "printer_settings_id": "Anycubic Kobra S1 0.6 nozzle - Hardened Steel",
     "retraction_length": [
         "1"

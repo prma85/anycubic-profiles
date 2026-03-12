@@ -9,7 +9,7 @@
         "10"
     ],
     "close_fan_the_first_x_layers": [
-        "3"
+        "4"
     ],
     "complete_print_exhaust_fan_speed": [
         "70"
@@ -33,7 +33,7 @@
         "70"
     ],
     "fan_max_speed_HS": [
-        "90"
+        "60"
     ],
     "fan_min_speed": [
         "0"
@@ -53,20 +53,26 @@
     "filament_deretraction_speed": [
         "25"
     ],
+    "filament_flow_ratio": [
+        "1"
+    ],
     "filament_retract_before_wipe": [
         "0%"
+    ],
+    "filament_retract_restart_extra": [
+        "0.02"
     ],
     "filament_retract_when_changing_layer": [
         "1"
     ],
     "filament_retraction_length": [
-        "0.8"
+        "0.6"
     ],
     "filament_retraction_minimum_travel": [
-        "2"
+        "4"
     ],
     "filament_retraction_speed": [
-        "30"
+        "25"
     ],
     "filament_settings_id": [
         "JustMaker PETG GF"
@@ -84,7 +90,7 @@
         "2"
     ],
     "filament_z_hop": [
-        "0.6"
+        "0.2"
     ],
     "from": "User",
     "hot_plate_temp": [
@@ -105,7 +111,7 @@
         "245"
     ],
     "nozzle_temperature_HS": [
-        "230"
+        "250"
     ],
     "nozzle_temperature_initial_layer": [
         "255"
@@ -114,7 +120,7 @@
         "250"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "235"
+        "255"
     ],
     "nozzle_temperature_range_high": [
         "270"
@@ -129,10 +135,7 @@
         "10%"
     ],
     "pressure_advance": [
-        "0.04"
-    ],
-    "reduce_fan_stop_start_freq": [
-        "0"
+        "0.042"
     ],
     "slow_down_layer_time": [
         "12"

@@ -1,4 +1,5 @@
 {
+    "default_print_profile": "0.16mm Optimal",
     "from": "User",
     "inherits": "Anycubic Kobra S1 0.4 nozzle",
     "max_layer_height": [
