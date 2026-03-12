@@ -1,0 +1,25 @@
+{
+    "from": "User",
+    "inherits": "Creality PETG @AC KS1 0.25mm",
+    "is_custom_defined": "0",
+    "name": "Creality PETG",
+    "filament_settings_id": [
+        "Creality PETG @AC KSX 0.25mm"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra X 0.25 nozzle"
+    ],
+    "version": "1.3.2503.03",
+    "filament_vendor": [
+        "Creality "
+    ],
+    "filament_max_volumetric_speed": [
+        "1.5"
+    ],
+    "cool_plate_temp": [
+        "70"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "70"
+    ]
+}

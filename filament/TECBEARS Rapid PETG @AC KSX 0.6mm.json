@@ -1,0 +1,34 @@
+{
+    "from": "User",
+    "inherits": "TECBEARS Rapid PETG @AC KS1 0.6mm",
+    "is_custom_defined": "0",
+    "name": "TECBEARS Rapid PETG",
+    "filament_settings_id": [
+        "TECBEARS Rapid PETG @AC KSX 0.6mm"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra X 0.6 nozzle"
+    ],
+    "version": "1.3.2503.03",
+    "filament_vendor": [
+        "TECBEARS"
+    ],
+    "filament_max_volumetric_speed": [
+        "8"
+    ],
+    "pressure_advance": [
+        "0.04"
+    ],
+    "cool_plate_temp": [
+        "70"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "70"
+    ],
+    "hot_plate_temp": [
+        "75"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "75"
+    ]
+}

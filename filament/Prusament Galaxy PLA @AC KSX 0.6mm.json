@@ -1,0 +1,16 @@
+{
+    "from": "User",
+    "inherits": "Prusament Galaxy PLA @AC KS1 0.6mm",
+    "is_custom_defined": "0",
+    "name": "Prusament Galaxy PLA",
+    "filament_settings_id": [
+        "Prusament Galaxy PLA @AC KSX 0.6mm"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra X 0.6 nozzle"
+    ],
+    "version": "1.3.2602.11",
+    "filament_vendor": [
+        "Prusament"
+    ]
+}

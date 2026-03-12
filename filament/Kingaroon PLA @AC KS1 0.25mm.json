@@ -1,0 +1,13 @@
+{
+    "from": "User",
+    "inherits": "Kingaroon PLA @AC KS1 Base",
+    "is_custom_defined": "0",
+    "name": "Kingaroon PLA",
+    "filament_settings_id": [
+        "Kingaroon PLA @AC KS1 0.25mm"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.25 nozzle"
+    ],
+    "version": "0.0.0.00"
+}

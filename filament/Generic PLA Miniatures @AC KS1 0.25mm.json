@@ -1,0 +1,13 @@
+{
+    "from": "User",
+    "inherits": "Generic PLA Miniatures @AC KS1 Base",
+    "is_custom_defined": "0",
+    "name": "Generic PLA Miniatures",
+    "filament_settings_id": [
+        "Generic PLA Miniatures @AC KS1 0.25mm"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.25 nozzle"
+    ],
+    "version": "1.3.2602.11"
+}

@@ -1,0 +1,25 @@
+{
+    "from": "User",
+    "inherits": "Overture TPU @AC KS1 0.6mm",
+    "is_custom_defined": "0",
+    "name": "Overture TPU",
+    "filament_settings_id": [
+        "Overture TPU @AC KSX 0.6mm"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra X 0.6 nozzle"
+    ],
+    "version": "1.5.0.61",
+    "filament_type": [
+        "TPU"
+    ],
+    "filament_vendor": [
+        "Overture"
+    ],
+    "filament_retraction_length": [
+        "0.8"
+    ],
+    "additional_cooling_fan_speed": [
+        "0"
+    ]
+}

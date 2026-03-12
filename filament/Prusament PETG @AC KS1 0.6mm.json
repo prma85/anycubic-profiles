@@ -1,20 +1,17 @@
 {
     "from": "User",
-    "inherits": "JustMaker PETG GF @AC KS1 Base",
+    "inherits": "Prusament PETG @AC KS1 Base",
     "is_custom_defined": "0",
-    "name": "JustMaker PETG GF",
+    "name": "Prusament PETG",
     "filament_settings_id": [
-        "JustMaker PETG GF @AC KS1 0.6mm"
+        "Prusament PETG @AC KS1 0.6mm"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle"
     ],
-    "version": "1.3.2503.03",
-    "filament_type": [
-        "PETG"
-    ],
+    "version": "1.3.2602.11",
     "filament_vendor": [
-        "JustMaker"
+        "Prusament"
     ],
     "filament_flow_ratio": [
         "0.96"

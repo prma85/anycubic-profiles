@@ -1,0 +1,37 @@
+{
+    "from": "User",
+    "inherits": "Kingaroon PLA @AC KS1 0.6mm",
+    "is_custom_defined": "0",
+    "name": "Kingaroon PLA",
+    "filament_settings_id": [
+        "Kingaroon PLA @AC KSX 0.6mm"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra X 0.6 nozzle"
+    ],
+    "version": "0.0.0.00",
+    "filament_max_volumetric_speed": [
+        "13"
+    ],
+    "pressure_advance": [
+        "0.036"
+    ],
+    "filament_retraction_length": [
+        "nil"
+    ],
+    "additional_cooling_fan_speed": [
+        "0"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
+    ]
+}
