@@ -20,7 +20,7 @@
     "name": "Disney plates",
     "outer_wall_line_width": "0.6",
     "outer_wall_speed": "100",
-    "print_settings_id": "Disney plates",
+    "print_settings_id": "Disney plates @0.6mm",
     "sparse_infill_density": "10%",
     "sparse_infill_line_width": "0.6",
     "sparse_infill_pattern": "adaptivecubic",

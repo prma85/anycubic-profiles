@@ -11,7 +11,7 @@
     "from": "User",
     "gap_infill_speed": "70",
     "infill_jerk": "4",
-    "inherits": "0.20mm Standard @Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "0.08mm Standard @Anycubic Kobra S1 0.4 nozzle",
     "initial_layer_acceleration": "600",
     "initial_layer_infill_speed": "35",
     "initial_layer_jerk": "4",

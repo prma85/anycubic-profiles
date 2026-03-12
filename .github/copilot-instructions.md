@@ -12,16 +12,17 @@
 
 1. [System Overview](#system-overview)
 2. [Printer Hardware Specifications](#printer-hardware-specifications)
-3. [Quick Start - How to Print](#quick-start---how-to-print)
-4. [Nozzle-Specific Configuration Variations](#nozzle-specific-configuration-variations)
-5. [Machine-Specific Differences (S1 vs X)](#machine-specific-differences-s1-vs-x)
-6. [Filament Selection by Type](#filament-selection-by-type)
-7. [Process Profile Selection Guide](#process-profile-selection-guide)
-8. [Specialized Profiles & Their Uses](#specialized-profiles--their-uses)
-9. [OrcaSlicer Best Practices by Print Type](#orcaslicer-best-practices-by-print-type)
-10. [Printer Calibration & Maintenance](#printer-calibration--maintenance)
-11. [Common Issues & Solutions](#common-issues--solutions)
-12. [Adding New Filaments](#adding-new-filaments)
+3. [🆕 Filament Profile Migration (v2.0)](#filament-profile-migration-v20)
+4. [Quick Start - How to Print](#quick-start---how-to-print)
+5. [Nozzle-Specific Configuration Variations](#nozzle-specific-configuration-variations)
+6. [Machine-Specific Differences (S1 vs X)](#machine-specific-differences-s1-vs-x)
+7. [Filament Selection by Type](#filament-selection-by-type)
+8. [Process Profile Selection Guide](#process-profile-selection-guide)
+9. [Specialized Profiles & Their Uses](#specialized-profiles--their-uses)
+10. [OrcaSlicer Best Practices by Print Type](#orcaslicer-best-practices-by-print-type)
+11. [Printer Calibration & Maintenance](#printer-calibration--maintenance)
+12. [Common Issues & Solutions](#common-issues--solutions)
+13. [Adding New Filaments](#adding-new-filaments)
 
 ---
 
@@ -75,6 +76,174 @@ user/651589/
 │
 └── README.md, QUICK_REFERENCE.md
 ```
+
+---
+
+## FILAMENT PROFILE MIGRATION (v2.0)
+
+### What Changed: Overview
+
+In March 2026, we completed a major migration of the filament profile system:
+
+**Before (v1.0):**
+- 52 filament profiles for Kobra S1 0.4mm brass nozzle only
+- Limited to single printer, single nozzle size
+- No variants for faster (0.6mm, 0.8mm) or finer (0.25mm) detail work
+
+**After (v2.0):**
+- **298 total filament profiles** (up from 52)
+- **Full nozzle coverage:** 0.25mm, 0.4mm, 0.6mm, 0.8mm
+- **Both printers supported:** KS1 (Kobra S1) and KSX (Kobra X) variants
+- **Physics-based rules:** Smart override system for each nozzle size
+- **Clean inheritance:** Each variant inherits from 0.4mm base, reducing maintenance
+- **Removed problematic settings:** No more aggressive flow_ratio deltas
+
+### Profile Inventory Summary
+
+```
+┌──────────────────────────────────────────────────┐
+│ FILAMENT PROFILE INVENTORY (v2.0)                │
+├──────────────────────────────────────────────────┤
+│ KS1 (Kobra S1) Profiles:          149            │
+│   • 0.4mm Base           52 profiles             │
+│   • 0.6mm variants       39 profiles             │
+│   • 0.25mm variants      29 profiles (PLA/PETG)  │
+│   • 0.8mm variants       29 profiles (PLA/PETG)  │
+│                                                  │
+│ KSX (Kobra X) Profiles:           149            │
+│   • 0.4mm variants       52 profiles             │
+│   • 0.6mm variants       39 profiles             │
+│   • 0.25mm variants      29 profiles             │
+│   • 0.8mm variants       29 profiles             │
+│                                                  │
+│ TOTAL:                            298 profiles   │
+└──────────────────────────────────────────────────┘
+```
+
+### Key Facts About Variants
+
+#### 0.4mm Nozzle (Base / Source of Truth)
+- Your original custom calibrations
+- All 52 material brands covered
+- Every 0.6mm/0.25mm/0.8mm variant inherits from these
+- Location: `filament/` folder (no nozzle suffix in name)
+- Example: `Creality PLA @AC KS1 Base`
+
+#### 0.6mm Nozzle (Speed-Optimized)
+- **Use when:** Large parts, production speed important, quality still matters
+- **Physics:** Larger orifice = higher flow, lower pressure advance
+- **Generation rule:** Direct system baseline application
+- **Coverage:** 39 profiles (all engineering plastics, all general purpose)
+- **Speed boost:** ~30% faster than 0.4mm with acceptable quality loss
+- **Example:** `Creality PLA @AC KS1 0.6mm`
+
+#### 0.25mm Nozzle (Fine Detail)
+- **Use when:** Small parts, miniatures, jewelry, high-precision geometry
+- **Physics:** Tiny orifice = ultra-precise extrusion, high PA
+- **Generation rule:** Selective system application (only values lower than 0.4mm)
+- **Coverage:** 29 profiles (PLA, PLA+, PETG only; no engineering plastics)
+- **Speed impact:** ~50% slower than 0.4mm but extreme detail possible
+- **Example:** `Creality PLA @AC KS1 0.25mm`
+
+#### 0.8mm Nozzle (Fast Prototype)
+- **Use when:** Rapid testing, large structures, fast iteration
+- **Physics:** Large orifice = minimal precision, bead-width-limited flow
+- **Generation rule:** Conservative system application (only values ≥ 0.6mm overlay)
+- **Coverage:** 29 profiles (PLA, PLA+, PETG only)
+- **Speed boost:** ~80% faster than 0.4mm, acceptable for prototypes
+- **Example:** `Creality PLA @AC KS1 0.8mm`
+
+#### KSX Variants (Kobra X)
+- Based on KS1 profiles but with X-specific adjustments
+- Inherit from corresponding KS1 nozzle variant (e.g., KSX 0.6 inherits from KS1 0.6)
+- Small overrides for X-specific thermal/pressure characteristics
+- **Important:** Do NOT inherit from KSX 0.4 baseline (known quality issue with system ABS temp)
+- Example inheritance: `Creality PLA @AC KSX 0.6mm` ← inherits ← `Creality PLA @AC KS1 0.6mm`
+
+### Generation Strategy (Technical Reference)
+
+For future maintenance and understanding how variants were generated:
+
+#### Smart Rule #1: 0.6mm - Direct System Application
+```
+FOR each material in library:
+  CREATE 0.6mm variant
+  INHERIT FROM: 0.4mm Base profile
+  OVERRIDE WITH: System Anycubic 0.6mm effective values
+  APPLICABLE TO: All 39 materials (ABS, ASA, TPU, PLA, PETG, Nylon, etc.)
+  
+  Fields applied:
+    • nozzle_temperature (system 0.6mm)
+    • pressure_advance (system 0.6mm, typically 40-60% of 0.4mm)
+    • filament_max_volumetric_speed (system value)
+    • cooling_fan settings (100% vs 60% for 0.4mm)
+```
+
+**Rationale:** User's JustMaker PETG GF 0.6mm proves system values work. Physics confirms: larger nozzle = higher temps needed, lower PA needed.
+
+#### Smart Rule #2: 0.25mm - Selective System Application
+```
+FOR each material IN [PLA, PLA+, PETG only]:
+  CREATE 0.25mm variant
+  INHERIT FROM: 0.4mm Base profile
+  FOR each numeric field:
+    IF system_0.25_value < custom_0.4mm_value THEN
+      OVERRIDE WITH: system_0.25_value
+    ELSE
+      SKIP (use inherited 0.4mm value)
+    END IF
+  APPLICABLE TO: 29 profiles (conservative material selection)
+```
+
+**Rationale:** Small nozzles are finicky. Only adopt system values if they represent improvements (lower flow = less clog risk). Skip if system would be more aggressive than your proven 0.4mm calibrations.
+
+#### Smart Rule #3: 0.8mm - Conservative Comparison
+```
+FOR each material IN [PLA, PLA+, PETG only]:
+  CREATE 0.8mm variant
+  INHERIT FROM: 0.4mm Base profile
+  FOR each numeric field:
+    IF system_0.8mm_value >= ks1_0.6mm_overlay_value THEN
+      OVERRIDE WITH: system_0.8mm_value
+    ELSE
+      SKIP (use inherited 0.4mm value)
+    END IF
+  APPLICABLE TO: 29 profiles (only non-precision materials)
+```
+
+**Rationale:** Maintain physics consistency: nozzle progression must be 0.4 → 0.6 → 0.8 (never dropping in PA or flow). Ensures no contradictory settings between sizes.
+
+#### KSX Variant Generation
+```
+FOR each KS1 nozzle_size variant (0.25/0.4/0.6/0.8):
+  CREATE KSX equivalent
+  INHERIT FROM: KS1 variant (same nozzle size)
+  OVERRIDE WITH: X-specific deltas (usually minimal for PLA/PETG)
+  COMPATIBLE_PRINTERS: "Anycubic Kobra X [nozzle] nozzle"
+  
+  X-specific overrides (if any):
+    • Pressure advance (typically within ±0.005 of KS1)
+    • Fan speeds (X has no auxiliary fan, may need adjustment)
+    • Temperature (rarely different; max ±2°C)
+```
+
+**Rationale:** X and S1 are mechanically similar. Inheriting from KS1 variants ensures all physics rules are consistent. X-specific customizations are minimal (mostly pressure advance and cooling strategy).
+
+### Where to Find Documentation
+
+- **Full technical guide:** See `filament/README.md` for complete nozzle variant documentation
+- **Quick selection:** Use the tables in README.md to pick nozzle size by use case
+- **Adding new materials:** Follow "Scenario 4" in filament README for adding materials with nozzle variants
+- **Inheritance chains:** All profiles documented with `inherits` field showing parent profile
+
+### Next Phase: Process Profiles
+
+Once filament variants are validated through test prints:
+
+**Planned:** Generate process profile variants (0.08mm, 0.12mm, 0.16mm, 0.20mm, 0.24mm, 0.28mm) for each nozzle size
+- Each process profile will inherit from 0.4mm base and adjust layer height + speeds
+- Expected: 6 nozzle sizes × ~8 layer heights = ~48 new process profiles
+- Will maintain the same smart rule strategy for speed/quality tradeoffs
 
 ---
 
