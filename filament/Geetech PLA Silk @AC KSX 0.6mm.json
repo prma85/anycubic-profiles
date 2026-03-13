@@ -21,18 +21,15 @@
         "Anycubic Kobra X 0.6 nozzle"
     ],
     "filament_flow_ratio": [
-        "0.92"
-    ],
-    "nozzle_temperature_range_high": [
-        "225"
-    ],
-    "nozzle_temperature_range_low": [
-        "220"
+        "0.9605"
     ],
     "pressure_advance": [
-        "0.002"
+        "0.032"
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_max_volumetric_speed": [
+        "17"
     ]
 }

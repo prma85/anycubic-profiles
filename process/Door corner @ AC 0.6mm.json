@@ -58,7 +58,5 @@
     "tree_support_brim_width": "2",
     "tree_support_tip_diameter": "0.9",
     "tree_support_top_rate": "12%",
-    "version": "2.3.0.03",
-    "wall_loops": "3",
-    "wall_sequence": "inner-outer-inner wall"
+    "version": "2.3.0.03"
 }

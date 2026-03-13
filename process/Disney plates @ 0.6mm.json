@@ -3,7 +3,7 @@
     "bottom_surface_pattern": "monotonicline",
     "from": "User",
     "infill_wall_overlap": "25%",
-    "inherits": "0.3mm Standard @Anycubic Kobra S1 0.6 nozzle",
+    "inherits": "0.30mm Standard @Anycubic Kobra S1 0.6 nozzle",
     "initial_layer_infill_speed": "90",
     "initial_layer_line_width": "0.58",
     "initial_layer_min_bead_width": "90%",
@@ -38,5 +38,7 @@
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel",
         "Anycubic Kobra X 0.6 nozzle"
-    ]
+    ],
+    "support_top_z_distance": "0.32",
+    "support_bottom_z_distance": "0.32"
 }

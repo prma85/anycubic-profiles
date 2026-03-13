@@ -21,9 +21,15 @@
         "Anycubic Kobra X 0.8 nozzle"
     ],
     "pressure_advance": [
-        "0.045"
+        "0.050"
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_flow_ratio": [
+        "1.00"
+    ],
+    "filament_max_volumetric_speed": [
+        "20"
     ]
 }

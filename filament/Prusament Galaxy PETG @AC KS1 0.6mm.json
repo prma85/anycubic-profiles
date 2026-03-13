@@ -67,19 +67,19 @@
     "hot_plate_temp_initial_layer": [
         "75"
     ],
-    "nozzle_temperature_range_low": [
-        "220"
-    ],
     "overhang_fan_speed": [
         "90"
     ],
     "pressure_advance": [
-        "0.031"
+        "0.051"
     ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_max_volumetric_speed": [
+        "11"
     ]
 }

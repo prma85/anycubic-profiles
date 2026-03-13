@@ -35,28 +35,16 @@
     "fan_min_speed": [
         "15"
     ],
-    "nozzle_temperature": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "220"
-    ],
-    "nozzle_temperature_range_high": [
-        "225"
-    ],
-    "nozzle_temperature_BRASS": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "225"
-    ],
-    "nozzle_temperature_HS": [
-        "225"
-    ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_flow_ratio": [
+        "1.00"
+    ],
+    "filament_max_volumetric_speed": [
+        "21"
+    ],
+    "pressure_advance": [
+        "0.074"
     ]
 }

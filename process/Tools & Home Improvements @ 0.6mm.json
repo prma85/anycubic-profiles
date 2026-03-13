@@ -15,7 +15,7 @@
     "hole_to_polyhole": "1",
     "infill_jerk": "6",
     "infill_wall_overlap": "25%",
-    "inherits": "0.3mm Standard @Anycubic Kobra S1 0.6 nozzle",
+    "inherits": "0.30mm Standard @Anycubic Kobra S1 0.6 nozzle",
     "initial_layer_acceleration": "2000",
     "initial_layer_infill_speed": "45",
     "initial_layer_jerk": "6",
@@ -68,7 +68,7 @@
     "support_object_first_layer_gap": "0.9",
     "support_object_xy_distance": "0.7",
     "support_threshold_angle": "30",
-    "support_top_z_distance": "0.32",
+    "support_top_z_distance": "0.3",
     "top_bottom_infill_wall_overlap": "25%",
     "top_shell_layers": "5",
     "top_solid_infill_flow_ratio": "1.03",
@@ -95,5 +95,6 @@
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel",
         "Anycubic Kobra X 0.6 nozzle"
-    ]
+    ],
+    "support_bottom_z_distance": "0.3"
 }

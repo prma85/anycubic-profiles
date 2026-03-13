@@ -29,22 +29,16 @@
     "fan_cooling_layer_time": [
         "100"
     ],
-    "nozzle_temperature_range_high": [
-        "225"
-    ],
-    "nozzle_temperature_range_low": [
-        "220"
-    ],
     "pressure_advance": [
-        "0.11"
+        "0.110"
     ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
     ],
-    "nozzle_temperature_HS": [
-        "225"
+    "filament_flow_ratio": [
+        "1.00"
     ],
-    "nozzle_temperature_initial_layer_HS": [
-        "225"
+    "filament_max_volumetric_speed": [
+        "4.75"
     ]
 }

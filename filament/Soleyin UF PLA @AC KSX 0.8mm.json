@@ -30,15 +30,18 @@
         "80"
     ],
     "filament_flow_ratio": [
-        "0.941"
+        "0.9808"
     ],
     "pressure_advance": [
-        "0.037"
+        "0.042"
     ],
     "slow_down_layer_time": [
         "8"
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_max_volumetric_speed": [
+        "17"
     ]
 }

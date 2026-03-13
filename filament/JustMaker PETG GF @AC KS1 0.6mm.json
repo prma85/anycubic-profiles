@@ -26,9 +26,15 @@
         "50"
     ],
     "pressure_advance": [
-        "0.032"
+        "0.052"
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
+    "filament_max_volumetric_speed": [
+        "12"
     ]
 }

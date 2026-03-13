@@ -38,7 +38,7 @@
         "42"
     ],
     "filament_max_volumetric_speed": [
-        "7"
+        "11"
     ],
     "filament_retract_before_wipe": [
         "0%"
@@ -66,5 +66,11 @@
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_flow_ratio": [
+        "0.97"
+    ],
+    "pressure_advance": [
+        "0.074"
     ]
 }

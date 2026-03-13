@@ -23,9 +23,15 @@
         "Anycubic Kobra S1 0.8 nozzle - Hardened Steel"
     ],
     "pressure_advance": [
-        "0.044"
+        "0.049"
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_flow_ratio": [
+        "0.971"
+    ],
+    "filament_max_volumetric_speed": [
+        "19"
     ]
 }

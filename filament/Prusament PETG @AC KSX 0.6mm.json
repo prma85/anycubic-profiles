@@ -36,16 +36,13 @@
         "15"
     ],
     "filament_flow_ratio": [
-        "1"
+        "1.00"
     ],
     "filament_max_volumetric_speed": [
-        "11"
-    ],
-    "nozzle_temperature_range_high": [
-        "225"
+        "15"
     ],
     "pressure_advance": [
-        "0.024"
+        "0.044"
     ],
     "filament_change_length": [
         "10"

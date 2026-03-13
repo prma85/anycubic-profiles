@@ -48,5 +48,8 @@
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_max_volumetric_speed": [
+        "11"
     ]
 }

@@ -29,7 +29,7 @@
         "High Temp Plate"
     ],
     "filament_flow_ratio": [
-        "0.98"
+        "1.00"
     ],
     "filament_load_time": [
         "42"
@@ -38,7 +38,7 @@
         "0"
     ],
     "pressure_advance": [
-        "0.035"
+        "0.045"
     ],
     "fan_cooling_layer_time_HS": [
         "100"
@@ -60,5 +60,8 @@
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_max_volumetric_speed": [
+        "13"
     ]
 }

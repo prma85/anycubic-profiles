@@ -37,9 +37,6 @@
     "filament_retraction_length": [
         "nil"
     ],
-    "nozzle_temperature": [
-        "205"
-    ],
     "nozzle_temperature_range_high_HS": [
         "240"
     ],
@@ -47,12 +44,18 @@
         "190"
     ],
     "pressure_advance": [
-        "0.01"
+        "0.040"
     ],
     "slow_down_layer_time_HS": [
         "12"
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_flow_ratio": [
+        "1.00"
+    ],
+    "filament_max_volumetric_speed": [
+        "11"
     ]
 }

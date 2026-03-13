@@ -41,13 +41,13 @@
         "; filament end gcode "
     ],
     "filament_flow_ratio": [
-        "1"
+        "1.00"
     ],
     "filament_load_time": [
         "42"
     ],
     "filament_max_volumetric_speed": [
-        "7"
+        "11"
     ],
     "filament_retract_before_wipe": [
         "0%"
@@ -87,5 +87,8 @@
     ],
     "filament_change_length": [
         "10"
+    ],
+    "pressure_advance": [
+        "0.074"
     ]
 }

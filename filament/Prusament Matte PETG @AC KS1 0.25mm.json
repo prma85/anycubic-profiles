@@ -55,16 +55,19 @@
     "filament_wipe_distance": [
         "2"
     ],
-    "nozzle_temperature_range_low": [
-        "220"
-    ],
     "overhang_fan_speed": [
         "90"
     ],
     "pressure_advance": [
-        "0.036"
+        "0.031"
     ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
+    ],
+    "filament_flow_ratio": [
+        "1.005"
+    ],
+    "filament_max_volumetric_speed": [
+        "9"
     ]
 }

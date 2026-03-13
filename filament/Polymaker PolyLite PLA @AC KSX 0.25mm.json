@@ -24,13 +24,10 @@
         "80"
     ],
     "filament_max_volumetric_speed": [
-        "5"
+        "14"
     ],
     "filament_retraction_length": [
         "0.8"
-    ],
-    "nozzle_temperature_range_high": [
-        "225"
     ],
     "fan_cooling_layer_time_BRASS": [
         "80"
@@ -40,5 +37,8 @@
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_flow_ratio": [
+        "0.93"
     ]
 }

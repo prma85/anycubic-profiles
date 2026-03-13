@@ -21,7 +21,7 @@
         "Anycubic Kobra X 0.25 nozzle"
     ],
     "filament_max_volumetric_speed": [
-        "11"
+        "20"
     ],
     "complete_print_exhaust_fan_speed": [
         "80"
@@ -29,10 +29,13 @@
     "during_print_exhaust_fan_speed": [
         "60"
     ],
-    "nozzle_temperature_range_high": [
-        "225"
-    ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_flow_ratio": [
+        "0.96"
+    ],
+    "pressure_advance": [
+        "0.0165"
     ]
 }

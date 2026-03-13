@@ -23,7 +23,7 @@
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
     ],
     "filament_flow_ratio": [
-        "0.98"
+        "1.00"
     ],
     "during_print_exhaust_fan_speed": [
         "60"
@@ -53,12 +53,15 @@
         "190"
     ],
     "pressure_advance": [
-        "0.006"
+        "0.0365"
     ],
     "slow_down_layer_time_HS": [
         "12"
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_max_volumetric_speed": [
+        "22"
     ]
 }

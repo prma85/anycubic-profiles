@@ -47,12 +47,18 @@
         "190"
     ],
     "pressure_advance": [
-        "0.041"
+        "0.0465"
     ],
     "slow_down_layer_time_HS": [
         "12"
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_flow_ratio": [
+        "1.02"
+    ],
+    "filament_max_volumetric_speed": [
+        "23"
     ]
 }

@@ -31,9 +31,6 @@
     "filament_unload_time": [
         "0"
     ],
-    "nozzle_temperature_initial_layer": [
-        "215"
-    ],
     "pressure_advance": [
         "0.045"
     ],
@@ -46,12 +43,6 @@
     "fan_min_speed_HS": [
         "100"
     ],
-    "nozzle_temperature_HS": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "220"
-    ],
     "nozzle_temperature_range_high_HS": [
         "240"
     ],
@@ -63,5 +54,11 @@
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_flow_ratio": [
+        "1.02"
+    ],
+    "filament_max_volumetric_speed": [
+        "4.5"
     ]
 }

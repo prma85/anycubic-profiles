@@ -47,7 +47,7 @@
         "; filament end gcode "
     ],
     "filament_flow_ratio": [
-        "0.96"
+        "1.00"
     ],
     "filament_load_time": [
         "42"
@@ -80,7 +80,7 @@
         "2"
     ],
     "pressure_advance": [
-        "0.059"
+        "0.084"
     ],
     "temperature_vitrification": [
         "70"
@@ -90,5 +90,8 @@
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_max_volumetric_speed": [
+        "14"
     ]
 }

@@ -44,12 +44,18 @@
         "35"
     ],
     "pressure_advance": [
-        "0.11"
+        "0.120"
     ],
     "slow_down_min_speed": [
         "10"
     ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
+    ],
+    "filament_flow_ratio": [
+        "1.02"
+    ],
+    "filament_max_volumetric_speed": [
+        "5.75"
     ]
 }

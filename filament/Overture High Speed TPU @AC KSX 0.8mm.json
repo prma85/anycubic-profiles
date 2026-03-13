@@ -23,14 +23,8 @@
     "activate_air_filtration": [
         "0"
     ],
-    "nozzle_temperature_range_high": [
-        "225"
-    ],
-    "nozzle_temperature_range_low": [
-        "220"
-    ],
     "pressure_advance": [
-        "0.11"
+        "0.120"
     ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
@@ -38,10 +32,10 @@
     "internal_bridge_fan_speed": [
         "-1"
     ],
-    "nozzle_temperature_HS": [
-        "225"
+    "filament_flow_ratio": [
+        "1.025"
     ],
-    "nozzle_temperature_initial_layer_HS": [
-        "225"
+    "filament_max_volumetric_speed": [
+        "12"
     ]
 }

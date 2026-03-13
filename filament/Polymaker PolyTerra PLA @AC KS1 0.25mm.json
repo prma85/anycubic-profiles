@@ -23,7 +23,7 @@
         "Anycubic Kobra S1 0.25 nozzle - Hardened Steel"
     ],
     "filament_max_volumetric_speed": [
-        "12"
+        "21"
     ],
     "fan_cooling_layer_time_HS": [
         "100"
@@ -39,5 +39,11 @@
     ],
     "nozzle_temperature_range_low_HS": [
         "190"
+    ],
+    "filament_flow_ratio": [
+        "0.96"
+    ],
+    "pressure_advance": [
+        "0.025"
     ]
 }

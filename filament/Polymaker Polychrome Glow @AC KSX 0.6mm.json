@@ -20,13 +20,13 @@
     "compatible_printers": [
         "Anycubic Kobra X 0.6 nozzle"
     ],
-    "nozzle_temperature_range_high": [
-        "225"
+    "filament_flow_ratio": [
+        "1.00"
     ],
-    "nozzle_temperature_initial_layer_HS": [
-        "225"
+    "filament_max_volumetric_speed": [
+        "16"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "220"
+    "pressure_advance": [
+        "0.040"
     ]
 }

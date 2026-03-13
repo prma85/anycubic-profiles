@@ -26,16 +26,13 @@
         "High Temp Plate"
     ],
     "filament_flow_ratio": [
-        "0.98"
+        "1.00"
     ],
     "filament_load_time": [
         "42"
     ],
     "filament_unload_time": [
         "0"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "215"
     ],
     "pressure_advance": [
         "0.01"
@@ -49,12 +46,6 @@
     "fan_min_speed_HS": [
         "100"
     ],
-    "nozzle_temperature_HS": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "220"
-    ],
     "nozzle_temperature_range_high_HS": [
         "240"
     ],
@@ -66,5 +57,8 @@
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_max_volumetric_speed": [
+        "3.5"
     ]
 }

@@ -76,14 +76,11 @@
     "hot_plate_temp_initial_layer": [
         "75"
     ],
-    "nozzle_temperature_range_low": [
-        "220"
-    ],
     "overhang_fan_speed": [
         "90"
     ],
     "pressure_advance": [
-        "0.054"
+        "0.074"
     ],
     "temperature_vitrification": [
         "70"
@@ -93,5 +90,11 @@
     ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
+    "filament_max_volumetric_speed": [
+        "13"
     ]
 }

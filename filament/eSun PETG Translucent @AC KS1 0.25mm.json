@@ -47,10 +47,10 @@
         "; filament end gcode "
     ],
     "filament_flow_ratio": [
-        "0.96"
+        "0.94"
     ],
     "filament_max_volumetric_speed": [
-        "12"
+        "11"
     ],
     "filament_retract_before_wipe": [
         "0%"
@@ -70,14 +70,11 @@
     "filament_wipe_distance": [
         "2"
     ],
-    "nozzle_temperature_range_low": [
-        "220"
-    ],
     "overhang_fan_speed": [
         "90"
     ],
     "pressure_advance": [
-        "0.053"
+        "0.048"
     ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
