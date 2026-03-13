@@ -13,7 +13,7 @@
     "default_jerk": "6",
     "flush_into_infill": "1",
     "from": "User",
-    "gap_infill_speed": "180",
+    "gap_infill_speed": "80",
     "infill_jerk": "6",
     "inherits": "0.20mm Standard @Anycubic Kobra S1 0.6 nozzle",
     "initial_layer_acceleration": "1000",

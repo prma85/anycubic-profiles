@@ -12,7 +12,7 @@
     "filename_format": "S1_{input_filename_base}_{filament_type[0]}_{print_time}.gcode",
     "flush_into_infill": "1",
     "from": "User",
-    "gap_infill_speed": "190",
+    "gap_infill_speed": "80",
     "infill_jerk": "6",
     "inherits": "0.24mm Standard @Anycubic Kobra S1 0.4 nozzle",
     "initial_layer_acceleration": "6000",

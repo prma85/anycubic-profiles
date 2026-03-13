@@ -1,11 +1,20 @@
 {
     "from": "User",
     "inherits": "Anycubic Kobra S1 0.6 nozzle",
+    "max_layer_height": [
+        "0.4"
+    ],
     "name": "Anycubic Kobra S1 0.6 nozzle - Brass",
     "nozzle_type": "brass",
     "printer_settings_id": "Anycubic Kobra S1 0.6 nozzle - Brass",
-    "retraction_length": [
-        "1"
+    "retract_restart_extra": [
+        "0.06"
     ],
-    "version": "1.3.2503.03"
+    "retraction_speed": [
+        "50"
+    ],
+    "version": "1.3.2503.03",
+    "wipe_distance": [
+        "2"
+    ]
 }

@@ -23,7 +23,7 @@
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
     ],
     "filament_flow_ratio": [
-        "0.96"
+        "1.00"
     ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
@@ -66,6 +66,9 @@
     ],
     "filament_deretraction_speed": [
         "25"
+    ],
+    "filament_max_volumetric_speed": [
+        "12"
     ],
     "filament_retract_before_wipe": [
         "0%"
