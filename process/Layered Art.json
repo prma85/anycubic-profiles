@@ -1,0 +1,14 @@
+{
+    "from": "User",
+    "infill_combination": "1",
+    "inherits": "0.20mm Standard @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Layered Art",
+    "print_settings_id": "Layered Art",
+    "seam_position": "back",
+    "sparse_infill_density": "5%",
+    "staggered_inner_seams": "1",
+    "version": "1.3.2603.16",
+    "wipe_before_external_loop": "1",
+    "wipe_on_loops": "1"
+}

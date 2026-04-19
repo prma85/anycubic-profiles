@@ -6,7 +6,7 @@
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "Creality PETG CR",
-    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "Improved PETG @AC KS1 0.4mm",
     "version": "1.3.2503.03",
     "filament_settings_id": [
         "Creality PETG CR @AC KS1 0.4mm"

@@ -6,7 +6,7 @@
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "eSun PETG Translucent",
-    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "Improved PETG Translucent @AC KS1 0.4mm",
     "version": "1.3.2602.11",
     "filament_settings_id": [
         "eSun PETG Translucent @AC KS1 0.4mm"
