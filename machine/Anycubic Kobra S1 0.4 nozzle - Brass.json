@@ -7,9 +7,6 @@
     ],
     "name": "Anycubic Kobra S1 0.4 nozzle - Brass",
     "printer_settings_id": "Anycubic Kobra S1 0.4 nozzle - Brass",
-    "retract_restart_extra": [
-        "0.04"
-    ],
     "retraction_speed": [
         "50"
     ],

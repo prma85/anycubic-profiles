@@ -3,6 +3,9 @@
     "inherits": "Anycubic Kobra S1 0.8 nozzle",
     "name": "Anycubic Kobra S1 0.8 nozzle - Brass",
     "printer_settings_id": "Anycubic Kobra S1 0.8 nozzle - Brass",
+    "retract_lift_above": [
+        "0.5"
+    ],
     "retract_restart_extra": [
         "0.08"
     ],

@@ -10,5 +10,8 @@
     "retraction_speed": [
         "50"
     ],
-    "version": "1.3.2503.03"
+    "version": "1.3.2503.03",
+    "z_hop": [
+        "0.6"
+    ]
 }

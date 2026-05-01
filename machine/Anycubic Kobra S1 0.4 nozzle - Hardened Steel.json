@@ -8,9 +8,6 @@
     "name": "Anycubic Kobra S1 0.4 nozzle - Hardened Steel",
     "nozzle_type": "hardened_steel",
     "printer_settings_id": "Anycubic Kobra S1 0.4 nozzle - Hardened Steel",
-    "retract_restart_extra": [
-        "0.04"
-    ],
     "retraction_speed": [
         "50"
     ],

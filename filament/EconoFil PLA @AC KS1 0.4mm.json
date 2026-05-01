@@ -36,7 +36,7 @@
         "40"
     ],
     "filament_settings_id": [
-        "EconoFil PLA"
+        "EconoFil PLA @AC KS1 0.4mm"
     ],
     "filament_vendor": [
         "Generic"
@@ -59,7 +59,7 @@
     ],
     "inherits": "Anycubic PLA @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
-    "name": "EconoFil PLA",
+    "name": "EconoFil PLA @AC KS1 0.4mm",
     "nozzle_temperature": [
         "200"
     ],
