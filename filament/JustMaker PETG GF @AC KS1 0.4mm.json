@@ -113,7 +113,7 @@
         "250"
     ],
     "nozzle_temperature_BRASS": [
-        "245"
+        "250"
     ],
     "nozzle_temperature_initial_layer": [
         "255"
@@ -122,7 +122,7 @@
         "255"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "260"
+        "265"
     ],
     "overhang_fan_speed": [
         "90"
@@ -147,5 +147,8 @@
     ],
     "textured_plate_temp": [
         "70"
+    ],
+    "nozzle_temperature_HS": [
+        "260"
     ]
 }

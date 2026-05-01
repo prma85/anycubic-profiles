@@ -29,10 +29,10 @@
         "50"
     ],
     "filament_settings_id": [
-        "iBOSS Silk Dual PLA @AC KS1 0.4mm"
+        "IBoss Silk Dual PLA @AC KS1 0.4mm"
     ],
     "filament_vendor": [
-        "iBoss"
+        "IBoss"
     ],
     "filament_z_hop": [
         "0.4"
@@ -46,7 +46,7 @@
     ],
     "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
-    "name": "iBOSS Silk Dual PLA @AC KS1 0.4mm",
+    "name": "IBoss Silk Dual PLA @AC KS1 0.4mm",
     "nozzle_temperature": [
         "220"
     ],

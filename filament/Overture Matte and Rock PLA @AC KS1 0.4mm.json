@@ -77,18 +77,18 @@
         "100"
     ],
     "nozzle_temperature_BRASS": [
-        "200"
+        "220"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "205"
+        "220"
     ],
     "slow_down_layer_time_BRASS": [
         "8"
     ],
     "nozzle_temperature_HS": [
-        "205"
+        "225"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "210"
+        "225"
     ]
 }

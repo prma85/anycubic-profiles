@@ -86,6 +86,9 @@
         "220"
     ],
     "nozzle_temperature_BRASS": [
-        "215"
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
     ]
 }

@@ -133,5 +133,11 @@
     ],
     "fan_max_speed_BRASS": [
         "80"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
     ]
 }

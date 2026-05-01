@@ -114,16 +114,16 @@
         "70"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "240"
+        "250"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "245"
+        "260"
     ],
     "nozzle_temperature_BRASS": [
-        "235"
+        "250"
     ],
     "nozzle_temperature_HS": [
-        "240"
+        "260"
     ],
     "fan_max_speed_BRASS": [
         "70"

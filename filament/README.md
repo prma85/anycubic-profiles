@@ -86,7 +86,7 @@ Legend:
 | Overture High Speed TPU | Anycubic TPU      | 0 / +0.01 / 0 / remove          | N/Y/N/NA        | 0 / 0 / 0 / n/a                 | Y/Y/N/NA        | n/a / n/a / n/a / n/a            | Y/Y/Y/NA         |
 | JustMaker PETG GF       | Anycubic PETG-CF  | +0.02 / -0.010 / n/a / add      | Y/Y/Y/NA        | 0 / +0.005 / n/a / keep         | NA/NA/NA/NA     | 0 / -0.005 / n/a / remove        | Y/Y/Y/NA         |
 | Generic Silk PLA        | Anycubic PLA Silk | -0.02 / -0.020 / 0 / add        | Y/Y/Y/NA        | +0.02 / +0.035 / 0 / keep       | NA/NA/NA/NA     | 0 / 0 / lower / remove           | Y/Y/Y/NA         |
-| eSun PLA-CF             | Anycubic PLA-CF   | n/a / -0.020 / 0 / add          | Y/Y/Y/NA        | n/a / +0.035 / 0 / keep         | NA/NA/NA/NA     | n/a / 0 / lower / remove         | Y/Y/Y/NA         |
+| ESun PLA-CF             | Anycubic PLA-CF   | n/a / -0.020 / 0 / add          | Y/Y/Y/NA        | n/a / +0.035 / 0 / keep         | NA/NA/NA/NA     | n/a / 0 / lower / remove         | Y/Y/Y/NA         |
 
 Notes:
 - n/a in user columns means key is not explicitly present and is inherited.

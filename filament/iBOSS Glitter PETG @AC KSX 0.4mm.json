@@ -5,14 +5,14 @@
     "filament_id": "GFPETG",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "iBOSS Glitter PETG",
+    "name": "IBoss Glitter PETG @AC KSX 0.4mm",
     "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",
     "version": "1.3.2503.03",
     "filament_settings_id": [
-        "iBOSS Glitter PETG @AC KSX 0.4mm"
+        "IBoss Glitter PETG @AC KSX 0.4mm"
     ],
     "filament_vendor": [
-        "iBoss"
+        "IBoss"
     ],
     "filament_type": [
         "PETG"

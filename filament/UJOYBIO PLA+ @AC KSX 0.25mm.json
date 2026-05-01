@@ -5,14 +5,14 @@
     "filament_id": "GFPLA+",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "UJOYBIO PLA+",
-    "inherits": "UJOYBIO PLA+ @AC KSX 0.4mm",
+    "name": "UJoyBio PLA+ @AC KSX 0.25mm",
+    "inherits": "UJoyBio  PLA+ @AC KSX 0.4mm",
     "version": "1.3.2503.03",
     "filament_settings_id": [
-        "UJOYBIO PLA+ @AC KSX 0.25mm"
+        "UJoyBio PLA+ @AC KSX 0.25mm"
     ],
     "filament_vendor": [
-        "UJOYBIO"
+        "UJoyBio "
     ],
     "filament_type": [
         "PLA"

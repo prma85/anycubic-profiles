@@ -5,14 +5,14 @@
     "filament_id": "GFPETG",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "TECBEARS Rapid PETG",
-    "inherits": "TECBEARS Rapid PETG @AC KSX 0.4mm",
+    "name": "TecBears Rapid PETG @AC KSX 0.25mm",
+    "inherits": "TecBears Rapid PETG @AC KSX 0.4mm",
     "version": "1.3.2503.03",
     "filament_settings_id": [
-        "TECBEARS Rapid PETG @AC KSX 0.25mm"
+        "TecBears Rapid PETG @AC KSX 0.25mm"
     ],
     "filament_vendor": [
-        "TECBEARS"
+        "TecBears"
     ],
     "filament_type": [
         "PETG"

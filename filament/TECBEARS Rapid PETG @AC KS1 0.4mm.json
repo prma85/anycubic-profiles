@@ -18,10 +18,10 @@
         "50"
     ],
     "filament_settings_id": [
-        "TECBEARS Rapid PETG @AC KS1 0.4mm"
+        "TecBears Rapid PETG @AC KS1 0.4mm"
     ],
     "filament_vendor": [
-        "TECBEARS"
+        "TecBears"
     ],
     "filament_z_hop": [
         "0.2"
@@ -29,7 +29,7 @@
     "from": "User",
     "inherits": "Improved PETG @AC KS1 0.4mm",
     "is_custom_defined": "0",
-    "name": "TECBEARS Rapid PETG @AC KS1 0.4mm",
+    "name": "TecBears Rapid PETG @AC KS1 0.4mm",
     "nozzle_temperature": [
         "245"
     ],
@@ -41,6 +41,9 @@
     ],
     "nozzle_temperature_initial_layer": [
         "245"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "255"
     ],
     "nozzle_temperature_range_high": [
         "270"

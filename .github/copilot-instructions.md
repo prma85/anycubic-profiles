@@ -36,12 +36,29 @@ Do not mix responsibilities between layers unless explicitly required.
 - Keep .json and .info pairs synchronized.
 
 ### Filament
+- **Naming:** All brand/material names MUST start with uppercase (ESun, IBOSS, IBoss, not ESun, IBoss, IBoss)
 - Keep KS1 and KSX nozzle suffix conventions.
 - Do not collapse KS1 and KSX filament profiles into one file.
 - Use one-level user inheritance:
   - KS1 0.25, 0.6, 0.8 must inherit matching KS1 0.4.
   - KSX 0.25, 0.6, 0.8 must inherit matching KSX 0.4.
   - KSX must never inherit KS1 user filaments.
+- **Flow ratio progression:**
+  - 0.4mm → 0.6mm: +0.02 (PLA), +0.025-0.03 (PETG)
+  - 0.6mm → 0.8mm: +0.02 (PLA), +0.025-0.03 (PETG)
+  - 0.4mm → 0.25mm: -0.02 (all materials)
+- **Temperature rules:**
+  - nozzle_temperature_BRASS = nozzle_temperature (base)
+  - nozzle_temperature_HS = base + 5 (PLA) or base + 10 (PETG)
+  - nozzle_temperature_initial_layer_BRASS = nozzle_temperature_initial_layer
+  - nozzle_temperature_initial_layer_HS = initial + 5 (PLA) or initial + 10 (PETG)
+  - Validate: nozzle_temperature_initial_layer_HS <= nozzle_temperature_range_high
+  - Do NOT change range_low or range_high values
+- **Material restrictions by nozzle:**
+  - 0.25mm: PLA only (no PETG, TPU, specialty)
+  - 0.4mm: All materials (primary calibration)
+  - 0.6mm: All materials
+  - 0.8mm: PLA, PETG, TPU
 - Keep child variants minimal:
   - Remove keys identical to inherited effective values.
   - Keep only intentional differences.

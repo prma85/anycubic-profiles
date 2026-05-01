@@ -5,14 +5,14 @@
     "filament_id": "GFPLA Matte",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "iBoss Matte PLA+",
-    "inherits": "iBoss Matte PLA+ @AC KSX 0.4mm",
+    "name": "IBoss Matte PLA+ @AC KSX 0.25mm",
+    "inherits": "IBoss Matte PLA+ @AC KSX 0.4mm",
     "version": "1.3.2503.03",
     "filament_settings_id": [
-        "iBoss Matte PLA+ @AC KSX 0.25mm"
+        "IBoss Matte PLA+ @AC KSX 0.25mm"
     ],
     "filament_vendor": [
-        "iBoss"
+        "IBoss"
     ],
     "filament_type": [
         "PLA"

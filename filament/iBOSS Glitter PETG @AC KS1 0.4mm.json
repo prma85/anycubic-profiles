@@ -5,14 +5,14 @@
     "filament_id": "GFPETG",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "iBOSS Glitter PETG",
+    "name": "IBoss Glitter PETG @AC KS1 0.4mm",
     "inherits": "Improved PETG @AC KS1 0.4mm",
     "version": "1.3.2503.03",
     "filament_settings_id": [
-        "iBOSS Glitter PETG @AC KS1 0.4mm"
+        "IBoss Glitter PETG @AC KS1 0.4mm"
     ],
     "filament_vendor": [
-        "iBoss"
+        "IBoss"
     ],
     "filament_type": [
         "PETG"

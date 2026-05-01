@@ -1,0 +1,22 @@
+{
+    "type": "filament",
+    "from": "User",
+    "setting_id": "GFSA10",
+    "filament_id": "GFPETG",
+    "is_custom_defined": "0",
+    "instantiation": "true",
+    "name": "IBoss PETG @AC KS1 0.8mm",
+    "inherits": "IBoss PETG @AC KS1 0.4mm",
+    "version": "1.3.2503.03",
+    "filament_settings_id": [
+        "IBoss PETG @AC KS1 0.8mm"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.8 nozzle",
+        "Anycubic Kobra S1 0.8 nozzle - Brass",
+        "Anycubic Kobra S1 0.8 nozzle - Hardened Steel"
+    ],
+    "filament_flow_ratio": [
+        "1.04"
+    ]
+}

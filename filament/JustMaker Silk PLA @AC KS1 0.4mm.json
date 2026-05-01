@@ -95,15 +95,18 @@
         "50"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "235"
+        "215"
     ],
     "fan_min_speed_BRASS": [
         "50"
     ],
     "nozzle_temperature_BRASS": [
-        "225"
+        "210"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "230"
+        "210"
+    ],
+    "nozzle_temperature_HS": [
+        "215"
     ]
 }

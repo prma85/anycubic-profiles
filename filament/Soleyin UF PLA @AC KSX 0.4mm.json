@@ -130,5 +130,11 @@
     ],
     "slow_down_layer_time_HS": [
         "12"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
     ]
 }

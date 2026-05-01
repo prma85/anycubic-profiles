@@ -4,7 +4,7 @@
     "name": "Anycubic Kobra S1 0.8 nozzle - Hardened Steel",
     "printer_settings_id": "Anycubic Kobra S1 0.8 nozzle - Hardened Steel",
     "retract_lift_above": [
-        "0.5"
+        "0.6"
     ],
     "retract_restart_extra": [
         "0.08"

@@ -50,7 +50,7 @@
         "All Surfaces"
     ],
     "filament_settings_id": [
-        "iBoss PETG"
+        "IBoss PETG @AC KS1 0.4mm"
     ],
     "filament_vendor": [
         "Generic"
@@ -70,7 +70,7 @@
     ],
     "inherits": "Improved PETG @AC KS1 0.4mm",
     "is_custom_defined": "0",
-    "name": "iBoss PETG",
+    "name": "IBoss PETG @AC KS1 0.4mm",
     "nozzle_temperature": [
         "235"
     ],

@@ -88,5 +88,11 @@
     ],
     "temperature_vitrification": [
         "70"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
     ]
 }

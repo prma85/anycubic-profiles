@@ -5,14 +5,14 @@
     "filament_id": "GFPETG",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "TECBEARS Rapid PETG",
+    "name": "TecBears Rapid PETG @AC KSX 0.4mm",
     "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",
     "version": "1.3.2503.03",
     "filament_settings_id": [
-        "TECBEARS Rapid PETG @AC KSX 0.4mm"
+        "TecBears Rapid PETG @AC KSX 0.4mm"
     ],
     "filament_vendor": [
-        "TECBEARS"
+        "TecBears"
     ],
     "filament_type": [
         "PETG"
@@ -135,15 +135,15 @@
         "70"
     ],
     "nozzle_temperature_BRASS": [
-        "240"
+        "245"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "240"
+        "245"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "245"
+        "255"
     ],
     "nozzle_temperature_HS": [
-        "245"
+        "255"
     ]
 }
