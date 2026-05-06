@@ -1,8 +1,6 @@
 {
     "type": "filament",
     "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Silk",
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "IBoss Silk PLA @AC KS1 0.25mm",
@@ -22,11 +20,11 @@
         "Anycubic Kobra S1 0.25 nozzle - Brass",
         "Anycubic Kobra S1 0.25 nozzle - Hardened Steel"
     ],
-    "filament_max_volumetric_speed": [
-        "9"
-    ],
     "filament_flow_ratio": [
         "0.95"
+    ],
+    "filament_max_volumetric_speed": [
+        "9"
     ],
     "pressure_advance": [
         "0.022"

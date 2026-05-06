@@ -5,7 +5,7 @@
     "filament_id": "GFPETG",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "Creality PETG",
+    "name": "Creality PETG @AC KSX 0.8mm",
     "inherits": "Creality PETG @AC KSX 0.4mm",
     "version": "1.3.2503.03",
     "filament_settings_id": [
@@ -45,9 +45,9 @@
         "10"
     ],
     "filament_flow_ratio": [
-        "0.99"
+        "1.01"
     ],
     "pressure_advance": [
-        "0.084"
+        "0.026"
     ]
 }

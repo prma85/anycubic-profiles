@@ -1,8 +1,6 @@
 {
     "type": "filament",
     "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Matte",
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "IBoss Matte PLA+ @AC KSX 0.4mm",
@@ -15,16 +13,13 @@
         "IBoss"
     ],
     "filament_type": [
-        "PLA"
+        "PLA+"
     ],
     "compatible_printers": [
         "Anycubic Kobra X 0.4 nozzle"
     ],
     "activate_air_filtration": [
         "1"
-    ],
-    "bed_type": [
-        "High Temp Plate"
     ],
     "complete_print_exhaust_fan_speed": [
         "100"
@@ -40,9 +35,6 @@
     ],
     "filament_end_gcode": [
         "; filament end gcode "
-    ],
-    "filament_load_time": [
-        "42"
     ],
     "filament_max_volumetric_speed": [
         "16"
@@ -74,9 +66,6 @@
     "filament_retraction_speed": [
         "35"
     ],
-    "filament_unload_time": [
-        "0"
-    ],
     "filament_wipe": [
         "1"
     ],
@@ -89,6 +78,15 @@
     "filament_z_hop_types": [
         "Slope Lift"
     ],
+    "nozzle_temperature_HS": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "205"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "210"
+    ],
     "nozzle_temperature_range_high": [
         "220"
     ],
@@ -96,6 +94,12 @@
         "200"
     ],
     "slow_down_layer_time": [
+        "8"
+    ],
+    "slow_down_layer_time_BRASS": [
+        "8"
+    ],
+    "slow_down_layer_time_HS": [
         "8"
     ],
     "temperature_vitrification": [
@@ -106,17 +110,5 @@
     ],
     "textured_plate_temp_initial_layer": [
         "55"
-    ],
-    "nozzle_temperature_BRASS": [
-        "210"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "210"
-    ],
-    "nozzle_temperature_HS": [
-        "215"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "205"
     ]
 }

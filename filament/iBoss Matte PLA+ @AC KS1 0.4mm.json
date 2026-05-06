@@ -1,8 +1,6 @@
 {
     "type": "filament",
     "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Matte",
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "IBoss Matte PLA+ @AC KS1 0.4mm",
@@ -15,7 +13,7 @@
         "IBoss"
     ],
     "filament_type": [
-        "PLA"
+        "PLA+"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
@@ -49,8 +47,20 @@
     "hot_plate_temp_initial_layer": [
         "60"
     ],
+    "nozzle_temperature_BRASS": [
+        "210"
+    ],
+    "nozzle_temperature_HS": [
+        "215"
+    ],
     "nozzle_temperature_initial_layer": [
         "205"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "205"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "210"
     ],
     "nozzle_temperature_range_high": [
         "220"
@@ -60,17 +70,5 @@
     ],
     "pressure_advance": [
         "0.03"
-    ],
-    "nozzle_temperature_BRASS": [
-        "210"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "210"
-    ],
-    "nozzle_temperature_HS": [
-        "215"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "205"
     ]
 }

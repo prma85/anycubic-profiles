@@ -1,8 +1,6 @@
 {
     "type": "filament",
     "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA-CF",
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "ESun PLA-CF @AC KSX 0.25mm",
@@ -20,16 +18,13 @@
     "compatible_printers": [
         "Anycubic Kobra X 0.25 nozzle"
     ],
-    "filament_max_volumetric_speed": [
-        "14"
-    ],
-    "filament_change_length": [
-        "10"
-    ],
     "filament_flow_ratio": [
         "0.96"
     ],
+    "filament_max_volumetric_speed": [
+        "14"
+    ],
     "pressure_advance": [
-        "0.010"
+        "0.01"
     ]
 }

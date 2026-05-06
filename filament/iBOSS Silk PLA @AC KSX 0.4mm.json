@@ -1,8 +1,6 @@
 {
     "type": "filament",
     "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Silk",
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "IBoss Silk PLA @AC KSX 0.4mm",
@@ -23,8 +21,17 @@
     "activate_air_filtration": [
         "1"
     ],
-    "bed_type": [
-        "High Temp Plate"
+    "fan_max_speed_BRASS": [
+        "80"
+    ],
+    "fan_max_speed_HS": [
+        "100"
+    ],
+    "fan_min_speed_BRASS": [
+        "70"
+    ],
+    "fan_min_speed_HS": [
+        "100"
     ],
     "filament_cost": [
         "25"
@@ -35,9 +42,6 @@
     "filament_flow_ratio": [
         "0.97"
     ],
-    "filament_load_time": [
-        "42"
-    ],
     "filament_max_volumetric_speed": [
         "10"
     ],
@@ -47,17 +51,26 @@
     "filament_retraction_speed": [
         "40"
     ],
-    "filament_unload_time": [
-        "0"
-    ],
     "filament_z_hop": [
         "0.3"
     ],
     "hot_plate_temp": [
         "60"
     ],
+    "nozzle_temperature_BRASS": [
+        "210"
+    ],
+    "nozzle_temperature_HS": [
+        "215"
+    ],
     "nozzle_temperature_initial_layer": [
         "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
     ],
     "nozzle_temperature_range_high": [
         "225"
@@ -71,6 +84,12 @@
     "slow_down_layer_time": [
         "8"
     ],
+    "slow_down_layer_time_BRASS": [
+        "8"
+    ],
+    "slow_down_layer_time_HS": [
+        "8"
+    ],
     "slow_down_min_speed": [
         "30"
     ],
@@ -82,41 +101,5 @@
     ],
     "textured_plate_temp_initial_layer": [
         "60"
-    ],
-    "fan_cooling_layer_time_HS": [
-        "100"
-    ],
-    "fan_max_speed_HS": [
-        "100"
-    ],
-    "fan_min_speed_HS": [
-        "100"
-    ],
-    "nozzle_temperature_HS": [
-        "215"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "225"
-    ],
-    "nozzle_temperature_range_high_HS": [
-        "240"
-    ],
-    "nozzle_temperature_range_low_HS": [
-        "190"
-    ],
-    "slow_down_layer_time_HS": [
-        "8"
-    ],
-    "fan_max_speed_BRASS": [
-        "80"
-    ],
-    "fan_min_speed_BRASS": [
-        "70"
-    ],
-    "nozzle_temperature_BRASS": [
-        "210"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "220"
     ]
 }

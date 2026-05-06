@@ -1,8 +1,6 @@
 {
     "type": "filament",
     "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Silk",
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "IBoss Silk PLA @AC KSX 0.25mm",
@@ -20,14 +18,11 @@
     "compatible_printers": [
         "Anycubic Kobra X 0.25 nozzle"
     ],
-    "filament_max_volumetric_speed": [
-        "9"
-    ],
-    "filament_change_length": [
-        "10"
-    ],
     "filament_flow_ratio": [
         "0.95"
+    ],
+    "filament_max_volumetric_speed": [
+        "9"
     ],
     "pressure_advance": [
         "0.022"

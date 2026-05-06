@@ -1,8 +1,6 @@
 {
     "type": "filament",
     "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA-CF",
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "ESun PLA-CF @AC KS1 0.8mm",
@@ -22,9 +20,6 @@
         "Anycubic Kobra S1 0.8 nozzle - Brass",
         "Anycubic Kobra S1 0.8 nozzle - Hardened Steel"
     ],
-    "filament_change_length": [
-        "10"
-    ],
     "filament_flow_ratio": [
         "1.02"
     ],
@@ -32,6 +27,6 @@
         "17"
     ],
     "pressure_advance": [
-        "0.040"
+        "0.04"
     ]
 }

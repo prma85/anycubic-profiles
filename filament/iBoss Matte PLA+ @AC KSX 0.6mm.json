@@ -1,8 +1,6 @@
 {
     "type": "filament",
     "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Matte",
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "IBoss Matte PLA+ @AC KSX 0.6mm",
@@ -15,21 +13,18 @@
         "IBoss"
     ],
     "filament_type": [
-        "PLA"
+        "PLA+"
     ],
     "compatible_printers": [
         "Anycubic Kobra X 0.6 nozzle"
-    ],
-    "pressure_advance": [
-        "0.040"
-    ],
-    "filament_change_length": [
-        "10"
     ],
     "filament_flow_ratio": [
         "0.98"
     ],
     "filament_max_volumetric_speed": [
         "17"
+    ],
+    "pressure_advance": [
+        "0.04"
     ]
 }

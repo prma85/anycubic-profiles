@@ -38,7 +38,7 @@
         "; filament end gcode "
     ],
     "filament_flow_ratio": [
-        "1.02"
+        "1.04"
     ],
     "filament_load_time": [
         "42"
@@ -83,6 +83,6 @@
         "12"
     ],
     "pressure_advance": [
-        "0.084"
+        "0.026"
     ]
 }

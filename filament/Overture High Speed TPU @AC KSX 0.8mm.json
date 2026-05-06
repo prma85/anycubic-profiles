@@ -5,7 +5,7 @@
     "filament_id": "GFTPU",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "Overture High Speed TPU",
+    "name": "Overture High Speed TPU @AC KSX 0.8mm",
     "inherits": "Overture High Speed TPU @AC KSX 0.4mm",
     "version": "1.5.0.61",
     "filament_settings_id": [
@@ -33,7 +33,7 @@
         "-1"
     ],
     "filament_flow_ratio": [
-        "1.025"
+        "1.045"
     ],
     "filament_max_volumetric_speed": [
         "12"

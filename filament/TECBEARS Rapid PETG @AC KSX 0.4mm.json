@@ -29,9 +29,6 @@
     "additional_cooling_fan_speed": [
         "10"
     ],
-    "bed_type": [
-        "High Temp Plate"
-    ],
     "filament_cost": [
         "19"
     ],
@@ -46,9 +43,6 @@
     ],
     "filament_flow_ratio": [
         "0.95"
-    ],
-    "filament_load_time": [
-        "42"
     ],
     "filament_max_volumetric_speed": [
         "18"
@@ -80,9 +74,6 @@
     "filament_start_gcode": [
         "; filament start gcode\n"
     ],
-    "filament_unload_time": [
-        "0"
-    ],
     "filament_wipe": [
         "1"
     ],
@@ -104,8 +95,20 @@
     "nozzle_temperature": [
         "245"
     ],
+    "nozzle_temperature_BRASS": [
+        "245"
+    ],
+    "nozzle_temperature_HS": [
+        "255"
+    ],
     "nozzle_temperature_initial_layer": [
         "245"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "245"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "255"
     ],
     "nozzle_temperature_range_high": [
         "270"
@@ -133,17 +136,5 @@
     ],
     "textured_plate_temp": [
         "70"
-    ],
-    "nozzle_temperature_BRASS": [
-        "245"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "245"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "255"
-    ],
-    "nozzle_temperature_HS": [
-        "255"
     ]
 }

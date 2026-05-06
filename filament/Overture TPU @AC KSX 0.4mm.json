@@ -5,7 +5,7 @@
     "filament_id": "GFTPU",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "Overture TPU",
+    "name": "Overture TPU @AC KSX 0.4mm",
     "inherits": "Anycubic TPU 95A @Anycubic Kobra X 0.4 nozzle",
     "version": "1.5.0.61",
     "filament_settings_id": [

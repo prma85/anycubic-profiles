@@ -11,6 +11,12 @@
     "filament_settings_id": [
         "IBoss PETG @AC KS1 0.8mm"
     ],
+    "filament_vendor": [
+        "IBoss"
+    ],
+    "filament_type": [
+        "PETG"
+    ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.8 nozzle",
         "Anycubic Kobra S1 0.8 nozzle - Brass",
@@ -18,5 +24,8 @@
     ],
     "filament_flow_ratio": [
         "1.04"
+    ],
+    "pressure_advance": [
+        "0.026"
     ]
 }

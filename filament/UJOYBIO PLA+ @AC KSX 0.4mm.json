@@ -23,13 +23,19 @@
     "activate_air_filtration": [
         "1"
     ],
-    "bed_type": [
-        "High Temp Plate"
-    ],
     "complete_print_exhaust_fan_speed": [
         "100"
     ],
     "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "100"
+    ],
+    "fan_max_speed_HS": [
+        "100"
+    ],
+    "fan_min_speed_HS": [
         "100"
     ],
     "filament_cost": [
@@ -40,9 +46,6 @@
     ],
     "filament_end_gcode": [
         "; filament end gcode "
-    ],
-    "filament_load_time": [
-        "42"
     ],
     "filament_max_volumetric_speed": [
         "12"
@@ -62,14 +65,23 @@
     "filament_retraction_speed": [
         "40"
     ],
-    "filament_unload_time": [
-        "0"
-    ],
     "filament_z_hop": [
         "0.4"
     ],
+    "nozzle_temperature_BRASS": [
+        "200"
+    ],
+    "nozzle_temperature_HS": [
+        "205"
+    ],
     "nozzle_temperature_initial_layer": [
         "205"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "205"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "210"
     ],
     "nozzle_temperature_range_high": [
         "220"
@@ -88,35 +100,5 @@
     ],
     "textured_plate_temp_initial_layer": [
         "55"
-    ],
-    "fan_cooling_layer_time_HS": [
-        "100"
-    ],
-    "fan_max_speed_HS": [
-        "100"
-    ],
-    "fan_min_speed_HS": [
-        "100"
-    ],
-    "nozzle_temperature_HS": [
-        "205"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "210"
-    ],
-    "nozzle_temperature_range_high_HS": [
-        "240"
-    ],
-    "nozzle_temperature_range_low_HS": [
-        "190"
-    ],
-    "slow_down_layer_time_HS": [
-        "8"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "205"
-    ],
-    "nozzle_temperature_BRASS": [
-        "200"
     ]
 }

@@ -1,4 +1,22 @@
 {
+    "type": "filament",
+    "from": "User",
+    "setting_id": "GFSA04",
+    "filament_id": "GFPLA Silk",
+    "is_custom_defined": "0",
+    "instantiation": "true",
+    "name": "Kingaroon PLA Silk @AC KS1 0.4mm",
+    "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",
+    "version": "0.0.0.00",
+    "filament_settings_id": [
+        "Kingaroon PLA Silk @AC KS1 0.4mm"
+    ],
+    "filament_vendor": [
+        "Anycubic"
+    ],
+    "filament_type": [
+        "PLA"
+    ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
@@ -22,22 +40,15 @@
     "filament_retraction_speed": [
         "40"
     ],
-    "filament_settings_id": [
-        "Kingaroon PLA Silk @AC KS1 0.4mm"
-    ],
     "filament_z_hop": [
         "0.3"
     ],
-    "from": "User",
     "hot_plate_temp": [
         "65"
     ],
     "hot_plate_temp_initial_layer": [
         "65"
     ],
-    "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",
-    "is_custom_defined": "0",
-    "name": "Kingaroon PLA Silk @AC KS1 0.4mm",
     "nozzle_temperature": [
         "205"
     ],
@@ -73,6 +84,5 @@
     ],
     "textured_plate_temp_initial_layer": [
         "60"
-    ],
-    "version": "0.0.0.00"
+    ]
 }

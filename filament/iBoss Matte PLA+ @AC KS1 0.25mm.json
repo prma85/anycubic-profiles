@@ -1,8 +1,6 @@
 {
     "type": "filament",
     "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Matte",
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "IBoss Matte PLA+ @AC KS1 0.25mm",
@@ -15,20 +13,20 @@
         "IBoss"
     ],
     "filament_type": [
-        "PLA"
+        "PLA+"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.25 nozzle",
         "Anycubic Kobra S1 0.25 nozzle - Brass",
         "Anycubic Kobra S1 0.25 nozzle - Hardened Steel"
     ],
-    "filament_max_volumetric_speed": [
-        "15"
-    ],
     "filament_flow_ratio": [
         "0.94"
     ],
+    "filament_max_volumetric_speed": [
+        "15"
+    ],
     "pressure_advance": [
-        "0.020"
+        "0.02"
     ]
 }

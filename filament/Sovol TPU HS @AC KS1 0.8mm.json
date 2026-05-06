@@ -5,7 +5,7 @@
     "filament_id": "GFTPU",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "Sovol TPU HS",
+    "name": "Sovol TPU HS @AC KS1 0.8mm",
     "inherits": "Sovol TPU HS @AC KS1 0.4mm",
     "version": "1.3.2602.11",
     "filament_settings_id": [
@@ -59,7 +59,7 @@
         "0,0,0\n0,0,0"
     ],
     "filament_flow_ratio": [
-        "1.069"
+        "1.089"
     ],
     "filament_max_volumetric_speed": [
         "7"

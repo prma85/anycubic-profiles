@@ -5,7 +5,7 @@
     "filament_id": "GFTPU",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "Sunlu TPU 95a",
+    "name": "Sunlu TPU 95a @AC KS1 0.4mm",
     "inherits": "Anycubic TPU @Anycubic Kobra S1 0.4 nozzle",
     "version": "1.3.2602.11",
     "filament_settings_id": [

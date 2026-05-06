@@ -1,4 +1,22 @@
 {
+    "type": "filament",
+    "from": "User",
+    "setting_id": "GFSA04",
+    "filament_id": "GFPETG",
+    "is_custom_defined": "0",
+    "instantiation": "true",
+    "name": "Improved PETG Translucent @AC KS1 0.6mm",
+    "inherits": "Improved PETG Translucent @AC KS1 0.4mm",
+    "version": "1.3.2602.11",
+    "filament_settings_id": [
+        "Improved PETG Translucent @AC KS1 0.6mm"
+    ],
+    "filament_vendor": [
+        "Anycubic"
+    ],
+    "filament_type": [
+        "PETG"
+    ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
@@ -8,18 +26,11 @@
         "60"
     ],
     "filament_flow_ratio": [
-        "0.98"
+        "0.99"
     ],
     "filament_max_volumetric_speed": [
         "13"
     ],
-    "filament_settings_id": [
-        "Improved PETG Translucent @AC KS1 0.6mm"
-    ],
-    "from": "User",
-    "inherits": "Improved PETG Translucent @AC KS1 0.4mm",
-    "is_custom_defined": "0",
-    "name": "Improved PETG Translucent @AC KS1 0.6mm",
     "nozzle_temperature_HS": [
         "245"
     ],
@@ -30,7 +41,6 @@
         "250"
     ],
     "pressure_advance": [
-        "0.074"
-    ],
-    "version": "1.3.2602.11"
+        "0.041"
+    ]
 }

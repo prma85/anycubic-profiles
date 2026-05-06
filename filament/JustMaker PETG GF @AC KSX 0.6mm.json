@@ -5,7 +5,7 @@
     "filament_id": "GFPETG-CF",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "JustMaker PETG GF",
+    "name": "JustMaker PETG GF @AC KSX 0.6mm",
     "inherits": "JustMaker PETG GF @AC KSX 0.4mm",
     "version": "1.3.2503.03",
     "filament_settings_id": [
@@ -21,13 +21,13 @@
         "Anycubic Kobra X 0.6 nozzle"
     ],
     "filament_flow_ratio": [
-        "0.98"
+        "0.99"
     ],
     "fan_max_speed_BRASS": [
         "50"
     ],
     "pressure_advance": [
-        "0.052"
+        "0.027"
     ],
     "filament_change_length": [
         "10"

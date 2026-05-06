@@ -5,7 +5,7 @@
     "filament_id": "GFPETG",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "Prusament Matte PETG",
+    "name": "Prusament Matte PETG @AC KSX 0.8mm",
     "inherits": "Prusament Matte PETG @AC KSX 0.4mm",
     "version": "1.3.2602.11",
     "filament_settings_id": [
@@ -39,10 +39,10 @@
         "15"
     ],
     "filament_flow_ratio": [
-        "1.065"
+        "1.085"
     ],
     "pressure_advance": [
-        "0.061"
+        "0.016"
     ],
     "filament_change_length": [
         "10"

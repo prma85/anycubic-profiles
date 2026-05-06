@@ -1,8 +1,6 @@
 {
     "type": "filament",
     "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA-CF",
     "is_custom_defined": "0",
     "instantiation": "true",
     "name": "ESun PLA-CF @AC KSX 0.4mm",
@@ -19,12 +17,6 @@
     ],
     "compatible_printers": [
         "Anycubic Kobra X 0.4 nozzle"
-    ],
-    "filament_flow_ratio": [
-        "0.98"
-    ],
-    "filament_max_volumetric_speed": [
-        "15"
     ],
     "activate_air_filtration": [
         "1"
@@ -47,6 +39,9 @@
     "fan_min_speed": [
         "100"
     ],
+    "fan_min_speed_BRASS": [
+        "100"
+    ],
     "fan_min_speed_HS": [
         "100"
     ],
@@ -65,11 +60,17 @@
     "filament_density": [
         "1.22"
     ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
     "filament_loading_speed": [
         "28"
     ],
     "filament_loading_speed_start": [
         "3"
+    ],
+    "filament_max_volumetric_speed": [
+        "15"
     ],
     "filament_retraction_length": [
         "nil"
@@ -110,23 +111,14 @@
     "nozzle_temperature_range_high": [
         "250"
     ],
-    "nozzle_temperature_range_high_HS": [
-        "240"
-    ],
     "nozzle_temperature_range_low": [
         "230"
-    ],
-    "nozzle_temperature_range_low_HS": [
-        "190"
     ],
     "pressure_advance": [
         "0.02"
     ],
     "slow_down_for_layer_cooling": [
         "0"
-    ],
-    "slow_down_layer_time_HS": [
-        "8"
     ],
     "slow_down_min_speed": [
         "120"

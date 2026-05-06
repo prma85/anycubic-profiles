@@ -5,7 +5,7 @@
     "filament_id": "GFPETG",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "Sovol PETG Translucent",
+    "name": "Sovol PETG Translucent @AC KSX 0.6mm",
     "inherits": "Sovol PETG Translucent @AC KSX 0.4mm",
     "version": "1.3.2503.03",
     "filament_settings_id": [
@@ -36,7 +36,7 @@
         "15"
     ],
     "filament_flow_ratio": [
-        "1.00"
+        "1.01"
     ],
     "filament_max_volumetric_speed": [
         "11"
@@ -48,6 +48,6 @@
         "10"
     ],
     "pressure_advance": [
-        "0.074"
+        "0.041"
     ]
 }

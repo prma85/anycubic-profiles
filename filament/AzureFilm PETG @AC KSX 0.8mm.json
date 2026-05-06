@@ -5,7 +5,7 @@
     "filament_id": "GFPETG",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "AzureFilm PETG",
+    "name": "AzureFilm PETG @AC KSX 0.8mm",
     "inherits": "AzureFilm PETG @AC KSX 0.4mm",
     "version": "1.3.2602.11",
     "filament_settings_id": [
@@ -42,12 +42,12 @@
         "20"
     ],
     "pressure_advance": [
-        "0.056"
+        "0.014"
     ],
     "filament_change_length": [
         "10"
     ],
     "filament_flow_ratio": [
-        "0.99"
+        "1.01"
     ]
 }

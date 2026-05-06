@@ -5,8 +5,8 @@
     "filament_id": "GFPETG",
     "is_custom_defined": "0",
     "instantiation": "true",
-    "name": "Sovol PETG Translucent",
-    "inherits": "Improved PETG Translucent @AC KS1 0.4mm",
+    "name": "Sovol PETG Translucent @AC KS1 0.4mm",
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
     "version": "1.3.2503.03",
     "filament_settings_id": [
         "Sovol PETG Translucent @AC KS1 0.4mm"
@@ -22,14 +22,41 @@
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
     ],
+    "filament_cost": [
+        "22"
+    ],
+    "hot_plate_temp": [
+        "70"
+    ],
+    "nozzle_temperature": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "235"
+    ],
+    "nozzle_temperature_range_high": [
+        "250"
+    ],
+    "pressure_advance": [
+        "0.064"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "245"
+    ],
+    "nozzle_temperature_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_HS": [
+        "245"
+    ],
     "additional_cooling_fan_speed": [
         "10"
     ],
     "close_fan_the_first_x_layers": [
         "5"
-    ],
-    "filament_cost": [
-        "22"
     ],
     "filament_deretraction_speed": [
         "25"
@@ -43,26 +70,11 @@
     "filament_z_hop": [
         "0.2"
     ],
-    "hot_plate_temp": [
-        "70"
-    ],
     "idle_temperature": [
         "175"
     ],
-    "nozzle_temperature": [
-        "235"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "235"
-    ],
-    "nozzle_temperature_range_high": [
-        "250"
-    ],
     "nozzle_temperature_range_low": [
         "235"
-    ],
-    "pressure_advance": [
-        "0.064"
     ],
     "reduce_fan_stop_start_freq": [
         "0"
@@ -72,18 +84,6 @@
     ],
     "textured_plate_temp": [
         "70"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "235"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "245"
-    ],
-    "nozzle_temperature_BRASS": [
-        "235"
-    ],
-    "nozzle_temperature_HS": [
-        "245"
     ],
     "fan_max_speed_BRASS": [
         "50"

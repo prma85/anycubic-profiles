@@ -36,7 +36,7 @@
         "15"
     ],
     "pressure_advance": [
-        "0.068"
+        "0.037"
     ],
     "fan_max_speed_BRASS": [
         "50"
@@ -45,7 +45,7 @@
         "10"
     ],
     "filament_flow_ratio": [
-        "0.98"
+        "0.99"
     ],
     "filament_max_volumetric_speed": [
         "13"
