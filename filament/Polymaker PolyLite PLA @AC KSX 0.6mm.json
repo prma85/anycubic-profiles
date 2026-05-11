@@ -37,5 +37,8 @@
     ],
     "filament_max_volumetric_speed": [
         "16"
+    ],
+    "pressure_advance": [
+        "0.023"
     ]
 }

@@ -37,7 +37,10 @@
     "nozzle_temperature_range_high": [
         "270"
     ],
+    "filament_flow_ratio": [
+        "1.00"
+    ],
     "pressure_advance": [
-        "0.04"
+        "0.023"
     ]
 }

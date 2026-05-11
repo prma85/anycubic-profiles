@@ -40,5 +40,8 @@
     ],
     "filament_flow_ratio": [
         "0.93"
+    ],
+    "pressure_advance": [
+        "0.056"
     ]
 }

@@ -21,7 +21,7 @@
         "Anycubic Kobra X 0.8 nozzle"
     ],
     "pressure_advance": [
-        "0.070"
+        "0.025"
     ],
     "fan_min_speed_BRASS": [
         "120"

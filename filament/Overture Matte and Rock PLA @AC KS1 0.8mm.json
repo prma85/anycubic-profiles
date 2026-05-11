@@ -23,7 +23,7 @@
         "Anycubic Kobra S1 0.8 nozzle - Hardened Steel"
     ],
     "pressure_advance": [
-        "0.070"
+        "0.025"
     ],
     "fan_min_speed_BRASS": [
         "120"

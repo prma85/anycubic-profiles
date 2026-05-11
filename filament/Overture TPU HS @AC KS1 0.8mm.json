@@ -41,7 +41,7 @@
         "35"
     ],
     "pressure_advance": [
-        "0.120"
+        "0.050"
     ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"

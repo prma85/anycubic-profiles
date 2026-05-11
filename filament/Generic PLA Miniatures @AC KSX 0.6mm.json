@@ -27,7 +27,7 @@
         "0.8"
     ],
     "pressure_advance": [
-        "0.01"
+        "0.020"
     ],
     "filament_change_length": [
         "10"

@@ -1,35 +1,20 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPETG",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Improved PETG @AC KS1 0.4mm",
-    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
-    "version": "1.3.2503.03",
-    "filament_settings_id": [
-        "Improved PETG @AC KS1 0.4mm"
-    ],
-    "filament_vendor": [
-        "Generic"
-    ],
-    "filament_type": [
-        "PETG"
-    ],
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.4 nozzle",
-        "Anycubic Kobra S1 0.4 nozzle - Brass",
-        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
-    ],
     "activate_air_filtration": [
         "1"
     ],
     "additional_cooling_fan_speed": [
         "10"
     ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Brass",
+        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+    ],
     "complete_print_exhaust_fan_speed": [
         "100"
+    ],
+    "dont_slow_down_outer_wall": [
+        "1"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
@@ -37,8 +22,17 @@
     "fan_max_speed": [
         "40"
     ],
+    "fan_max_speed_BRASS": [
+        "60"
+    ],
+    "fan_max_speed_HS": [
+        "40"
+    ],
     "filament_cost": [
         "22"
+    ],
+    "filament_density": [
+        "1.24"
     ],
     "filament_deretraction_speed": [
         "25"
@@ -58,23 +52,48 @@
     "filament_retract_lift_enforce": [
         "All Surfaces"
     ],
+    "filament_settings_id": [
+        "Improved PETG @AC KS1 0.4mm"
+    ],
+    "filament_vendor": [
+        "Generic"
+    ],
     "filament_z_hop": [
         "0.6"
     ],
     "filament_z_hop_types": [
         "Slope Lift"
     ],
+    "from": "User",
     "hot_plate_temp": [
         "70"
     ],
     "idle_temperature": [
         "175"
     ],
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
+    "internal_bridge_fan_speed": [
+        "100"
+    ],
+    "is_custom_defined": "0",
+    "name": "Improved PETG @AC KS1 0.4mm",
     "nozzle_temperature": [
         "235"
     ],
+    "nozzle_temperature_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_HS": [
+        "245"
+    ],
     "nozzle_temperature_initial_layer": [
         "235"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "245"
     ],
     "nozzle_temperature_range_high": [
         "255"
@@ -89,27 +108,10 @@
         "0"
     ],
     "temperature_vitrification": [
-        "80"
+        "60"
     ],
     "textured_plate_temp": [
         "70"
     ],
-    "dont_slow_down_outer_wall": [
-        "1"
-    ],
-    "fan_max_speed_BRASS": [
-        "60"
-    ],
-    "nozzle_temperature_BRASS": [
-        "235"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "235"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "245"
-    ],
-    "nozzle_temperature_HS": [
-        "245"
-    ]
+    "version": "1.3.2503.03"
 }

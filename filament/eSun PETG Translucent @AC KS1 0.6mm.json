@@ -74,7 +74,7 @@
         "90"
     ],
     "pressure_advance": [
-        "0.037"
+        "0.039"
     ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
