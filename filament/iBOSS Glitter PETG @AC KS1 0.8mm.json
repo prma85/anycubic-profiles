@@ -29,7 +29,7 @@
         "3"
     ],
     "fan_min_speed": [
-        "30"
+        "80"
     ],
     "filament_density": [
         "1.27"
@@ -38,7 +38,7 @@
         "; filament end gcode "
     ],
     "filament_flow_ratio": [
-        "1.04"
+        "0.94"
     ],
     "filament_load_time": [
         "42"
@@ -50,7 +50,7 @@
         "1"
     ],
     "filament_retraction_length": [
-        "0.8"
+        "1.6"
     ],
     "filament_retraction_minimum_travel": [
         "2"
@@ -80,9 +80,33 @@
         "10"
     ],
     "filament_max_volumetric_speed": [
-        "12"
+        "15"
     ],
     "pressure_advance": [
-        "0.032"
+        "0.019"
+    ],
+    "nozzle_temperature": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "250"
+    ],
+    "nozzle_temperature_HS": [
+        "255"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "260"
+    ],
+    "nozzle_temperature_range_high": [
+        "265"
+    ],
+    "nozzle_temperature_BRASS": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "250"
+    ],
+    "fan_max_speed": [
+        "90"
     ]
 }

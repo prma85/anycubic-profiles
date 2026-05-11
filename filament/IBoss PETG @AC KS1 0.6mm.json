@@ -23,9 +23,42 @@
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
     ],
     "filament_flow_ratio": [
-        "1.01"
+        "0.96"
     ],
     "pressure_advance": [
-        "0.043"
+        "0.038"
+    ],
+    "filament_retraction_length": [
+        "1.2"
+    ],
+    "filament_max_volumetric_speed": [
+        "10"
+    ],
+    "nozzle_temperature": [
+        "245"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "245"
+    ],
+    "nozzle_temperature_HS": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "255"
+    ],
+    "nozzle_temperature_range_high": [
+        "260"
+    ],
+    "nozzle_temperature_BRASS": [
+        "245"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "245"
+    ],
+    "fan_max_speed": [
+        "70"
+    ],
+    "fan_min_speed": [
+        "60"
     ]
 }

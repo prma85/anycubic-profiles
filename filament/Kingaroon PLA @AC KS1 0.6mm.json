@@ -29,7 +29,7 @@
         "High Temp Plate"
     ],
     "filament_flow_ratio": [
-        "1.00"
+        "0.97"
     ],
     "filament_load_time": [
         "42"
@@ -62,6 +62,36 @@
         "10"
     ],
     "filament_max_volumetric_speed": [
-        "13"
+        "14.4"
+    ],
+    "filament_retraction_length": [
+        "1"
+    ],
+    "nozzle_temperature": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
+    ],
+    "nozzle_temperature_range_high": [
+        "225"
+    ],
+    "nozzle_temperature_BRASS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "225"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "100"
     ]
 }

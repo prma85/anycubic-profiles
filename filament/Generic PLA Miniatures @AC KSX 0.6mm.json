@@ -21,10 +21,10 @@
         "Anycubic Kobra X 0.6 nozzle"
     ],
     "fan_min_speed": [
-        "80"
+        "100"
     ],
     "filament_retraction_length": [
-        "0.8"
+        "1"
     ],
     "pressure_advance": [
         "0.020"
@@ -33,9 +33,33 @@
         "10"
     ],
     "filament_flow_ratio": [
-        "1.00"
+        "0.97"
     ],
     "filament_max_volumetric_speed": [
-        "3.5"
+        "3"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
+    ],
+    "nozzle_temperature_range_high": [
+        "225"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
+    ],
+    "fan_max_speed": [
+        "100"
     ]
 }

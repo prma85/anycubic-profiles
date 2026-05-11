@@ -1,6 +1,6 @@
 # Filament Configuration Guide - User 651589
 
-Last updated: 2026-03-12
+Last updated: 2026-05-11
 Framework: Anycubic Slicer Next (OrcaSlicer-based)
 Scope: Custom filament profiles for Anycubic Kobra S1 and Anycubic Kobra X
 
@@ -44,53 +44,78 @@ Nozzle-family counts currently present:
 5. Keep profile overrides minimal and intentional.
 6. Never remove version.
 
-## Temperature and Delta Rules
+## Nozzle Transition Rules
 
-- Apply HS +5 only to:
-  - nozzle_temperature_HS
-  - nozzle_temperature_initial_layer_HS
-- Do not apply +5 to:
-  - nozzle_temperature_range_low
-  - nozzle_temperature_range_high
-- Enforce thermal safety:
-  - nozzle_temperature_initial_layer_HS <= nozzle_temperature_range_high
+All non-0.4mm variants are derived from the matching 0.4mm parent by applying these deltas.
+Rationale: larger nozzles extrude more plastic per unit time — the heater needs to be hotter to keep the melt fluid, the larger bead needs more cooling to solidify cleanly, wider orifices reduce pressure buildup (lower PA needed), and the larger melt reservoir increases oozing risk (more retraction). (Based on Prusa nozzle guide, Polymaker retraction wiki, Flashforge nozzle size guide.)
+
+### PLA group (Regular, Matte, Silk, Metal, Glow, Translucent, CF)
+
+| Parameter              | 0.25mm  | 0.6mm  | 0.8mm  |
+|------------------------|---------|--------|--------|
+| Pressure Advance       | ×1.5    | ×0.667 | ×0.333 |
+| Flow Ratio             | +0.01   | −0.01  | −0.02  |
+| Retraction Length      | −0.2mm  | +0.2mm | +0.4mm |
+| Max Volumetric Speed   | cap 3   | ×1.2   | ×1.4   |
+| All Nozzle Temp keys   | −5°C    | +5°C   | +10°C  |
+| Fan Speed (max & min)  | −20pp   | +20pp  | +40pp  |
+
+Subtype overrides (stacked on top of the table above):
+- **Matte:** extra −0.01 flow (matte particles expand more)
+- **Silk/Metal:** cap `filament_retraction_speed` at 30 mm/s for 0.6/0.8mm — these break if retracted too fast when cold
+- **Translucent:** fan −10% extra, MVS −20% extra
+
+### PETG group (Regular, High-Flow/Rapid, Translucent)
+
+| Parameter              | 0.6mm   | 0.8mm  |
+|------------------------|---------|--------|
+| Pressure Advance       | ×0.60   | ×0.30  |
+| Flow Ratio             | −0.02   | −0.04  |
+| Retraction Length      | +0.4mm  | +0.8mm |
+| Max Volumetric Speed   | ×1.25   | ×1.5   |
+| All Nozzle Temp keys   | +10°C   | +15°C  |
+| Fan Speed (max & min)  | +30pp   | +50pp  |
+
+Subtype overrides:
+- **High-Flow (Rapid, GF):** MVS result ×1.2
+- **Translucent:** fan = 0%, MVS = 0.4mm value ×0.7
+
+### TPU group (95A, HS, High Speed)
+
+| Parameter              | 0.6mm  | 0.8mm  |
+|------------------------|--------|--------|
+| Pressure Advance       | ×0.50  | 0.000  |
+| Flow Ratio             | none   | −0.01  |
+| Retraction Length      | keep   | keep   |
+| Max Volumetric Speed   | cap 5  | cap 7  |
+| All Nozzle Temp keys   | +5°C   | +10°C  |
+| Fan Speed (max & min)  | +20pp  | +40pp  |
+
+Note: TPU is extruder-grip limited — even on 0.8mm nozzle, keep print speed ≤ 40–50 mm/s on the Kobra S1.
+
+### Application notes
+
+- "pp" = percentage points absolute (e.g. 40% + 20pp = 60%); fan clamped 0–100
+- If 0.4mm retraction is nil/absent, use 0.8 mm as the baseline before applying the delta
+- Temperature: shift all of `nozzle_temperature`, `nozzle_temperature_initial_layer`, `nozzle_temperature_HS`, `nozzle_temperature_initial_layer_HS`, `nozzle_temperature_range_high`, `nozzle_temperature_BRASS`, `nozzle_temperature_initial_layer_BRASS` — **never** change `nozzle_temperature_range_low`
+- Round PA to 3 decimal places; flow ratio to 4 decimal places
+
+## Hardened Steel Temperature Rules (within a single nozzle size)
+
+- `nozzle_temperature_BRASS` = base temperature
+- `nozzle_temperature_initial_layer_BRASS` = initial layer temperature
+- `nozzle_temperature_HS` = base + 5°C (PLA) or base + 10°C (PETG)
+- `nozzle_temperature_initial_layer_HS` = initial + 5°C (PLA) or initial + 10°C (PETG)
+- Validate: `nozzle_temperature_initial_layer_HS` ≤ `nozzle_temperature_range_high`
+- Do NOT change `nozzle_temperature_range_low`
 
 ## Editing Workflow
 
 1. Edit 0.4mm parent for shared material behavior.
-2. Keep variant-only behavior in 0.25mm, 0.6mm, 0.8mm children.
-3. Remove child keys identical to 0.4mm parent.
+2. Derive 0.25mm/0.6mm/0.8mm variants by applying the delta tables above.
+3. Remove child keys identical to 0.4mm parent (keep only intentional differences).
 4. Validate inheritance targets and JSON syntax.
 5. Refresh .info timestamps when bulk updates are made.
-
-## Delta Audit Matrix (Merged)
-
-Representative profiles were audited to confirm transition-driven behavior.
-
-Scope:
-- Printer context: KS1 variants (0.4mm, 0.6mm, 0.8mm, 0.25mm)
-- System reference: Anycubic S1 and S1 Max profiles
-- Keys checked: filament_flow_ratio, pressure_advance, filament_max_volumetric_speed, filament_change_length
-
-Legend:
-- Y = system transition contains a change for that key
-- N = key exists but no system change
-- NA = key not present in that system transition
-
-| Profile                 | Family Ref        | User 0.4->0.6 (flow/PA/MVS/FCL) | System 0.4->0.6 | User 0.6->0.8 (flow/PA/MVS/FCL) | System 0.6->0.8 | User 0.4->0.25 (flow/PA/MVS/FCL) | System 0.4->0.25 |
-| ----------------------- | ----------------- | ------------------------------- | --------------- | ------------------------------- | --------------- | -------------------------------- | ---------------- |
-| Improved PETG           | Anycubic PETG     | +0.02 / -0.010 / -3 / add       | Y/Y/Y/Y         | 0 / +0.005 / 0 / keep           | N/Y/N/N         | 0 / -0.005 / lower / remove      | Y/Y/Y/NA         |
-| Improved PLA            | Anycubic PLA      | n/a / n/a / n/a / add           | Y/Y/Y/Y         | n/a / n/a / n/a / keep          | Y/Y/Y/N         | n/a / n/a / n/a / remove         | Y/Y/Y/NA         |
-| Improved PLA+           | Anycubic PLA+     | n/a / n/a / n/a / add           | Y/Y/Y/NA        | n/a / n/a / n/a / keep          | NA/NA/NA/NA     | n/a / n/a / n/a / remove         | Y/Y/Y/NA         |
-| Anycubic ABS improved   | Anycubic ASA      | n/a / n/a / 0 / n/a             | Y/Y/Y/NA        | n/a / n/a / 0 / n/a             | Y/N/N/NA        | n/a / n/a / n/a / n/a            | Y/Y/Y/NA         |
-| Overture High Speed TPU | Anycubic TPU      | 0 / +0.01 / 0 / remove          | N/Y/N/NA        | 0 / 0 / 0 / n/a                 | Y/Y/N/NA        | n/a / n/a / n/a / n/a            | Y/Y/Y/NA         |
-| JustMaker PETG GF       | Anycubic PETG-CF  | +0.02 / -0.010 / n/a / add      | Y/Y/Y/NA        | 0 / +0.005 / n/a / keep         | NA/NA/NA/NA     | 0 / -0.005 / n/a / remove        | Y/Y/Y/NA         |
-| Generic Silk PLA        | Anycubic PLA Silk | -0.02 / -0.020 / 0 / add        | Y/Y/Y/NA        | +0.02 / +0.035 / 0 / keep       | NA/NA/NA/NA     | 0 / 0 / lower / remove           | Y/Y/Y/NA         |
-| ESun PLA-CF             | Anycubic PLA-CF   | n/a / -0.020 / 0 / add          | Y/Y/Y/NA        | n/a / +0.035 / 0 / keep         | NA/NA/NA/NA     | n/a / 0 / lower / remove         | Y/Y/Y/NA         |
-
-Notes:
-- n/a in user columns means key is not explicitly present and is inherited.
-- add/keep/remove under FCL describes filament_change_length lifecycle.
 
 ## Validation Checklist
 

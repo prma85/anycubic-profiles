@@ -1,6 +1,6 @@
 # Copilot Instructions - User 651589 Anycubic Profiles
 
-Last updated: 2026-03-12
+Last updated: 2026-05-11
 
 ## Purpose
 
@@ -43,17 +43,56 @@ Do not mix responsibilities between layers unless explicitly required.
   - KS1 0.25, 0.6, 0.8 must inherit matching KS1 0.4.
   - KSX 0.25, 0.6, 0.8 must inherit matching KSX 0.4.
   - KSX must never inherit KS1 user filaments.
-- **Flow ratio progression:**
-  - 0.4mm → 0.6mm: +0.02 (PLA), +0.025-0.03 (PETG)
-  - 0.6mm → 0.8mm: +0.02 (PLA), +0.025-0.03 (PETG)
-  - 0.4mm → 0.25mm: -0.02 (all materials)
-- **Temperature rules:**
+- **Nozzle transition rules (applied relative to 0.4mm parent values):**
+
+  **PLA group** (Regular, Matte, Silk, Metal, Glow, Translucent, CF):
+  | Parameter                  | 0.25mm  | 0.6mm   | 0.8mm   |
+  |----------------------------|---------|---------|---------|
+  | Pressure Advance           | ×1.5    | ×0.667  | ×0.333  |
+  | Flow Ratio                 | +0.01   | −0.01   | −0.02   |
+  | Retraction Length          | −0.2mm  | +0.2mm  | +0.4mm  |
+  | Max Volumetric Speed       | cap 3   | ×1.2    | ×1.4    |
+  | Nozzle Temp (all temp keys)| −5°C    | +5°C    | +10°C   |
+  | Fan (max & min speed)      | −20pp   | +20pp   | +40pp   |
+  - Matte subtype: apply extra −0.01 to flow ratio
+  - Silk/Metal subtype: cap filament_retraction_speed at 30 mm/s for 0.6/0.8mm
+
+  **PETG group** (Regular, High-Flow/Rapid, Translucent):
+  | Parameter                  | 0.6mm   | 0.8mm   |
+  |----------------------------|---------|---------|
+  | Pressure Advance           | ×0.60   | ×0.30   |
+  | Flow Ratio                 | −0.02   | −0.04   |
+  | Retraction Length          | +0.4mm  | +0.8mm  |
+  | Max Volumetric Speed       | ×1.25   | ×1.5    |
+  | Nozzle Temp (all temp keys)| +10°C   | +15°C   |
+  | Fan (max & min speed)      | +30pp   | +50pp   |
+  - High-Flow subtype (Rapid, GF): multiply MVS result by additional ×1.2
+  - Translucent subtype: set fan to 0%, set MVS to 0.4mm value ×0.7
+
+  **TPU group** (95A, HS, High Speed):
+  | Parameter                  | 0.6mm   | 0.8mm   |
+  |----------------------------|---------|---------|
+  | Pressure Advance           | ×0.50   | 0.000   |
+  | Flow Ratio                 | no change| −0.01  |
+  | Retraction Length          | keep    | keep    |
+  | Max Volumetric Speed       | cap 5   | cap 7   |
+  | Nozzle Temp (all temp keys)| +5°C    | +10°C   |
+  | Fan (max & min speed)      | +20pp   | +40pp   |
+
+  **Important:** "pp" = percentage points (absolute, not relative). All fan values clamped 0–100.
+  Retraction: if the 0.4mm value is nil/absent, use 0.8mm as the baseline before applying the delta.
+  Temperature: shift nozzle_temperature, nozzle_temperature_initial_layer, nozzle_temperature_HS,
+    nozzle_temperature_initial_layer_HS, nozzle_temperature_range_high,
+    nozzle_temperature_BRASS, nozzle_temperature_initial_layer_BRASS — all by the same delta.
+    Do NOT change nozzle_temperature_range_low.
+
+- **Temperature rules (Hardened Steel offset, within a single nozzle size):**
   - nozzle_temperature_BRASS = nozzle_temperature (base)
-  - nozzle_temperature_HS = base + 5 (PLA) or base + 10 (PETG)
   - nozzle_temperature_initial_layer_BRASS = nozzle_temperature_initial_layer
+  - nozzle_temperature_HS = base + 5 (PLA) or base + 10 (PETG)
   - nozzle_temperature_initial_layer_HS = initial + 5 (PLA) or initial + 10 (PETG)
   - Validate: nozzle_temperature_initial_layer_HS <= nozzle_temperature_range_high
-  - Do NOT change range_low or range_high values
+  - Do NOT change range_low
 - **Material restrictions by nozzle:**
   - 0.25mm: PLA only (no PETG, TPU, specialty)
   - 0.4mm: All materials (primary calibration)

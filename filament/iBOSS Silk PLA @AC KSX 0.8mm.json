@@ -22,12 +22,45 @@
         "90"
     ],
     "filament_flow_ratio": [
-        "1.01"
+        "0.95"
     ],
     "filament_max_volumetric_speed": [
-        "12"
+        "14"
     ],
     "pressure_advance": [
-        "0.016"
+        "0.011"
+    ],
+    "filament_retraction_length": [
+        "1.2"
+    ],
+    "nozzle_temperature": [
+        "230"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "230"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "235"
+    ],
+    "nozzle_temperature_range_high": [
+        "235"
+    ],
+    "nozzle_temperature_BRASS": [
+        "230"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "230"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "100"
+    ],
+    "filament_retraction_speed": [
+        "30"
     ]
 }

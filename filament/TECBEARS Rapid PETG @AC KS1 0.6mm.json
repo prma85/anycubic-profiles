@@ -26,7 +26,7 @@
         "High Temp Plate"
     ],
     "fan_min_speed": [
-        "30"
+        "60"
     ],
     "filament_density": [
         "1.27"
@@ -35,13 +35,13 @@
         "; filament end gcode "
     ],
     "filament_flow_ratio": [
-        "0.98"
+        "0.93"
     ],
     "filament_load_time": [
         "42"
     ],
     "filament_max_volumetric_speed": [
-        "19"
+        "27"
     ],
     "filament_retract_before_wipe": [
         "0%"
@@ -77,6 +77,33 @@
         "10"
     ],
     "pressure_advance": [
-        "0.027"
+        "0.024"
+    ],
+    "filament_retraction_length": [
+        "1.9"
+    ],
+    "nozzle_temperature": [
+        "255"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "255"
+    ],
+    "nozzle_temperature_HS": [
+        "255"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "265"
+    ],
+    "nozzle_temperature_range_high": [
+        "280"
+    ],
+    "nozzle_temperature_BRASS": [
+        "255"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "255"
+    ],
+    "fan_max_speed": [
+        "70"
     ]
 }
