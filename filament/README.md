@@ -109,6 +109,40 @@ Note: TPU is extruder-grip limited — even on 0.8mm nozzle, keep print speed �
 - Validate: `nozzle_temperature_initial_layer_HS` ≤ `nozzle_temperature_range_high`
 - Do NOT change `nozzle_temperature_range_low`
 
+## ABS / ASA Group Rules
+
+ABS and ASA require special handling not covered by the PLA/PETG/TPU transition tables.
+
+### Required settings (all ABS/ASA profiles)
+- `fan_max_speed: 10`, `fan_min_speed: 5` — must be explicitly set; KSX system parent wrongly inherits 100/80
+- `activate_air_filtration: 1` (KS1 only — KSX has no filtration hardware, parent defaults to 0)
+- `activate_chamber_temp_control: 1`, `chamber_temperature: 55`
+- `dont_slow_down_outer_wall: 1`
+
+### Temperature baseline (Anycubic ABS improved)
+- `nozzle_temperature: 255`, `nozzle_temperature_initial_layer: 255`
+- `nozzle_temperature_HS: 260`, `nozzle_temperature_initial_layer_HS: 260` (+5°C HS rule applies)
+- `hot_plate_temp: 105`, `hot_plate_temp_initial_layer: 105`
+
+### Nozzle availability
+- 0.4mm, 0.6mm, 0.8mm only — no 0.25mm for ABS/ASA
+
+---
+
+## Matte PLA Adhesion Rules
+
+Matte PLA has lower inter-layer adhesion and is more vulnerable to early thermal contraction than regular PLA. All matte profiles must include:
+
+- `close_fan_the_first_x_layers: 4` — no fan for first 4 layers prevents thermal shock detach
+- `full_fan_speed_layer: 8` — gradual ramp from layer 4 to 8 instead of instant full fan
+- `filament_z_hop: 0.6` — matte leaves larger ooze blobs on travel; 0.4mm is insufficient clearance
+- `fan_max_speed: 80`, `fan_min_speed: 60` — matte surface degrades with over-cooling (vs 100/100 regular PLA)
+- `fan_cooling_layer_time: 80` — shorter threshold (vs 100 for regular PLA)
+
+These are validated against the Bambu A1 profile source and community OrcaSlicer practice. The fan reduction is intentional — matte pigment cools faster and over-cooling causes surface roughness.
+
+---
+
 ## Editing Workflow
 
 1. Edit 0.4mm parent for shared material behavior.

@@ -9,6 +9,7 @@
     ],
     "name": "Anycubic Kobra S1 0.2 nozzle - Brass",
     "printer_settings_id": "Anycubic Kobra S1 0.2 nozzle - Brass",
+    "printer_flush_multiplier": "0.7",
     "retraction_length": [
         "0.4"
     ],

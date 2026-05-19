@@ -1,0 +1,409 @@
+# SKILLS.md — Slicer, Printer, and Filament Knowledge Base
+
+Last updated: 2026-05-18
+Scope: Anycubic Slicer Next (OrcaSlicer-based), Kobra S1, Kobra X
+
+---
+
+## 1. Slicer Architecture
+
+### Anycubic Slicer Next
+- Based on OrcaSlicer. All OrcaSlicer filament/process JSON keys apply.
+- BambuStudio profiles are NOT directly compatible — see Section 7.
+- Profile resolution: user `inherits` chain resolves user files first, then `system/Anycubic/`.
+- The `name` field is the identity key used by `inherits` — it must exactly match the filename stem.
+
+### Three-Tier System
+```
+Machine (hardware) → Filament (material) → Process (strategy)
+```
+Each tier can only override the tier above it, not skip levels.
+
+### File Format
+- `.json` — profile settings (inheritance overlay)
+- `.info` — sync metadata
+  ```
+  sync_info = create
+  user_id =
+  setting_id = <exact filename stem>
+  updated_time = <unix epoch>
+  ```
+- Keys absent in a child profile are inherited from parent.
+- Keys present in a child override the parent value.
+- Remove keys from children when they match the parent exactly (keep files minimal).
+
+---
+
+## 2. Hardware: Kobra S1 vs Kobra X Differences
+
+These differences drive why filament profiles must remain separate per printer family.
+
+| Feature | Kobra S1 | Kobra X |
+|---------|----------|---------|
+| Build volume | 250×250×250mm | 260×260×260mm |
+| Auxiliary cooling fan | Yes (`additional_cooling_fan_speed`) | No (always 0) |
+| Air filtration / exhaust fan | Yes (`activate_air_filtration=1`) | No (`=0`) |
+| Bed leveling | ABL mesh | ABL mesh |
+| Acceleration (default) | Higher | More conservative |
+| Typical PA (PLA 0.4mm) | ~0.035–0.042 | ~0.030–0.035 |
+| Fan behavior (base PLA) | `fan_max=100, fan_min=100` | `fan_max=100, fan_min=80` |
+| KSX parent `filament_deretraction_speed` | — | `nil` (vs KS1 `30`) |
+
+**Rule:** Never inherit KSX filament profiles from KS1 user profiles. Always inherit from the matching system parent for the correct printer family.
+
+### Nozzle Variants Available
+Both printers support: 0.25mm, 0.4mm, 0.6mm, 0.8mm
+- 0.25mm: PLA only
+- 0.4mm: all materials (primary calibration nozzle)
+- 0.6mm: all materials
+- 0.8mm: PLA, PETG, TPU only
+
+---
+
+## 3. Filament Profile Architecture
+
+### Inheritance Chain
+```
+system parent (e.g. Anycubic PLA @Anycubic Kobra S1 0.4 nozzle)
+    └── user 0.4mm (e.g. Elegoo PLA @AC KS1 0.4mm)
+            ├── user 0.25mm (inherits KS1 0.4mm)
+            ├── user 0.6mm  (inherits KS1 0.4mm)
+            └── user 0.8mm  (inherits KS1 0.4mm)
+```
+
+KSX chain is identical but rooted in KSX system parent and KSX user 0.4mm.
+
+### Naming Convention
+`[Brand] [Material] @AC [Printer] [Nozzle]`
+- Examples: `Elegoo PLA @AC KS1 0.4mm`, `Bambu PLA Matte @AC KSX 0.4mm`
+- Brand/material names must start uppercase for slicer alphabetical sorting.
+
+### Required Keys in Every Filament Profile
+- `type`, `from`, `is_custom_defined`, `instantiation`, `name`, `inherits`, `version`
+- `filament_settings_id`, `filament_vendor`, `filament_type`, `compatible_printers`
+- All 6 nozzle temperature keys: `nozzle_temperature`, `nozzle_temperature_initial_layer`, `nozzle_temperature_BRASS`, `nozzle_temperature_initial_layer_BRASS`, `nozzle_temperature_HS`, `nozzle_temperature_initial_layer_HS`
+
+---
+
+## 4. Nozzle Transition Rules
+
+All non-0.4mm variants are derived from the 0.4mm parent by applying these deltas.
+
+### PLA Group (Regular, Matte, Silk, Metal, Glow, Translucent, CF)
+
+| Parameter | 0.25mm | 0.6mm | 0.8mm |
+|-----------|--------|-------|-------|
+| Pressure Advance | ×1.5 | ×0.667 | ×0.333 |
+| Flow Ratio | +0.01 | −0.01 | −0.02 |
+| Retraction Length | −0.2mm | +0.2mm | +0.4mm |
+| Max Volumetric Speed | cap 3 | ×1.2 | ×1.4 |
+| All Nozzle Temp keys | −5°C | +5°C | +10°C |
+| Fan Speed (max & min) | −20pp | +20pp | +40pp |
+
+Subtype overrides (stacked on table above):
+- **Matte:** extra −0.01 flow ratio (matte particles expand more)
+- **Silk/Metal:** cap `filament_retraction_speed` at 30 mm/s for 0.6/0.8mm
+- **Translucent:** fan −10pp extra, MVS −20% extra
+
+### PETG Group (Regular, High-Flow/Rapid, Translucent)
+
+| Parameter | 0.6mm | 0.8mm |
+|-----------|-------|-------|
+| Pressure Advance | ×0.60 | ×0.30 |
+| Flow Ratio | −0.02 | −0.04 |
+| Retraction Length | +0.4mm | +0.8mm |
+| Max Volumetric Speed | ×1.25 | ×1.5 |
+| All Nozzle Temp keys | +10°C | +15°C |
+| Fan Speed (max & min) | +30pp | +50pp |
+
+Subtype overrides:
+- **High-Flow (Rapid, GF):** MVS result ×1.2
+- **Translucent:** fan = 0%, MVS = 0.4mm value ×0.7
+
+### TPU Group (95A, HS, High Speed)
+
+| Parameter | 0.6mm | 0.8mm |
+|-----------|-------|-------|
+| Pressure Advance | ×0.50 | 0.000 |
+| Flow Ratio | none | −0.01 |
+| Retraction Length | keep | keep |
+| Max Volumetric Speed | cap 5 | cap 7 |
+| All Nozzle Temp keys | +5°C | +10°C |
+| Fan Speed (max & min) | +20pp | +40pp |
+
+Note: TPU is extruder-grip limited — keep print speed ≤ 40–50 mm/s even on 0.8mm on Kobra S1.
+
+### Application Notes
+- "pp" = percentage points absolute; fan values clamped 0–100
+- If 0.4mm retraction is nil/absent, use 0.8mm as baseline before delta
+- Temperature delta shifts ALL of: `nozzle_temperature`, `nozzle_temperature_initial_layer`, `nozzle_temperature_HS`, `nozzle_temperature_initial_layer_HS`, `nozzle_temperature_range_high`, `nozzle_temperature_BRASS`, `nozzle_temperature_initial_layer_BRASS` — **never** `nozzle_temperature_range_low`
+- Round PA to 3 decimal places; flow ratio to 4 decimal places
+
+---
+
+## 5. Hardened Steel Temperature Rules
+
+Applied within a single nozzle size (not a nozzle transition):
+
+| Key | Value |
+|-----|-------|
+| `nozzle_temperature_BRASS` | = base temperature |
+| `nozzle_temperature_initial_layer_BRASS` | = initial layer temperature |
+| `nozzle_temperature_HS` | base + 5°C (PLA) or base + 10°C (PETG) |
+| `nozzle_temperature_initial_layer_HS` | initial + 5°C (PLA) or initial + 10°C (PETG) |
+
+**Validate:** `nozzle_temperature_initial_layer_HS` ≤ `nozzle_temperature_range_high`
+**Never** change `nozzle_temperature_range_low` or `nozzle_temperature_range_high`.
+
+Why: Hardened steel has lower thermal conductivity than brass — requires higher temps for equivalent melt flow.
+
+---
+
+## 6. Material-Specific Behavior Notes
+
+### PLA (Regular)
+- Temp: 200–220°C nozzle, 55–65°C bed
+- Cooling: aggressive (fan_max=100%, fan_min=100%)
+- PA: ~0.032–0.042 on Kobra S1 with 0.4mm brass
+- Flow ratio: 0.96–0.98
+- MVS: 12–16 mm³/s (conservative), up to 21 on Bambu A1 hardware (cap 16 for Kobra)
+
+### PLA Matte
+- Same temps as regular PLA
+- Flow ratio: −0.01 vs regular (matte pigment expands more)
+- Cooling: reduced vs regular — **fan_max=80%, fan_min=60%** (matte surface quality degrades with over-cooling)
+- **Early layer adhesion:** `close_fan_the_first_x_layers=4`, `full_fan_speed_layer=8` — critical for small models
+- **Z-hop:** 0.6mm minimum (matte can leave larger blobs on travel; 0.4mm insufficient)
+- `slow_down_layer_time=6` (shorter than regular — matte cools faster by nature)
+- Density: ~1.24–1.32 g/cm³ (higher than regular PLA ~1.24)
+- Bambu PLA Matte specific: density 1.32, flow 0.96 (conservative baseline for Kobra)
+
+### PLA Silk / Metal
+- Temp: 220–230°C (higher for sheen)
+- Retraction speed: cap at 30 mm/s for 0.6/0.8mm nozzles (brittle when cold)
+- Cooling: similar to regular PLA
+
+### PLA-CF (Carbon Fiber)
+- Requires hardened steel nozzle
+- Flow ratio: slightly lower (~0.95)
+- Temp: 220–230°C
+
+### PETG
+- Temp: 230–250°C nozzle, 70–80°C bed
+- Cooling: gentle (fan 60–80%)
+- PA: ~0.03–0.05
+- Support XY distance: increase to 1.0mm (PETG fuses easily)
+- Bridge speed: 30 mm/s, bridge flow: 0.94
+
+### ABS / ASA (e.g. Anycubic ABS improved)
+- Temp: 255°C nozzle (Anycubic ABS improved), 105°C bed
+- Cooling: minimal — fan_max=10%, fan_min=5% (warping risk)
+- Chamber temp: 55°C recommended
+- Air filtration: enabled on KS1
+- `dont_slow_down_outer_wall=1`
+- `activate_air_filtration=1`, `activate_chamber_temp_control=1`
+- KSX system parent wrongly inherits fan_max=100/fan_min=80 — must explicitly override to 10/5
+
+### TPU
+- Temp: 200–220°C nozzle, 20–30°C bed
+- Cooling: minimal (fan 20–40%)
+- Speed: ≤ 40–50 mm/s (extruder-grip limited on Kobra)
+- PA: 0 for 0.8mm; reduced for 0.6mm
+
+---
+
+## 7. BambuStudio Profile Compatibility
+
+When importing a BambuStudio filament profile into Anycubic Slicer Next:
+
+### Keys to REMOVE (Bambu-only hardware):
+- `fan_p2_after_x_layers`, `fan_p2_before_x_layers`, `fan_p2_speed_before_x_layers`
+- `fan_p3_speed`, `fan_p4_speed`
+- `fan_speed_after_x_layers`, `fan_speed_before_x_layers`
+- `filament_change_length`
+- `pellet_flow_coefficient` (pellet extruder only)
+
+### Keys to CHANGE:
+- `enable_pressure_advance`: Bambu sets to `0` (uses its own PA system). Must change to `1` for OrcaSlicer/AnycubicSlicerNext.
+- `pressure_advance`: Bambu profiles often omit this. Must add based on printer calibration baseline.
+- `filament_start_gcode`: Bambu A1 gcode uses `M106 P3` (bed fan) and AMS conditionals — not valid on Kobra. Replace with `"; filament start gcode"`.
+- `version`: Replace Bambu version string (e.g. `2.6.1.55`) with current Anycubic version (`1.3.2602.11`).
+- `inherits`: Change from `""` to the appropriate Anycubic system parent.
+
+### Keys to KEEP (also exist in OrcaSlicer):
+- `filament_flush_temp`, `filament_flush_volumetric_speed`
+- `filament_prime_volume`, `filament_ramming_volumetric_speed`
+- `filament_stamping_distance`, `filament_stamping_loading_speed`
+- `idle_temperature`, `filament_adhesiveness_category`
+- `supertack_plate_temp`, `cool_plate_temp`, `eng_plate_temp`, `textured_cool_plate_temp` (and initial_layer variants) — slicer ignores unsupported plate types
+- `filament_cooling_final_speed`, `filament_cooling_initial_speed`, `filament_cooling_moves`
+- `filament_loading_speed`, `filament_unloading_speed` (ignored for single extruder)
+
+### Bambu Printer → Anycubic Printer Mapping
+
+When porting Bambu filament profiles to Anycubic, use the closest hardware equivalent as source:
+
+| Bambu printer | Anycubic equivalent | Why |
+|---------------|---------------------|-----|
+| **A1** | **Kobra X** | Open-frame single extruder, comparable hotend, no enclosure |
+| **A1 Mini (A1M)** | **Kobra X** | Same family as A1 — use for KSX profiles |
+| **P1S** | **Kobra S1** | Enclosed, higher performance hotend, auxiliary cooling fan, air filtration |
+
+**Important:** A1 and A1M are separate profile sets in BambuStudio — A1 covers `Bambu Lab A1 0.4/0.6/0.8 nozzle`, A1M covers `Bambu Lab A1 mini 0.4/0.6/0.8 nozzle`. They are different `compatible_printers` lists.
+
+### BambuStudio Profile Locations (Local Installation)
+
+All system profiles are at:
+```
+C:\Users\pandrade\AppData\Roaming\BambuStudio\system\BBL\
+  filament\   — 1,572 filament profiles
+  process\    — 259 process profiles
+  machine\    — printer machine definitions
+```
+
+User custom profiles (flat, no inheritance from Anycubic parents) are at:
+```
+C:\Users\pandrade\AppData\Roaming\BambuStudio\user\3129683811\filament\
+```
+
+### Filament Parent Naming Conventions in BambuStudio
+
+All BBL filament profiles inherit from a `@base` root, then have printer-specific variants:
+
+| Printer | Example parent profile name | `compatible_printers` |
+|---------|----------------------------|-----------------------|
+| A1 (0.4mm) | `Bambu PLA Basic @BBL A1` | `Bambu Lab A1 0.4 nozzle`, `0.6 nozzle`, `0.8 nozzle` |
+| A1M (0.4mm) | `Bambu PLA Basic @BBL A1M` | `Bambu Lab A1 mini 0.4 nozzle`, `0.6 nozzle`, `0.8 nozzle` |
+| P1S (0.4mm) | `Bambu PLA Basic @BBL P1S 0.4 nozzle` | `Bambu Lab P1S 0.4 nozzle` |
+
+**Key difference:** A1/A1M filament parents have no nozzle suffix in the filename (covers all nozzles via `compatible_printers`). P1S filament parents are nozzle-specific files.
+
+**P1S has very few dedicated filament profiles** (only high-temp materials: ABS, PC, PC-FR, PETG-HF, PLA Basic, PLA Matte, PLA Silk+, TPU). For standard PLA variants not listed for P1S, BambuStudio falls back to P1P profiles — so **P1P is the correct `inherits` target for KS1 standard PLA profiles**.
+
+### Process Parent Naming in BambuStudio
+
+| Printer | Example process profile | `compatible_printers` |
+|---------|------------------------|-----------------------|
+| A1 | `0.20mm Standard @BBL A1` | `Bambu Lab A1 0.4 nozzle` |
+| P1P/P1S | `0.20mm Standard @BBL P1P` | `Bambu Lab P1P 0.4 nozzle` |
+
+P1S has **no dedicated process profiles** — it uses P1P process profiles. P1S machine definition itself inherits from `fdm_bbl_3dp_001_common` (not P1P), but the process library is shared via P1P naming.
+
+### Porting Anycubic Profiles → BambuStudio (Future Work)
+
+BambuStudio **does** support `inherits`. The problem is that Anycubic system parents do not exist in BambuStudio, so the chain cannot resolve. Solution: re-parent to the Bambu equivalent, keep all override keys unchanged, update only identity fields.
+
+**Re-parenting map:**
+
+| Anycubic profile family | New `inherits` in BambuStudio | New `compatible_printers` |
+|------------------------|-------------------------------|--------------------------|
+| KSX filament 0.4mm | `Bambu [Material] @BBL A1` | `Bambu Lab A1 0.4 nozzle`, `Bambu Lab A1 mini 0.4 nozzle` |
+| KSX filament 0.6mm | `Bambu [Material] @BBL A1` (already covers 0.6) | `Bambu Lab A1 0.6 nozzle`, `Bambu Lab A1 mini 0.6 nozzle` |
+| KS1 filament 0.4mm | `Bambu [Material] @BBL P1S 0.4 nozzle` (or P1P if P1S not available) | `Bambu Lab P1S 0.4 nozzle` |
+| KS1 process profiles | `[Layer] @BBL P1P` | `Bambu Lab P1P 0.4 nozzle`, `Bambu Lab P1S 0.4 nozzle` |
+| KSX process profiles | `[Layer] @BBL A1` | `Bambu Lab A1 0.4 nozzle`, `Bambu Lab A1 mini 0.4 nozzle` |
+
+This is a future task — not yet started as of 2026-05-18.
+
+### MVS Scaling for Bambu → Kobra:
+Bambu A1 has a more powerful hotend than Kobra. Cap MVS when importing:
+- PLA Basic: Bambu=21 → Kobra cap=16
+- PLA Matte: Bambu=22 (A1 profile) → Kobra cap=14 (official OrcaSlicer Matte base=12)
+
+### Plate Temp Adjustment:
+- Bambu A1 hot plate 65°C PLA → use 60°C on Kobra (better adhesion without elephant foot)
+
+---
+
+## 8. Multi-Color Printing (AMS / Color Changes)
+
+### Prime Tower Settings
+For small models (< 30mm footprint) with many color changes:
+- `prime_volume`: minimum 45 mm³ (Bambu default 6 mm³ is insufficient — leaves contaminated melt)
+- `prime_tower_width`: 25mm minimum (wider = more wipe strokes = cleaner nozzle departure)
+- `prime_tower_rib_width`: 10mm with 25mm tower
+- `flush_into_infill`: `0` for small models — infill area too small to absorb flush volume cleanly
+
+### Small Model Protection
+For models < 20mm diameter at any point during print:
+- `close_fan_the_first_x_layers=4` — thermal contraction at layer 2 can shear tiny perimeters off bed
+- `full_fan_speed_layer=8` — gradual fan ramp prevents thermal shock
+- `filament_z_hop=0.6mm` — clearance for nozzle blobs during travel
+- Brim 10–15mm recommended for spherical or conical base geometries
+- `flush_into_infill=0` — small infill area cannot absorb flush
+
+### Diagnosing Detach Failures
+- **Same pair always fails** → bed position / ABL mesh gap → move models to center
+- **Random pair fails, prime tower survives** → nozzle blob collision OR thermal shock → z_hop + fan fix
+- **All fail consistently** → thermal or bed surface issue → fan fix + bed temp + IPA clean
+- **Fails at layer 2–4 specifically** → fan kicks in too early → `close_fan_the_first_x_layers` fix
+- **Fails first time after color change** → prime volume too low → increase `prime_volume`
+
+### Gcode Diagnosis Pattern
+Check: when does first `T[n]` tool change occur relative to detach layer?
+- If first tool change is AFTER detach layer → blob collision is NOT the cause → thermal/adhesion
+- If tool change coincides with detach layer → prime volume / z_hop is likely cause
+
+---
+
+## 9. Process Profile Rules
+
+### Naming Families
+- `@ AC Base` — 0.4mm nozzle, cross-printer
+- `@ AC 0.6mm` — 0.6mm nozzle
+- `@ AC 0.25mm` — 0.25mm fine detail
+
+### Layer Height Constraint
+Layer height ≤ 0.75 × nozzle diameter:
+- 0.25mm nozzle: max 0.18mm layer
+- 0.4mm nozzle: max 0.30mm layer
+- 0.6mm nozzle: max 0.45mm layer
+- 0.8mm nozzle: max 0.60mm layer
+
+### 0.6mm Safety Rule
+`support_bottom_z_distance` ≥ effective layer height on all 0.6mm profiles.
+
+### HQ vs Optimal (0.25mm family)
+Must differ in exactly 8 keys only:
+`default_acceleration`, `outer_wall_acceleration`, `outer_wall_speed`, `inner_wall_acceleration`, `inner_wall_speed`, `gap_infill_speed`, `internal_solid_infill_speed`, `sparse_infill_speed`
+
+### PETG Process Intent
+PETG profiles intentionally diverge from regular in:
+- `bridge_speed=30`, `bridge_flow=0.94`
+- `support_object_xy_distance=1.0` (prevents fusing)
+- Slightly increased support Z gaps
+Never force PETG to match regular profile speeds.
+
+---
+
+## 10. Debugging Profiles
+
+### Profiles Not Showing in Slicer
+Check: `C:\Users\pandrade\AppData\Roaming\AnycubicSlicerNext\log\debug_*.log`
+The log shows explicit load errors — missing parent, malformed JSON, ID mismatch.
+
+### Common Errors
+| Symptom | Likely cause |
+|---------|-------------|
+| Profile missing from dropdown | `name` doesn't match filename stem |
+| Profile shows but has wrong values | `inherits` points to wrong parent |
+| Slicer crashes on load | JSON syntax error |
+| Values not overriding parent | Key name typo or wrong key format |
+
+---
+
+## 11. Validation Checklist
+
+Before committing any change:
+- [ ] JSON syntax valid
+- [ ] `name` = filename stem exactly
+- [ ] `filament_settings_id` or `print_settings_id` = same as name
+- [ ] `.info` exists with matching `setting_id`
+- [ ] `inherits` target exists (user or system)
+- [ ] `compatible_printers` covers intended scope
+- [ ] No keys duplicated from parent
+- [ ] Hardened Steel temps correct (+5 PLA / +10 PETG on HS keys only)
+- [ ] `nozzle_temperature_initial_layer_HS` ≤ `nozzle_temperature_range_high`
+- [ ] Layer height ≤ 0.75 × nozzle diameter
+- [ ] For 0.6mm process: `support_bottom_z_distance` ≥ layer height
+- [ ] For matte PLA: `close_fan_the_first_x_layers=4`, `full_fan_speed_layer=8`, `filament_z_hop=0.6`

@@ -1,177 +1,226 @@
-# Copilot Instructions - User 651589 Anycubic Profiles
+# Copilot Instructions — User 651589 Anycubic Profiles
 
-Last updated: 2026-05-11
+Last updated: 2026-05-18
 
 ## Purpose
 
-These instructions guide AI-assisted edits to custom Anycubic Slicer profiles in user/651589.
+Authoritative editing policy for AI-assisted work on custom Anycubic Slicer profiles in `user/651589`.
 
-Primary objectives:
-- Preserve inheritance-driven architecture.
-- Apply small, auditable overrides.
-- Keep S1 and X behavior unified where intended.
+For full slicer knowledge, printer differences, and material behaviour see **`../SKILLS.md`**.
+For repository architecture and machine notes see **`../README.md`**.
 
-## Read This First
+---
 
-Before editing profiles, read:
-- ../copilot-instructions.md (high-level map)
-- ../README.md (repository architecture)
-- ../filament/README.md (filament strategy)
-- ../process/README.md (process families and tuning rules)
+## Documentation Map
+
+| File | Purpose |
+|------|---------|
+| `SKILLS.md` | Complete knowledge base: hardware, filament logic, troubleshooting |
+| `CLAUDE.md` | Claude Code instructions for this repository |
+| `.github/copilot-instructions.md` | This file — editing policy and validation gates |
+| `README.md` | Repository architecture, machine overrides, S1 vs X strategy |
+| `filament/README.md` | Filament strategy, nozzle transition tables, inventory |
+| `process/README.md` | Process families, HQ/Optimal rule, PETG intent |
+
+---
+
+## Primary Objectives
+
+- Preserve inheritance-driven architecture — child files override only what differs
+- Apply small, auditable overrides — no wholesale rewrites of parent content
+- Keep KS1 and KSX filament families strictly separate
+- Keep process profiles shared between S1 and X for the same nozzle size
+
+---
 
 ## Folder Responsibilities
 
-- machine/: printer and nozzle hardware overlays
-- filament/: material behavior calibration
-- process/: quality, speed, and use-case presets
+- `machine/` — printer and nozzle hardware overlays only
+- `filament/` — material behaviour calibration, printer-scoped
+- `process/` — quality, speed, and use-case presets, nozzle-scoped
 
-Do not mix responsibilities between layers unless explicitly required.
+Do not mix responsibilities between layers.
 
-## Naming and Structure Rules
+---
 
-### Process
-- Base family: <name> @ AC Base
-- 0.6 family: <name> @ AC 0.6mm
-- 0.25 family: <name> @ AC 0.25mm
-- Keep .json and .info pairs synchronized.
+## Naming Rules
 
 ### Filament
-- **Naming:** All brand/material names MUST start with uppercase (ESun, IBOSS, IBoss, not ESun, IBoss, IBoss)
-- Keep KS1 and KSX nozzle suffix conventions.
-- Do not collapse KS1 and KSX filament profiles into one file.
-- Use one-level user inheritance:
-  - KS1 0.25, 0.6, 0.8 must inherit matching KS1 0.4.
-  - KSX 0.25, 0.6, 0.8 must inherit matching KSX 0.4.
-  - KSX must never inherit KS1 user filaments.
-- **Nozzle transition rules (applied relative to 0.4mm parent values):**
+- Pattern: `[Brand] [Material] @AC [Printer] [Nozzle]`
+- Examples: `Elegoo PLA @AC KS1 0.4mm`, `Bambu PLA Matte @AC KSX 0.4mm`
+- **Brand/material names MUST start with uppercase** (ESun not eSun, IBoss not iBOSS)
+- KS1 and KSX are separate — never merge into one file
 
-  **PLA group** (Regular, Matte, Silk, Metal, Glow, Translucent, CF):
-  | Parameter                  | 0.25mm  | 0.6mm   | 0.8mm   |
-  |----------------------------|---------|---------|---------|
-  | Pressure Advance           | ×1.5    | ×0.667  | ×0.333  |
-  | Flow Ratio                 | +0.01   | −0.01   | −0.02   |
-  | Retraction Length          | −0.2mm  | +0.2mm  | +0.4mm  |
-  | Max Volumetric Speed       | cap 3   | ×1.2    | ×1.4    |
-  | Nozzle Temp (all temp keys)| −5°C    | +5°C    | +10°C   |
-  | Fan (max & min speed)      | −20pp   | +20pp   | +40pp   |
-  - Matte subtype: apply extra −0.01 to flow ratio
-  - Silk/Metal subtype: cap filament_retraction_speed at 30 mm/s for 0.6/0.8mm
-
-  **PETG group** (Regular, High-Flow/Rapid, Translucent):
-  | Parameter                  | 0.6mm   | 0.8mm   |
-  |----------------------------|---------|---------|
-  | Pressure Advance           | ×0.60   | ×0.30   |
-  | Flow Ratio                 | −0.02   | −0.04   |
-  | Retraction Length          | +0.4mm  | +0.8mm  |
-  | Max Volumetric Speed       | ×1.25   | ×1.5    |
-  | Nozzle Temp (all temp keys)| +10°C   | +15°C   |
-  | Fan (max & min speed)      | +30pp   | +50pp   |
-  - High-Flow subtype (Rapid, GF): multiply MVS result by additional ×1.2
-  - Translucent subtype: set fan to 0%, set MVS to 0.4mm value ×0.7
-
-  **TPU group** (95A, HS, High Speed):
-  | Parameter                  | 0.6mm   | 0.8mm   |
-  |----------------------------|---------|---------|
-  | Pressure Advance           | ×0.50   | 0.000   |
-  | Flow Ratio                 | no change| −0.01  |
-  | Retraction Length          | keep    | keep    |
-  | Max Volumetric Speed       | cap 5   | cap 7   |
-  | Nozzle Temp (all temp keys)| +5°C    | +10°C   |
-  | Fan (max & min speed)      | +20pp   | +40pp   |
-
-  **Important:** "pp" = percentage points (absolute, not relative). All fan values clamped 0–100.
-  Retraction: if the 0.4mm value is nil/absent, use 0.8mm as the baseline before applying the delta.
-  Temperature: shift nozzle_temperature, nozzle_temperature_initial_layer, nozzle_temperature_HS,
-    nozzle_temperature_initial_layer_HS, nozzle_temperature_range_high,
-    nozzle_temperature_BRASS, nozzle_temperature_initial_layer_BRASS — all by the same delta.
-    Do NOT change nozzle_temperature_range_low.
-
-- **Temperature rules (Hardened Steel offset, within a single nozzle size):**
-  - nozzle_temperature_BRASS = nozzle_temperature (base)
-  - nozzle_temperature_initial_layer_BRASS = nozzle_temperature_initial_layer
-  - nozzle_temperature_HS = base + 5 (PLA) or base + 10 (PETG)
-  - nozzle_temperature_initial_layer_HS = initial + 5 (PLA) or initial + 10 (PETG)
-  - Validate: nozzle_temperature_initial_layer_HS <= nozzle_temperature_range_high
-  - Do NOT change range_low
-- **Material restrictions by nozzle:**
-  - 0.25mm: PLA only (no PETG, TPU, specialty)
-  - 0.4mm: All materials (primary calibration)
-  - 0.6mm: All materials
-  - 0.8mm: PLA, PETG, TPU
-- Keep child variants minimal:
-  - Remove keys identical to inherited effective values.
-  - Keep only intentional differences.
-  - Never remove version.
-- .info must be plain key-value with sync_info=create and aligned setting_id.
-- Deltas must remain type-specific and printer-aware.
-- filament_change_length must only be added or kept when justified by system transitions.
+### Process
+- Base (0.4mm cross-printer): `[name] @ AC Base`
+- 0.6mm: `[name] @ AC 0.6mm`
+- 0.25mm: `[name] @ AC 0.25mm`
 
 ### Machine
-- Keep machine overrides minimal.
-- Avoid duplicating system values unless intentional for lock-in.
+- Pattern: `Anycubic [Model] [Nozzle] nozzle - [Material]`
+- Example: `Anycubic Kobra S1 0.4 nozzle - Brass`
 
-## Compatibility Rules
+---
 
-For process profiles:
-- Include Kobra X in compatible_printers for the same nozzle size.
-- Keep S1 brass and hardened variants listed where used.
+## Filament Inheritance Rules
 
-For filament profiles:
-- Keep printer-specific compatibility due thermal and cooling differences.
+```
+KS1 system parent
+    └── KS1 user 0.4mm (editable parent overlay)
+            ├── KS1 user 0.25mm  ← inherits KS1 0.4mm
+            ├── KS1 user 0.6mm   ← inherits KS1 0.4mm
+            └── KS1 user 0.8mm   ← inherits KS1 0.4mm
 
-## 0.25 HQ vs Optimal Rule
+KSX system parent
+    └── KSX user 0.4mm (editable parent overlay)
+            ├── KSX user 0.25mm  ← inherits KSX 0.4mm
+            ├── KSX user 0.6mm   ← inherits KSX 0.4mm
+            └── KSX user 0.8mm   ← inherits KSX 0.4mm
+```
 
-For the five 0.25 pairs (0.06/0.08/0.10/0.12/0.14), HQ and Optimal should differ only on:
-- default_acceleration
-- outer_wall_acceleration
-- outer_wall_speed
-- inner_wall_acceleration
-- inner_wall_speed
-- gap_infill_speed
-- internal_solid_infill_speed
-- sparse_infill_speed
+- KSX must **never** inherit from KS1 user profiles
+- Non-0.4mm variants keep only keys that differ from their 0.4mm parent
+- `version` is always retained in every file
 
-Any additional differences should be treated as regression unless explicitly requested.
+---
 
-## 0.6 Safety Rule
+## Nozzle Transition Rules
 
-For 0.6 process profiles:
-- Ensure support_bottom_z_distance >= effective layer height.
+Applied relative to the 0.4mm parent of the same material+printer. Full tables in `SKILLS.md` Section 4.
 
-## Regular vs PETG Intent
+**PLA group** (Regular, Matte, Silk, Metal, Glow, Translucent, CF):
 
-PETG process variants intentionally diverge from regular profiles in bridge and support behavior.
+| Parameter | 0.25mm | 0.6mm | 0.8mm |
+|-----------|--------|-------|-------|
+| Pressure Advance | ×1.5 | ×0.667 | ×0.333 |
+| Flow Ratio | +0.01 | −0.01 | −0.02 |
+| Retraction Length | −0.2mm | +0.2mm | +0.4mm |
+| Max Volumetric Speed | cap 3 | ×1.2 | ×1.4 |
+| Nozzle Temp (all keys) | −5°C | +5°C | +10°C |
+| Fan Speed (max & min) | −20pp | +20pp | +40pp |
 
-When creating or editing PETG variants:
-- Preserve explicit bridge tuning.
-- Preserve support release spacing where defined.
-- Do not force PETG to match regular profile speeds blindly.
+Subtype: Matte adds extra −0.01 flow. Silk/Metal cap retraction speed at 30 mm/s for 0.6/0.8mm.
+
+**PETG group** (Regular, High-Flow/Rapid, Translucent):
+
+| Parameter | 0.6mm | 0.8mm |
+|-----------|-------|-------|
+| Pressure Advance | ×0.60 | ×0.30 |
+| Flow Ratio | −0.02 | −0.04 |
+| Retraction Length | +0.4mm | +0.8mm |
+| Max Volumetric Speed | ×1.25 | ×1.5 |
+| Nozzle Temp (all keys) | +10°C | +15°C |
+| Fan Speed (max & min) | +30pp | +50pp |
+
+**TPU group** (95A, HS, High Speed):
+
+| Parameter | 0.6mm | 0.8mm |
+|-----------|-------|-------|
+| Pressure Advance | ×0.50 | 0.000 |
+| Flow Ratio | none | −0.01 |
+| Retraction Length | keep | keep |
+| Max Volumetric Speed | cap 5 | cap 7 |
+| Nozzle Temp (all keys) | +5°C | +10°C |
+| Fan Speed (max & min) | +20pp | +40pp |
+
+**Application notes:**
+- "pp" = percentage points absolute; fan clamped 0–100
+- Temperature delta shifts ALL of: `nozzle_temperature`, `nozzle_temperature_initial_layer`, `nozzle_temperature_HS`, `nozzle_temperature_initial_layer_HS`, `nozzle_temperature_range_high`, `nozzle_temperature_BRASS`, `nozzle_temperature_initial_layer_BRASS` — **never** `nozzle_temperature_range_low`
+- Round PA to 3 dp; flow ratio to 4 dp
+- If 0.4mm retraction is nil/absent, use 0.8mm as baseline before delta
+
+---
+
+## Hardened Steel Temperature Rules (within a single nozzle size)
+
+- `nozzle_temperature_BRASS` = base temperature
+- `nozzle_temperature_initial_layer_BRASS` = initial layer temperature
+- `nozzle_temperature_HS` = base + 5°C (PLA) or base + 10°C (PETG)
+- `nozzle_temperature_initial_layer_HS` = initial + 5°C (PLA) or initial + 10°C (PETG)
+- **Validate:** `nozzle_temperature_initial_layer_HS` ≤ `nozzle_temperature_range_high`
+- **Never** change `nozzle_temperature_range_low`
+
+---
+
+## Material Restrictions by Nozzle
+
+- 0.25mm: PLA only
+- 0.4mm: all materials
+- 0.6mm: all materials
+- 0.8mm: PLA, PETG, TPU only
+
+---
+
+## Process Profile Rules
+
+- `compatible_printers` for 0.4mm base: include Kobra S1 (plain, Brass, Hardened Steel) and Kobra X
+- 0.6mm safety rule: `support_bottom_z_distance` ≥ effective layer height
+- HQ vs Optimal (0.25mm): must differ in exactly 8 keys — see `SKILLS.md` Section 9
+- PETG process variants intentionally diverge in bridge and support — do not force to match regular
+
+---
+
+## Machine Profile Rules
+
+- Keep overrides minimal
+- Avoid duplicating system values unless intentional for lock-in
+- Do not modify `system/Anycubic/` files
+
+---
+
+## .info File Rules
+
+Every `.json` profile must have a paired `.info`:
+```
+sync_info = create
+user_id =
+setting_id = <exact filename stem>
+updated_time = <unix epoch>
+```
+
+---
 
 ## Change Discipline
 
-When editing JSON profiles:
-- Keep IDs coherent and unique.
-- Keep inheritance targets valid.
-- Prefer removing redundant keys to rely on parent defaults.
-- Avoid unrelated formatting churn.
+- Keep child files minimal — remove keys that match parent exactly
+- Keep IDs coherent: `name` = `filament_settings_id`/`print_settings_id` = filename stem = `.info` `setting_id`
+- Prefer inheritance over duplication
+- Stage only intentionally changed files in git commits
+- Never commit gcode files
+
+---
+
+## Numeric Tuning Validation Gates
+
+Any numeric tuning proposal must pass all gates before values are changed:
+
+1. Data integrity — profile loads and resolves cleanly
+2. Inheritance resolution — effective value confirmed at each level
+3. Scope discipline — change applies only to intended profiles
+4. Baseline behaviour characterization — current effective value documented
+5. Constraint compliance — layer height, line width, volumetric limits checked
+6. Comparative justification — rationale for new value vs baseline
+7. Cross-profile consistency — related profiles checked for regressions
+8. Risk scoring and rollback plan — impact assessment and revert path
+9. Test matrix proposal — what to print and what to look for
+10. Output contract — exactly which keys change, to what values, in which files
+
+**Mandatory STOP conditions:** unresolved inheritance chain, missing effective baseline, missing rule-check report, protected family consistency regressions without rationale, missing rollback plan.
+
+---
 
 ## Validation Checklist
 
-After changes, verify:
-- JSON syntax is valid.
-- Name, filename, and info alignment are correct.
-- Inheritance targets exist.
-- Compatibility lists match intended nozzle and printer scope.
-- HQ/Optimal and PETG rules remain consistent.
-- For filament variants:
-  - All non-0.4 variants inherit matching 0.4 parent.
-  - BRASS and HS temperature key intent remains intact where required.
-  - HS initial temperature does not exceed range high.
-  - Keys identical to inherited values are removed except required metadata.
-
-## External Analysis Context
-
-If preparing data for external AI analysis with zipped inputs:
-- user.zip = custom overlays (user/651589/*)
-- anycubic.zip = system defaults (system/Anycubic/*)
-- Resolve inherits in user.zip by checking user.zip first, then anycubic.zip.
+After any change:
+- [ ] JSON syntax valid
+- [ ] `name` = filename stem exactly
+- [ ] `filament_settings_id` / `print_settings_id` matches name
+- [ ] `.info` exists with matching `setting_id`
+- [ ] `inherits` target exists
+- [ ] `compatible_printers` covers intended scope
+- [ ] No keys duplicated from parent (except `version`)
+- [ ] Hardened Steel temps correct
+- [ ] `nozzle_temperature_initial_layer_HS` ≤ `nozzle_temperature_range_high`
+- [ ] Layer height ≤ 0.75 × nozzle diameter
+- [ ] For 0.6mm process: `support_bottom_z_distance` ≥ layer height
+- [ ] For matte PLA: `close_fan_the_first_x_layers=4`, `full_fan_speed_layer=8`, `filament_z_hop=0.6`

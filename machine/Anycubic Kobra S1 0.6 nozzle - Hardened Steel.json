@@ -3,6 +3,7 @@
     "inherits": "Anycubic Kobra S1 0.6 nozzle",
     "is_custom_defined": "0",
     "name": "Anycubic Kobra S1 0.6 nozzle - Hardened Steel",
+    "printer_flush_multiplier": "0.7",
     "printer_settings_id": "Anycubic Kobra S1 0.6 nozzle - Hardened Steel",
     "retract_restart_extra": [
         "0.06"

@@ -19,8 +19,7 @@ Design goal:
 - Main architecture and status: README.md
 - Process details: process/README.md
 - Filament details: filament/README.md
-- Copilot overview: copilot-instructions.md
-- Copilot authoring rules: .github/copilot-instructions.md
+- Copilot instructions: .github/copilot-instructions.md
 - External AI review prompt: AI_OPTIMIZATION_REVIEW_PROMPT.md
 
 ## Process Profile Status
