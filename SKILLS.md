@@ -249,7 +249,12 @@ When porting Bambu filament profiles to Anycubic, use the closest hardware equiv
 | **A1 Mini (A1M)** | **Kobra X** | Same family as A1 — use for KSX profiles |
 | **P1S** | **Kobra S1** | Enclosed, higher performance hotend, auxiliary cooling fan, air filtration |
 
-**Important:** A1 and A1M are separate profile sets in BambuStudio — A1 covers `Bambu Lab A1 0.4/0.6/0.8 nozzle`, A1M covers `Bambu Lab A1 mini 0.4/0.6/0.8 nozzle`. They are different `compatible_printers` lists.
+**A1 vs A1M differences** — only 3 keys differ between `Bambu PLA Basic @BBL A1` and `@BBL A1M`:
+- `compatible_printers`: A1 targets `Bambu Lab A1`, A1M targets `Bambu Lab A1 mini`
+- `hot_plate_temp`: A1=65°C, A1M=60°C
+- `hot_plate_temp_initial_layer`: A1=65°C, A1M=60°C
+
+Everything else (fan, cooling, temps, flow) is identical between the two.
 
 ### BambuStudio Profile Locations (Local Installation)
 
@@ -276,9 +281,21 @@ All BBL filament profiles inherit from a `@base` root, then have printer-specifi
 | A1M (0.4mm) | `Bambu PLA Basic @BBL A1M` | `Bambu Lab A1 mini 0.4 nozzle`, `0.6 nozzle`, `0.8 nozzle` |
 | P1S (0.4mm) | `Bambu PLA Basic @BBL P1S 0.4 nozzle` | `Bambu Lab P1S 0.4 nozzle` |
 
-**Key difference:** A1/A1M filament parents have no nozzle suffix in the filename (covers all nozzles via `compatible_printers`). P1S filament parents are nozzle-specific files.
+**Key architecture difference vs OrcaSlicer — BambuStudio does NOT use per-nozzle filament variants:**
+- `flow_ratio` and `filament_max_volumetric_speed` live in the `@base` parent only (e.g. PLA Basic @base has flow=0.98, MVS=21)
+- The `@BBL A1` printer-specific file does NOT override these — it only sets bed temps, fan, and cooling
+- There are no 0.6mm or 0.8mm filament files for A1/A1M — one file covers all nozzle sizes
+- Only 0.2mm nozzle gets its own filament file (too restrictive for the shared values)
+- BambuStudio computes volumetric limits from the machine profile's nozzle diameter at slice time
+- **Implication for porting:** Our Anycubic 0.6mm and 0.8mm filament variants all collapse into the single `@BBL A1` or `@BBL P1S` parent — nozzle variants don't exist as separate files in BambuStudio
 
 **P1S has very few dedicated filament profiles** (only high-temp materials: ABS, PC, PC-FR, PETG-HF, PLA Basic, PLA Matte, PLA Silk+, TPU). For standard PLA variants not listed for P1S, BambuStudio falls back to P1P profiles — so **P1P is the correct `inherits` target for KS1 standard PLA profiles**.
+
+**User custom profiles in BambuStudio** (`user/3129683811/filament/` and `user/3129683811/process/`):
+- `compatible_printers` is `None` / not set — BambuStudio resolves printer compatibility from context
+- Inherit from BBL system parents (e.g. `Generic PLA @BBL A1M`, `0.20mm Standard @BBL A1M`)
+- Only override keys that differ from the parent
+- This simplifies porting — no need to set `compatible_printers` in user filament files
 
 ### Process Parent Naming in BambuStudio
 
@@ -295,13 +312,14 @@ BambuStudio **does** support `inherits`. The problem is that Anycubic system par
 
 **Re-parenting map:**
 
-| Anycubic profile family | New `inherits` in BambuStudio | New `compatible_printers` |
-|------------------------|-------------------------------|--------------------------|
-| KSX filament 0.4mm | `Bambu [Material] @BBL A1` | `Bambu Lab A1 0.4 nozzle`, `Bambu Lab A1 mini 0.4 nozzle` |
-| KSX filament 0.6mm | `Bambu [Material] @BBL A1` (already covers 0.6) | `Bambu Lab A1 0.6 nozzle`, `Bambu Lab A1 mini 0.6 nozzle` |
-| KS1 filament 0.4mm | `Bambu [Material] @BBL P1S 0.4 nozzle` (or P1P if P1S not available) | `Bambu Lab P1S 0.4 nozzle` |
-| KS1 process profiles | `[Layer] @BBL P1P` | `Bambu Lab P1P 0.4 nozzle`, `Bambu Lab P1S 0.4 nozzle` |
-| KSX process profiles | `[Layer] @BBL A1` | `Bambu Lab A1 0.4 nozzle`, `Bambu Lab A1 mini 0.4 nozzle` |
+| Anycubic profile family | New `inherits` in BambuStudio | `compatible_printers` |
+|------------------------|-------------------------------|----------------------|
+| KSX filament (all nozzle sizes) | `Bambu [Material] @BBL A1` | not needed (set to None) |
+| KS1 filament (all nozzle sizes) | `Bambu [Material] @BBL P1S 0.4 nozzle` (or `@BBL P1P` if P1S variant absent) | not needed (set to None) |
+| KSX process profiles | `[Layer] @BBL A1` | not needed (set to None) |
+| KS1 process profiles | `[Layer] @BBL P1P` | not needed (set to None) |
+
+**Note:** KSX 0.6mm and 0.8mm filament variants collapse into the same `@BBL A1` parent as the 0.4mm — nozzle size is not a separate file in BambuStudio. The per-nozzle flow/MVS adjustments we maintain in Anycubic profiles will be overrides on top of the A1 base, and BambuStudio will use them as-is.
 
 This is a future task — not yet started as of 2026-05-18.
 
