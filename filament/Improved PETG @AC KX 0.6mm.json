@@ -51,7 +51,7 @@
         "255"
     ],
     "nozzle_temperature_range_high": [
-        "265"
+        "255"
     ],
     "pressure_advance": [
         "0.038"
