@@ -76,6 +76,9 @@
     "nozzle_temperature_initial_layer": [
         "235"
     ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "250"
+    ],
     "nozzle_temperature_initial_layer_HS": [
         "255"
     ],

@@ -29,7 +29,7 @@
         "0.91"
     ],
     "filament_max_volumetric_speed": [
-        "27.0"
+        "27"
     ],
     "filament_retract_before_wipe": [
         "0%"
@@ -56,7 +56,7 @@
         "260"
     ],
     "nozzle_temperature_BRASS": [
-        "260"
+        "255"
     ],
     "nozzle_temperature_HS": [
         "260"
