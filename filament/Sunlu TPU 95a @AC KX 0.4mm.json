@@ -1,7 +1,4 @@
 {
-    "additional_cooling_fan_speed": [
-        "60"
-    ],
     "complete_print_exhaust_fan_speed": [
         "70"
     ],

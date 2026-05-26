@@ -1,7 +1,4 @@
 {
-    "activate_air_filtration": [
-        "0"
-    ],
     "complete_print_exhaust_fan_speed": [
         "100"
     ],
@@ -61,9 +58,6 @@
     ],
     "nozzle_temperature_BRASS": [
         "205"
-    ],
-    "nozzle_temperature_HS": [
-        "210"
     ],
     "nozzle_temperature_initial_layer": [
         "205"

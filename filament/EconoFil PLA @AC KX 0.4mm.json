@@ -7,9 +7,6 @@
     "filament_cost": [
         "16"
     ],
-    "filament_retraction_length": [
-        "0.8"
-    ],
     "hot_plate_temp": [
         "60"
     ],

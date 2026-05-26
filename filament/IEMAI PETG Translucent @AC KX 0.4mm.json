@@ -1,7 +1,4 @@
 {
-    "additional_cooling_fan_speed": [
-        "10"
-    ],
     "cool_plate_temp": [
         "50"
     ],
@@ -81,6 +78,9 @@
         "250"
     ],
     "nozzle_temperature_initial_layer_HS": [
+        "260"
+    ],
+    "nozzle_temperature_range_high": [
         "260"
     ],
     "nozzle_temperature_range_low": [
