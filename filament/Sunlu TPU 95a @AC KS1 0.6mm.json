@@ -32,7 +32,7 @@
         "; filament end gcode "
     ],
     "filament_max_volumetric_speed": [
-        "6.2"
+        "5"
     ],
     "filament_retraction_speed": [
         "30"

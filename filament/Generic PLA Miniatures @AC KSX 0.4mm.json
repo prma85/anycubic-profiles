@@ -53,6 +53,9 @@
     "filament_loading_speed_start": [
         "0.5"
     ],
+    "filament_max_volumetric_speed": [
+        "2.5"
+    ],
     "filament_retract_lift_below": [
         "249"
     ],

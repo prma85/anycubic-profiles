@@ -47,7 +47,7 @@
         "0.5"
     ],
     "filament_max_volumetric_speed": [
-        "16"
+        "2.5"
     ],
     "filament_retract_lift_below": [
         "249"

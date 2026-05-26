@@ -18,7 +18,7 @@
         "100"
     ],
     "filament_max_volumetric_speed": [
-        "10.0"
+        "5"
     ],
     "nozzle_temperature": [
         "255"
