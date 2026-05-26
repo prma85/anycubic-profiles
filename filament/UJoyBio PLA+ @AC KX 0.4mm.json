@@ -47,16 +47,10 @@
     "filament_z_hop": [
         "0.4"
     ],
-    "nozzle_temperature_BRASS": [
-        "200"
-    ],
     "nozzle_temperature_HS": [
         "205"
     ],
     "nozzle_temperature_initial_layer": [
-        "205"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
         "205"
     ],
     "nozzle_temperature_initial_layer_HS": [

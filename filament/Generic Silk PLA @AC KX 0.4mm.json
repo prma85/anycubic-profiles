@@ -29,16 +29,10 @@
     "hot_plate_temp": [
         "60"
     ],
-    "nozzle_temperature_BRASS": [
-        "220"
-    ],
     "nozzle_temperature_HS": [
         "225"
     ],
     "nozzle_temperature_initial_layer": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
         "220"
     ],
     "nozzle_temperature_initial_layer_HS": [

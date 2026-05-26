@@ -8,9 +8,6 @@
     "fan_min_speed": [
         "100"
     ],
-    "fan_min_speed_BRASS": [
-        "70"
-    ],
     "filament_change_length": [
         "10"
     ],
@@ -29,16 +26,10 @@
     "nozzle_temperature": [
         "230"
     ],
-    "nozzle_temperature_BRASS": [
-        "230"
-    ],
     "nozzle_temperature_HS": [
         "240"
     ],
     "nozzle_temperature_initial_layer": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
         "220"
     ],
     "nozzle_temperature_initial_layer_HS": [

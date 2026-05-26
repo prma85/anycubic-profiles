@@ -20,9 +20,6 @@
     "fan_min_speed": [
         "100"
     ],
-    "fan_min_speed_BRASS": [
-        "100"
-    ],
     "fan_min_speed_HS": [
         "100"
     ],
@@ -74,16 +71,10 @@
     "nozzle_temperature": [
         "240"
     ],
-    "nozzle_temperature_BRASS": [
-        "240"
-    ],
     "nozzle_temperature_HS": [
         "245"
     ],
     "nozzle_temperature_initial_layer": [
-        "245"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
         "245"
     ],
     "nozzle_temperature_initial_layer_HS": [

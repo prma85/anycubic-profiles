@@ -5,9 +5,6 @@
     "cool_plate_temp_initial_layer": [
         "50"
     ],
-    "fan_max_speed_BRASS": [
-        "70"
-    ],
     "filament_cost": [
         "39"
     ],
@@ -65,16 +62,10 @@
     "nozzle_temperature": [
         "250"
     ],
-    "nozzle_temperature_BRASS": [
-        "250"
-    ],
     "nozzle_temperature_HS": [
         "260"
     ],
     "nozzle_temperature_initial_layer": [
-        "250"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
         "250"
     ],
     "nozzle_temperature_initial_layer_HS": [

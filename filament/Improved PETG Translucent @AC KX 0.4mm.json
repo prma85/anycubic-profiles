@@ -50,13 +50,7 @@
     "nozzle_temperature": [
         "220"
     ],
-    "nozzle_temperature_BRASS": [
-        "220"
-    ],
     "nozzle_temperature_initial_layer": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
         "220"
     ],
     "nozzle_temperature_range_high": [

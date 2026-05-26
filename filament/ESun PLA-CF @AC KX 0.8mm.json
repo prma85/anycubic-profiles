@@ -2,13 +2,7 @@
     "compatible_printers": [
         "Anycubic Kobra X 0.8 nozzle"
     ],
-    "fan_cooling_layer_time_BRASS": [
-        "100"
-    ],
     "fan_max_speed": [
-        "100"
-    ],
-    "fan_max_speed_BRASS": [
         "100"
     ],
     "filament_flow_ratio": [
@@ -23,16 +17,10 @@
     "nozzle_temperature": [
         "250"
     ],
-    "nozzle_temperature_BRASS": [
-        "250"
-    ],
     "nozzle_temperature_HS": [
         "255"
     ],
     "nozzle_temperature_initial_layer": [
-        "255"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
         "255"
     ],
     "nozzle_temperature_initial_layer_HS": [

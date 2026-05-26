@@ -23,16 +23,10 @@
     "nozzle_temperature": [
         "215"
     ],
-    "nozzle_temperature_BRASS": [
-        "215"
-    ],
     "nozzle_temperature_HS": [
         "215"
     ],
     "nozzle_temperature_initial_layer": [
-        "215"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
         "215"
     ],
     "nozzle_temperature_initial_layer_HS": [

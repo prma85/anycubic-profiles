@@ -8,9 +8,6 @@
     "dont_slow_down_outer_wall": [
         "1"
     ],
-    "fan_max_speed_BRASS": [
-        "60"
-    ],
     "filament_cost": [
         "29"
     ],
@@ -77,13 +74,7 @@
     "nozzle_temperature": [
         "220"
     ],
-    "nozzle_temperature_BRASS": [
-        "220"
-    ],
     "nozzle_temperature_initial_layer": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
         "220"
     ],
     "nozzle_temperature_range_high": [

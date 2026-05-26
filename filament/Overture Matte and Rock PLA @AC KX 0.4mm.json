@@ -8,15 +8,6 @@
     "cool_plate_temp_initial_layer": [
         "40"
     ],
-    "fan_cooling_layer_time_BRASS": [
-        "100"
-    ],
-    "fan_max_speed_BRASS": [
-        "100"
-    ],
-    "fan_min_speed_BRASS": [
-        "100"
-    ],
     "filament_cost": [
         "25"
     ],
@@ -77,13 +68,7 @@
     "hot_plate_temp": [
         "55"
     ],
-    "nozzle_temperature_BRASS": [
-        "200"
-    ],
     "nozzle_temperature_HS": [
-        "205"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
         "205"
     ],
     "nozzle_temperature_initial_layer_HS": [
@@ -93,9 +78,6 @@
         "0.05"
     ],
     "slow_down_layer_time": [
-        "8"
-    ],
-    "slow_down_layer_time_BRASS": [
         "8"
     ],
     "slow_down_min_speed": [

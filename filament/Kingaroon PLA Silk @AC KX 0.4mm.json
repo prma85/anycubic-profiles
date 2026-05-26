@@ -5,14 +5,8 @@
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "fan_max_speed_BRASS": [
-        "80"
-    ],
     "fan_max_speed_HS": [
         "100"
-    ],
-    "fan_min_speed_BRASS": [
-        "70"
     ],
     "fan_min_speed_HS": [
         "100"
@@ -38,16 +32,10 @@
     "filament_z_hop": [
         "0.3"
     ],
-    "nozzle_temperature_BRASS": [
-        "210"
-    ],
     "nozzle_temperature_HS": [
         "215"
     ],
     "nozzle_temperature_initial_layer": [
-        "215"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
         "215"
     ],
     "nozzle_temperature_initial_layer_HS": [

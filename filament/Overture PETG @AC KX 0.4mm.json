@@ -11,12 +11,6 @@
     "enable_pressure_advance": [
         "0"
     ],
-    "fan_max_speed_BRASS": [
-        "100"
-    ],
-    "fan_min_speed_BRASS": [
-        "0"
-    ],
     "fan_min_speed_HS": [
         "20"
     ],
@@ -65,14 +59,8 @@
     "idle_temperature": [
         "175"
     ],
-    "nozzle_temperature_BRASS": [
-        "250"
-    ],
     "nozzle_temperature_HS": [
         "255"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "250"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "255"

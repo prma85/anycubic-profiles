@@ -11,9 +11,6 @@
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "fan_max_speed_BRASS": [
-        "80"
-    ],
     "fan_max_speed_HS": [
         "100"
     ],
@@ -60,9 +57,6 @@
         "0.4"
     ],
     "nozzle_temperature": [
-        "220"
-    ],
-    "nozzle_temperature_BRASS": [
         "220"
     ],
     "nozzle_temperature_HS": [

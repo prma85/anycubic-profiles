@@ -8,14 +8,8 @@
     "enable_pressure_advance": [
         "1"
     ],
-    "fan_max_speed_BRASS": [
-        "60"
-    ],
     "fan_min_speed": [
         "100"
-    ],
-    "fan_min_speed_BRASS": [
-        "40"
     ],
     "filament_cost": [
         "35"
@@ -44,16 +38,10 @@
     "nozzle_temperature": [
         "220"
     ],
-    "nozzle_temperature_BRASS": [
-        "220"
-    ],
     "nozzle_temperature_HS": [
         "225"
     ],
     "nozzle_temperature_initial_layer": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
         "220"
     ],
     "nozzle_temperature_initial_layer_HS": [
