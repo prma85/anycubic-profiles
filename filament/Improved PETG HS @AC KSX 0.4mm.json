@@ -1,12 +1,15 @@
 {
     "activate_air_filtration": [
-        "1"
+        "0"
     ],
     "activate_chamber_temp_control": [
         "1"
     ],
     "additional_cooling_fan_speed": [
-        "10"
+        "0"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
     ],
     "cool_plate_temp": [
         "50"
@@ -14,8 +17,17 @@
     "cool_plate_temp_initial_layer": [
         "50"
     ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "fan_max_speed": [
+        "30"
+    ],
     "fan_max_speed_BRASS": [
         "70"
+    ],
+    "fan_max_speed_HS": [
+        "40"
     ],
     "filament_cost": [
         "23"
@@ -79,6 +91,9 @@
     ],
     "idle_temperature": [
         "175"
+    ],
+    "internal_bridge_fan_speed": [
+        "100"
     ],
     "nozzle_temperature": [
         "235"

@@ -1,6 +1,6 @@
 {
     "activate_air_filtration": [
-        "1"
+        "0"
     ],
     "complete_print_exhaust_fan_speed": [
         "100"
@@ -33,7 +33,7 @@
         "0.96"
     ],
     "filament_max_volumetric_speed": [
-        "16"
+        "19"
     ],
     "filament_retract_before_wipe": [
         "0%"
@@ -54,10 +54,16 @@
         "0.4"
     ],
     "hot_plate_temp": [
-        "65"
+        "70"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "70"
     ],
     "nozzle_temperature_BRASS": [
         "205"
+    ],
+    "nozzle_temperature_HS": [
+        "210"
     ],
     "nozzle_temperature_initial_layer": [
         "205"
@@ -79,9 +85,6 @@
     ],
     "nozzle_temperature_range_low_HS": [
         "190"
-    ],
-    "pressure_advance": [
-        "0.04"
     ],
     "slow_down_layer_time_HS": [
         "8"

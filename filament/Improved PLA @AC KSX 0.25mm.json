@@ -24,7 +24,7 @@
         "195"
     ],
     "nozzle_temperature_BRASS": [
-        "195"
+        "210"
     ],
     "nozzle_temperature_HS": [
         "200"
@@ -33,13 +33,13 @@
         "195"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "195"
+        "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "200"
     ],
     "nozzle_temperature_range_high": [
-        "200"
+        "225"
     ],
     "pressure_advance": [
         "0.053"

@@ -1,53 +1,6 @@
 {
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.4 nozzle",
-        "Anycubic Kobra S1 0.4 nozzle - Brass",
-        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
-    ],
-    "complete_print_exhaust_fan_speed": [
-        "100"
-    ],
-    "cool_plate_temp_initial_layer": [
-        "40"
-    ],
-    "during_print_exhaust_fan_speed": [
-        "100"
-    ],
     "filament_cost": [
         "16"
-    ],
-    "filament_deretraction_speed": [
-        "0"
-    ],
-    "filament_max_volumetric_speed": [
-        "16"
-    ],
-    "filament_retract_lift_below": [
-        "249"
-    ],
-    "filament_retract_restart_extra": [
-        "0"
-    ],
-    "filament_retract_when_changing_layer": [
-        "1"
-    ],
-    "filament_retraction_length": [
-        "0.8"
-    ],
-    "filament_retraction_minimum_travel": [
-        "1"
-    ],
-    "filament_retraction_speed": [
-        "40"
-    ],
-    "filament_wipe": [
-        "1"
-    ],
-    "filament_wipe_distance": [
-        "1"
-    ],
-    "filament_z_hop": [
-        "0.4"
     ],
     "hot_plate_temp": [
         "60"
@@ -55,23 +8,14 @@
     "hot_plate_temp_initial_layer": [
         "60"
     ],
-    "nozzle_temperature": [
-        "200"
-    ],
     "nozzle_temperature_BRASS": [
         "200"
-    ],
-    "nozzle_temperature_HS": [
-        "205"
     ],
     "nozzle_temperature_initial_layer": [
         "210"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
         "210"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "205"
     ],
     "nozzle_temperature_range_high": [
         "210"
@@ -89,8 +33,8 @@
         "Generic"
     ],
     "from": "User",
-    "inherits": "Anycubic PLA @Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "Improved PLA @AC KS1 0.4mm",
     "is_custom_defined": "0",
     "name": "EconoFil PLA @AC KS1 0.4mm",
-    "version": "1.3.2503.03"
+    "version": "1.3.2602.11"
 }

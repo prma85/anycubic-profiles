@@ -1,9 +1,12 @@
 {
     "activate_air_filtration": [
-        "1"
+        "0"
     ],
     "additional_cooling_fan_speed": [
-        "10"
+        "0"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
     ],
     "cool_plate_temp": [
         "50"
@@ -14,14 +17,23 @@
     "dont_slow_down_outer_wall": [
         "1"
     ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "fan_max_speed": [
+        "30"
+    ],
     "fan_max_speed_BRASS": [
         "60"
+    ],
+    "fan_max_speed_HS": [
+        "40"
     ],
     "filament_cost": [
         "22"
     ],
     "filament_density": [
-        "1.27"
+        "1.24"
     ],
     "filament_deretraction_speed": [
         "25"
@@ -33,7 +45,7 @@
         "0.95"
     ],
     "filament_max_volumetric_speed": [
-        "13"
+        "10"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "10"
@@ -80,6 +92,9 @@
     "idle_temperature": [
         "175"
     ],
+    "internal_bridge_fan_speed": [
+        "100"
+    ],
     "nozzle_temperature": [
         "235"
     ],
@@ -117,7 +132,7 @@
         "12"
     ],
     "temperature_vitrification": [
-        "80"
+        "60"
     ],
     "textured_plate_temp": [
         "70"
