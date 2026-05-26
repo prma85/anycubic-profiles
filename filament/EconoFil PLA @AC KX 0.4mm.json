@@ -20,6 +20,9 @@
     "nozzle_temperature_range_high": [
         "210"
     ],
+    "nozzle_temperature_range_low": [
+        "190"
+    ],
     "textured_plate_temp": [
         "65"
     ],
