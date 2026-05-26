@@ -1,26 +1,14 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA+",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Polymaker PLA Pro @AC KS1 0.6mm",
-    "inherits": "Polymaker PLA Pro @AC KS1 0.4mm",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Polymaker PLA Pro @AC KS1 0.6mm"
-    ],
-    "filament_vendor": [
-        "Polymaker"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "100"
     ],
     "fan_min_speed_BRASS": [
         "80"
@@ -32,10 +20,7 @@
         "0.95"
     ],
     "filament_max_volumetric_speed": [
-        "26.4"
-    ],
-    "pressure_advance": [
-        "0.027"
+        "27.5"
     ],
     "filament_retraction_length": [
         "1"
@@ -43,11 +28,17 @@
     "nozzle_temperature": [
         "225"
     ],
-    "nozzle_temperature_initial_layer": [
+    "nozzle_temperature_BRASS": [
         "225"
     ],
     "nozzle_temperature_HS": [
         "230"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "225"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "230"
@@ -55,16 +46,18 @@
     "nozzle_temperature_range_high": [
         "230"
     ],
-    "nozzle_temperature_BRASS": [
-        "225"
+    "pressure_advance": [
+        "0.027"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "225"
+    "filament_settings_id": [
+        "Polymaker PLA Pro @AC KS1 0.6mm"
     ],
-    "fan_max_speed": [
-        "100"
+    "filament_vendor": [
+        "Polymaker"
     ],
-    "fan_min_speed": [
-        "100"
-    ]
+    "from": "User",
+    "inherits": "Polymaker PLA Pro @AC KS1 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Polymaker PLA Pro @AC KS1 0.6mm",
+    "version": "1.3.2602.11"
 }

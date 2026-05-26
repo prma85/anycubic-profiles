@@ -1,22 +1,12 @@
 {
-    "type": "filament",
-    "from": "User",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "ESun PLA-CF @AC KSX 0.25mm",
-    "inherits": "ESun PLA-CF @AC KSX 0.4mm",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "ESun PLA-CF @AC KSX 0.25mm"
-    ],
-    "filament_vendor": [
-        "Esun"
-    ],
-    "filament_type": [
-        "PLA-CF"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.25 nozzle"
+    ],
+    "fan_max_speed": [
+        "80"
+    ],
+    "fan_min_speed": [
+        "80"
     ],
     "filament_flow_ratio": [
         "0.99"
@@ -24,19 +14,22 @@
     "filament_max_volumetric_speed": [
         "3"
     ],
-    "pressure_advance": [
-        "0.030"
-    ],
     "filament_retraction_length": [
         "0.6"
     ],
     "nozzle_temperature": [
         "235"
     ],
+    "nozzle_temperature_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_HS": [
+        "240"
+    ],
     "nozzle_temperature_initial_layer": [
         "240"
     ],
-    "nozzle_temperature_HS": [
+    "nozzle_temperature_initial_layer_BRASS": [
         "240"
     ],
     "nozzle_temperature_initial_layer_HS": [
@@ -45,16 +38,18 @@
     "nozzle_temperature_range_high": [
         "245"
     ],
-    "nozzle_temperature_BRASS": [
-        "235"
+    "pressure_advance": [
+        "0.030"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "240"
+    "filament_settings_id": [
+        "ESun PLA-CF @AC KSX 0.25mm"
     ],
-    "fan_max_speed": [
-        "80"
+    "filament_vendor": [
+        "Esun"
     ],
-    "fan_min_speed": [
-        "80"
-    ]
+    "from": "User",
+    "inherits": "ESun PLA-CF @AC KSX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "ESun PLA-CF @AC KSX 0.25mm",
+    "version": "1.3.2602.11"
 }

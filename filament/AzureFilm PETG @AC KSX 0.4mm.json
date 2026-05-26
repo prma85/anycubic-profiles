@@ -1,33 +1,21 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPETG",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "AzureFilm PETG @AC KSX 0.4mm",
-    "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "AzureFilm PETG @AC KSX 0.4mm"
-    ],
-    "filament_vendor": [
-        "AzureFilm"
-    ],
-    "filament_type": [
-        "PETG"
-    ],
-    "compatible_printers": [
-        "Anycubic Kobra X 0.4 nozzle"
-    ],
     "activate_air_filtration": [
         "1"
     ],
     "additional_cooling_fan_speed": [
         "10"
     ],
-    "bed_type": [
-        "High Temp Plate"
+    "cool_plate_temp": [
+        "50"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "50"
+    ],
+    "dont_slow_down_outer_wall": [
+        "1"
+    ],
+    "fan_max_speed_BRASS": [
+        "60"
     ],
     "filament_cost": [
         "19"
@@ -44,11 +32,8 @@
     "filament_flow_ratio": [
         "0.95"
     ],
-    "filament_load_time": [
-        "42"
-    ],
     "filament_max_volumetric_speed": [
-        "18"
+        "13"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "10"
@@ -77,9 +62,6 @@
     "filament_start_gcode": [
         "; filament start gcode\n"
     ],
-    "filament_unload_time": [
-        "0"
-    ],
     "filament_wipe": [
         "1"
     ],
@@ -104,8 +86,20 @@
     "nozzle_temperature": [
         "240"
     ],
+    "nozzle_temperature_BRASS": [
+        "240"
+    ],
+    "nozzle_temperature_HS": [
+        "250"
+    ],
     "nozzle_temperature_initial_layer": [
         "240"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "240"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "250"
     ],
     "nozzle_temperature_range_high": [
         "265"
@@ -131,22 +125,15 @@
     "textured_plate_temp": [
         "70"
     ],
-    "dont_slow_down_outer_wall": [
-        "1"
+    "filament_settings_id": [
+        "AzureFilm PETG @AC KSX 0.4mm"
     ],
-    "fan_max_speed_BRASS": [
-        "60"
+    "filament_vendor": [
+        "AzureFilm"
     ],
-    "nozzle_temperature_BRASS": [
-        "240"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "240"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "250"
-    ],
-    "nozzle_temperature_HS": [
-        "250"
-    ]
+    "from": "User",
+    "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "AzureFilm PETG @AC KSX 0.4mm",
+    "version": "1.3.2602.11"
 }

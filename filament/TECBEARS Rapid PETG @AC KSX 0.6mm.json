@@ -1,22 +1,4 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPETG",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "TecBears Rapid PETG @AC KSX 0.6mm",
-    "inherits": "TecBears Rapid PETG @AC KSX 0.4mm",
-    "version": "1.3.2503.03",
-    "filament_settings_id": [
-        "TecBears Rapid PETG @AC KSX 0.6mm"
-    ],
-    "filament_vendor": [
-        "TecBears"
-    ],
-    "filament_type": [
-        "PETG"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.6 nozzle"
     ],
@@ -32,23 +14,20 @@
     "fan_max_speed": [
         "100"
     ],
+    "fan_max_speed_BRASS": [
+        "50"
+    ],
     "fan_min_speed": [
         "45"
+    ],
+    "filament_change_length": [
+        "10"
     ],
     "filament_flow_ratio": [
         "0.93"
     ],
     "filament_max_volumetric_speed": [
-        "27"
-    ],
-    "fan_max_speed_BRASS": [
-        "50"
-    ],
-    "filament_change_length": [
-        "10"
-    ],
-    "pressure_advance": [
-        "0.038"
+        "22.5"
     ],
     "filament_retraction_length": [
         "1.9"
@@ -56,11 +35,17 @@
     "nozzle_temperature": [
         "255"
     ],
-    "nozzle_temperature_initial_layer": [
+    "nozzle_temperature_BRASS": [
         "255"
     ],
     "nozzle_temperature_HS": [
         "265"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "255"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "255"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "265"
@@ -68,10 +53,18 @@
     "nozzle_temperature_range_high": [
         "280"
     ],
-    "nozzle_temperature_BRASS": [
-        "255"
+    "pressure_advance": [
+        "0.038"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "255"
-    ]
+    "filament_settings_id": [
+        "TecBears Rapid PETG @AC KSX 0.6mm"
+    ],
+    "filament_vendor": [
+        "TecBears"
+    ],
+    "from": "User",
+    "inherits": "TecBears Rapid PETG @AC KSX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "TecBears Rapid PETG @AC KSX 0.6mm",
+    "version": "1.3.2503.03"
 }

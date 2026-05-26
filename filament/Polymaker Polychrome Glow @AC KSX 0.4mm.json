@@ -1,33 +1,24 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Glow",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Polymaker Polychrome Glow @AC KSX 0.4mm",
-    "inherits": "Anycubic PLA Glow @Anycubic Kobra X 0.4 nozzle",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Polymaker Polychrome Glow @AC KSX 0.4mm"
-    ],
-    "filament_vendor": [
-        "Polymaker"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
-    "compatible_printers": [
-        "Anycubic Kobra X 0.4 nozzle"
-    ],
     "activate_air_filtration": [
         "1"
     ],
-    "bed_type": [
-        "High Temp Plate"
-    ],
     "close_fan_the_first_x_layers": [
         "2"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "40"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "100"
+    ],
+    "fan_max_speed_HS": [
+        "100"
+    ],
+    "fan_min_speed_BRASS": [
+        "50"
+    ],
+    "fan_min_speed_HS": [
+        "100"
     ],
     "filament_cost": [
         "25"
@@ -41,11 +32,8 @@
     "filament_flow_ratio": [
         "0.98"
     ],
-    "filament_load_time": [
-        "42"
-    ],
     "filament_max_volumetric_speed": [
-        "15"
+        "13"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "15"
@@ -68,8 +56,8 @@
     "filament_shrink": [
         "102%"
     ],
-    "filament_unload_time": [
-        "0"
+    "filament_shrinkage_compensation_z": [
+        "102%"
     ],
     "filament_wipe": [
         "nil"
@@ -86,13 +74,34 @@
     "hot_plate_temp": [
         "55"
     ],
+    "nozzle_temperature_BRASS": [
+        "210"
+    ],
+    "nozzle_temperature_HS": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "220"
+    ],
     "nozzle_temperature_range_high": [
         "220"
+    ],
+    "nozzle_temperature_range_high_HS": [
+        "240"
     ],
     "nozzle_temperature_range_low": [
         "210"
     ],
+    "nozzle_temperature_range_low_HS": [
+        "190"
+    ],
     "slow_down_layer_time": [
+        "8"
+    ],
+    "slow_down_layer_time_HS": [
         "8"
     ],
     "temperature_vitrification": [
@@ -101,40 +110,15 @@
     "textured_plate_temp": [
         "55"
     ],
-    "fan_cooling_layer_time_HS": [
-        "100"
+    "filament_settings_id": [
+        "Polymaker Polychrome Glow @AC KSX 0.4mm"
     ],
-    "fan_max_speed_HS": [
-        "100"
+    "filament_vendor": [
+        "Polymaker"
     ],
-    "fan_min_speed_HS": [
-        "100"
-    ],
-    "filament_shrinkage_compensation_z": [
-        "102%"
-    ],
-    "nozzle_temperature_HS": [
-        "215"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "220"
-    ],
-    "nozzle_temperature_range_high_HS": [
-        "240"
-    ],
-    "nozzle_temperature_range_low_HS": [
-        "190"
-    ],
-    "slow_down_layer_time_HS": [
-        "8"
-    ],
-    "fan_min_speed_BRASS": [
-        "50"
-    ],
-    "nozzle_temperature_BRASS": [
-        "210"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "215"
-    ]
+    "from": "User",
+    "inherits": "Anycubic PLA Glow @Anycubic Kobra X 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Polymaker Polychrome Glow @AC KSX 0.4mm",
+    "version": "1.3.2602.11"
 }

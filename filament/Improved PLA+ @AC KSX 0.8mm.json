@@ -1,24 +1,12 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA+",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Improved PLA+ @AC KSX 0.8mm",
-    "inherits": "Improved PLA+ @AC KSX 0.4mm",
-    "version": "1.3.2503.03",
-    "filament_settings_id": [
-        "Improved PLA+ @AC KSX 0.8mm"
-    ],
-    "filament_vendor": [
-        "Anycubic"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.8 nozzle"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "100"
     ],
     "filament_change_length": [
         "10"
@@ -27,10 +15,7 @@
         "0.94"
     ],
     "filament_max_volumetric_speed": [
-        "21"
-    ],
-    "pressure_advance": [
-        "0.013"
+        "24.0"
     ],
     "filament_retraction_length": [
         "1.2"
@@ -38,11 +23,17 @@
     "nozzle_temperature": [
         "215"
     ],
-    "nozzle_temperature_initial_layer": [
+    "nozzle_temperature_BRASS": [
         "215"
     ],
     "nozzle_temperature_HS": [
         "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "220"
@@ -50,16 +41,18 @@
     "nozzle_temperature_range_high": [
         "220"
     ],
-    "nozzle_temperature_BRASS": [
-        "215"
+    "pressure_advance": [
+        "0.013"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "215"
+    "filament_settings_id": [
+        "Improved PLA+ @AC KSX 0.8mm"
     ],
-    "fan_max_speed": [
-        "100"
+    "filament_vendor": [
+        "Anycubic"
     ],
-    "fan_min_speed": [
-        "100"
-    ]
+    "from": "User",
+    "inherits": "Improved PLA+ @AC KSX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Improved PLA+ @AC KSX 0.8mm",
+    "version": "1.3.2503.03"
 }

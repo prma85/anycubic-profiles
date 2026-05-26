@@ -1,35 +1,20 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFABS",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Anycubic ABS improved @AC KS1 0.6mm",
-    "inherits": "Anycubic ABS improved @AC KS1 0.4mm",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Anycubic ABS improved @AC KS1 0.6mm"
-    ],
-    "filament_vendor": [
-        "Anycubic"
-    ],
-    "filament_type": [
-        "ASA"
+    "adaptive_pressure_advance_model": [
+        "0,0,0\n0,0,0"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
     ],
+    "filament_end_gcode": [
+        "; filament end gcode "
+    ],
     "filament_flow_ratio": [
         "0.97"
     ],
-    "adaptive_pressure_advance_model": [
-        "0,0,0\n0,0,0"
-    ],
-    "filament_end_gcode": [
-        "; filament end gcode "
+    "filament_max_volumetric_speed": [
+        "10.0"
     ],
     "filament_retraction_length": [
         "nil"
@@ -40,7 +25,15 @@
     "temperature_vitrification": [
         "100"
     ],
-    "filament_max_volumetric_speed": [
-        "9"
-    ]
+    "filament_settings_id": [
+        "Anycubic ABS improved @AC KS1 0.6mm"
+    ],
+    "filament_vendor": [
+        "Anycubic"
+    ],
+    "from": "User",
+    "inherits": "Anycubic ABS improved @AC KS1 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Anycubic ABS improved @AC KS1 0.6mm",
+    "version": "1.3.2602.11"
 }

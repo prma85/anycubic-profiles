@@ -1,38 +1,29 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Matte",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Overture Matte and Rock PLA @AC KS1 0.4mm",
-    "inherits": "Anycubic PLA Matte @Anycubic Kobra S1 0.4 nozzle",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Overture Matte and Rock PLA @AC KS1 0.4mm"
+    "activate_chamber_temp_control": [
+        "1"
     ],
-    "filament_vendor": [
-        "Overture"
+    "additional_cooling_fan_speed": [
+        "10"
     ],
-    "filament_type": [
-        "PLA"
+    "close_fan_the_first_x_layers": [
+        "4"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
     ],
-    "close_fan_the_first_x_layers": [
-        "4"
+    "cool_plate_temp_initial_layer": [
+        "40"
     ],
-    "full_fan_speed_layer": [
-        "8"
+    "fan_cooling_layer_time_BRASS": [
+        "100"
     ],
-    "activate_chamber_temp_control": [
-        "1"
+    "fan_max_speed_BRASS": [
+        "100"
     ],
-    "additional_cooling_fan_speed": [
-        "10"
+    "fan_min_speed_BRASS": [
+        "100"
     ],
     "filament_cost": [
         "25"
@@ -49,20 +40,38 @@
     "filament_z_hop": [
         "0.6"
     ],
+    "full_fan_speed_layer": [
+        "8"
+    ],
     "hot_plate_temp_initial_layer": [
         "60"
     ],
     "nozzle_temperature": [
         "220"
     ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
     "nozzle_temperature_initial_layer": [
         "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
     ],
     "nozzle_temperature_range_high": [
         "230"
     ],
     "pressure_advance": [
         "0.05"
+    ],
+    "slow_down_layer_time_BRASS": [
+        "8"
     ],
     "slow_down_min_speed": [
         "60"
@@ -73,28 +82,15 @@
     "textured_plate_temp_initial_layer": [
         "60"
     ],
-    "fan_cooling_layer_time_BRASS": [
-        "100"
+    "filament_settings_id": [
+        "Overture Matte and Rock PLA @AC KS1 0.4mm"
     ],
-    "fan_max_speed_BRASS": [
-        "100"
+    "filament_vendor": [
+        "Overture"
     ],
-    "fan_min_speed_BRASS": [
-        "100"
-    ],
-    "nozzle_temperature_BRASS": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "220"
-    ],
-    "slow_down_layer_time_BRASS": [
-        "8"
-    ],
-    "nozzle_temperature_HS": [
-        "225"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "225"
-    ]
+    "from": "User",
+    "inherits": "Anycubic PLA Matte @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Overture Matte and Rock PLA @AC KS1 0.4mm",
+    "version": "1.3.2602.11"
 }

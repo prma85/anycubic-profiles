@@ -1,24 +1,11 @@
 {
-    "type": "filament",
-    "from": "User",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Bambu PLA Basic @AC KS1 0.4mm",
-    "inherits": "Anycubic PLA @Anycubic Kobra S1 0.4 nozzle",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Bambu PLA Basic @AC KS1 0.4mm"
-    ],
-    "filament_vendor": [
-        "Bambu Lab"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "40"
     ],
     "filament_cost": [
         "24.99"
@@ -38,28 +25,39 @@
     "hot_plate_temp_initial_layer": [
         "60"
     ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
+    ],
     "textured_plate_temp": [
         "60"
     ],
     "textured_plate_temp_initial_layer": [
         "60"
     ],
-    "nozzle_temperature": [
-        "220"
+    "filament_settings_id": [
+        "Bambu PLA Basic @AC KS1 0.4mm"
     ],
-    "nozzle_temperature_initial_layer": [
-        "220"
+    "filament_vendor": [
+        "Bambu Lab"
     ],
-    "nozzle_temperature_BRASS": [
-        "220"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "220"
-    ],
-    "nozzle_temperature_HS": [
-        "225"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "225"
-    ]
+    "from": "User",
+    "inherits": "Anycubic PLA @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Bambu PLA Basic @AC KS1 0.4mm",
+    "version": "1.3.2602.11"
 }

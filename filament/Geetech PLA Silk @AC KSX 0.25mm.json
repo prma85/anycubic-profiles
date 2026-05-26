@@ -1,27 +1,12 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Silk",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Geetech PLA Silk @AC KSX 0.25mm",
-    "inherits": "Geetech PLA Silk @AC KSX 0.4mm",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Geetech PLA Silk @AC KSX 0.25mm"
-    ],
-    "filament_vendor": [
-        "Geetech"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.25 nozzle"
     ],
-    "filament_max_volumetric_speed": [
-        "3"
+    "fan_max_speed": [
+        "80"
+    ],
+    "fan_min_speed": [
+        "60"
     ],
     "filament_change_length": [
         "10"
@@ -29,8 +14,8 @@
     "filament_flow_ratio": [
         "0.9505"
     ],
-    "pressure_advance": [
-        "0.033"
+    "filament_max_volumetric_speed": [
+        "3"
     ],
     "filament_retraction_length": [
         "0.6"
@@ -38,11 +23,17 @@
     "nozzle_temperature": [
         "215"
     ],
-    "nozzle_temperature_initial_layer": [
+    "nozzle_temperature_BRASS": [
         "215"
     ],
     "nozzle_temperature_HS": [
         "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "220"
@@ -50,16 +41,18 @@
     "nozzle_temperature_range_high": [
         "225"
     ],
-    "nozzle_temperature_BRASS": [
-        "215"
+    "pressure_advance": [
+        "0.033"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "215"
+    "filament_settings_id": [
+        "Geetech PLA Silk @AC KSX 0.25mm"
     ],
-    "fan_max_speed": [
-        "80"
+    "filament_vendor": [
+        "Geetech"
     ],
-    "fan_min_speed": [
-        "60"
-    ]
+    "from": "User",
+    "inherits": "Geetech PLA Silk @AC KSX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Geetech PLA Silk @AC KSX 0.25mm",
+    "version": "1.3.2602.11"
 }

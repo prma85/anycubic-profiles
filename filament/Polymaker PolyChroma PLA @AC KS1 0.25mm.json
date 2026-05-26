@@ -1,45 +1,38 @@
 {
-    "type": "filament",
-    "from": "User",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Polymaker PolyChroma PLA @AC KS1 0.25mm",
-    "inherits": "Polymaker PolyChroma PLA @AC KS1 0.4mm",
-    "version": "1.3.2503.03",
-    "filament_settings_id": [
-        "Polymaker PolyChroma PLA @AC KS1 0.25mm"
-    ],
-    "filament_vendor": [
-        "Polymaker"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.25 nozzle",
         "Anycubic Kobra S1 0.25 nozzle - Brass",
         "Anycubic Kobra S1 0.25 nozzle - Hardened Steel"
     ],
+    "fan_max_speed": [
+        "80"
+    ],
+    "fan_min_speed": [
+        "80"
+    ],
     "filament_flow_ratio": [
         "0.96"
-    ],
-    "pressure_advance": [
-        "0.030"
-    ],
-    "filament_retraction_length": [
-        "0.6"
     ],
     "filament_max_volumetric_speed": [
         "3"
     ],
+    "filament_retraction_length": [
+        "0.6"
+    ],
     "nozzle_temperature": [
         "215"
     ],
-    "nozzle_temperature_initial_layer": [
+    "nozzle_temperature_BRASS": [
         "215"
     ],
     "nozzle_temperature_HS": [
         "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "220"
@@ -47,16 +40,18 @@
     "nozzle_temperature_range_high": [
         "225"
     ],
-    "nozzle_temperature_BRASS": [
-        "215"
+    "pressure_advance": [
+        "0.030"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "215"
+    "filament_settings_id": [
+        "Polymaker PolyChroma PLA @AC KS1 0.25mm"
     ],
-    "fan_max_speed": [
-        "80"
+    "filament_vendor": [
+        "Polymaker"
     ],
-    "fan_min_speed": [
-        "80"
-    ]
+    "from": "User",
+    "inherits": "Polymaker PolyChroma PLA @AC KS1 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Polymaker PolyChroma PLA @AC KS1 0.25mm",
+    "version": "1.3.2503.03"
 }

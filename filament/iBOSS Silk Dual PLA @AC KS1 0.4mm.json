@@ -1,27 +1,14 @@
 {
-    "type": "filament",
-    "from": "User",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "IBoss Silk Dual PLA @AC KS1 0.4mm",
-    "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "IBoss Silk Dual PLA @AC KS1 0.4mm"
-    ],
-    "filament_vendor": [
-        "IBoss"
-    ],
-    "filament_type": [
-        "PLA"
+    "close_fan_the_first_x_layers": [
+        "2"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
     ],
-    "close_fan_the_first_x_layers": [
-        "2"
+    "cool_plate_temp_initial_layer": [
+        "40"
     ],
     "fan_min_speed_BRASS": [
         "70"
@@ -91,5 +78,16 @@
     ],
     "textured_plate_temp_initial_layer": [
         "60"
-    ]
+    ],
+    "filament_settings_id": [
+        "IBoss Silk Dual PLA @AC KS1 0.4mm"
+    ],
+    "filament_vendor": [
+        "IBoss"
+    ],
+    "from": "User",
+    "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "IBoss Silk Dual PLA @AC KS1 0.4mm",
+    "version": "1.3.2602.11"
 }

@@ -1,22 +1,4 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA+",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Improved PLA+ @AC KS1 0.4mm",
-    "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
-    "version": "1.3.2503.03",
-    "filament_settings_id": [
-        "Improved PLA+ @AC KS1 0.4mm"
-    ],
-    "filament_vendor": [
-        "Anycubic"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
@@ -24,6 +6,9 @@
     ],
     "complete_print_exhaust_fan_speed": [
         "100"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "40"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
@@ -33,6 +18,9 @@
     ],
     "filament_deretraction_speed": [
         "25"
+    ],
+    "filament_max_volumetric_speed": [
+        "19"
     ],
     "filament_retraction_minimum_travel": [
         "1.5"
@@ -46,8 +34,20 @@
     "hot_plate_temp_initial_layer": [
         "65"
     ],
+    "nozzle_temperature_BRASS": [
+        "205"
+    ],
+    "nozzle_temperature_HS": [
+        "210"
+    ],
     "nozzle_temperature_initial_layer": [
         "205"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "205"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "210"
     ],
     "nozzle_temperature_range_high": [
         "210"
@@ -55,16 +55,15 @@
     "nozzle_temperature_range_low": [
         "205"
     ],
-    "nozzle_temperature_HS": [
-        "210"
+    "filament_settings_id": [
+        "Improved PLA+ @AC KS1 0.4mm"
     ],
-    "nozzle_temperature_initial_layer_HS": [
-        "210"
+    "filament_vendor": [
+        "Anycubic"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "205"
-    ],
-    "nozzle_temperature_BRASS": [
-        "205"
-    ]
+    "from": "User",
+    "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Improved PLA+ @AC KS1 0.4mm",
+    "version": "1.3.2503.03"
 }

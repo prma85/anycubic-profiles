@@ -1,32 +1,20 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPETG",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "AzureFilm PETG @AC KS1 0.6mm",
-    "inherits": "AzureFilm PETG @AC KS1 0.4mm",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "AzureFilm PETG @AC KS1 0.6mm"
-    ],
-    "filament_vendor": [
-        "AzureFilm"
-    ],
-    "filament_type": [
-        "PETG"
+    "adaptive_pressure_advance_model": [
+        "0,0,0\n0,0,0"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
     ],
-    "bed_type": [
-        "High Temp Plate"
+    "fan_max_speed": [
+        "70"
     ],
     "fan_min_speed": [
         "60"
+    ],
+    "filament_change_length": [
+        "10"
     ],
     "filament_density": [
         "1.27"
@@ -34,8 +22,8 @@
     "filament_end_gcode": [
         "; filament end gcode "
     ],
-    "filament_load_time": [
-        "42"
+    "filament_flow_ratio": [
+        "0.93"
     ],
     "filament_max_volumetric_speed": [
         "22.5"
@@ -58,38 +46,26 @@
     "filament_start_gcode": [
         "; filament start gcode\n"
     ],
-    "filament_unload_time": [
-        "0"
-    ],
     "filament_wipe": [
         "1"
     ],
     "filament_wipe_distance": [
         "2"
     ],
-    "overhang_fan_speed": [
-        "90"
-    ],
-    "pressure_advance": [
-        "0.022"
-    ],
-    "adaptive_pressure_advance_model": [
-        "0,0,0\n0,0,0"
-    ],
-    "filament_change_length": [
-        "10"
-    ],
-    "filament_flow_ratio": [
-        "0.93"
-    ],
     "nozzle_temperature": [
         "250"
     ],
-    "nozzle_temperature_initial_layer": [
+    "nozzle_temperature_BRASS": [
         "250"
     ],
     "nozzle_temperature_HS": [
         "260"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "250"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "260"
@@ -97,13 +73,21 @@
     "nozzle_temperature_range_high": [
         "275"
     ],
-    "nozzle_temperature_BRASS": [
-        "250"
+    "overhang_fan_speed": [
+        "90"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "250"
+    "pressure_advance": [
+        "0.022"
     ],
-    "fan_max_speed": [
-        "70"
-    ]
+    "filament_settings_id": [
+        "AzureFilm PETG @AC KS1 0.6mm"
+    ],
+    "filament_vendor": [
+        "AzureFilm"
+    ],
+    "from": "User",
+    "inherits": "AzureFilm PETG @AC KS1 0.4mm",
+    "is_custom_defined": "0",
+    "name": "AzureFilm PETG @AC KS1 0.6mm",
+    "version": "1.3.2602.11"
 }

@@ -1,27 +1,12 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Silk",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Generic Silk PLA @AC KSX 0.6mm",
-    "inherits": "Generic Silk PLA @AC KSX 0.4mm",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Generic Silk PLA @AC KSX 0.6mm"
-    ],
-    "filament_vendor": [
-        "Anycubic"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.6 nozzle"
     ],
-    "pressure_advance": [
-        "0.021"
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "100"
     ],
     "filament_change_length": [
         "10"
@@ -30,19 +15,28 @@
         "0.96"
     ],
     "filament_max_volumetric_speed": [
-        "10.8"
+        "12.5"
     ],
     "filament_retraction_length": [
         "0.7"
     ],
+    "filament_retraction_speed": [
+        "30"
+    ],
     "nozzle_temperature": [
         "225"
     ],
-    "nozzle_temperature_initial_layer": [
+    "nozzle_temperature_BRASS": [
         "225"
     ],
     "nozzle_temperature_HS": [
         "230"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "225"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "230"
@@ -50,19 +44,18 @@
     "nozzle_temperature_range_high": [
         "230"
     ],
-    "nozzle_temperature_BRASS": [
-        "225"
+    "pressure_advance": [
+        "0.021"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "225"
+    "filament_settings_id": [
+        "Generic Silk PLA @AC KSX 0.6mm"
     ],
-    "fan_max_speed": [
-        "100"
+    "filament_vendor": [
+        "Anycubic"
     ],
-    "fan_min_speed": [
-        "100"
-    ],
-    "filament_retraction_speed": [
-        "30"
-    ]
+    "from": "User",
+    "inherits": "Generic Silk PLA @AC KSX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Generic Silk PLA @AC KSX 0.6mm",
+    "version": "1.3.2602.11"
 }

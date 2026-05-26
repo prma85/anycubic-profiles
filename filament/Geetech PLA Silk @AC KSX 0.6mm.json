@@ -1,60 +1,6 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Silk",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Geetech PLA Silk @AC KSX 0.6mm",
-    "inherits": "Geetech PLA Silk @AC KSX 0.4mm",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Geetech PLA Silk @AC KSX 0.6mm"
-    ],
-    "filament_vendor": [
-        "Geetech"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.6 nozzle"
-    ],
-    "filament_flow_ratio": [
-        "0.9305"
-    ],
-    "pressure_advance": [
-        "0.015"
-    ],
-    "filament_change_length": [
-        "10"
-    ],
-    "filament_max_volumetric_speed": [
-        "19.2"
-    ],
-    "filament_retraction_length": [
-        "1"
-    ],
-    "nozzle_temperature": [
-        "225"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "225"
-    ],
-    "nozzle_temperature_HS": [
-        "230"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "230"
-    ],
-    "nozzle_temperature_range_high": [
-        "235"
-    ],
-    "nozzle_temperature_BRASS": [
-        "225"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "225"
     ],
     "fan_max_speed": [
         "100"
@@ -62,7 +8,54 @@
     "fan_min_speed": [
         "100"
     ],
+    "filament_change_length": [
+        "10"
+    ],
+    "filament_flow_ratio": [
+        "0.9305"
+    ],
+    "filament_max_volumetric_speed": [
+        "12.5"
+    ],
+    "filament_retraction_length": [
+        "1"
+    ],
     "filament_retraction_speed": [
         "30"
-    ]
+    ],
+    "nozzle_temperature": [
+        "225"
+    ],
+    "nozzle_temperature_BRASS": [
+        "225"
+    ],
+    "nozzle_temperature_HS": [
+        "230"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "230"
+    ],
+    "nozzle_temperature_range_high": [
+        "235"
+    ],
+    "pressure_advance": [
+        "0.015"
+    ],
+    "filament_settings_id": [
+        "Geetech PLA Silk @AC KSX 0.6mm"
+    ],
+    "filament_vendor": [
+        "Geetech"
+    ],
+    "from": "User",
+    "inherits": "Geetech PLA Silk @AC KSX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Geetech PLA Silk @AC KSX 0.6mm",
+    "version": "1.3.2602.11"
 }

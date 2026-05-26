@@ -1,56 +1,29 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPETG",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Overture PETG @AC KS1 0.8mm",
-    "inherits": "Overture PETG @AC KS1 0.4mm",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Overture PETG @AC KS1 0.8mm"
+    "adaptive_pressure_advance_model": [
+        "0,0,0\n0,0,0"
     ],
-    "filament_vendor": [
-        "Overture"
-    ],
-    "filament_type": [
-        "PETG"
+    "close_fan_the_first_x_layers": [
+        "3"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.8 nozzle",
         "Anycubic Kobra S1 0.8 nozzle - Brass",
         "Anycubic Kobra S1 0.8 nozzle - Hardened Steel"
     ],
-    "bed_type": [
-        "High Temp Plate"
-    ],
-    "close_fan_the_first_x_layers": [
-        "3"
-    ],
-    "filament_flow_ratio": [
-        "0.91"
-    ],
-    "filament_load_time": [
-        "42"
-    ],
-    "filament_unload_time": [
-        "0"
-    ],
-    "pressure_advance": [
-        "0.015"
-    ],
-    "adaptive_pressure_advance_model": [
-        "0,0,0\n0,0,0"
-    ],
     "fan_max_speed_BRASS": [
         "60"
+    ],
+    "fan_min_speed": [
+        "50"
     ],
     "filament_change_length": [
         "10"
     ],
+    "filament_flow_ratio": [
+        "0.91"
+    ],
     "filament_max_volumetric_speed": [
-        "12"
+        "22.5"
     ],
     "filament_retraction_length": [
         "1.6"
@@ -58,11 +31,17 @@
     "nozzle_temperature": [
         "250"
     ],
-    "nozzle_temperature_initial_layer": [
+    "nozzle_temperature_BRASS": [
         "250"
     ],
     "nozzle_temperature_HS": [
         "270"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "250"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "270"
@@ -70,16 +49,18 @@
     "nozzle_temperature_range_high": [
         "270"
     ],
-    "nozzle_temperature_BRASS": [
-        "250"
+    "pressure_advance": [
+        "0.015"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "250"
+    "filament_settings_id": [
+        "Overture PETG @AC KS1 0.8mm"
     ],
-    "fan_max_speed": [
-        "100"
+    "filament_vendor": [
+        "Overture"
     ],
-    "fan_min_speed": [
-        "50"
-    ]
+    "from": "User",
+    "inherits": "Overture PETG @AC KS1 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Overture PETG @AC KS1 0.8mm",
+    "version": "1.3.2602.11"
 }

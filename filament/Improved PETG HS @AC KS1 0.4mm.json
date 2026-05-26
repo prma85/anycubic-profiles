@@ -107,5 +107,11 @@
     "textured_plate_temp": [
         "70"
     ],
-    "version": "1.3.2503.03"
+    "version": "1.3.2503.03",
+    "cool_plate_temp": [
+        "50"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "50"
+    ]
 }

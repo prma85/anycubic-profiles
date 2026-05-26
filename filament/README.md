@@ -1,6 +1,6 @@
 # Filament Configuration Guide - User 651589
 
-Last updated: 2026-05-11
+Last updated: 2026-05-25
 Framework: Anycubic Slicer Next (OrcaSlicer-based)
 Scope: Custom filament profiles for Anycubic Kobra S1 and Anycubic Kobra X
 
@@ -56,7 +56,7 @@ Rationale: larger nozzles extrude more plastic per unit time — the heater need
 | Pressure Advance       | ×1.5    | ×0.667 | ×0.333 |
 | Flow Ratio             | +0.01   | −0.01  | −0.02  |
 | Retraction Length      | −0.2mm  | +0.2mm | +0.4mm |
-| Max Volumetric Speed   | cap 3   | ×1.2   | ×1.4   |
+| Max Volumetric Speed   | cap 3   | ×1.25  | ×1.50  |
 | All Nozzle Temp keys   | −5°C    | +5°C   | +10°C  |
 | Fan Speed (max & min)  | −20pp   | +20pp  | +40pp  |
 
@@ -142,6 +142,67 @@ Matte PLA has lower inter-layer adhesion and is more vulnerable to early thermal
 These are validated against the Bambu A1 profile source and community OrcaSlicer practice. The fan reduction is intentional — matte pigment cools faster and over-cooling causes surface roughness.
 
 ---
+
+## Cool Plate (Smooth PEI) Temperature Rules
+
+The cool plate requires explicit temperature overrides — system parent values are often wrong.
+
+| Material  | cool_plate_temp | cool_plate_temp_initial_layer | Notes |
+|-----------|-----------------|-------------------------------|-------|
+| PLA/PLA+  | (inherit 35)    | **40**                        | Must override initial layer to 40 |
+| PETG      | **50**          | **50**                        | Both fields must be explicitly 50. Never use bare PEI — glue stick mandatory as release agent |
+| TPU       | 30              | 30                            | Light adhesion for flexible parts |
+| ABS/ASA   | (not applicable — use hot plate / textured plate) | | |
+
+**PETG cool plate warning:** PETG bonds chemically to smooth PEI. At 70°C+ the bond becomes permanent and will tear the surface on removal. 50°C + glue stick is the safe combination.
+
+## Reference MVS Table (0.4mm nozzle)
+
+Calibrated baselines for high-speed Klipper printers (Kobra S1 has ~15% higher flow capacity than Kobra X due to better hotend thermistors/heater).
+
+| Filament Type             | KSX (mm³/s) | KS1 (mm³/s) |
+|---------------------------|:-----------:|:-----------:|
+| Rapid PLA / High Flow     | 23          | 27          |
+| Rapid PLA+ / PLA+ 2.0     | 20          | 24          |
+| Standard PLA+             | 16          | 19          |
+| Standard PLA              | 13          | 16          |
+| Matte PLA                 | 14          | 16          |
+| Translucent PLA           | 15          | 17          |
+| Silk / Dual Colour PLA    | 10          | 12          |
+| Galaxy / Glitter PLA      | 13          | 15          |
+| Glow in Dark PLA          | 13          | 15          |
+| Carbon Fibre PLA (CF)     | 16          | 19          |
+| Rapid PETG / HF / HS      | 18          | 21          |
+| Standard PETG             | 13          | 15          |
+| Translucent PETG          | 11          | 13          |
+| PETG GF (Glass Fibre)     | 11          | 13          |
+| PETG CF (Carbon Fibre)    | 12          | 14          |
+| TPU Standard 95A          | 4           | 5           |
+| TPU High Speed            | 8           | 10          |
+
+**KSX note:** KSX profiles were not individually calibrated — values above are applied as reference baselines. KS1 values reflect actual calibration runs.
+
+## Nozzle MVS Scaling Rules
+
+When deriving nozzle variants from the 0.4mm parent MVS:
+
+| Nozzle  | Multiplier | Notes |
+|---------|-----------|-------|
+| 0.25mm  | ×0.50     | **Always cap at 3 mm³/s** regardless of calculation |
+| 0.4mm   | ×1.00     | baseline |
+| 0.6mm   | ×1.25     | reduced wall friction |
+| 0.8mm   | ×1.50     | much less back-pressure |
+
+Physics: larger nozzle orifice → less wall friction → higher achievable flow. But thermal capacity limits still apply — the multipliers assume the same hotend.
+
+## Profile Format Rules (slicer-compatible simplified format)
+
+As of 2026-05-25 all profiles use the simplified format that matches what the slicer generates when editing through the UI:
+
+1. **No header fields** — drop `type`, `setting_id`, `filament_id`, `instantiation`, `filament_type`, `bed_type`
+2. **No redundant keys** — any key with the exact same value as the parent is removed
+3. **Alphabetical order** — content keys (a–z), then identity keys (a–z): `filament_settings_id`, `filament_vendor`, `from`, `inherits`, `is_custom_defined`, `name`, `version`
+4. `compatible_printers` is only present when it differs from parent
 
 ## Editing Workflow
 

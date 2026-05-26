@@ -1,22 +1,4 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Glow",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Polymaker Polychrome Glow @AC KS1 0.6mm",
-    "inherits": "Polymaker Polychrome Glow @AC KS1 0.4mm",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Polymaker Polychrome Glow @AC KS1 0.6mm"
-    ],
-    "filament_vendor": [
-        "Polymaker"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
@@ -26,9 +8,20 @@
         "1.00"
     ],
     "filament_max_volumetric_speed": [
-        "16"
+        "18.8"
     ],
     "pressure_advance": [
         "0.040"
-    ]
+    ],
+    "filament_settings_id": [
+        "Polymaker Polychrome Glow @AC KS1 0.6mm"
+    ],
+    "filament_vendor": [
+        "Polymaker"
+    ],
+    "from": "User",
+    "inherits": "Polymaker Polychrome Glow @AC KS1 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Polymaker Polychrome Glow @AC KS1 0.6mm",
+    "version": "1.3.2602.11"
 }

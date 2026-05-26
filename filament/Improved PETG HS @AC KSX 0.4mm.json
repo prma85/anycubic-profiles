@@ -1,25 +1,4 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPETG",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Improved PETG HS @AC KSX 0.4mm",
-    "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",
-    "version": "1.3.2503.03",
-    "filament_settings_id": [
-        "Improved PETG HS @AC KSX 0.4mm"
-    ],
-    "filament_vendor": [
-        "Generic"
-    ],
-    "filament_type": [
-        "PETG"
-    ],
-    "compatible_printers": [
-        "Anycubic Kobra X 0.4 nozzle"
-    ],
     "activate_air_filtration": [
         "1"
     ],
@@ -29,8 +8,14 @@
     "additional_cooling_fan_speed": [
         "10"
     ],
-    "bed_type": [
-        "High Temp Plate"
+    "cool_plate_temp": [
+        "50"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "50"
+    ],
+    "fan_max_speed_BRASS": [
+        "70"
     ],
     "filament_cost": [
         "23"
@@ -47,11 +32,8 @@
     "filament_flow_ratio": [
         "0.98"
     ],
-    "filament_load_time": [
-        "42"
-    ],
     "filament_max_volumetric_speed": [
-        "14"
+        "18"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "10"
@@ -80,9 +62,6 @@
     "filament_start_gcode": [
         "; filament start gcode\n"
     ],
-    "filament_unload_time": [
-        "0"
-    ],
     "filament_wipe": [
         "1"
     ],
@@ -104,8 +83,20 @@
     "nozzle_temperature": [
         "235"
     ],
+    "nozzle_temperature_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_HS": [
+        "245"
+    ],
     "nozzle_temperature_initial_layer": [
         "235"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "245"
     ],
     "nozzle_temperature_range_high": [
         "245"
@@ -131,19 +122,15 @@
     "textured_plate_temp": [
         "70"
     ],
-    "fan_max_speed_BRASS": [
-        "70"
+    "filament_settings_id": [
+        "Improved PETG HS @AC KSX 0.4mm"
     ],
-    "nozzle_temperature_BRASS": [
-        "235"
+    "filament_vendor": [
+        "Generic"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "235"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "245"
-    ],
-    "nozzle_temperature_HS": [
-        "245"
-    ]
+    "from": "User",
+    "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Improved PETG HS @AC KSX 0.4mm",
+    "version": "1.3.2503.03"
 }

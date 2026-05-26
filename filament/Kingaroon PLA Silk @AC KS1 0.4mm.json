@@ -1,26 +1,11 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Silk",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Kingaroon PLA Silk @AC KS1 0.4mm",
-    "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",
-    "version": "0.0.0.00",
-    "filament_settings_id": [
-        "Kingaroon PLA Silk @AC KS1 0.4mm"
-    ],
-    "filament_vendor": [
-        "Anycubic"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "40"
     ],
     "fan_max_speed_BRASS": [
         "60"
@@ -84,5 +69,16 @@
     ],
     "textured_plate_temp_initial_layer": [
         "60"
-    ]
+    ],
+    "filament_settings_id": [
+        "Kingaroon PLA Silk @AC KS1 0.4mm"
+    ],
+    "filament_vendor": [
+        "Anycubic"
+    ],
+    "from": "User",
+    "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Kingaroon PLA Silk @AC KS1 0.4mm",
+    "version": "0.0.0.00"
 }

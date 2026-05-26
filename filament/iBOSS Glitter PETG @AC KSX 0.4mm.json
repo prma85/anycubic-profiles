@@ -1,30 +1,15 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPETG",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "IBoss Glitter PETG @AC KSX 0.4mm",
-    "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",
-    "version": "1.3.2503.03",
-    "filament_settings_id": [
-        "IBoss Glitter PETG @AC KSX 0.4mm"
-    ],
-    "filament_vendor": [
-        "IBoss"
-    ],
-    "filament_type": [
-        "PETG"
-    ],
-    "compatible_printers": [
-        "Anycubic Kobra X 0.4 nozzle"
-    ],
     "activate_air_filtration": [
         "1"
     ],
     "additional_cooling_fan_speed": [
         "10"
+    ],
+    "cool_plate_temp": [
+        "50"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "50"
     ],
     "dont_slow_down_outer_wall": [
         "1"
@@ -48,7 +33,7 @@
         "0.98"
     ],
     "filament_max_volumetric_speed": [
-        "10"
+        "13"
     ],
     "filament_minimal_purge_on_wipe_tower": [
         "10"
@@ -133,5 +118,16 @@
     ],
     "textured_plate_temp": [
         "70"
-    ]
+    ],
+    "filament_settings_id": [
+        "IBoss Glitter PETG @AC KSX 0.4mm"
+    ],
+    "filament_vendor": [
+        "IBoss"
+    ],
+    "from": "User",
+    "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "IBoss Glitter PETG @AC KSX 0.4mm",
+    "version": "1.3.2503.03"
 }

@@ -1,22 +1,12 @@
 {
-    "type": "filament",
-    "from": "User",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "IBoss Silk PLA @AC KSX 0.25mm",
-    "inherits": "IBoss Silk PLA @AC KSX 0.4mm",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "IBoss Silk PLA @AC KSX 0.25mm"
-    ],
-    "filament_vendor": [
-        "IBoss"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.25 nozzle"
+    ],
+    "fan_max_speed": [
+        "80"
+    ],
+    "fan_min_speed": [
+        "60"
     ],
     "filament_flow_ratio": [
         "0.98"
@@ -24,20 +14,23 @@
     "filament_max_volumetric_speed": [
         "3"
     ],
-    "pressure_advance": [
-        "0.048"
-    ],
     "filament_retraction_length": [
         "0.6"
     ],
     "nozzle_temperature": [
         "215"
     ],
-    "nozzle_temperature_initial_layer": [
+    "nozzle_temperature_BRASS": [
         "215"
     ],
     "nozzle_temperature_HS": [
         "210"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "220"
@@ -45,16 +38,18 @@
     "nozzle_temperature_range_high": [
         "220"
     ],
-    "nozzle_temperature_BRASS": [
-        "215"
+    "pressure_advance": [
+        "0.048"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "215"
+    "filament_settings_id": [
+        "IBoss Silk PLA @AC KSX 0.25mm"
     ],
-    "fan_max_speed": [
-        "80"
+    "filament_vendor": [
+        "IBoss"
     ],
-    "fan_min_speed": [
-        "60"
-    ]
+    "from": "User",
+    "inherits": "IBoss Silk PLA @AC KSX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "IBoss Silk PLA @AC KSX 0.25mm",
+    "version": "1.3.2602.11"
 }

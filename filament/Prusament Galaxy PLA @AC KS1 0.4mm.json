@@ -1,35 +1,20 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Galaxy",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Prusament Galaxy PLA @AC KS1 0.4mm",
-    "inherits": "Anycubic PLA Galaxy @Anycubic Kobra S1 0.4 nozzle",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Prusament Galaxy PLA @AC KS1 0.4mm"
-    ],
-    "filament_vendor": [
-        "Prusament"
-    ],
-    "filament_type": [
-        "PLA"
+    "additional_cooling_fan_speed": [
+        "80"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
     ],
-    "filament_max_volumetric_speed": [
-        "21"
-    ],
-    "additional_cooling_fan_speed": [
-        "80"
+    "cool_plate_temp_initial_layer": [
+        "40"
     ],
     "filament_cost": [
         "29"
+    ],
+    "filament_max_volumetric_speed": [
+        "21"
     ],
     "hot_plate_temp": [
         "60"
@@ -40,10 +25,16 @@
     "nozzle_temperature": [
         "220"
     ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
     "nozzle_temperature_HS": [
         "225"
     ],
     "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
         "220"
     ],
     "nozzle_temperature_initial_layer_HS": [
@@ -67,10 +58,15 @@
     "textured_plate_temp_initial_layer": [
         "60"
     ],
-    "nozzle_temperature_BRASS": [
-        "220"
+    "filament_settings_id": [
+        "Prusament Galaxy PLA @AC KS1 0.4mm"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "220"
-    ]
+    "filament_vendor": [
+        "Prusament"
+    ],
+    "from": "User",
+    "inherits": "Anycubic PLA Galaxy @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Prusament Galaxy PLA @AC KS1 0.4mm",
+    "version": "1.3.2602.11"
 }

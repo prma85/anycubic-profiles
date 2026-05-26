@@ -1,26 +1,14 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Silk",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Kingaroon PLA Silk @AC KS1 0.6mm",
-    "inherits": "Kingaroon PLA Silk @AC KS1 0.4mm",
-    "version": "0.0.0.00",
-    "filament_settings_id": [
-        "Kingaroon PLA Silk @AC KS1 0.6mm"
-    ],
-    "filament_vendor": [
-        "Anycubic"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "100"
     ],
     "fan_min_speed_BRASS": [
         "90"
@@ -34,19 +22,22 @@
     "filament_max_volumetric_speed": [
         "9.6"
     ],
-    "pressure_advance": [
-        "0.016"
-    ],
     "filament_retraction_length": [
         "1"
+    ],
+    "filament_retraction_speed": [
+        "30"
     ],
     "nozzle_temperature": [
         "210"
     ],
-    "nozzle_temperature_initial_layer": [
-        "220"
+    "nozzle_temperature_BRASS": [
+        "210"
     ],
     "nozzle_temperature_HS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
         "220"
     ],
     "nozzle_temperature_initial_layer_HS": [
@@ -55,19 +46,18 @@
     "nozzle_temperature_range_high": [
         "225"
     ],
-    "nozzle_temperature_BRASS": [
-        "210"
+    "pressure_advance": [
+        "0.016"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "220"
+    "filament_settings_id": [
+        "Kingaroon PLA Silk @AC KS1 0.6mm"
     ],
-    "fan_max_speed": [
-        "100"
+    "filament_vendor": [
+        "Anycubic"
     ],
-    "fan_min_speed": [
-        "100"
-    ],
-    "filament_retraction_speed": [
-        "30"
-    ]
+    "from": "User",
+    "inherits": "Kingaroon PLA Silk @AC KS1 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Kingaroon PLA Silk @AC KS1 0.6mm",
+    "version": "0.0.0.00"
 }

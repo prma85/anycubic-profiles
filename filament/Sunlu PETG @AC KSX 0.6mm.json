@@ -1,22 +1,4 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPETG",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Sunlu PETG @AC KSX 0.6mm",
-    "inherits": "Sunlu PETG @AC KSX 0.4mm",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Sunlu PETG @AC KSX 0.6mm"
-    ],
-    "filament_vendor": [
-        "Sunlu"
-    ],
-    "filament_type": [
-        "PETG"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.6 nozzle"
     ],
@@ -32,17 +14,11 @@
     "fan_max_speed": [
         "100"
     ],
-    "fan_min_speed": [
-        "45"
-    ],
-    "filament_max_volumetric_speed": [
-        "11.25"
-    ],
-    "pressure_advance": [
-        "0.017"
-    ],
     "fan_max_speed_BRASS": [
         "50"
+    ],
+    "fan_min_speed": [
+        "45"
     ],
     "filament_change_length": [
         "10"
@@ -50,17 +26,26 @@
     "filament_flow_ratio": [
         "0.92"
     ],
+    "filament_max_volumetric_speed": [
+        "16.2"
+    ],
     "filament_retraction_length": [
         "0.7"
     ],
     "nozzle_temperature": [
         "240"
     ],
-    "nozzle_temperature_initial_layer": [
+    "nozzle_temperature_BRASS": [
         "240"
     ],
     "nozzle_temperature_HS": [
         "260"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "240"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "240"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "265"
@@ -68,10 +53,18 @@
     "nozzle_temperature_range_high": [
         "290"
     ],
-    "nozzle_temperature_BRASS": [
-        "240"
+    "pressure_advance": [
+        "0.017"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "240"
-    ]
+    "filament_settings_id": [
+        "Sunlu PETG @AC KSX 0.6mm"
+    ],
+    "filament_vendor": [
+        "Sunlu"
+    ],
+    "from": "User",
+    "inherits": "Sunlu PETG @AC KSX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Sunlu PETG @AC KSX 0.6mm",
+    "version": "1.3.2602.11"
 }

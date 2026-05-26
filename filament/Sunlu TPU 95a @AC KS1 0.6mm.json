@@ -1,35 +1,17 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFTPU",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Sunlu TPU 95a @AC KS1 0.6mm",
-    "inherits": "Sunlu TPU 95a @AC KS1 0.4mm",
-    "version": "1.3.2602.11",
-    "filament_settings_id": [
-        "Sunlu TPU 95a @AC KS1 0.6mm"
+    "activate_air_filtration": [
+        "0"
     ],
-    "filament_vendor": [
-        "SUNLU"
+    "adaptive_pressure_advance_model": [
+        "0,0,0\n0,0,0"
     ],
-    "filament_type": [
-        "TPU"
+    "additional_cooling_fan_speed": [
+        "60"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
-    ],
-    "activate_air_filtration": [
-        "0"
-    ],
-    "additional_cooling_fan_speed": [
-        "60"
-    ],
-    "bed_type": [
-        "High Temp Plate"
     ],
     "complete_print_exhaust_fan_speed": [
         "70"
@@ -40,17 +22,41 @@
     "fan_cooling_layer_time": [
         "100"
     ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "100"
+    ],
     "filament_end_gcode": [
         "; filament end gcode "
     ],
-    "filament_load_time": [
-        "42"
+    "filament_max_volumetric_speed": [
+        "6.2"
     ],
     "filament_retraction_speed": [
         "30"
     ],
-    "filament_unload_time": [
-        "0"
+    "nozzle_temperature": [
+        "225"
+    ],
+    "nozzle_temperature_BRASS": [
+        "225"
+    ],
+    "nozzle_temperature_HS": [
+        "230"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "230"
+    ],
+    "nozzle_temperature_range_high": [
+        "235"
     ],
     "pressure_advance": [
         "0.049"
@@ -61,40 +67,15 @@
     "temperature_vitrification": [
         "30"
     ],
-    "adaptive_pressure_advance_model": [
-        "0,0,0\n0,0,0"
+    "filament_settings_id": [
+        "Sunlu TPU 95a @AC KS1 0.6mm"
     ],
-    "filament_flow_ratio": [
-        "1.029"
+    "filament_vendor": [
+        "SUNLU"
     ],
-    "filament_max_volumetric_speed": [
-        "5"
-    ],
-    "nozzle_temperature": [
-        "225"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "225"
-    ],
-    "nozzle_temperature_HS": [
-        "230"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "230"
-    ],
-    "nozzle_temperature_range_high": [
-        "235"
-    ],
-    "nozzle_temperature_BRASS": [
-        "225"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "225"
-    ],
-    "fan_max_speed": [
-        "100"
-    ],
-    "fan_min_speed": [
-        "100"
-    ]
+    "from": "User",
+    "inherits": "Sunlu TPU 95a @AC KS1 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Sunlu TPU 95a @AC KS1 0.6mm",
+    "version": "1.3.2602.11"
 }

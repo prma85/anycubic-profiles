@@ -1,31 +1,18 @@
 {
-    "type": "filament",
-    "from": "User",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "IBoss Matte PLA+ @AC KSX 0.6mm",
-    "inherits": "IBoss Matte PLA+ @AC KSX 0.4mm",
-    "version": "1.3.2503.03",
-    "filament_settings_id": [
-        "IBoss Matte PLA+ @AC KSX 0.6mm"
-    ],
-    "filament_vendor": [
-        "IBoss"
-    ],
-    "filament_type": [
-        "PLA+"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.6 nozzle"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "100"
     ],
     "filament_flow_ratio": [
         "0.94"
     ],
     "filament_max_volumetric_speed": [
-        "19.2"
-    ],
-    "pressure_advance": [
-        "0.020"
+        "17.5"
     ],
     "filament_retraction_length": [
         "0.7"
@@ -33,11 +20,17 @@
     "nozzle_temperature": [
         "215"
     ],
-    "nozzle_temperature_initial_layer": [
-        "225"
+    "nozzle_temperature_BRASS": [
+        "215"
     ],
     "nozzle_temperature_HS": [
         "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "225"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "215"
@@ -45,16 +38,18 @@
     "nozzle_temperature_range_high": [
         "225"
     ],
-    "nozzle_temperature_BRASS": [
-        "215"
+    "pressure_advance": [
+        "0.020"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "225"
+    "filament_settings_id": [
+        "IBoss Matte PLA+ @AC KSX 0.6mm"
     ],
-    "fan_max_speed": [
-        "100"
+    "filament_vendor": [
+        "IBoss"
     ],
-    "fan_min_speed": [
-        "100"
-    ]
+    "from": "User",
+    "inherits": "IBoss Matte PLA+ @AC KSX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "IBoss Matte PLA+ @AC KSX 0.6mm",
+    "version": "1.3.2503.03"
 }

@@ -1,29 +1,11 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPETG",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Sovol PETG Translucent @AC KS1 0.6mm",
-    "inherits": "Sovol PETG Translucent @AC KS1 0.4mm",
-    "version": "1.3.2503.03",
-    "filament_settings_id": [
-        "Sovol PETG Translucent @AC KS1 0.6mm"
-    ],
-    "filament_vendor": [
-        "Sovol"
-    ],
-    "filament_type": [
-        "PETG"
+    "adaptive_pressure_advance_model": [
+        "0,0,0\n0,0,0"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
-    ],
-    "bed_type": [
-        "High Temp Plate"
     ],
     "complete_print_exhaust_fan_speed": [
         "70"
@@ -31,8 +13,14 @@
     "during_print_exhaust_fan_speed": [
         "70"
     ],
+    "fan_max_speed": [
+        "0"
+    ],
     "fan_min_speed": [
         "0"
+    ],
+    "filament_change_length": [
+        "10"
     ],
     "filament_density": [
         "1.27"
@@ -43,11 +31,8 @@
     "filament_flow_ratio": [
         "0.96"
     ],
-    "filament_load_time": [
-        "42"
-    ],
     "filament_max_volumetric_speed": [
-        "7"
+        "12.5"
     ],
     "filament_retract_before_wipe": [
         "0%"
@@ -67,9 +52,6 @@
     "filament_start_gcode": [
         "; filament start gcode\n"
     ],
-    "filament_unload_time": [
-        "0"
-    ],
     "filament_wipe": [
         "1"
     ],
@@ -79,26 +61,20 @@
     "hot_plate_temp_initial_layer": [
         "75"
     ],
-    "overhang_fan_speed": [
-        "90"
-    ],
-    "adaptive_pressure_advance_model": [
-        "0,0,0\n0,0,0"
-    ],
-    "filament_change_length": [
-        "10"
-    ],
-    "pressure_advance": [
-        "0.038"
-    ],
     "nozzle_temperature": [
         "245"
     ],
-    "nozzle_temperature_initial_layer": [
+    "nozzle_temperature_BRASS": [
         "245"
     ],
     "nozzle_temperature_HS": [
         "255"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "245"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "245"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "255"
@@ -106,13 +82,21 @@
     "nozzle_temperature_range_high": [
         "260"
     ],
-    "nozzle_temperature_BRASS": [
-        "245"
+    "overhang_fan_speed": [
+        "90"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "245"
+    "pressure_advance": [
+        "0.038"
     ],
-    "fan_max_speed": [
-        "0"
-    ]
+    "filament_settings_id": [
+        "Sovol PETG Translucent @AC KS1 0.6mm"
+    ],
+    "filament_vendor": [
+        "Sovol"
+    ],
+    "from": "User",
+    "inherits": "Sovol PETG Translucent @AC KS1 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Sovol PETG Translucent @AC KS1 0.6mm",
+    "version": "1.3.2503.03"
 }

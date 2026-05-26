@@ -1,21 +1,6 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPETG",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Creality Hyper PLA Galaxy @AC KS1 0.25mm",
-    "inherits": "Creality Hyper PLA Galaxy @AC KS1 0.4mm",
-    "version": "1.3.2503.03",
-    "filament_settings_id": [
-        "Creality Hyper PLA Galaxy @AC KS1 0.25mm"
-    ],
-    "filament_vendor": [
-        "Creality"
-    ],
-    "filament_type": [
-        "PETG"
+    "adaptive_pressure_advance_model": [
+        "0,0,0\n0,0,0"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.25 nozzle",
@@ -26,7 +11,10 @@
         "35"
     ],
     "cool_plate_temp_initial_layer": [
-        "35"
+        "40"
+    ],
+    "fan_max_speed": [
+        "20"
     ],
     "fan_min_speed": [
         "10"
@@ -36,6 +24,9 @@
     ],
     "filament_end_gcode": [
         "; filament end gcode "
+    ],
+    "filament_flow_ratio": [
+        "0.99"
     ],
     "filament_max_volumetric_speed": [
         "3"
@@ -58,29 +49,20 @@
     "filament_wipe_distance": [
         "2"
     ],
-    "overhang_fan_speed": [
-        "90"
-    ],
-    "temperature_vitrification": [
-        "70"
-    ],
-    "adaptive_pressure_advance_model": [
-        "0,0,0\n0,0,0"
-    ],
-    "filament_flow_ratio": [
-        "0.99"
-    ],
-    "pressure_advance": [
-        "0.096"
-    ],
     "nozzle_temperature": [
         "200"
     ],
-    "nozzle_temperature_initial_layer": [
+    "nozzle_temperature_BRASS": [
         "200"
     ],
     "nozzle_temperature_HS": [
         "210"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "200"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "200"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "210"
@@ -88,13 +70,24 @@
     "nozzle_temperature_range_high": [
         "225"
     ],
-    "nozzle_temperature_BRASS": [
-        "200"
+    "overhang_fan_speed": [
+        "90"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "200"
+    "pressure_advance": [
+        "0.096"
     ],
-    "fan_max_speed": [
-        "20"
-    ]
+    "temperature_vitrification": [
+        "70"
+    ],
+    "filament_settings_id": [
+        "Creality Hyper PLA Galaxy @AC KS1 0.25mm"
+    ],
+    "filament_vendor": [
+        "Creality"
+    ],
+    "from": "User",
+    "inherits": "Creality Hyper PLA Galaxy @AC KS1 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Creality Hyper PLA Galaxy @AC KS1 0.25mm",
+    "version": "1.3.2503.03"
 }

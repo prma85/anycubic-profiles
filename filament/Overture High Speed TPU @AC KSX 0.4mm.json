@@ -1,30 +1,6 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFTPU",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "Overture High Speed TPU @AC KSX 0.4mm",
-    "inherits": "Anycubic TPU 95A @Anycubic Kobra X 0.4 nozzle",
-    "version": "1.5.0.61",
-    "filament_settings_id": [
-        "Overture High Speed TPU @AC KSX 0.4mm"
-    ],
-    "filament_vendor": [
-        "Overture"
-    ],
-    "filament_type": [
-        "TPU"
-    ],
-    "compatible_printers": [
-        "Anycubic Kobra X 0.4 nozzle"
-    ],
     "additional_cooling_fan_speed": [
         "100"
-    ],
-    "bed_type": [
-        "High Temp Plate"
     ],
     "cool_plate_temp": [
         "30"
@@ -44,8 +20,26 @@
     "eng_plate_temp_initial_layer": [
         "30"
     ],
+    "fan_cooling_layer_time_BRASS": [
+        "100"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "100"
+    ],
+    "fan_max_speed_BRASS": [
+        "100"
+    ],
+    "fan_max_speed_HS": [
+        "100"
+    ],
     "fan_min_speed": [
         "100"
+    ],
+    "filament_adhesiveness_category": [
+        "0"
+    ],
+    "filament_change_length": [
+        "10"
     ],
     "filament_cooling_final_speed": [
         "3.4"
@@ -68,8 +62,11 @@
     "filament_flow_ratio": [
         "0.985"
     ],
-    "filament_load_time": [
-        "42"
+    "filament_flush_temp": [
+        "0"
+    ],
+    "filament_flush_volumetric_speed": [
+        "0"
     ],
     "filament_loading_speed": [
         "28"
@@ -78,7 +75,7 @@
         "3"
     ],
     "filament_max_volumetric_speed": [
-        "10"
+        "8"
     ],
     "filament_multitool_ramming_flow": [
         "10"
@@ -86,14 +83,17 @@
     "filament_multitool_ramming_volume": [
         "10"
     ],
+    "filament_prime_volume": [
+        "45"
+    ],
+    "filament_ramming_volumetric_speed": [
+        "-1"
+    ],
     "filament_retraction_length": [
         "0.5"
     ],
     "filament_start_gcode": [
         "; filament start gcode\n{if (bed_temperature[current_extruder] >35)||(bed_temperature_initial_layer[current_extruder] >35)}M106 P3 S255\n{elsif (bed_temperature[current_extruder] >30)||(bed_temperature_initial_layer[current_extruder] >30)}M106 P3 S180\n{endif}"
-    ],
-    "filament_unload_time": [
-        "0"
     ],
     "filament_unloading_speed": [
         "90"
@@ -113,8 +113,20 @@
     "nozzle_temperature": [
         "250"
     ],
+    "nozzle_temperature_BRASS": [
+        "250"
+    ],
+    "nozzle_temperature_HS": [
+        "255"
+    ],
     "nozzle_temperature_initial_layer": [
         "245"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "245"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "250"
     ],
     "nozzle_temperature_range_high": [
         "255"
@@ -128,6 +140,12 @@
     "required_nozzle_HRC": [
         "3"
     ],
+    "slow_down_layer_time_BRASS": [
+        "8"
+    ],
+    "slow_down_layer_time_HS": [
+        "8"
+    ],
     "temperature_vitrification": [
         "35"
     ],
@@ -137,52 +155,15 @@
     "textured_plate_temp_initial_layer": [
         "35"
     ],
-    "fan_cooling_layer_time_BRASS": [
-        "100"
+    "filament_settings_id": [
+        "Overture High Speed TPU @AC KSX 0.4mm"
     ],
-    "fan_cooling_layer_time_HS": [
-        "100"
+    "filament_vendor": [
+        "Overture"
     ],
-    "fan_max_speed_BRASS": [
-        "100"
-    ],
-    "fan_max_speed_HS": [
-        "100"
-    ],
-    "filament_adhesiveness_category": [
-        "0"
-    ],
-    "filament_change_length": [
-        "10"
-    ],
-    "filament_flush_temp": [
-        "0"
-    ],
-    "filament_flush_volumetric_speed": [
-        "0"
-    ],
-    "filament_prime_volume": [
-        "45"
-    ],
-    "filament_ramming_volumetric_speed": [
-        "-1"
-    ],
-    "nozzle_temperature_BRASS": [
-        "250"
-    ],
-    "nozzle_temperature_HS": [
-        "255"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "245"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "250"
-    ],
-    "slow_down_layer_time_BRASS": [
-        "8"
-    ],
-    "slow_down_layer_time_HS": [
-        "8"
-    ]
+    "from": "User",
+    "inherits": "Anycubic TPU 95A @Anycubic Kobra X 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Overture High Speed TPU @AC KSX 0.4mm",
+    "version": "1.5.0.61"
 }

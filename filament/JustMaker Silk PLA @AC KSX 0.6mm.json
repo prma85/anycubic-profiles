@@ -1,27 +1,12 @@
 {
-    "type": "filament",
-    "from": "User",
-    "setting_id": "GFSA04",
-    "filament_id": "GFPLA Silk",
-    "is_custom_defined": "0",
-    "instantiation": "true",
-    "name": "JustMaker Silk PLA @AC KSX 0.6mm",
-    "inherits": "JustMaker Silk PLA @AC KSX 0.4mm",
-    "version": "1.3.2503.03",
-    "filament_settings_id": [
-        "JustMaker Silk PLA @AC KSX 0.6mm"
-    ],
-    "filament_vendor": [
-        "JustMaker"
-    ],
-    "filament_type": [
-        "PLA"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.6 nozzle"
     ],
-    "pressure_advance": [
-        "0.027"
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "100"
     ],
     "fan_min_speed_BRASS": [
         "70"
@@ -38,14 +23,20 @@
     "filament_retraction_length": [
         "1"
     ],
+    "filament_retraction_speed": [
+        "30"
+    ],
     "nozzle_temperature": [
         "225"
+    ],
+    "nozzle_temperature_HS": [
+        "235"
     ],
     "nozzle_temperature_initial_layer": [
         "215"
     ],
-    "nozzle_temperature_HS": [
-        "235"
+    "nozzle_temperature_initial_layer_BRASS": [
+        "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "220"
@@ -53,19 +44,18 @@
     "nozzle_temperature_range_high": [
         "240"
     ],
-    "nozzle_temperature_BRASS": [
-        "225"
+    "pressure_advance": [
+        "0.027"
     ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "215"
+    "filament_settings_id": [
+        "JustMaker Silk PLA @AC KSX 0.6mm"
     ],
-    "fan_max_speed": [
-        "100"
+    "filament_vendor": [
+        "JustMaker"
     ],
-    "fan_min_speed": [
-        "100"
-    ],
-    "filament_retraction_speed": [
-        "30"
-    ]
+    "from": "User",
+    "inherits": "JustMaker Silk PLA @AC KSX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "JustMaker Silk PLA @AC KSX 0.6mm",
+    "version": "1.3.2503.03"
 }
