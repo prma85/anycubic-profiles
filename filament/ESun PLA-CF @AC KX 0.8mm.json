@@ -1,0 +1,58 @@
+{
+    "compatible_printers": [
+        "Anycubic Kobra X 0.8 nozzle"
+    ],
+    "fan_cooling_layer_time_BRASS": [
+        "100"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_max_speed_BRASS": [
+        "100"
+    ],
+    "filament_flow_ratio": [
+        "0.96"
+    ],
+    "filament_max_volumetric_speed": [
+        "24"
+    ],
+    "filament_retraction_length": [
+        "1.2"
+    ],
+    "nozzle_temperature": [
+        "250"
+    ],
+    "nozzle_temperature_BRASS": [
+        "250"
+    ],
+    "nozzle_temperature_HS": [
+        "255"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "255"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "255"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "260"
+    ],
+    "nozzle_temperature_range_high": [
+        "260"
+    ],
+    "pressure_advance": [
+        "0.007"
+    ],
+    "filament_settings_id": [
+        "ESun PLA-CF @AC KX 0.8mm"
+    ],
+    "filament_vendor": [
+        "Esun"
+    ],
+    "from": "User",
+    "inherits": "ESun PLA-CF @AC KX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "ESun PLA-CF @AC KX 0.8mm",
+    "version": "1.3.2602.11"
+}

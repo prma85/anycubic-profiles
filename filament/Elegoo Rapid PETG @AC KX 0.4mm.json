@@ -1,0 +1,139 @@
+{
+    "activate_air_filtration": [
+        "1"
+    ],
+    "activate_chamber_temp_control": [
+        "1"
+    ],
+    "additional_cooling_fan_speed": [
+        "10"
+    ],
+    "cool_plate_temp": [
+        "50"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "50"
+    ],
+    "fan_max_speed_BRASS": [
+        "70"
+    ],
+    "filament_cost": [
+        "23"
+    ],
+    "filament_density": [
+        "1.29"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode "
+    ],
+    "filament_flow_ratio": [
+        "0.9702"
+    ],
+    "filament_max_volumetric_speed": [
+        "18"
+    ],
+    "filament_minimal_purge_on_wipe_tower": [
+        "10"
+    ],
+    "filament_retract_before_wipe": [
+        "0%"
+    ],
+    "filament_retract_lift_below": [
+        "249"
+    ],
+    "filament_retract_lift_enforce": [
+        "All Surfaces"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "0.8"
+    ],
+    "filament_retraction_minimum_travel": [
+        "2"
+    ],
+    "filament_retraction_speed": [
+        "30"
+    ],
+    "filament_start_gcode": [
+        "; filament start gcode\n"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "filament_wipe_distance": [
+        "2"
+    ],
+    "filament_z_hop": [
+        "0.6"
+    ],
+    "filament_z_hop_types": [
+        "Slope Lift"
+    ],
+    "hot_plate_temp": [
+        "70"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "70"
+    ],
+    "idle_temperature": [
+        "175"
+    ],
+    "nozzle_temperature": [
+        "240"
+    ],
+    "nozzle_temperature_BRASS": [
+        "240"
+    ],
+    "nozzle_temperature_HS": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "240"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "240"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "250"
+    ],
+    "nozzle_temperature_range_high": [
+        "270"
+    ],
+    "nozzle_temperature_range_low": [
+        "240"
+    ],
+    "overhang_fan_threshold": [
+        "10%"
+    ],
+    "pressure_advance": [
+        "0.05"
+    ],
+    "reduce_fan_stop_start_freq": [
+        "0"
+    ],
+    "slow_down_layer_time": [
+        "12"
+    ],
+    "temperature_vitrification": [
+        "72"
+    ],
+    "textured_plate_temp": [
+        "70"
+    ],
+    "filament_settings_id": [
+        "Elegoo Rapid PETG @AC KX 0.4mm"
+    ],
+    "filament_vendor": [
+        "Elegoo"
+    ],
+    "from": "User",
+    "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Elegoo Rapid PETG @AC KX 0.4mm",
+    "version": "1.3.2602.11"
+}

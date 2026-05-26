@@ -1,0 +1,58 @@
+{
+    "compatible_printers": [
+        "Anycubic Kobra X 0.25 nozzle"
+    ],
+    "fan_max_speed": [
+        "80"
+    ],
+    "fan_min_speed": [
+        "60"
+    ],
+    "filament_change_length": [
+        "10"
+    ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
+    "filament_max_volumetric_speed": [
+        "3"
+    ],
+    "filament_retraction_length": [
+        "0.6"
+    ],
+    "nozzle_temperature": [
+        "215"
+    ],
+    "nozzle_temperature_BRASS": [
+        "215"
+    ],
+    "nozzle_temperature_HS": [
+        "210"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "210"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "210"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "215"
+    ],
+    "nozzle_temperature_range_high": [
+        "215"
+    ],
+    "pressure_advance": [
+        "0.036"
+    ],
+    "filament_settings_id": [
+        "Kingaroon PLA Silk @AC KX 0.25mm"
+    ],
+    "filament_vendor": [
+        "Anycubic"
+    ],
+    "from": "User",
+    "inherits": "Kingaroon PLA Silk @AC KX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Kingaroon PLA Silk @AC KX 0.25mm",
+    "version": "0.0.0.00"
+}

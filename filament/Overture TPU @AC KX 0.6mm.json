@@ -1,0 +1,58 @@
+{
+    "adaptive_pressure_advance_model": [
+        "0,0,0\n0,0,0"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra X 0.6 nozzle"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "80"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "60"
+    ],
+    "fan_cooling_layer_time": [
+        "100"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "filament_max_volumetric_speed": [
+        "5"
+    ],
+    "nozzle_temperature": [
+        "255"
+    ],
+    "nozzle_temperature_BRASS": [
+        "255"
+    ],
+    "nozzle_temperature_HS": [
+        "260"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "255"
+    ],
+    "nozzle_temperature_range_high": [
+        "260"
+    ],
+    "pressure_advance": [
+        "0.050"
+    ],
+    "filament_settings_id": [
+        "Overture TPU @AC KX 0.6mm"
+    ],
+    "filament_vendor": [
+        "Overture"
+    ],
+    "from": "User",
+    "inherits": "Overture TPU @AC KX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Overture TPU @AC KX 0.6mm",
+    "version": "1.5.0.61"
+}

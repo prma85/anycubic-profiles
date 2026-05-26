@@ -1,0 +1,45 @@
+{
+    "compatible_printers": [
+        "Anycubic Kobra X 0.4 nozzle",
+        "Anycubic Kobra X 0.4 nozzle - Brass",
+        "Anycubic Kobra X 0.4 nozzle - Hardened Steel"
+    ],
+    "filament_cost": [
+        "16"
+    ],
+    "filament_retraction_length": [
+        "0.8"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "210"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "210"
+    ],
+    "nozzle_temperature_range_high": [
+        "210"
+    ],
+    "textured_plate_temp": [
+        "65"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
+    ],
+    "filament_settings_id": [
+        "EconoFil PLA @AC KX 0.4mm"
+    ],
+    "filament_vendor": [
+        "Generic"
+    ],
+    "from": "User",
+    "inherits": "Improved PLA @AC KX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "EconoFil PLA @AC KX 0.4mm",
+    "version": "1.3.2602.11"
+}

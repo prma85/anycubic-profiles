@@ -1,0 +1,73 @@
+{
+    "close_fan_the_first_x_layers": [
+        "3"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra X 0.8 nozzle"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "80"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "60"
+    ],
+    "fan_cooling_layer_time": [
+        "20"
+    ],
+    "fan_max_speed": [
+        "0"
+    ],
+    "fan_max_speed_BRASS": [
+        "50"
+    ],
+    "fan_min_speed": [
+        "0"
+    ],
+    "filament_change_length": [
+        "10"
+    ],
+    "filament_flow_ratio": [
+        "0.94"
+    ],
+    "filament_max_volumetric_speed": [
+        "16.5"
+    ],
+    "filament_retraction_length": [
+        "1.6"
+    ],
+    "nozzle_temperature": [
+        "265"
+    ],
+    "nozzle_temperature_BRASS": [
+        "265"
+    ],
+    "nozzle_temperature_HS": [
+        "275"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "265"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "265"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "275"
+    ],
+    "nozzle_temperature_range_high": [
+        "265"
+    ],
+    "pressure_advance": [
+        "0.010"
+    ],
+    "filament_settings_id": [
+        "IEMAI PETG Translucent @AC KX 0.8mm"
+    ],
+    "filament_vendor": [
+        "IEMAI"
+    ],
+    "from": "User",
+    "inherits": "IEMAI PETG Translucent @AC KX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "IEMAI PETG Translucent @AC KX 0.8mm",
+    "version": "1.3.9.03"
+}
