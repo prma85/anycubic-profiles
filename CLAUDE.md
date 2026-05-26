@@ -15,7 +15,7 @@ This file covers the **git-tracked repository** specifically.
 
 Read in this order before editing:
 
-1. **`SKILLS.md`** — complete knowledge base: printer hardware, slicer architecture, filament logic, KS1 vs KSX differences, troubleshooting patterns
+1. **`SKILLS.md`** — complete knowledge base: printer hardware, slicer architecture, filament logic, KS1 vs KX differences, troubleshooting patterns
 2. **`.github/copilot-instructions.md`** — authoritative editing policy, validation gates, naming rules, nozzle transition tables
 3. **`README.md`** — repository architecture, machine overlay notes, S1 vs X strategy
 4. **`process/README.md`** or **`filament/README.md`** — domain-specific guidance
@@ -41,12 +41,12 @@ Machine  →  Filament  →  Process
 ```
 
 - **Machine:** `machine/` — nozzle type, retraction, acceleration limits
-- **Filament:** `filament/` — temps, flow, PA, cooling — **printer-scoped, never merge KS1/KSX**
+- **Filament:** `filament/` — temps, flow, PA, cooling — **printer-scoped, never merge KS1/KX**
 - **Process:** `process/` — layer height, speeds, supports — **shared across S1+X per nozzle**
 
 ## Critical Rules (Never Violate)
 
-- Never cross-inherit KS1 and KSX filament families
+- Never cross-inherit KS1 and KX filament families
 - Never remove `version` from any profile
 - Never modify files under `system/Anycubic/` (vendor defaults, not git-tracked)
 - Never exceed layer height > 0.75 × nozzle diameter

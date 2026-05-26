@@ -9,13 +9,14 @@ Scope: Custom filament profiles for Anycubic Kobra S1 and Anycubic Kobra X
 Filaments are printer-scoped and nozzle-scoped.
 
 Current inheritance model:
-- KS1 0.4mm and KSX 0.4mm are custom overlay parents per material.
+- KS1 0.4mm and KX 0.4mm are custom overlay parents per material.
 - KS1 0.25mm, 0.6mm, 0.8mm inherit from matching KS1 0.4mm.
-- KSX 0.25mm, 0.6mm, 0.8mm inherit from matching KSX 0.4mm.
+- KX 0.25mm, 0.6mm, 0.8mm inherit from matching KX 0.4mm.
+- Standard PLA brands inherit from `Improved PLA @AC KS1/KX 0.4mm` (not directly from the system parent) to pick up calibrated retraction, z-hop, fan, and temperature settings.
 - Non-0.4 variants keep only keys that differ from their 0.4 parent.
 - version is always retained.
 
-This one-level user inheritance model was tested and confirmed to load correctly in the slicer UI.
+This inheritance model was tested and confirmed to load correctly in the slicer UI.
 
 ## Naming Convention
 
@@ -24,8 +25,8 @@ This one-level user inheritance model was tested and confirmed to load correctly
 Examples:
 - Creality PLA @AC KS1 0.4mm
 - Creality PLA @AC KS1 0.6mm
-- Creality PLA @AC KSX 0.4mm
-- Creality PLA @AC KSX 0.8mm
+- Creality PLA @AC KX 0.4mm
+- Creality PLA @AC KX 0.8mm
 
 ## Inventory Snapshot
 
@@ -37,7 +38,7 @@ Nozzle-family counts currently present:
 
 ## Key Rules
 
-1. Keep KS1 and KSX separate.
+1. Keep KS1 and KX separate.
 2. Do not collapse printer families into one profile.
 3. Keep .json and .info pairs synchronized.
 4. Keep filament_settings_id, setting_id, and filename aligned.
@@ -114,8 +115,8 @@ Note: TPU is extruder-grip limited — even on 0.8mm nozzle, keep print speed �
 ABS and ASA require special handling not covered by the PLA/PETG/TPU transition tables.
 
 ### Required settings (all ABS/ASA profiles)
-- `fan_max_speed: 10`, `fan_min_speed: 5` — must be explicitly set; KSX system parent wrongly inherits 100/80
-- `activate_air_filtration: 1` (KS1 only — KSX has no filtration hardware, parent defaults to 0)
+- `fan_max_speed: 10`, `fan_min_speed: 5` — must be explicitly set; KX system parent wrongly inherits 100/80
+- `activate_air_filtration: 1` (KS1 only — KX has no filtration hardware, parent defaults to 0)
 - `activate_chamber_temp_control: 1`, `chamber_temperature: 55`
 - `dont_slow_down_outer_wall: 1`
 
@@ -160,7 +161,7 @@ The cool plate requires explicit temperature overrides — system parent values 
 
 Calibrated baselines for high-speed Klipper printers (Kobra S1 has ~15% higher flow capacity than Kobra X due to better hotend thermistors/heater).
 
-| Filament Type             | KSX (mm³/s) | KS1 (mm³/s) |
+| Filament Type             | KX (mm³/s) | KS1 (mm³/s) |
 |---------------------------|:-----------:|:-----------:|
 | Rapid PLA / High Flow     | 23          | 27          |
 | Rapid PLA+ / PLA+ 2.0     | 20          | 24          |
@@ -180,7 +181,7 @@ Calibrated baselines for high-speed Klipper printers (Kobra S1 has ~15% higher f
 | TPU Standard 95A          | 4           | 5           |
 | TPU High Speed            | 8           | 10          |
 
-**KSX note:** KSX profiles were not individually calibrated — values above are applied as reference baselines. KS1 values reflect actual calibration runs.
+**KX note:** KX values are reference baselines (not individually calibrated). KS1 values reflect actual calibration runs — do not change KS1 MVS without test print evidence.
 
 ## Nozzle MVS Scaling Rules
 

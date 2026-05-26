@@ -1,6 +1,6 @@
 # Copilot Instructions — User 651589 Anycubic Profiles
 
-Last updated: 2026-05-18
+Last updated: 2026-05-25
 
 ## Purpose
 
@@ -28,7 +28,7 @@ For repository architecture and machine notes see **`../README.md`**.
 
 - Preserve inheritance-driven architecture — child files override only what differs
 - Apply small, auditable overrides — no wholesale rewrites of parent content
-- Keep KS1 and KSX filament families strictly separate
+- Keep KS1 and KX filament families strictly separate
 - Keep process profiles shared between S1 and X for the same nozzle size
 
 ---
@@ -47,9 +47,9 @@ Do not mix responsibilities between layers.
 
 ### Filament
 - Pattern: `[Brand] [Material] @AC [Printer] [Nozzle]`
-- Examples: `Elegoo PLA @AC KS1 0.4mm`, `Bambu PLA Matte @AC KSX 0.4mm`
+- Examples: `Elegoo PLA @AC KS1 0.4mm`, `Bambu PLA Matte @AC KX 0.4mm`
 - **Brand/material names MUST start with uppercase** (ESun not eSun, IBoss not iBOSS)
-- KS1 and KSX are separate — never merge into one file
+- KS1 and KX are separate — never merge into one file
 
 ### Process
 - Base (0.4mm cross-printer): `[name] @ AC Base`
@@ -71,14 +71,24 @@ KS1 system parent
             ├── KS1 user 0.6mm   ← inherits KS1 0.4mm
             └── KS1 user 0.8mm   ← inherits KS1 0.4mm
 
-KSX system parent
-    └── KSX user 0.4mm (editable parent overlay)
-            ├── KSX user 0.25mm  ← inherits KSX 0.4mm
-            ├── KSX user 0.6mm   ← inherits KSX 0.4mm
-            └── KSX user 0.8mm   ← inherits KSX 0.4mm
+KX system parent
+    └── KX user 0.4mm (editable parent overlay)
+            ├── KX user 0.25mm  ← inherits KX 0.4mm
+            ├── KX user 0.6mm   ← inherits KX 0.4mm
+            └── KX user 0.8mm   ← inherits KX 0.4mm
 ```
 
-- KSX must **never** inherit from KS1 user profiles
+Deeper chain for standard PLA brands:
+```
+System parent
+    └── Improved PLA @AC KS1/KX 0.4mm  ← calibrated user base
+            └── [Brand] PLA @AC KS1/KX 0.4mm  ← brand overlay
+                    ├── [Brand] PLA @AC KS1/KX 0.25mm
+                    ├── [Brand] PLA @AC KS1/KX 0.6mm
+                    └── [Brand] PLA @AC KS1/KX 0.8mm
+```
+
+- KX must **never** inherit from KS1 user profiles
 - Non-0.4mm variants keep only keys that differ from their 0.4mm parent
 - `version` is always retained in every file
 
@@ -95,7 +105,7 @@ Applied relative to the 0.4mm parent of the same material+printer. Full tables i
 | Pressure Advance | ×1.5 | ×0.667 | ×0.333 |
 | Flow Ratio | +0.01 | −0.01 | −0.02 |
 | Retraction Length | −0.2mm | +0.2mm | +0.4mm |
-| Max Volumetric Speed | cap 3 | ×1.2 | ×1.4 |
+| Max Volumetric Speed | ×0.50, cap 3 | ×1.25 | ×1.50 |
 | Nozzle Temp (all keys) | −5°C | +5°C | +10°C |
 | Fan Speed (max & min) | −20pp | +20pp | +40pp |
 
@@ -139,6 +149,30 @@ Subtype: Matte adds extra −0.01 flow. Silk/Metal cap retraction speed at 30 mm
 - `nozzle_temperature_initial_layer_HS` = initial + 5°C (PLA) or initial + 10°C (PETG)
 - **Validate:** `nozzle_temperature_initial_layer_HS` ≤ `nozzle_temperature_range_high`
 - **Never** change `nozzle_temperature_range_low`
+
+---
+
+## Cool Plate (Smooth PEI) Temperature Rules
+
+System parent defaults are often wrong — explicit overrides are required:
+
+| Material | `cool_plate_temp` | `cool_plate_temp_initial_layer` |
+|----------|-------------------|---------------------------------|
+| PLA/PLA+ | 35 (inherit — do not override) | **40** (must override explicitly) |
+| PETG | **50** (must override) | **50** (must override) |
+| TPU | 30 | 30 |
+
+**PETG:** Bonds chemically to smooth PEI at 70°C+. Never inherit the system default (KX system parent has 70 — wrong). 50°C + glue stick is mandatory.
+
+---
+
+## KX Profile Derivation from KS1
+
+When creating a KX profile based on a KS1 profile:
+- **Apply** hardware-structural deltas: `additional_cooling_fan_speed=0`, `activate_air_filtration=0`, plate temp +5°C
+- **Copy** calibration values: nozzle temps, MVS, retraction, fan speeds
+- **Do not copy** `flow_ratio` and `pressure_advance` — let these inherit from the KX system parent
+- **Do not copy** `adaptive_pressure_advance_model` — KX has its own PA characteristics
 
 ---
 

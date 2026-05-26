@@ -1,6 +1,6 @@
 # Anycubic Custom Profiles - User 651589
 
-Last updated: 2026-03-12
+Last updated: 2026-05-25
 
 ## Repository Purpose
 
@@ -67,8 +67,9 @@ PETG process variants intentionally diverge in bridge and support behavior. Pres
 Filaments are printer and nozzle scoped because thermal and cooling behavior is hardware dependent.
 
 Current model:
-- KS1 0.4mm and KSX 0.4mm are the base custom overlays for each printer family.
+- KS1 0.4mm and KX 0.4mm are the base custom overlays for each printer family.
 - 0.25mm, 0.6mm, and 0.8mm variants inherit from same-printer 0.4mm overlays.
+- Standard PLA brands inherit from `Improved PLA @AC KS1/KX 0.4mm` rather than directly from the system parent, giving a deeper chain that carries calibrated retraction, z-hop, fan, and temperature settings.
 - Variant files keep only keys that differ from their 0.4mm parent.
 - Keep version in all filament profiles.
 
@@ -77,7 +78,7 @@ For full details and inventory, see filament/README.md.
 ## S1 vs X Strategy (Merged)
 
 Core principle:
-- Filaments remain split by printer and nozzle (KS1 vs KSX).
+- Filaments remain split by printer and nozzle (KS1 vs KX).
 - Processes are mostly shared by nozzle family through compatible_printers.
 
 Why:
