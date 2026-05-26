@@ -1,21 +1,17 @@
 {
+    "compatible_printers": [
+        "Anycubic Kobra X 0.4 nozzle",
+        "Anycubic Kobra X 0.4 nozzle - Brass",
+        "Anycubic Kobra X 0.4 nozzle - Hardened Steel"
+    ],
     "cool_plate_temp_initial_layer": [
         "40"
     ],
     "filament_cost": [
         "16"
     ],
-    "filament_deretraction_speed": [
-        "0"
-    ],
-    "filament_retract_lift_below": [
-        "249"
-    ],
-    "filament_retract_restart_extra": [
-        "0"
-    ],
-    "filament_retract_when_changing_layer": [
-        "1"
+    "filament_retraction_length": [
+        "0.8"
     ],
     "filament_retraction_minimum_travel": [
         "1"
@@ -23,14 +19,17 @@
     "filament_retraction_speed": [
         "40"
     ],
-    "filament_wipe": [
-        "1"
-    ],
     "filament_wipe_distance": [
         "1"
     ],
     "filament_z_hop": [
         "0.4"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
     ],
     "nozzle_temperature": [
         "200"
