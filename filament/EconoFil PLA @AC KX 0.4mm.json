@@ -2,7 +2,8 @@
     "compatible_printers": [
         "Anycubic Kobra X 0.4 nozzle",
         "Anycubic Kobra X 0.4 nozzle - Brass",
-        "Anycubic Kobra X 0.4 nozzle - Hardened Steel"
+        "Anycubic Kobra X 0.4 nozzle - Hardened Steel",
+        "Anycubic Kobra X 0.4 nozzle - Stainless Steel"
     ],
     "filament_cost": [
         "16"

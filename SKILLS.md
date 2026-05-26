@@ -215,21 +215,46 @@ Calibrated baselines for high-speed Klipper printers:
 
 ---
 
-## 5. Hardened Steel Temperature Rules
+## 5. Nozzle Material Temperature Rules
+
+### How the slicer resolves temperature keys by nozzle_type
+
+The slicer selects a temperature key from the filament profile based on the `nozzle_type` set in the machine profile:
+
+| `nozzle_type` in machine | Filament keys used | KS1 machines | KX machines |
+|---|---|---|---|
+| `brass` (nil = default) | `nozzle_temperature_BRASS` / `_initial_layer_BRASS` | Kobra S1 0.4 nozzle, 0.4 - Brass | Kobra X 0.4 nozzle, 0.4 - Brass |
+| `hardened_steel` | `nozzle_temperature_HS` / `_initial_layer_HS` | Kobra S1 0.4 - Hardened Steel | Kobra X 0.4 nozzle (factory default!) |
+| `stainless_steel` | `nozzle_temperature_HS` / `_initial_layer_HS` | — | Kobra X 0.4 - Stainless Steel |
+
+**KX-specific:** The Kobra X factory machine profile has `nozzle_type = hardened_steel`. The `nozzle_temperature` base is calibrated for HS. `_BRASS` keys exist in profiles but there is no KX Brass machine profile in the system — Brass and Stainless Steel are optional nozzle purchases. The slicer UI shows only the `_HS` field for both HS and Stainless Steel.
+
+**KS1-specific:** The base `nozzle_temperature` is calibrated for brass. `_BRASS` keys equal the base (no offset). `_HS` keys are base + 5°C (PLA) or base + 10°C (PETG).
+
+### Temperature key values per nozzle material
 
 Applied within a single nozzle size (not a nozzle transition):
 
+**KS1 profiles:**
 | Key | Value |
 |-----|-------|
-| `nozzle_temperature_BRASS` | = base temperature |
+| `nozzle_temperature_BRASS` | = base temperature (brass is the reference) |
 | `nozzle_temperature_initial_layer_BRASS` | = initial layer temperature |
 | `nozzle_temperature_HS` | base + 5°C (PLA) or base + 10°C (PETG) |
 | `nozzle_temperature_initial_layer_HS` | initial + 5°C (PLA) or initial + 10°C (PETG) |
 
-**Validate:** `nozzle_temperature_initial_layer_HS` ≤ `nozzle_temperature_range_high`
-**Never** change `nozzle_temperature_range_low` or `nozzle_temperature_range_high`.
+**KX profiles:**
+| Key | Value |
+|-----|-------|
+| `nozzle_temperature_BRASS` | = base + 15°C (brass on KX needs more heat — different thermal path) |
+| `nozzle_temperature_initial_layer_BRASS` | = initial + 15°C |
+| `nozzle_temperature_HS` | = base (HS is the reference on KX, no offset) |
+| `nozzle_temperature_initial_layer_HS` | = initial layer temperature (no offset) |
 
-Why: Hardened steel has lower thermal conductivity than brass — requires higher temps for equivalent melt flow.
+Note: `_BRASS` keys on KX are dead code in practice — no KX system machine profile for brass is shipped. Keep them for completeness but do not expect the slicer to use them unless a KX Brass machine profile is created.
+
+**Validate:** `nozzle_temperature_initial_layer_HS` ≤ `nozzle_temperature_range_high`
+**Never** change `nozzle_temperature_range_low`.
 
 ---
 
