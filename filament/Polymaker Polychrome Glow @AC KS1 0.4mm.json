@@ -31,8 +31,11 @@
     "filament_z_hop": [
         "0.8"
     ],
-    "hot_plate_temp_initial_layer": [
+    "hot_plate_temp": [
         "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "65"
     ],
     "nozzle_temperature": [
         "220"
@@ -61,8 +64,11 @@
     "temperature_vitrification": [
         "63"
     ],
-    "textured_plate_temp_initial_layer": [
+    "textured_plate_temp": [
         "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
     ],
     "filament_settings_id": [
         "Polymaker Polychrome Glow @AC KS1 0.4mm"

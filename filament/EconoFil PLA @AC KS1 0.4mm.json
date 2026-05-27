@@ -2,12 +2,6 @@
     "filament_cost": [
         "16"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
     "nozzle_temperature_BRASS": [
         "200"
     ],
@@ -25,12 +19,6 @@
     ],
     "nozzle_temperature_range_low": [
         "190"
-    ],
-    "textured_plate_temp": [
-        "65"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "65"
     ],
     "filament_settings_id": [
         "EconoFil PLA @AC KS1 0.4mm"

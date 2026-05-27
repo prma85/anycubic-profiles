@@ -43,6 +43,9 @@
     "full_fan_speed_layer": [
         "8"
     ],
+    "hot_plate_temp": [
+        "55"
+    ],
     "hot_plate_temp_initial_layer": [
         "60"
     ],
@@ -79,8 +82,11 @@
     "temperature_vitrification": [
         "75"
     ],
-    "textured_plate_temp_initial_layer": [
+    "textured_plate_temp": [
         "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
     ],
     "filament_settings_id": [
         "Overture Matte and Rock PLA @AC KS1 0.4mm"

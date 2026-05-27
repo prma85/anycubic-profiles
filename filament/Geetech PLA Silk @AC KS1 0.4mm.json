@@ -26,10 +26,10 @@
         "0.8"
     ],
     "hot_plate_temp": [
-        "50"
+        "55"
     ],
     "hot_plate_temp_initial_layer": [
-        "50"
+        "60"
     ],
     "nozzle_temperature": [
         "220"
@@ -60,6 +60,12 @@
     ],
     "slow_down_layer_time_BRASS": [
         "0"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
     ],
     "filament_settings_id": [
         "Geetech PLA Silk @AC KS1 0.4mm"

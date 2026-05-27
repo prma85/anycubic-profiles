@@ -43,12 +43,6 @@
     "filament_wipe": [
         "1"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
     "nozzle_temperature": [
         "230"
     ],
@@ -79,12 +73,6 @@
     "temperature_vitrification": [
         "54"
     ],
-    "textured_plate_temp": [
-        "60"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "60"
-    ],
     "filament_settings_id": [
         "Sunlu PLA+ 2.0 @AC KS1 0.4mm"
     ],
@@ -92,7 +80,7 @@
         "Sunlu"
     ],
     "from": "User",
-    "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "Improved PLA+ @AC KS1 0.4mm",
     "is_custom_defined": "0",
     "name": "Sunlu PLA+ 2.0 @AC KS1 0.4mm",
     "version": "1.3.2602.11"

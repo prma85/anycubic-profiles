@@ -17,7 +17,7 @@
         "0.5"
     ],
     "hot_plate_temp": [
-        "60"
+        "55"
     ],
     "hot_plate_temp_initial_layer": [
         "60"
@@ -56,7 +56,7 @@
         "60"
     ],
     "textured_plate_temp_initial_layer": [
-        "60"
+        "65"
     ],
     "filament_settings_id": [
         "Generic Silk PLA @AC KS1 0.4mm"

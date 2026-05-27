@@ -58,6 +58,9 @@
     "filament_z_hop": [
         "0.4"
     ],
+    "hot_plate_temp": [
+        "55"
+    ],
     "hot_plate_temp_initial_layer": [
         "60"
     ],
@@ -89,10 +92,10 @@
         "0.04"
     ],
     "textured_plate_temp": [
-        "45"
+        "60"
     ],
     "textured_plate_temp_initial_layer": [
-        "50"
+        "65"
     ],
     "filament_settings_id": [
         "JustMaker Silk PLA @AC KS1 0.4mm"

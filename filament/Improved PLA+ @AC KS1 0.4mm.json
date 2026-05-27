@@ -29,31 +29,37 @@
         "35"
     ],
     "hot_plate_temp": [
-        "65"
+        "55"
     ],
     "hot_plate_temp_initial_layer": [
-        "65"
+        "60"
     ],
     "nozzle_temperature_BRASS": [
-        "205"
+        "225"
     ],
     "nozzle_temperature_HS": [
-        "210"
+        "230"
     ],
     "nozzle_temperature_initial_layer": [
-        "205"
+        "225"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "205"
+        "225"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "210"
+        "230"
     ],
     "nozzle_temperature_range_high": [
-        "210"
+        "240"
     ],
     "nozzle_temperature_range_low": [
-        "205"
+        "225"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
     ],
     "filament_settings_id": [
         "Improved PLA+ @AC KS1 0.4mm"

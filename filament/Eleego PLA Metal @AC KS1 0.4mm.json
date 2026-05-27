@@ -32,7 +32,7 @@
         "60"
     ],
     "hot_plate_temp_initial_layer": [
-        "60"
+        "65"
     ],
     "nozzle_temperature_BRASS": [
         "205"
@@ -60,6 +60,12 @@
     ],
     "slow_down_min_speed": [
         "40"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
     ],
     "filament_settings_id": [
         "Eleego PLA Metal @AC KS1 0.4mm"
