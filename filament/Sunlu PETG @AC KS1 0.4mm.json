@@ -77,10 +77,10 @@
         "Slope Lift"
     ],
     "hot_plate_temp": [
-        "60"
+        "70"
     ],
     "hot_plate_temp_initial_layer": [
-        "60"
+        "70"
     ],
     "idle_temperature": [
         "175"
@@ -125,10 +125,10 @@
         "68"
     ],
     "textured_plate_temp": [
-        "60"
+        "70"
     ],
     "textured_plate_temp_initial_layer": [
-        "60"
+        "70"
     ],
     "filament_settings_id": [
         "Sunlu PETG @AC KS1 0.4mm"

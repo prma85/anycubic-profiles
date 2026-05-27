@@ -54,7 +54,7 @@
         "220"
     ],
     "nozzle_temperature_range_high": [
-        "230"
+        "270"
     ],
     "overhang_fan_threshold": [
         "10%"

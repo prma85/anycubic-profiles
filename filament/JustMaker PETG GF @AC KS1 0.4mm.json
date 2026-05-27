@@ -143,7 +143,7 @@
         "JustMaker"
     ],
     "from": "User",
-    "inherits": "Anycubic PETG-CF @Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "JustMaker PETG GF @AC KS1 0.4mm",
     "version": "1.3.2503.03"
