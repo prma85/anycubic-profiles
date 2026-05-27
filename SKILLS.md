@@ -437,9 +437,31 @@ Bambu A1 has a more powerful hotend than Kobra. Cap MVS when importing:
 ### Prime Tower Settings
 For small models (< 30mm footprint) with many color changes:
 - `prime_volume`: minimum 45 mm³ (Bambu default 6 mm³ is insufficient — leaves contaminated melt)
-- `prime_tower_width`: 25mm minimum (wider = more wipe strokes = cleaner nozzle departure)
-- `prime_tower_rib_width`: 10mm with 25mm tower
+- `prime_tower_width`: 35mm minimum for tall prints >50mm (wider = more wipe strokes = cleaner nozzle departure; also more stable)
+- `prime_tower_brim_width`: 5mm minimum — 1mm brim will detach on long prints, voiding all subsequent color changes
+- `prime_tower_rib_width`: 10mm with 35mm tower
 - `flush_into_infill`: `0` for small models — infill area too small to absorb flush volume cleanly
+
+### Flushing Volumes Matrix (CRITICAL — set in slicer UI, not in JSON)
+The per-filament-pair flush volumes are set in the "Flushing Volumes" dialog (multi-material setup screen). They are NOT stored in process JSON files — they embed per-project at slice time. The system default is 70mm³ per pair, which is **far too low** for dark→light transitions.
+
+**Required flush volumes by transition direction:**
+| Transition | Volume | Reason |
+|-----------|--------|--------|
+| Dark → light (e.g. black → yellow) | **400–500 mm³** | Heavy pigment contamination of melt |
+| Light → dark (e.g. yellow → black) | **100–150 mm³** | Dark hides residual color |
+| Same color family | 50–70 mm³ | Minimal contamination |
+
+**Why the default 70mm³ fails:** With `printer_flush_multiplier` at 0.9, black→yellow effective flush ≈ 63mm³. Physics requires ~400mm³ to clear the pigment from a 0.4mm melt zone. You will see color mixing every time.
+
+**How to set:** In Anycubic Slicer Next, when adding multiple filaments to a plate, click the color swatch grid / "Flushing Volumes" button. Enter values per-pair. Always save the project file (.3mf) to preserve these values between sessions.
+
+### Printer Flush Multiplier
+`printer_flush_multiplier` in machine profiles scales ALL flush volumes globally.
+- **0.7** (former value) = 30% reduction — causes contamination for any dark→light transition
+- **0.9** (current value) = 10% reduction — acceptable compromise for filament economy
+- **1.0** = full flush — safest for multi-color, most filament waste
+- Never set below 0.9 if doing any multi-color prints with contrasting colors
 
 ### Small Model Protection
 For models < 20mm diameter at any point during print:

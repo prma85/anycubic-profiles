@@ -2,7 +2,7 @@
     "from": "User",
     "inherits": "Anycubic Kobra S1 0.8 nozzle",
     "name": "Anycubic Kobra S1 0.8 nozzle - Hardened Steel",
-    "printer_flush_multiplier": "0.7",
+    "printer_flush_multiplier": "0.9",
     "printer_settings_id": "Anycubic Kobra S1 0.8 nozzle - Hardened Steel",
     "retract_lift_above": [
         "0.6"
