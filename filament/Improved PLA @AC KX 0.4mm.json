@@ -51,22 +51,16 @@
         "0.4"
     ],
     "hot_plate_temp": [
-        "80"
+        "60"
     ],
     "hot_plate_temp_initial_layer": [
-        "80"
+        "60"
     ],
     "nozzle_temperature": [
         "200"
     ],
-    "nozzle_temperature_HS": [
-        "205"
-    ],
     "nozzle_temperature_initial_layer": [
         "200"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "205"
     ],
     "nozzle_temperature_range_high": [
         "220"
@@ -87,10 +81,10 @@
         "55"
     ],
     "textured_plate_temp": [
-        "75"
+        "60"
     ],
     "textured_plate_temp_initial_layer": [
-        "75"
+        "60"
     ],
     "filament_settings_id": [
         "Improved PLA @AC KX 0.4mm"

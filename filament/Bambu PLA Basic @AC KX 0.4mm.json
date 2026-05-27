@@ -33,7 +33,7 @@
         "Bambu Lab"
     ],
     "from": "User",
-    "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",
+    "inherits": "Improved PLA @AC KX 0.4mm",
     "is_custom_defined": "0",
     "name": "Bambu PLA Basic @AC KX 0.4mm",
     "version": "1.3.2602.11"
