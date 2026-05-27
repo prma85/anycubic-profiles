@@ -26,7 +26,7 @@
     "prime_volume": "40",
     "print_settings_id": "0.08mm HQ @ AC Base",
     "raft_first_layer_density": "80%",
-    "seam_gap": "0",
+    "seam_gap": "10%",
     "sparse_infill_pattern": "crosshatch",
     "sparse_infill_speed": "150",
     "support_base_pattern": "rectilinear",

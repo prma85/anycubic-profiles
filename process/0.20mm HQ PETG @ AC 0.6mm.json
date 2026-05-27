@@ -65,5 +65,6 @@
     "tree_support_branch_distance_organic": "10",
     "tree_support_tip_diameter": "0.9",
     "tree_support_top_rate": "12%",
-    "version": "2.3.0.03"
+    "version": "2.3.0.03",
+    "wipe_on_loops": "1"
 }

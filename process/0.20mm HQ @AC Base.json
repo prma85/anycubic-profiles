@@ -21,7 +21,7 @@
     "prime_volume": "40",
     "print_settings_id": "0.20mm HQ @AC Base",
     "scarf_joint_speed": "30",
-    "seam_gap": "0",
+    "seam_gap": "10%",
     "seam_slope_inner_walls": "1",
     "sparse_infill_speed": "200",
     "support_base_pattern": "rectilinear",
@@ -40,5 +40,6 @@
     "version": "1.3.2603.16",
     "wall_generator": "arachne",
     "wall_loops": "3",
-    "wall_sequence": "inner-outer-inner wall"
+    "wall_sequence": "inner-outer-inner wall",
+    "wipe_on_loops": "1"
 }

@@ -89,5 +89,6 @@
     "tree_support_top_rate": "12%",
     "version": "2.3.0.03",
     "wall_loops": "3",
-    "wall_sequence": "inner-outer-inner wall"
+    "wall_sequence": "inner-outer-inner wall",
+    "wipe_on_loops": "1"
 }

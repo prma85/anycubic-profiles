@@ -74,5 +74,6 @@
     "version": "2.3.0.03",
     "wall_loops": "3",
     "wall_sequence": "inner-outer-inner wall",
-    "support_bottom_z_distance": "0.34"
+    "support_bottom_z_distance": "0.34",
+    "wipe_on_loops": "1"
 }

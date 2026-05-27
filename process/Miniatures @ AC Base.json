@@ -90,5 +90,6 @@
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel",
         "Anycubic Kobra X 0.4 nozzle"
-    ]
+    ],
+    "wipe_on_loops": "1"
 }

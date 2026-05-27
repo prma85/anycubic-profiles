@@ -287,7 +287,6 @@
     "wall_transition_filter_deviation": "25%",
     "wall_transition_length": "100%",
     "wipe_before_external_loop": "0",
-    "wipe_on_loops": "0",
     "wipe_speed": "80%",
     "wipe_tower_extra_flow": "100%",
     "wipe_tower_filament": "0",

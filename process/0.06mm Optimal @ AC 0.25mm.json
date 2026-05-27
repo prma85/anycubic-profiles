@@ -24,7 +24,7 @@
     "prime_tower_width": "30",
     "prime_volume": "40",
     "print_settings_id": "0.06mm Optimal @ AC 0.25mm",
-    "seam_gap": "0",
+    "seam_gap": "10%",
     "support_base_pattern": "rectilinear",
     "support_bottom_z_distance": "0.06",
     "support_interface_bottom_layers": "3",
