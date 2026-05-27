@@ -1,6 +1,8 @@
 {
     "bottom_shell_layers": "5",
+    "bridge_flow": "1.4",
     "bridge_no_support": "1",
+    "bridge_speed": "20",
     "brim_object_gap": "0.15",
     "brim_type": "no_brim",
     "compatible_printers": [
@@ -19,7 +21,10 @@
     "initial_layer_infill_speed": "70",
     "initial_layer_speed": "30",
     "inner_wall_speed": "150",
+    "internal_bridge_flow": "0.95",
     "internal_solid_infill_speed": "200",
+    "ironing_flow": "18%",
+    "ironing_speed": "20",
     "max_travel_detour_distance": "300",
     "name": "Door corner @ AC Base",
     "outer_wall_acceleration": "2000",

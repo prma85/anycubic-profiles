@@ -15,6 +15,7 @@
     "infill_wall_overlap": "25%",
     "inherits": "0.28mm Standard @Anycubic Kobra S1 0.4 nozzle",
     "inner_wall_line_width": "0.6",
+    "internal_bridge_flow": "0.95",
     "internal_solid_infill_line_width": "0.6",
     "ironing_flow": "14%",
     "ironing_speed": "50",

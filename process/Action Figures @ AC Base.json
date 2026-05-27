@@ -28,6 +28,7 @@
     "initial_layer_travel_speed": "75%",
     "inner_wall_acceleration": "10000",
     "inner_wall_jerk": "6",
+    "internal_bridge_flow": "0.95",
     "internal_solid_infill_acceleration": "10000",
     "internal_solid_infill_pattern": "monotonicline",
     "ironing_flow": "30%",

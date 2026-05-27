@@ -1,7 +1,9 @@
 {
     "bottom_shell_layers": "6",
     "bottom_shell_thickness": "1",
+    "bridge_flow": "1.3",
     "bridge_no_support": "1",
+    "bridge_speed": "25",
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
         "Anycubic Kobra S1 0.6 nozzle - Brass",
@@ -16,7 +18,10 @@
     "initial_layer_acceleration": "1500",
     "initial_layer_infill_speed": "100",
     "initial_layer_speed": "50",
+    "internal_bridge_flow": "0.95",
     "internal_solid_infill_acceleration": "100%",
+    "ironing_flow": "15%",
+    "ironing_speed": "25",
     "max_travel_detour_distance": "300",
     "name": "0.18mm Optimal Silk PLA @ AC 0.6mm",
     "precise_outer_wall": "1",

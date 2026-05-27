@@ -1,7 +1,8 @@
 {
     "bottom_shell_layers": "4",
+    "bridge_flow": "1.4",
     "bridge_no_support": "1",
-    "bridge_speed": "25",
+    "bridge_speed": "20",
     "brim_type": "no_brim",
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
@@ -20,7 +21,10 @@
     "initial_layer_speed": "30",
     "inner_wall_line_width": "0.5",
     "inner_wall_speed": "120",
+    "internal_bridge_flow": "0.95",
     "internal_solid_infill_speed": "180",
+    "ironing_flow": "18%",
+    "ironing_speed": "20",
     "line_width": "0.5",
     "max_travel_detour_distance": "300",
     "name": "Batch Flexi @ AC Base",

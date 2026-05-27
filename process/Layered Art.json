@@ -1,7 +1,12 @@
 {
+    "bridge_flow": "1.4",
+    "bridge_speed": "20",
     "from": "User",
     "infill_combination": "1",
     "inherits": "0.20mm Standard @Anycubic Kobra S1 0.4 nozzle",
+    "internal_bridge_flow": "0.95",
+    "ironing_flow": "18%",
+    "ironing_speed": "20",
     "is_custom_defined": "0",
     "max_travel_detour_distance": "300",
     "name": "Layered Art",

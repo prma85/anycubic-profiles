@@ -1,6 +1,6 @@
 {
     "bottom_shell_layers": "5",
-    "bridge_flow": "1.2",
+    "bridge_flow": "1.4",
     "bridge_no_support": "1",
     "bridge_speed": "20",
     "brim_type": "no_brim",
@@ -16,6 +16,9 @@
     "inherits": "0.24mm Standard @Anycubic Kobra S1 0.4 nozzle",
     "initial_layer_infill_speed": "110",
     "initial_layer_speed": "60",
+    "internal_bridge_flow": "0.95",
+    "ironing_flow": "18%",
+    "ironing_speed": "20",
     "is_infill_first": "1",
     "max_travel_detour_distance": "300",
     "min_width_top_surface": "400%",

@@ -1,5 +1,7 @@
 {
     "bottom_shell_layers": "4",
+    "bridge_flow": "1.4",
+    "bridge_speed": "20",
     "brim_object_gap": "0.15",
     "brim_type": "outer_only",
     "brim_width": "8",
@@ -19,6 +21,9 @@
     "initial_layer_infill_speed": "50",
     "initial_layer_line_width": "0.55",
     "initial_layer_speed": "25",
+    "internal_bridge_flow": "0.95",
+    "ironing_flow": "18%",
+    "ironing_speed": "20",
     "max_travel_detour_distance": "300",
     "name": "Large Object @ AC Base",
     "only_one_wall_first_layer": "0",

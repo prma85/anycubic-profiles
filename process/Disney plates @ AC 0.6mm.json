@@ -14,6 +14,7 @@
     "gap_infill_speed": "150",
     "infill_wall_overlap": "25%",
     "inherits": "0.30mm Standard @Anycubic Kobra S1 0.6 nozzle",
+    "internal_bridge_flow": "0.95",
     "internal_solid_infill_pattern": "monotonicline",
     "ironing_flow": "25%",
     "ironing_speed": "25",

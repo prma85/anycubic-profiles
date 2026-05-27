@@ -1,4 +1,6 @@
 {
+    "bridge_flow": "1.2",
+    "bridge_speed": "30",
     "compatible_printers": [
         "Anycubic Kobra S1 0.8 nozzle",
         "Anycubic Kobra S1 0.8 nozzle - Brass",
@@ -7,7 +9,10 @@
     "from": "User",
     "inherits": "Large Object @ AC Base",
     "inner_wall_line_width": "0.82",
+    "internal_bridge_flow": "0.95",
     "internal_solid_infill_line_width": "0.82",
+    "ironing_flow": "18%",
+    "ironing_speed": "30",
     "layer_height": "0.32",
     "line_width": "0.82",
     "name": "Large Object @ AC 0.8mm",

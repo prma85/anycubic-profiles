@@ -1,7 +1,8 @@
 {
     "bottom_shell_layers": "4",
+    "bridge_flow": "1.4",
     "bridge_no_support": "1",
-    "bridge_speed": "15",
+    "bridge_speed": "20",
     "brim_type": "no_brim",
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
@@ -15,7 +16,10 @@
     "infill_combination": "1",
     "inherits": "0.12mm Standard @Anycubic Kobra S1 0.4 nozzle",
     "inner_wall_speed": "150",
+    "internal_bridge_flow": "0.95",
     "internal_solid_infill_speed": "200",
+    "ironing_flow": "18%",
+    "ironing_speed": "20",
     "max_travel_detour_distance": "300",
     "name": "0.12mm HQ @ AC Base",
     "outer_wall_acceleration": "2000",

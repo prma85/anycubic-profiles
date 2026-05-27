@@ -1,4 +1,6 @@
 {
+    "bridge_flow": "1.4",
+    "bridge_speed": "20",
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Brass",
@@ -9,6 +11,9 @@
     "from": "User",
     "infill_combination": "1",
     "inherits": "0.24mm Standard @Anycubic Kobra S1 0.4 nozzle",
+    "internal_bridge_flow": "0.95",
+    "ironing_flow": "18%",
+    "ironing_speed": "20",
     "max_travel_detour_distance": "300",
     "name": "0.24mm Draft @ AC Base",
     "precise_outer_wall": "1",

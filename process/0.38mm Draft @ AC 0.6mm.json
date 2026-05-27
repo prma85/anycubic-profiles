@@ -1,4 +1,6 @@
 {
+    "bridge_flow": "1.3",
+    "bridge_speed": "25",
     "brim_type": "no_brim",
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
@@ -12,7 +14,10 @@
     "inherits": "0.30mm Standard @Anycubic Kobra S1 0.6 nozzle",
     "initial_layer_infill_speed": "100",
     "inner_wall_speed": "230",
+    "internal_bridge_flow": "0.95",
     "internal_solid_infill_speed": "230",
+    "ironing_flow": "18%",
+    "ironing_speed": "25",
     "layer_height": "0.38",
     "max_travel_detour_distance": "300",
     "name": "0.38mm Draft @ AC 0.6mm",

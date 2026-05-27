@@ -14,6 +14,7 @@
     "default_acceleration": "10000",
     "default_jerk": "6",
     "elefant_foot_compensation": "0.2",
+    "enable_support": "0",
     "filename_format": "S1_{input_filename_base}_{filament_type[0]}_{print_time}.gcode",
     "filter_out_gap_fill": "0.7",
     "flush_into_infill": "1",
@@ -30,6 +31,7 @@
     "inner_wall_jerk": "6",
     "inner_wall_line_width": "0.52",
     "inner_wall_speed": "220",
+    "internal_bridge_flow": "0.95",
     "internal_solid_infill_acceleration": "10000",
     "internal_solid_infill_line_width": "0.48",
     "ironing_flow": "30%",
@@ -79,6 +81,7 @@
     "support_object_first_layer_gap": "0.25",
     "support_object_xy_distance": "0.9",
     "support_on_build_plate_only": "1",
+    "support_remove_small_overhang": "0",
     "support_speed": "70",
     "support_style": "organic",
     "support_threshold_angle": "70",
@@ -102,7 +105,5 @@
     "wall_generator": "arachne",
     "wall_loops": "4",
     "wipe_before_external_loop": "1",
-    "wipe_on_loops": "1",
-    "enable_support": "0",
-    "support_remove_small_overhang": "0"
+    "wipe_on_loops": "1"
 }
