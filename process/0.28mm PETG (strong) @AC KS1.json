@@ -8,7 +8,6 @@
     "brim_type": "outer_only",
     "default_acceleration": "6000",
     "enable_prime_tower": "0",
-    "flush_into_infill": "1",
     "from": "User",
     "infill_wall_overlap": "20%",
     "inherits": "0.28mm Standard @Anycubic Kobra S1 0.4 nozzle",
