@@ -52,6 +52,9 @@
     "filament_retract_lift_enforce": [
         "All Surfaces"
     ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
     "filament_settings_id": [
         "Improved PETG @AC KS1 0.4mm"
     ],

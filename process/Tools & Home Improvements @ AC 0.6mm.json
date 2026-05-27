@@ -61,6 +61,7 @@
     "print_settings_id": "Tools & Home Improvements @ AC 0.6mm",
     "raft_first_layer_density": "30%",
     "reduce_crossing_wall": "1",
+    "reduce_infill_retraction": "0",
     "scarf_angle_threshold": "135",
     "scarf_joint_speed": "55%",
     "scarf_overhang_threshold": "35%",
@@ -73,6 +74,7 @@
     "sparse_infill_line_width": "0.8",
     "sparse_infill_pattern": "gyroid",
     "sparse_infill_speed": "110",
+    "support_bottom_z_distance": "0.3",
     "support_line_width": "0.6",
     "support_object_first_layer_gap": "0.9",
     "support_object_xy_distance": "0.7",
@@ -97,8 +99,7 @@
     "version": "1.3.2602.11",
     "wall_loops": "3",
     "wall_sequence": "inner-outer-inner wall",
+    "wipe_on_loops": "1",
     "xy_contour_compensation": "-0.05",
-    "xy_hole_compensation": "0.05",
-    "support_bottom_z_distance": "0.3",
-    "wipe_on_loops": "1"
+    "xy_hole_compensation": "0.05"
 }

@@ -1,7 +1,7 @@
 {
-    "bridge_no_support": "1",
     "bottom_shell_layers": "4",
     "bridge_flow": "0.94",
+    "bridge_no_support": "1",
     "bridge_speed": "30",
     "compatible_printers": [
         "Anycubic Kobra S1 0.6 nozzle",
@@ -26,6 +26,7 @@
     "internal_bridge_speed": "100%",
     "internal_solid_infill_pattern": "monotonicline",
     "internal_solid_infill_speed": "180",
+    "max_travel_detour_distance": "300",
     "name": "0.20mm HQ PETG @ AC 0.6mm",
     "only_one_wall_top": "0",
     "outer_wall_acceleration": "2000",
@@ -40,6 +41,7 @@
     "raft_first_layer_density": "30%",
     "raft_first_layer_expansion": "10",
     "reduce_crossing_wall": "1",
+    "reduce_infill_retraction": "0",
     "slow_down_layers": "1",
     "slowdown_for_curled_perimeters": "1",
     "sparse_infill_density": "12%",

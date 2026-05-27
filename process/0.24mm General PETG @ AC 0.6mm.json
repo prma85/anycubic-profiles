@@ -25,6 +25,7 @@
     "internal_solid_infill_acceleration": "9500",
     "internal_solid_infill_pattern": "monotonicline",
     "internal_solid_infill_speed": "210",
+    "max_travel_detour_distance": "300",
     "name": "0.24mm General PETG @ AC 0.6mm",
     "only_one_wall_top": "0",
     "outer_wall_acceleration": "3500",

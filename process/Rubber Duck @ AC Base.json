@@ -17,6 +17,12 @@
     "brim_object_gap": "0.1",
     "brim_type": "auto_brim",
     "brim_width": "5",
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Brass",
+        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel",
+        "Anycubic Kobra X 0.4 nozzle"
+    ],
     "compatible_printers_condition": "",
     "counterbore_hole_bridging": "none",
     "default_acceleration": "10000",
@@ -112,7 +118,7 @@
     "make_overhang_printable_angle": "55",
     "make_overhang_printable_hole_size": "0",
     "max_bridge_length": "10",
-    "max_travel_detour_distance": "0",
+    "max_travel_detour_distance": "300",
     "max_volumetric_extrusion_rate_slope": "0",
     "max_volumetric_extrusion_rate_slope_segment_length": "5",
     "min_bead_width": "85%",
@@ -166,8 +172,8 @@
     "raft_first_layer_density": "90%",
     "raft_first_layer_expansion": "5",
     "raft_layers": "0",
-    "reduce_crossing_wall": "0",
-    "reduce_infill_retraction": "1",
+    "reduce_crossing_wall": "1",
+    "reduce_infill_retraction": "0",
     "resolution": "0.012",
     "role_based_wipe_speed": "1",
     "rotate_solid_infill_direction": "1",
@@ -313,11 +319,5 @@
         "70"
     ],
     "xy_contour_compensation": "0",
-    "xy_hole_compensation": "0.05",
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.4 nozzle",
-        "Anycubic Kobra S1 0.4 nozzle - Brass",
-        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel",
-        "Anycubic Kobra X 0.4 nozzle"
-    ]
+    "xy_hole_compensation": "0.05"
 }

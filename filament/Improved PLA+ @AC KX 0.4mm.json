@@ -41,6 +41,9 @@
     "filament_retract_restart_extra": [
         "0"
     ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
     "filament_retraction_minimum_travel": [
         "1.5"
     ],
