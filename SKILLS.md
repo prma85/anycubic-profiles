@@ -485,7 +485,40 @@ Check: when does first `T[n]` tool change occur relative to detach layer?
 
 ---
 
-## 9. Process Profile Rules
+## 9. Batch Printing and Large Plate Strategies
+
+### Profiles for these use cases
+
+| Profile | Use case | Layer | Key differences |
+|---|---|---|---|
+| `Batch Flexi @ AC Base` | 20–30 flexi/articulated PLA parts (clicker toys, dragons, octopus, fidgets) | 0.12mm | No support, no brim, gyroid infill, slow_down_layers=4, nearbyfirst |
+| `Large Object @ AC Base` | Single large print covering 60%+ of the plate | 0.20mm | 8mm outer brim, slow first layer, adaptive cubic infill, supports on build plate only |
+
+### Collision warning for articulated/flexi models (false positive)
+
+When slicing irregular-shaped articulated prints (flexi dragons, octopus, fidget rings) the slicer sometimes shows a collision warning even with "by layer" printing and no parts actually touching.
+
+**Why it happens:** The slicer computes a clearance envelope (cylinder of radius 60mm, height 40mm above the nozzle tip — the extruder body dimensions) around every object bounding box. For irregular shapes like a dragon's tail or octopus tentacles the bounding boxes overlap even though the actual printed geometry does not. In **by-layer mode this warning is a false positive** — the extruder never descends into a fully printed object because all objects are printed simultaneously at the same Z height.
+
+**What to check in the slicer preview:** After slicing, step through the layer preview. If no layer shows two parts occupying the same XY space, the print is safe. The collision warning refers to the extruder carriage sweeping past a tall finished section of one object while printing a low section of an adjacent one — only relevant for sequential (by-object) printing.
+
+**Fix in profile:** `print_order: nearbyfirst` reduces cross-plate travel and minimises the frequency of the slicer flagging the envelope overlap. The warning can be safely acknowledged and dismissed for by-layer flexi batch prints.
+
+### Slow-down for small parts batches
+
+When printing 20–30 small objects at once, each individual layer completes in 2–5 seconds at normal speeds — too fast for the layer to cool before the next one starts, causing layer fusion and saggy walls.
+
+The filament's `slow_down_layer_time` (8 seconds for PLA system default) kicks in automatically per object when `slow_down_layers` is set in the process profile. The `Batch Flexi @ AC Base` profile sets `slow_down_layers: 4` — the slicer enforces the minimum layer time on the first 4 layers of every object on the plate, then releases to full speed once the object has sufficient height to self-cool.
+
+### Brim strategy for 2mm-spaced batch prints
+
+With 2mm spacing between objects, any brim wider than 1mm will merge brims between adjacent parts, making removal very difficult or damaging hinge sections. PEO plate grips PLA well without brim at 60°C first-layer bed temp. Use `brim_type: no_brim` for flexi batch prints.
+
+Exception: if an object has a very small footprint (< 15mm base) and is detaching, add a 2mm `outer_only` brim to that specific object in the slicer's per-object settings overrides rather than changing the profile.
+
+---
+
+## 10. Process Profile Rules
 
 ### Naming Families
 - `@ AC Base` — 0.4mm nozzle, cross-printer
@@ -515,7 +548,7 @@ Never force PETG to match regular profile speeds.
 
 ---
 
-## 10. Debugging Profiles
+## 11. Debugging Profiles
 
 ### Profiles Not Showing in Slicer
 Check: `C:\Users\pandrade\AppData\Roaming\AnycubicSlicerNext\log\debug_*.log`
@@ -531,7 +564,7 @@ The log shows explicit load errors — missing parent, malformed JSON, ID mismat
 
 ---
 
-## 11. Validation Checklist
+## 12. Validation Checklist
 
 Before committing any change:
 - [ ] JSON syntax valid
