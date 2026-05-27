@@ -1,163 +1,186 @@
 # Process Profiles Guide
 
-Last updated: 2026-03-11
+Last updated: 2026-05-27
 Scope: `user/651589/process`
 
 ## Overview
 
-This folder contains custom process profiles organized as inheritance overlays on top of Anycubic system defaults.
+Custom process profiles organised as inheritance overlays on top of Anycubic system defaults.
 
 Current inventory:
-- Total JSON profiles: 65
-- Shared base family (`@ AC Base`): 26
-- 0.6mm family (`@ AC 0.6mm` plus legacy `@ 0.6mm`): 26
+- Total JSON profiles: 76
+- Base family (`@ AC Base`): 31
+- 0.6mm family (`@ AC 0.6mm`): 24
+- 0.8mm family (`@ AC 0.8mm`): 2 (Large Object only)
 - 0.25mm family (`@ AC 0.25mm`): 13
+- Named specialty profiles: 6
 
 Core strategy:
-- Keep geometry and nozzle-specific physics in system parents whenever possible.
-- Keep custom files focused on intent (quality, speed, special use cases).
-- Use explicit naming to make nozzle context obvious.
+- Inherit geometry and nozzle physics from system parents.
+- Custom files encode intent (quality, speed, use-case), not hardware.
+- Process profiles are shared between KS1 and KX via `compatible_printers`.
+- Where KX needs different process behaviour, a KX-specific profile inherits the base and overrides only what differs.
 
 ## Naming Pattern
 
-### Base family (cross-printer process intent)
-- Pattern: `<profile> @ AC Base`
-- Example: `0.16mm HQ @ AC Base`
-
-### 0.6mm family
-- Pattern: `<profile> @ AC 0.6mm`
-- Legacy names still present for compatibility: `<profile> @ 0.6mm`
-- Example: `0.24mm Draft @ AC 0.6mm`
-
-### 0.25mm family
-- Pattern: `<profile> @ AC 0.25mm`
-- Example: `0.10mm HQ @ AC 0.25mm`
+| Family | Pattern | Example |
+|---|---|---|
+| 0.4mm cross-printer | `<profile> @ AC Base` | `0.16mm HQ @ AC Base` |
+| 0.6mm nozzle | `<profile> @ AC 0.6mm` | `0.24mm Draft @ AC 0.6mm` |
+| 0.8mm nozzle | `<profile> @ AC 0.8mm` | `Large Object @ AC 0.8mm` |
+| 0.25mm nozzle | `<profile> @ AC 0.25mm` | `0.10mm HQ @ AC 0.25mm` |
+| Named specialty | `<Use Case> @ AC <family>` | `Batch Flexi @ AC Base` |
 
 ## Compatibility Pattern
 
-Process profiles are intentionally shared between S1 and X for the same nozzle size.
+All process profiles list both S1 and X for the same nozzle size.
 
-### 0.4mm compatible_printers
-- `Anycubic Kobra S1 0.4 nozzle`
-- `Anycubic Kobra S1 0.4 nozzle - Brass`
-- `Anycubic Kobra S1 0.4 nozzle - Hardened Steel`
-- `Anycubic Kobra X 0.4 nozzle`
+### 0.4mm `compatible_printers`
+```json
+["Anycubic Kobra S1 0.4 nozzle",
+ "Anycubic Kobra S1 0.4 nozzle - Brass",
+ "Anycubic Kobra S1 0.4 nozzle - Hardened Steel",
+ "Anycubic Kobra X 0.4 nozzle"]
+```
 
-### 0.6mm compatible_printers
-- `Anycubic Kobra S1 0.6 nozzle`
-- `Anycubic Kobra S1 0.6 nozzle - Brass`
-- `Anycubic Kobra S1 0.6 nozzle - Hardened Steel`
-- `Anycubic Kobra X 0.6 nozzle`
+### 0.6mm `compatible_printers`
+```json
+["Anycubic Kobra S1 0.6 nozzle",
+ "Anycubic Kobra S1 0.6 nozzle - Brass",
+ "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"]
+```
+*(KX 0.6mm added when a KX-specific 0.6mm profile is created)*
 
-### 0.25mm compatible_printers
-- `Anycubic Kobra S1 0.25 nozzle`
-- `Anycubic Kobra S1 0.25 nozzle - Brass`
-- `Anycubic Kobra S1 0.25 nozzle - Hardened Steel`
-- `Anycubic Kobra X 0.25 nozzle`
+### 0.25mm `compatible_printers`
+```json
+["Anycubic Kobra S1 0.25 nozzle",
+ "Anycubic Kobra S1 0.25 nozzle - Brass",
+ "Anycubic Kobra S1 0.25 nozzle - Hardened Steel"]
+```
 
-## New and Expanded Profile Sets
+## Profile Families
 
-## 0.4mm base migration (`@ AC Base`)
-- Standardized naming for custom base profiles.
-- Added missing shared 0.4 process variants:
-  - `Book Nook @ AC Base`
-  - `Disney plates @ AC Base`
-- These inherit from `0.28mm Standard @Anycubic Kobra S1 0.4 nozzle` and intentionally remove direct layer geometry overrides.
+### Standard layer height families (0.4mm nozzle)
 
-## 0.6mm expansion (`@ AC 0.6mm`)
-- Generated from mapped system standards:
-  - `0.18` family from `0.18mm Standard @Anycubic Kobra S1 0.6 nozzle`
-  - `0.20` family from `0.20mm Standard @Anycubic Kobra S1 0.6 nozzle`
-  - `0.24` family from `0.24mm Standard @Anycubic Kobra S1 0.6 nozzle`
-  - `0.30/0.32/0.38` family from `0.30mm Standard @Anycubic Kobra S1 0.6 nozzle`
-- Added new drafts:
-  - `0.32mm Draft @ AC 0.6mm`
-  - `0.38mm Draft @ AC 0.6mm`
-- Support Z-distance sanity enforced:
-  - `support_bottom_z_distance >= effective layer height`
+| Layer | Profile name | Use case |
+|---|---|---|
+| 0.06–0.14mm | `0.XXmm HQ/Optimal @ AC 0.25mm` | Ultra-fine 0.25mm nozzle detail |
+| 0.08mm | `0.08mm HQ/Optimal @ AC Base` | Extreme detail, 0.4mm nozzle |
+| 0.12mm | `0.12mm HQ/Optimal @ AC Base` | High detail |
+| 0.16mm | `0.16mm HQ @ AC Base` | Daily quality |
+| 0.16mm | `0.16mm Optimal @ AC Base` | Daily quality, faster |
+| 0.16mm | `0.16mm Optimal Silk PLA @ AC Base` | Silk PLA speed |
+| 0.20mm | `0.20mm HQ @AC Base` | Standard balanced |
+| 0.20mm | `0.20mm SD @ AC Base` | Standard + lower density |
+| 0.24mm | `0.24mm HQ @ AC Base` | Fast quality |
+| 0.24mm | `0.24mm Draft @ AC Base` | Draft speed |
+| 0.28mm | `0.28mm ExtraDraft @ AC Base` | Draft max |
 
-## 0.25mm HQ/Optimal family
-Added HQ and Optimal variants at:
-- `0.06mm`
-- `0.08mm`
-- `0.10mm`
-- `0.12mm`
-- `0.14mm`
+### PETG profiles (0.4mm nozzle)
 
-All 5 HQ/Optimal pairs now follow the same difference pattern.
+| Layer | Profile name |
+|---|---|
+| 0.16mm | `0.16mm HQ PETG @ AC Base` |
+| 0.20mm | `0.20mm General PETG @ AC Base` |
+| 0.20mm | `0.20mm General PETG (Rapid) @ AC Base` |
+| 0.24mm | `0.24mm General PETG @ AC Base` |
+| 0.24mm | `0.24mm General PETG (slow) @ AC Base` |
+| 0.28mm | `0.28mm PETG @AC KS1` |
+| 0.28mm | `0.28mm PETG (strong) @AC KS1` |
+
+PETG profiles intentionally diverge: slower bridges (30mm/s), increased support XY distance, adjusted support gaps for PETG's adhesion characteristics.
+
+### TPU profiles (0.4mm nozzle)
+
+| Profile | Notes |
+|---|---|
+| `0.20mm Optimal TPU @ AC Base` | Standard TPU, reduce_crossing_wall off |
+| `0.20mm Optimal TPU - Avoid Crossing Walls Off @ AC Base` | TPU without wall avoidance |
+
+### Specialty / use-case profiles
+
+| Profile | Inherits | Purpose |
+|---|---|---|
+| `Batch Flexi @ AC Base` | 0.12mm Standard | 20–30 flexi/articulated PLA parts simultaneously (0.12mm, 0.5mm walls, no support, gyroid, slow_down_layers=4) |
+| `Batch Flexi 0.16mm @ AC Base` | Batch Flexi @ AC Base | Same as above at 0.16mm, slightly faster |
+| `Large Object @ AC Base` | 0.16mm Standard | Single print covering 60%+ of plate (outer brim, slow first layer, variable layer height base) |
+| `Large Object @ AC 0.6mm` | Large Object @ AC Base | Large objects, 0.6mm nozzle, 0.24mm layer |
+| `Large Object @ AC 0.8mm` | Large Object @ AC Base | Large objects, 0.8mm nozzle, 0.32mm layer |
+| `Action Figures @ AC Base` | 0.12mm Standard | Detailed figures with ironing |
+| `Miniatures @ AC Base` | 0.08mm Standard | Ultra-detail 0.08mm, fine line widths |
+| `Custom Pokeballs @ AC Base` | 0.08mm Standard | Spherical multi-colour models |
+| `Goffy Figures` | 0.12mm Standard | Figure quality at moderate speed |
+| `Book Nook @ AC Base/0.6mm` | 0.28mm Standard | Large decorative scenes |
+| `Disney plates @ AC Base/0.6mm` | 0.28mm Standard | Flat plate art |
+| `Rubber Duck @ AC Base/0.25mm/0.6mm` | 0.08mm Standard | Multi-colour toy with exclude_object |
+| `Layered Art` | — | Layered colour art |
+| `Vase (Spiral) @ AC Base/0.6mm` | — | Single-perimeter spiral mode |
+| `Vase (hollow) @ AC Base/0.6mm` | — | Hollow vase with minimal shell |
+
+## Universal Settings Applied to All Profiles
+
+These are explicit in every non-excluded profile (not relying on system defaults):
+
+| Setting | Value | Why |
+|---|---|---|
+| `reduce_crossing_wall` | `1` | Routes travel along walls instead of over infill — prevents nozzle hitting infill peaks |
+| `reduce_infill_retraction` | `0` | Retracts before all infill travel — prevents ooze blobs that nozzle clips |
+| `max_travel_detour_distance` | `300` | Caps detour search at 300mm for consistent travel pathfinding |
+| `seam_gap` | `10%` | Consistent seam closure across all profiles |
+| `wipe_on_loops` | `1` | Wipes nozzle tip before each outer wall (excluded: 0.06/0.08mm fine detail) |
+
+## Support Settings (standardised 2026-05-27)
+
+All support-enabled profiles (non-TPU, non-vase, non-flexi) use:
+
+| Setting | Value | Rationale |
+|---|---|---|
+| `support_interface_top_layers` | `3` | Dense separation surface for clean removal |
+| `support_interface_bottom_layers` | `2` | Standard |
+| `support_interface_spacing` | `0.2mm` | Dense (vs system default 0.5mm) — flat peelable surface |
+| `support_interface_pattern` | `rectilinear_interlaced` | Alternating perpendicular layers, no gaps |
+| `support_interface_speed` | `40mm/s` (0.4mm), `45` (0.6mm), `50` (0.8mm) | Slow = flat interface, no curl; primary anti-adhesion mechanism |
+| `support_speed` | `120` (0.4mm), `150` (0.6mm), `180` (0.8mm) | Body scaffolding can be fast |
+
+**Z-distance by layer height** (fixed values, NOT proportional to layer):
+
+| Layer height | `support_top_z_distance` | `support_bottom_z_distance` |
+|---|---|---|
+| 0.06–0.10mm | 0.10 | 0.10 |
+| 0.12–0.16mm | 0.14 | 0.14 |
+| 0.18–0.28mm | 0.16 | 0.16 |
+| 0.30mm+ | 0.20 | 0.16 |
+
+Setting `top_z = layer_height` is wrong — it creates gaps up to 0.50mm at large layer heights, causing sagging before bridging can start. PETG profiles keep their larger gaps (0.24–0.30mm) to prevent PETG fusing to the part.
 
 ## HQ vs Optimal: Key Differences (0.25mm family)
 
-Across all 0.25mm pairs, HQ vs Optimal differs in exactly 8 keys:
-- `default_acceleration`
-- `outer_wall_acceleration`
-- `outer_wall_speed`
-- `inner_wall_acceleration`
-- `inner_wall_speed`
-- `gap_infill_speed`
-- `internal_solid_infill_speed`
-- `sparse_infill_speed`
+Exactly 8 keys differ between HQ and Optimal variants:
+`default_acceleration`, `outer_wall_acceleration`, `outer_wall_speed`,
+`inner_wall_acceleration`, `inner_wall_speed`,
+`gap_infill_speed`, `internal_solid_infill_speed`, `sparse_infill_speed`
 
-### Shared behavior
-- HQ keeps slower/more conservative walls and acceleration for quality.
-- Optimal pushes inner wall and infill throughput for print time reduction.
+## Bambu Studio Migration (future)
 
-### Value pattern
-For `0.06` and `0.08`:
-- HQ `sparse_infill_speed=150` vs Optimal `450`
+Process profiles will need re-parenting to BBL equivalents when porting to BambuStudio.
+See `../SKILLS.md` section 7 for the full migration guide including:
+- Re-parenting map (KS1 → P1P/P1S, KX → A1)
+- Keys to remove, change, and keep
+- Process parent naming in BambuStudio
+- Specialty profile handling for Batch Flexi and Large Object
 
-For `0.10`, `0.12`, `0.14`:
-- HQ `sparse_infill_speed=200` vs Optimal `130`
-
-This asymmetry is intentional and inherited from the selected system template families.
-
-## Regular vs PETG Process Behavior
-
-The PETG variants are not simple copies; they explicitly tune adhesion risk, support release, and bridging.
-
-Representative deltas observed in current profiles:
-- Bridges:
-  - PETG sets explicit `bridge_speed=30`
-  - PETG sets explicit `bridge_flow=0.94`
-- Supports:
-  - PETG generally increases `support_object_xy_distance` (e.g., `0.7 -> 1`)
-  - PETG slightly increases support Z gaps in some 0.20 profiles (`0.30 -> 0.32`)
-- Throughput:
-  - PETG commonly lowers some infill/internal speeds vs regular profiles
-  - Outer wall speed can be profile-family dependent and is not globally slower in every layer family
-
-In short:
-- Regular profiles prioritize broader speed/quality balance.
-- PETG profiles prioritize stability and release behavior where PETG tends to string, fuse supports, or sag bridges.
-
-## Extension Rules (How To Add More)
-
-When adding a new custom process profile:
-
-1. Choose the correct system parent by nozzle and layer family.
-2. Keep naming consistent:
-- Base: `@ AC Base`
-- 0.6: `@ AC 0.6mm`
-- 0.25: `@ AC 0.25mm`
-3. Keep `compatible_printers` aligned to nozzle size and include Kobra X.
-4. Remove unnecessary geometry/nozzle-layer keys if parent already defines them.
-5. Validate support spacing for the effective layer height.
-6. Generate matching `.info` file with aligned ID/name.
+The new specialty profiles (`Batch Flexi`, `Large Object`) should map to P1P/P1S process parents at the matching layer height, keeping all custom keys unchanged. BambuStudio supports `inherits` so the same overlay approach works.
 
 ## Validation Checklist
 
-Before accepting a new or edited process profile:
-- JSON parses successfully.
-- `name`, filename, and `.info` basename match.
-- `print_settings_id` is unique and coherent.
-- `inherits` points to an existing parent profile.
-- `compatible_printers` covers both S1 and X for that nozzle size.
-- For 0.6: `support_bottom_z_distance >= effective layer height`.
-- HQ/Optimal pairs only differ where intended.
-
-## Related Docs
-
-- Main repository guide: `../README.md`
-- Quick operator guide: `../QUICK_REFERENCE.md`
-- Filament strategy: `../filament/README.md`
-- S1 vs X unification note: `../S1_VS_X_UNIFICATION.md`
+Before accepting any new or edited process profile:
+- JSON parses successfully
+- `name`, filename, and `.info` basename match
+- `print_settings_id` is unique and coherent
+- `inherits` points to an existing parent
+- `compatible_printers` covers both S1 and X for that nozzle size
+- `support_top_z_distance` follows the layer-height table above, not `= layer_height`
+- `support_interface_spacing` is `0.2` (or intentional exception documented)
+- `reduce_crossing_wall: 1`, `reduce_infill_retraction: 0`, `max_travel_detour_distance: 300` present
+- `seam_gap: 10%` and `wipe_on_loops: 1` present (except 0.06/0.08mm fine detail profiles)
+- Matching `.info` file exists with aligned `setting_id`

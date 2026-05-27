@@ -405,7 +405,7 @@ All BBL filament profiles inherit from a `@base` root, then have printer-specifi
 
 P1S has **no dedicated process profiles** — it uses P1P process profiles. P1S machine definition itself inherits from `fdm_bbl_3dp_001_common` (not P1P), but the process library is shared via P1P naming.
 
-### Porting Anycubic Profiles → BambuStudio (Future Work)
+### Porting Anycubic Profiles → BambuStudio (Planned — profiles ready)
 
 BambuStudio **does** support `inherits`. The problem is that Anycubic system parents do not exist in BambuStudio, so the chain cannot resolve. Solution: re-parent to the Bambu equivalent, keep all override keys unchanged, update only identity fields.
 
@@ -420,7 +420,21 @@ BambuStudio **does** support `inherits`. The problem is that Anycubic system par
 
 **Note:** KX 0.6mm and 0.8mm filament variants collapse into the same `@BBL A1` parent as the 0.4mm — nozzle size is not a separate file in BambuStudio. The per-nozzle flow/MVS adjustments we maintain in Anycubic profiles will be overrides on top of the A1 base, and BambuStudio will use them as-is.
 
-This is a future task — not yet started as of 2026-05-25.
+### Process Profile Migration — Specialty Profiles
+
+| Anycubic profile | BambuStudio `inherits` | Notes |
+|---|---|---|
+| `Batch Flexi @ AC Base` (0.12mm) | `0.12mm Standard @BBL P1P` / `@BBL A1` | Keep all custom keys unchanged; remove `compatible_printers` |
+| `Batch Flexi 0.16mm @ AC Base` | `Batch Flexi @ AC Base` (migrated) or `0.16mm Standard @BBL P1P` | Inherits from migrated Batch Flexi |
+| `Large Object @ AC Base` (0.16mm) | `0.16mm Standard @BBL P1P` / `@BBL A1` | Keep all custom keys; brim, support, and seam settings all valid in BBL |
+| `Large Object @ AC 0.6mm` (0.24mm) | `0.24mm Standard @BBL P1P 0.6 nozzle` | Line widths and support z-distances remain correct |
+| `Large Object @ AC 0.8mm` (0.32mm) | `0.32mm Standard @BBL P1P 0.8 nozzle` | Same |
+
+**Process keys that are safe in BambuStudio:** All keys we use in process profiles (`reduce_crossing_wall`, `max_travel_detour_distance`, `support_interface_*`, `print_order`, `seam_position`, `slow_down_layers`, `brim_*`, `elefant_foot_compensation`, `wall_*`, `infill_*`, `sparse_infill_*`) exist in OrcaSlicer and BambuStudio. No removal needed for process profiles.
+
+**Process keys to CHECK in BambuStudio:** `print_order: nearbyfirst` — verify this value is supported in the BBL version you're targeting. If not, fall back to `default`.
+
+This is a planned task — not yet started as of 2026-05-27. The profiles are now in a clean, well-documented state and ready for migration when needed.
 
 ### MVS Scaling for Bambu → Kobra:
 Bambu A1 has a more powerful hotend than Kobra. Cap MVS when importing:

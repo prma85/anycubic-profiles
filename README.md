@@ -1,6 +1,6 @@
 # Anycubic Custom Profiles - User 651589
 
-Last updated: 2026-05-25
+Last updated: 2026-05-27
 
 ## Repository Purpose
 
@@ -25,26 +25,28 @@ Design goal:
 ## Process Profile Status
 
 Process library families:
-- Base profiles (@ AC Base): shared process intent
-- 0.6mm profiles (@ AC 0.6mm): thicker-layer speed family
-- 0.25mm profiles (@ AC 0.25mm): fine-detail family
-
-Completed work:
-- Added missing 0.4 base variants for Book Nook and Disney plates.
-- Expanded 0.6 families, including 0.32 and 0.38 draft tiers.
-- Added 0.25 HQ and Optimal profiles at 0.06, 0.08, 0.10, 0.12, 0.14.
-- Normalized 0.25 HQ vs Optimal differences to a consistent 8-key pattern.
+- Base profiles (@ AC Base): 31 profiles, shared KS1+KX intent
+- 0.6mm profiles (@ AC 0.6mm): 24 profiles
+- 0.8mm profiles (@ AC 0.8mm): 2 profiles (Large Object family)
+- 0.25mm profiles (@ AC 0.25mm): 13 profiles
+- Named specialty: 6 profiles
 
 ### Quick Selection
 
-Default profile: 0.20mm Quite-HQ @ AC Base
+Default profile: 0.20mm HQ @AC Base
 
-- Balanced daily use: 0.20mm Quite-HQ @ AC Base
-- Best quality: 0.16mm HQ @ AC Base or 0.12mm HQ @ AC Base
-- Fast output: 0.24mm General PETG @ AC Base or 0.28mm ExtraDraft @ AC Base
-- Tiny detail: 0.08mm HQ @ AC 0.25mm
-- Flexible: 0.20mm Optimal TPU @ AC Base
-- Functional and strong: Tools & Home Improvements @ AC Base
+| Use case | Profile |
+|---|---|
+| Balanced daily use | `0.20mm HQ @AC Base` |
+| Best quality | `0.16mm HQ @ AC Base` or `0.12mm HQ @ AC Base` |
+| Ultra-fine detail | `0.08mm HQ @ AC 0.25mm` |
+| Fast draft | `0.28mm ExtraDraft @ AC Base` |
+| TPU flexible | `0.20mm Optimal TPU @ AC Base` |
+| Functional/strong | `Tools & Home Improvements @ AC Base` |
+| Batch flexi parts (20–30 pieces) | `Batch Flexi @ AC Base` (0.12mm) or `Batch Flexi 0.16mm @ AC Base` |
+| Large single object (60%+ plate) | `Large Object @ AC Base` / `@ AC 0.6mm` / `@ AC 0.8mm` |
+| PETG general | `0.20mm General PETG @ AC Base` |
+| Miniatures | `Miniatures @ AC Base` |
 
 ### 0.25 HQ vs Optimal Rule
 
@@ -93,28 +95,37 @@ When to break process unification:
 ## Machine Custom Settings vs System Defaults
 
 Machine files are lightweight overlays, not full forks.
+All KS1 machine profiles set `printer_flush_multiplier: 0.9` (system default 1.0 — reduced 10% for filament economy while remaining safe for multi-colour).
 
 ### Anycubic Kobra S1 0.2 nozzle - Brass
-- max_layer_height: 0.18 -> 0.14
-- min_layer_height: 0.05 -> 0.04
-- retraction_length: 0.8 -> 0.4
+- max_layer_height: 0.14, min_layer_height: 0.04
+- retraction_length: 0.4 (finer nozzle needs less retraction)
+- printer_flush_multiplier: 0.9
 
 ### Anycubic Kobra S1 0.4 nozzle - Brass
-- default_print_profile: 0.20 Standard -> 0.16mm Optimal
-- max_layer_height: 0.28 -> 0.32
-- retraction_speed: 40 -> 50
-- retract_restart_extra: 0 -> 0.04
-- wipe_distance: 1 -> 2
+- default_print_profile: 0.16mm Optimal
+- max_layer_height: 0.32
+- retraction_speed: 50, wipe_distance: 2
+- printer_flush_multiplier: 0.9
 
 ### Anycubic Kobra S1 0.4 nozzle - Hardened Steel
-- Same as 0.4 brass, plus nozzle_type: brass -> hardened_steel
+- Same as 0.4 Brass + nozzle_type: hardened_steel
 
-### Anycubic Kobra S1 0.6 nozzle - Brass
-- nozzle_type: hardened_steel -> brass
-- retraction_length: 0.8 -> 1.0
+### Anycubic Kobra S1 0.6 nozzle - Brass / Hardened Steel
+- z_hop: 0.6 (larger nozzle needs more clearance)
+- retract_restart_extra: 0.06
+- retraction_speed: 50
+- printer_flush_multiplier: 0.9
 
-### Anycubic Kobra S1 0.8 nozzle - Brass and Hardened Steel
-- retraction_length: 0.8 -> 1.0
+### Anycubic Kobra S1 0.8 nozzle - Brass / Hardened Steel
+- retract_lift_above: 0.5 (Brass) / 0.6 (HS)
+- retract_restart_extra: 0.08
+- retraction_speed: 60, wipe_distance: 2
+- printer_flush_multiplier: 0.9
+
+### Anycubic Kobra X 0.4 nozzle - Stainless Steel
+- nozzle_type: stainless_steel
+- No flush_multiplier override (inherits system default 1.0 — KX was working correctly)
 
 ## Numeric Tuning Validation Checklist (Merged)
 

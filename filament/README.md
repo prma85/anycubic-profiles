@@ -1,6 +1,6 @@
 # Filament Configuration Guide - User 651589
 
-Last updated: 2026-05-25
+Last updated: 2026-05-27
 Framework: Anycubic Slicer Next (OrcaSlicer-based)
 Scope: Custom filament profiles for Anycubic Kobra S1 and Anycubic Kobra X
 
@@ -12,7 +12,10 @@ Current inheritance model:
 - KS1 0.4mm and KX 0.4mm are custom overlay parents per material.
 - KS1 0.25mm, 0.6mm, 0.8mm inherit from matching KS1 0.4mm.
 - KX 0.25mm, 0.6mm, 0.8mm inherit from matching KX 0.4mm.
-- Standard PLA brands inherit from `Improved PLA @AC KS1/KX 0.4mm` (not directly from the system parent) to pick up calibrated retraction, z-hop, fan, and temperature settings.
+- **Brand PLA profiles** inherit from `Improved PLA @AC KS1/KX 0.4mm` (not directly from system parent).
+- **Brand PLA+ profiles** inherit from `Improved PLA+ @AC KS1/KX 0.4mm`.
+- `EconoFil PLA` inherits from `Improved PLA` directly (already correct parent).
+- Specialty PLA (Matte, Silk, Galaxy, Metal, Glow) retain system specialty parents with explicit bed temp overrides.
 - Non-0.4 variants keep only keys that differ from their 0.4 parent.
 - version is always retained.
 
@@ -100,6 +103,48 @@ Note: TPU is extruder-grip limited — even on 0.8mm nozzle, keep print speed �
 - If 0.4mm retraction is nil/absent, use 0.8 mm as the baseline before applying the delta
 - Temperature: shift all of `nozzle_temperature`, `nozzle_temperature_initial_layer`, `nozzle_temperature_HS`, `nozzle_temperature_initial_layer_HS`, `nozzle_temperature_range_high`, `nozzle_temperature_BRASS`, `nozzle_temperature_initial_layer_BRASS` — **never** change `nozzle_temperature_range_low`
 - Round PA to 3 decimal places; flow ratio to 4 decimal places
+
+## Bed Temperature Rules by Printer and Plate Type
+
+### KS1 (CoreXY, high-speed, 600mm/s+) — differentiated by surface and layer
+
+| Material | Smooth plate (PEO) first layer | Smooth plate other layers | Textured PEI first layer | Textured PEI other layers |
+|---|---|---|---|---|
+| PLA / PLA+ standard | 60°C | 55°C | 65°C | 60°C |
+| PLA Matte / Silk / Galaxy | 60°C | 55°C | 65°C | 60°C |
+| PLA Metal / Glow (filled) | 65°C | 60°C | 65°C | 60°C |
+| PETG | 75–80°C | 70°C | 75–80°C | 70°C |
+| TPU | 30°C | 30°C | 30°C | 30°C |
+
+JSON keys: `hot_plate_temp_initial_layer` / `hot_plate_temp` (smooth), `textured_plate_temp_initial_layer` / `textured_plate_temp` (textured).
+
+KS1 uses higher textured first-layer temp to lock filament into the texture ridges against the high-speed toolhead departing quickly. CoreXY edge-of-bed is ~10°C cooler than centre — the 5°C first-layer boost compensates.
+
+### KX (Bedslinger, i3 Cartesian, 450mm/s) — flat temperature
+
+| Material | All plate types, all layers |
+|---|---|
+| PLA / PLA+ standard | 60°C |
+| PLA Matte / Silk / Galaxy | 60°C |
+| PLA Metal / Glow (filled) | first layer 65°C, others 60°C |
+| PETG | 70–75°C |
+| TPU | 35°C |
+
+KX uses flat 60°C because bedslinger thermal cycling during oscillation requires consistent bed heat. No first-layer/other-layer differentiation needed on smooth plate. Filled materials still get 65°C first layer to compensate particle heatsinks.
+
+### Improved PLA nozzle temperatures (KS1 calibrated)
+
+- `nozzle_temperature`: 200°C, `nozzle_temperature_initial_layer`: 200°C
+- `nozzle_temperature_BRASS`: 215°C, `nozzle_temperature_initial_layer_BRASS`: 220°C
+- `nozzle_temperature_HS`: 220°C, `nozzle_temperature_initial_layer_HS`: 220°C
+- `nozzle_temperature_range_high`: 230°C, `nozzle_temperature_range_low`: 200°C
+
+### Improved PLA+ nozzle temperatures (KS1 calibrated, raised to KS1 high-speed spec)
+
+- BRASS: 225°C all layers, HS: 230°C all layers
+- `nozzle_temperature_range_high`: 240°C, `nozzle_temperature_range_low`: 225°C
+
+(PLA+ at 205°C was calibrated for bedslingers — KS1 at 600mm/s needs 225°C minimum to maintain melt quality.)
 
 ## Hardened Steel Temperature Rules (within a single nozzle size)
 
