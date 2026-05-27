@@ -1,0 +1,22 @@
+{
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.8 nozzle",
+        "Anycubic Kobra S1 0.8 nozzle - Brass",
+        "Anycubic Kobra S1 0.8 nozzle - Hardened Steel"
+    ],
+    "from": "User",
+    "inherits": "Large Object @ AC Base",
+    "inner_wall_line_width": "0.82",
+    "internal_solid_infill_line_width": "0.82",
+    "layer_height": "0.32",
+    "line_width": "0.82",
+    "name": "Large Object @ AC 0.8mm",
+    "outer_wall_line_width": "0.82",
+    "outer_wall_speed": "180",
+    "print_settings_id": "Large Object @ AC 0.8mm",
+    "sparse_infill_line_width": "0.82",
+    "sparse_infill_speed": "380",
+    "support_bottom_z_distance": "0.32",
+    "support_top_z_distance": "0.32",
+    "version": "1.3.2503.03"
+}
