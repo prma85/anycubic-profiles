@@ -549,16 +549,28 @@ Layer height ≤ 0.75 × nozzle diameter:
 ### 0.6mm Safety Rule
 `support_bottom_z_distance` ≥ effective layer height on all 0.6mm profiles.
 
-### HQ vs Optimal (0.25mm family)
+### HQ vs Optimal (0.25mm PLA family)
 Must differ in exactly 8 keys only:
 `default_acceleration`, `outer_wall_acceleration`, `outer_wall_speed`, `inner_wall_acceleration`, `inner_wall_speed`, `gap_infill_speed`, `internal_solid_infill_speed`, `sparse_infill_speed`
 
-### PETG Process Intent
-PETG profiles intentionally diverge from regular in:
-- `bridge_speed=30`, `bridge_flow=0.94`
-- `support_object_xy_distance=1.0` (prevents fusing)
-- Slightly increased support Z gaps
-Never force PETG to match regular profile speeds.
+### PETG Profile Naming — HQ / Optimal / Draft
+PETG profiles follow the same HQ/Optimal/Draft pattern as PLA:
+- **HQ** — quality/slow: outer 60–80mm/s, jerk 6, accel 2000–4000
+- **Optimal** — high speeds, auto-capped by filament MVS: outer 150mm/s, accel 6000
+  - Regular PETG (MVS 10–12): slicer caps to ~120mm/s
+  - Rapid/HS PETG (MVS 18–21): full 150mm/s outer, 200mm/s inner
+  - One profile serves both — no separate "Rapid" profile needed
+- **Draft** (0.24mm+ only) — max throughput: outer 200mm/s, accel 8000
+
+All PETG profiles: `bridge_flow: 0.94`, `bridge_speed: 30`, `default_jerk: 6`,
+`support_object_xy_distance: 0.7–1.0`, support z-distances 0.24–0.30mm (larger gap prevents PETG fusing),
+`overhang_reverse: 1`, `wipe_before_external_loop: 1`.
+
+### ABS/ASA Process Profiles (KS1 only)
+`0.20mm ABS-ASA @ AC Base`, `0.24mm ABS-ASA @ AC 0.6mm`, `0.32mm ABS-ASA @ AC 0.8mm`
+- KS1 only — open-frame KX lacks thermal stability for ABS/ASA
+- Pairs with `Anycubic ABS improved @AC KS1` filament (fan 10%, chamber 55°C)
+- Key settings: jerk 6, `default_acceleration: 3500`, outer 70mm/s, 4 walls, 5 shells, `bridge_flow: 1.0`, `bridge_speed: 20`
 
 ---
 

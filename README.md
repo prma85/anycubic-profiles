@@ -45,7 +45,10 @@ Default profile: 0.20mm HQ @AC Base
 | Functional/strong | `Tools & Home Improvements @ AC Base` |
 | Batch flexi parts (20–30 pieces) | `Batch Flexi @ AC Base` (0.12mm) or `Batch Flexi 0.16mm @ AC Base` |
 | Large single object (60%+ plate) | `Large Object @ AC Base` / `@ AC 0.6mm` / `@ AC 0.8mm` |
-| PETG general | `0.20mm General PETG @ AC Base` |
+| PETG quality | `0.20mm HQ PETG @ AC Base` |
+| PETG speed / Rapid PETG | `0.20mm Optimal PETG @ AC Base` |
+| PETG draft | `0.24mm Draft PETG @ AC Base` |
+| ABS / ASA | `0.20mm ABS-ASA @ AC Base` (KS1 only) |
 | Miniatures | `Miniatures @ AC Base` |
 
 ### 0.25 HQ vs Optimal Rule

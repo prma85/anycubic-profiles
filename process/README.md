@@ -8,12 +8,12 @@ Scope: `user/651589/process`
 Custom process profiles organised as inheritance overlays on top of Anycubic system defaults.
 
 Current inventory:
-- Total JSON profiles: 76
-- Base family (`@ AC Base`): 31
-- 0.6mm family (`@ AC 0.6mm`): 24
+- Total JSON profiles: 84
+- Base family (`@ AC Base`): 35
+- 0.6mm family (`@ AC 0.6mm`): 27
 - 0.8mm family (`@ AC 0.8mm`): 2 (Large Object only)
 - 0.25mm family (`@ AC 0.25mm`): 13
-- Named specialty profiles: 6
+- Other/named specialty: 7
 
 Core strategy:
 - Inherit geometry and nozzle physics from system parents.
@@ -76,19 +76,37 @@ All process profiles list both S1 and X for the same nozzle size.
 | 0.24mm | `0.24mm Draft @ AC Base` | Draft speed |
 | 0.28mm | `0.28mm ExtraDraft @ AC Base` | Draft max |
 
-### PETG profiles (0.4mm nozzle)
+### PETG profiles — HQ / Optimal / Draft pattern
 
-| Layer | Profile name |
-|---|---|
-| 0.16mm | `0.16mm HQ PETG @ AC Base` |
-| 0.20mm | `0.20mm General PETG @ AC Base` |
-| 0.20mm | `0.20mm General PETG (Rapid) @ AC Base` |
-| 0.24mm | `0.24mm General PETG @ AC Base` |
-| 0.24mm | `0.24mm General PETG (slow) @ AC Base` |
-| 0.28mm | `0.28mm PETG @AC KS1` |
-| 0.28mm | `0.28mm PETG (strong) @AC KS1` |
+**Design principle:** Speeds are set high. The filament's `filament_max_volumetric_speed` automatically caps the actual speed. Regular PETG (MVS 10–12) will be slower than Rapid PETG (MVS 18–21) on the same Optimal profile — no separate profile needed per filament brand.
 
-PETG profiles intentionally diverge: slower bridges (30mm/s), increased support XY distance, adjusted support gaps for PETG's adhesion characteristics.
+**0.4mm nozzle:**
+
+| Layer | Profile | Outer | Inner | Intent |
+|---|---|---|---|---|
+| 0.16mm | `0.16mm HQ PETG @ AC Base` | 80 | 150 | Quality |
+| 0.16mm | `0.16mm Optimal PETG @ AC Base` | 150 | 200 | Fast, MVS-capped |
+| 0.20mm | `0.20mm HQ PETG @ AC Base` | 60 | 100 | Quality/slow |
+| 0.20mm | `0.20mm Optimal PETG @ AC Base` | 150 | 200 | Fast — daily driver for Rapid PETG |
+| 0.24mm | `0.24mm HQ PETG @ AC Base` | 50 | 70 | Quality/slow |
+| 0.24mm | `0.24mm Draft PETG @ AC Base` | 200 | 300 | Max throughput |
+| 0.28mm | `0.28mm HQ PETG @ AC Base` | 60 | 90 | Quality/slow |
+| 0.28mm | `0.28mm Draft PETG @ AC Base` | 200 | 300 | Max throughput |
+| 0.28mm | `0.28mm PETG @AC KS1` | inherit | inherit | Minimal wrapper |
+| 0.28mm | `0.28mm PETG (strong) @AC KS1` | 100 | 150 | Max walls/shells |
+
+**0.6mm nozzle:**
+
+| Layer | Profile | Outer | Inner | Intent |
+|---|---|---|---|---|
+| 0.18mm | `0.18mm HQ PETG @ AC 0.6mm` | 80 | 150 | Quality |
+| 0.18mm | `0.18mm Optimal PETG @ AC 0.6mm` | 150 | 200 | Fast |
+| 0.20mm | `0.20mm HQ PETG @ AC 0.6mm` | 60 | 110 | Quality |
+| 0.20mm | `0.20mm Optimal PETG @ AC 0.6mm` | 150 | 200 | Fast |
+| 0.24mm | `0.24mm HQ PETG @ AC 0.6mm` | 80 | 120 | Quality |
+| 0.24mm | `0.24mm Draft PETG @ AC 0.6mm` | 200 | 350 | Max throughput |
+
+PETG profiles use: jerk=6, `bridge_flow: 0.94`, `bridge_speed: 30`, `support_object_xy_distance: 0.7–1.0`, support z-distances 0.24–0.30mm (larger than PLA to prevent PETG fusing to part), `overhang_reverse: 1`, `wipe_before_external_loop: 1`.
 
 ### TPU profiles (0.4mm nozzle)
 
@@ -136,7 +154,7 @@ All support-enabled profiles (non-TPU, non-vase, non-flexi) use:
 | Setting | Value | Rationale |
 |---|---|---|
 | `support_interface_top_layers` | `3` | Dense separation surface for clean removal |
-| `support_interface_bottom_layers` | `2` | Standard |
+| `support_interface_bottom_layers` | `3` | Match top layers — explicit, not -1 |
 | `support_interface_spacing` | `0.2mm` | Dense (vs system default 0.5mm) — flat peelable surface |
 | `support_interface_pattern` | `rectilinear_interlaced` | Alternating perpendicular layers, no gaps |
 | `support_interface_speed` | `40mm/s` (0.4mm), `45` (0.6mm), `50` (0.8mm) | Slow = flat interface, no curl; primary anti-adhesion mechanism |
@@ -153,12 +171,21 @@ All support-enabled profiles (non-TPU, non-vase, non-flexi) use:
 
 Setting `top_z = layer_height` is wrong — it creates gaps up to 0.50mm at large layer heights, causing sagging before bridging can start. PETG profiles keep their larger gaps (0.24–0.30mm) to prevent PETG fusing to the part.
 
-## HQ vs Optimal: Key Differences (0.25mm family)
+## HQ vs Optimal vs Draft
 
-Exactly 8 keys differ between HQ and Optimal variants:
+**PLA (0.25mm family):** Exactly 8 keys differ between HQ and Optimal:
 `default_acceleration`, `outer_wall_acceleration`, `outer_wall_speed`,
 `inner_wall_acceleration`, `inner_wall_speed`,
 `gap_infill_speed`, `internal_solid_infill_speed`, `sparse_infill_speed`
+
+**PETG family:**
+- **HQ** — quality/slow: outer 60–80, inner 70–150, `top_surface_speed` 45–60. Conservative acceleration (2000 outer, 4000 default).
+- **Optimal** — fast, MVS-capped: outer 150, inner 200, infill 300. `default_acceleration: 6000`. With regular PETG (MVS 10–12) the slicer auto-caps speeds to ~120mm/s. With Rapid PETG (MVS 18–21) speeds are fully unleashed.
+- **Draft** (0.24mm+) — max throughput: outer 200, inner 300–350. `default_acceleration: 8000`. Always MVS-capped regardless of filament.
+
+**ABS/ASA family:**
+- `0.20mm ABS-ASA @ AC Base` — slow speeds (outer 70, inner 110), jerk 6, accel 3500, 4 walls, 5 shells. KS1 only.
+- `0.24mm ABS-ASA @ AC 0.6mm`, `0.32mm ABS-ASA @ AC 0.8mm` — same philosophy at larger nozzle sizes.
 
 ## Bambu Studio Migration (future)
 
