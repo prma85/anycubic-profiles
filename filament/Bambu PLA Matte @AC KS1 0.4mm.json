@@ -7,8 +7,11 @@
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
     ],
+    "cool_plate_temp": [
+        "45"
+    ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "50"
     ],
     "fan_cooling_layer_time": [
         "80"

@@ -8,10 +8,10 @@
         "100"
     ],
     "cool_plate_temp": [
-        "40"
+        "45"
     ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "50"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
