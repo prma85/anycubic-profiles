@@ -16,7 +16,7 @@
     "inherits": "0.06mm Standard @Anycubic Kobra S1 0.25 nozzle",
     "initial_layer_infill_speed": "100",
     "initial_layer_speed": "60",
-    "inner_wall_acceleration": "10000",
+    "inner_wall_acceleration": "8000",
     "inner_wall_speed": "350",
     "internal_bridge_flow": "0.95",
     "internal_solid_infill_speed": "350",
