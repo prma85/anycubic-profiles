@@ -1,6 +1,6 @@
 # Filament Configuration Guide - User 651589
 
-Last updated: 2026-05-27
+Last updated: 2026-06-02
 Framework: Anycubic Slicer Next (OrcaSlicer-based)
 Scope: Custom filament profiles for Anycubic Kobra S1 and Anycubic Kobra X
 
@@ -15,6 +15,8 @@ Current inheritance model:
 - **Brand PLA profiles** inherit from `Improved PLA @AC KS1/KX 0.4mm` (not directly from system parent).
 - **Brand PLA+ profiles** inherit from `Improved PLA+ @AC KS1/KX 0.4mm`.
 - `EconoFil PLA` inherits from `Improved PLA` directly (already correct parent).
+- **PLA Translucent profiles** inherit from `Improved PLA Translucent @AC KS1/KX 0.4mm`.
+- **Brand PETG Translucent profiles** (Prusament, ESun, Sovol, IEMAI) inherit from `Improved PETG Translucent @AC KS1/KX 0.4mm` (not directly from system parent).
 - Specialty PLA (Matte, Silk, Galaxy, Metal, Glow) retain system specialty parents with explicit bed temp overrides.
 - Non-0.4 variants keep only keys that differ from their 0.4 parent.
 - version is always retained.
@@ -67,7 +69,7 @@ Rationale: larger nozzles extrude more plastic per unit time — the heater need
 Subtype overrides (stacked on top of the table above):
 - **Matte:** extra −0.01 flow (matte particles expand more)
 - **Silk/Metal:** cap `filament_retraction_speed` at 30 mm/s for 0.6/0.8mm — these break if retracted too fast when cold
-- **Translucent:** fan −10% extra, MVS −20% extra
+- **Translucent (clarity mode):** fan = 0% all layers, flow +0.03 (1.01 at 0.4mm), MVS = 8 mm³/s (0.4mm) — see Translucent Clarity Profile Rules below
 
 ### PETG group (Regular, High-Flow/Rapid, Translucent)
 
@@ -82,7 +84,7 @@ Subtype overrides (stacked on top of the table above):
 
 Subtype overrides:
 - **High-Flow (Rapid, GF):** MVS result ×1.2
-- **Translucent:** fan = 0%, MVS = 0.4mm value ×0.7
+- **Translucent (clarity mode):** fan = 0% all layers, MVS = 5 mm³/s (0.4mm) — see Translucent Clarity Profile Rules below
 
 ### TPU group (95A, HS, High Speed)
 
@@ -213,20 +215,56 @@ Calibrated baselines for high-speed Klipper printers (Kobra S1 has ~15% higher f
 | Standard PLA+             | 16          | 19          |
 | Standard PLA              | 13          | 16          |
 | Matte PLA                 | 14          | 16          |
-| Translucent PLA           | 15          | 17          |
+| Translucent PLA           | 8           | 8           |
 | Silk / Dual Colour PLA    | 10          | 12          |
 | Galaxy / Glitter PLA      | 13          | 15          |
 | Glow in Dark PLA          | 13          | 15          |
 | Carbon Fibre PLA (CF)     | 16          | 19          |
 | Rapid PETG / HF / HS      | 18          | 21          |
 | Standard PETG             | 13          | 15          |
-| Translucent PETG          | 11          | 13          |
+| Translucent PETG          | 5           | 5           |
 | PETG GF (Glass Fibre)     | 11          | 13          |
 | PETG CF (Carbon Fibre)    | 12          | 14          |
 | TPU Standard 95A          | 4           | 5           |
 | TPU High Speed            | 8           | 10          |
 
 **KX note:** KX values are reference baselines (not individually calibrated). KS1 values reflect actual calibration runs — do not change KS1 MVS without test print evidence.
+
+*Translucent MVS values are clarity-mode caps. These profiles trade throughput for optical clarity (fan=0%, low speed, high temp). Standard translucent at normal speeds would use the previous 15/17 and 11/13 values.*
+
+## Translucent Clarity Profile Rules
+
+Translucent filaments require a fundamentally different approach from opaque materials. The goal is a single optical block, not fast throughput. Source: Bambu wiki on transparent PETG printing.
+
+### Why fan=0%
+Cooling fan freezes the extruded bead before it can fully flatten and fuse with the previous layer, trapping micro-bubbles. At 0% fan, layers melt into each other forming one continuous mass.
+
+### PLA Translucent settings (Improved PLA Translucent base)
+| Parameter | Value |
+|---|---|
+| `nozzle_temperature` (body) | 230°C (Brass) |
+| `nozzle_temperature_initial_layer` | 235°C (Brass) |
+| `nozzle_temperature_HS` / `_initial_layer_HS` | +5°C on each |
+| `fan_max_speed` / `fan_min_speed` | 0% (all nozzle types) |
+| `filament_flow_ratio` | 1.01 at 0.4mm, 1.00 at 0.6mm, 0.99 at 0.8mm |
+| `filament_max_volumetric_speed` | 8 / 10 / 12 mm³/s (0.4/0.6/0.8mm) |
+
+### PETG Translucent settings (Improved PETG Translucent base)
+| Parameter | KS1 value | KX value |
+|---|---|---|
+| `nozzle_temperature` (body, 0.4mm Brass) | 260°C | 252°C |
+| `nozzle_temperature_initial_layer` | 260°C | 252°C |
+| `nozzle_temperature_HS` / `_initial_layer_HS` | +10°C | +10°C |
+| `fan_max_speed` / `fan_min_speed` | 0% | 0% |
+| `filament_max_volumetric_speed` | 5 / 6.25 / 7.5 mm³/s | 5 / 6.25 / 7.5 mm³/s |
+
+KX runs ~8°C cooler than KS1 to prevent heat-creep in the multi-channel ACE toolhead at slow print speeds.
+
+### Nozzle temperature scaling for translucent variants
+Both PLA and PETG translucent variants follow the same ×+5°C/+10°C/+15°C nozzle delta rules as the rest of their material group.
+
+### Brand profiles
+All brand PETG translucent profiles (Prusament, ESun, Sovol, IEMAI) inherit from `Improved PETG Translucent @AC KS1/KX 0.4mm`. Brands with their own calibrated temps (Sovol 235°C, IEMAI 250°C) keep explicit temp overrides in their profiles.
 
 ## Nozzle MVS Scaling Rules
 

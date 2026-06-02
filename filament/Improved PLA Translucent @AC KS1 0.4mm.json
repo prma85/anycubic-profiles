@@ -4,60 +4,57 @@
         "Anycubic Kobra S1 0.4 nozzle - Brass",
         "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
     ],
-    "cool_plate_temp": [
-        "50"
-    ],
-    "cool_plate_temp_initial_layer": [
-        "50"
-    ],
     "fan_max_speed": [
+        "0"
+    ],
+    "fan_max_speed_BRASS": [
+        "0"
+    ],
+    "fan_max_speed_HS": [
         "0"
     ],
     "fan_min_speed": [
         "0"
     ],
-    "filament_cost": [
-        "39"
+    "fan_min_speed_BRASS": [
+        "0"
+    ],
+    "fan_min_speed_HS": [
+        "0"
+    ],
+    "filament_flow_ratio": [
+        "1.01"
     ],
     "filament_max_volumetric_speed": [
-        "5"
-    ],
-    "hot_plate_temp": [
-        "70"
+        "8"
     ],
     "nozzle_temperature": [
-        "260"
+        "230"
     ],
     "nozzle_temperature_BRASS": [
-        "260"
+        "230"
     ],
     "nozzle_temperature_HS": [
-        "270"
+        "235"
     ],
     "nozzle_temperature_initial_layer": [
-        "260"
+        "235"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "260"
+        "235"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "270"
-    ],
-    "nozzle_temperature_range_high": [
-        "275"
-    ],
-    "pressure_advance": [
-        "0.064"
+        "240"
     ],
     "filament_settings_id": [
-        "Improved PETG Translucent @AC KS1 0.4mm"
+        "Improved PLA Translucent @AC KS1 0.4mm"
     ],
     "filament_vendor": [
-        "Anycubic"
+        "Generic"
     ],
     "from": "User",
-    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
+    "inherits": "Improved PLA @AC KS1 0.4mm",
     "is_custom_defined": "0",
-    "name": "Improved PETG Translucent @AC KS1 0.4mm",
-    "version": "1.3.2602.11"
+    "name": "Improved PLA Translucent @AC KS1 0.4mm",
+    "version": "1.3.2503.03"
 }

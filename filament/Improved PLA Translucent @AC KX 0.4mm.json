@@ -1,0 +1,47 @@
+{
+    "compatible_printers": [
+        "Anycubic Kobra X 0.4 nozzle",
+        "Anycubic Kobra X 0.4 nozzle - Stainless Steel"
+    ],
+    "fan_max_speed": [
+        "0"
+    ],
+    "fan_min_speed": [
+        "0"
+    ],
+    "filament_flow_ratio": [
+        "1.01"
+    ],
+    "filament_max_volumetric_speed": [
+        "8"
+    ],
+    "nozzle_temperature": [
+        "230"
+    ],
+    "nozzle_temperature_BRASS": [
+        "230"
+    ],
+    "nozzle_temperature_HS": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "240"
+    ],
+    "filament_settings_id": [
+        "Improved PLA Translucent @AC KX 0.4mm"
+    ],
+    "filament_vendor": [
+        "Generic"
+    ],
+    "from": "User",
+    "inherits": "Improved PLA @AC KX 0.4mm",
+    "is_custom_defined": "0",
+    "name": "Improved PLA Translucent @AC KX 0.4mm",
+    "version": "1.3.2503.03"
+}

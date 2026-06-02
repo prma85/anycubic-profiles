@@ -5,47 +5,38 @@
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
     ],
     "filament_flow_ratio": [
-        "0.96"
+        "1.00"
     ],
     "filament_max_volumetric_speed": [
-        "3.75"
-    ],
-    "filament_retraction_length": [
-        "1.2"
+        "10"
     ],
     "nozzle_temperature": [
-        "260"
+        "235"
     ],
     "nozzle_temperature_BRASS": [
-        "260"
+        "235"
     ],
     "nozzle_temperature_HS": [
-        "270"
+        "240"
     ],
     "nozzle_temperature_initial_layer": [
-        "260"
+        "240"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "260"
+        "240"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "270"
-    ],
-    "nozzle_temperature_range_high": [
-        "275"
-    ],
-    "pressure_advance": [
-        "0.020"
+        "245"
     ],
     "filament_settings_id": [
-        "IEMAI PETG Translucent @AC KS1 0.6mm"
+        "Improved PLA Translucent @AC KS1 0.6mm"
     ],
     "filament_vendor": [
-        "IEMAI"
+        "Generic"
     ],
     "from": "User",
-    "inherits": "IEMAI PETG Translucent @AC KS1 0.4mm",
+    "inherits": "Improved PLA Translucent @AC KS1 0.4mm",
     "is_custom_defined": "0",
-    "name": "IEMAI PETG Translucent @AC KS1 0.6mm",
-    "version": "1.3.9.03"
+    "name": "Improved PLA Translucent @AC KS1 0.6mm",
+    "version": "1.3.2503.03"
 }

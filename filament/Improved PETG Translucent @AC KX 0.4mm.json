@@ -1,72 +1,46 @@
 {
+    "compatible_printers": [
+        "Anycubic Kobra X 0.4 nozzle",
+        "Anycubic Kobra X 0.4 nozzle - Stainless Steel"
+    ],
     "cool_plate_temp": [
         "50"
     ],
     "cool_plate_temp_initial_layer": [
         "50"
     ],
+    "fan_max_speed": [
+        "0"
+    ],
+    "fan_min_speed": [
+        "0"
+    ],
     "filament_cost": [
         "39"
     ],
-    "filament_density": [
-        "1.27"
-    ],
-    "filament_deretraction_speed": [
-        "0"
-    ],
-    "filament_end_gcode": [
-        "; filament end gcode "
-    ],
     "filament_max_volumetric_speed": [
-        "13"
-    ],
-    "filament_retract_before_wipe": [
-        "0%"
-    ],
-    "filament_retract_when_changing_layer": [
-        "1"
-    ],
-    "filament_retraction_length": [
-        "0.8"
-    ],
-    "filament_retraction_minimum_travel": [
-        "2"
-    ],
-    "filament_retraction_speed": [
-        "30"
-    ],
-    "filament_start_gcode": [
-        "; filament start gcode\n"
-    ],
-    "filament_wipe": [
-        "1"
-    ],
-    "filament_wipe_distance": [
-        "2"
+        "5"
     ],
     "hot_plate_temp": [
         "70"
     ],
     "nozzle_temperature": [
-        "220"
+        "252"
     ],
     "nozzle_temperature_initial_layer": [
-        "220"
+        "252"
+    ],
+    "nozzle_temperature_HS": [
+        "262"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "262"
     ],
     "nozzle_temperature_range_high": [
         "270"
     ],
-    "overhang_fan_threshold": [
-        "10%"
-    ],
     "pressure_advance": [
         "0.064"
-    ],
-    "slow_down_layer_time": [
-        "12"
-    ],
-    "temperature_vitrification": [
-        "70"
     ],
     "filament_settings_id": [
         "Improved PETG Translucent @AC KX 0.4mm"

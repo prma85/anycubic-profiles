@@ -1,6 +1,6 @@
 # Process Profiles Guide
 
-Last updated: 2026-05-27
+Last updated: 2026-06-02
 Scope: `user/651589/process`
 
 ## Overview
@@ -8,12 +8,12 @@ Scope: `user/651589/process`
 Custom process profiles organised as inheritance overlays on top of Anycubic system defaults.
 
 Current inventory:
-- Total JSON profiles: 84
-- Base family (`@ AC Base`): 35
+- Total JSON profiles: 86
+- Base family (`@ AC Base`): 37
 - 0.6mm family (`@ AC 0.6mm`): 27
 - 0.8mm family (`@ AC 0.8mm`): 2 (Large Object only)
 - 0.25mm family (`@ AC 0.25mm`): 13
-- Other/named specialty: 7
+- Other/named specialty: 9
 
 Core strategy:
 - Inherit geometry and nozzle physics from system parents.
@@ -40,7 +40,8 @@ All process profiles list both S1 and X for the same nozzle size.
 ["Anycubic Kobra S1 0.4 nozzle",
  "Anycubic Kobra S1 0.4 nozzle - Brass",
  "Anycubic Kobra S1 0.4 nozzle - Hardened Steel",
- "Anycubic Kobra X 0.4 nozzle"]
+ "Anycubic Kobra X 0.4 nozzle",
+ "Anycubic Kobra X 0.4 nozzle - Stainless Steel"]
 ```
 
 ### 0.6mm `compatible_printers`
@@ -134,6 +135,8 @@ PETG profiles use: jerk=6, `bridge_flow: 0.94`, `bridge_speed: 30`, `support_obj
 | `Layered Art` | — | Layered colour art |
 | `Vase (Spiral) @ AC Base/0.6mm` | — | Single-perimeter spiral mode |
 | `Vase (hollow) @ AC Base/0.6mm` | — | Hollow vase with minimal shell |
+| `0.10mm Translucent Vase @ AC Base` | `Vase (Spiral) @ AC Base` | Glass-clarity hollow objects — 18mm/s, fan=0% implied by filament, vase/spiral mode |
+| `0.10mm Translucent Solid @ AC Base` | `0.20mm Optimal PETG @ AC Base` | Glass-clarity solid objects — 18mm/s, 100% alignedrectilinear infill, 0 top/bottom shells, +4% flow |
 
 ## Universal Settings Applied to All Profiles
 

@@ -5,26 +5,26 @@
         "Anycubic Kobra S1 0.6 nozzle - Hardened Steel"
     ],
     "filament_flow_ratio": [
-        "0.96"
+        "0.94"
     ],
     "filament_max_volumetric_speed": [
         "3.75"
     ],
     "filament_retraction_length": [
-        "1.2"
+        "1.5"
     ],
     "pressure_advance": [
-        "0.020"
+        "0.035"
     ],
     "filament_settings_id": [
-        "Prusament PETG Translucent @AC KS1 0.6mm"
+        "ESun PETG Translucent @AC KS1 0.6mm"
     ],
     "filament_vendor": [
-        "Prusament"
+        "ESun"
     ],
     "from": "User",
-    "inherits": "Prusament PETG Translucent @AC KS1 0.4mm",
+    "inherits": "ESun PETG Translucent @AC KS1 0.4mm",
     "is_custom_defined": "0",
-    "name": "Prusament PETG Translucent @AC KS1 0.6mm",
+    "name": "ESun PETG Translucent @AC KS1 0.6mm",
     "version": "1.3.2602.11"
 }

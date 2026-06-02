@@ -138,7 +138,7 @@ All non-0.4mm variants are derived from the 0.4mm parent by applying these delta
 Subtype overrides (stacked on table above):
 - **Matte:** extra −0.01 flow ratio (matte particles expand more)
 - **Silk/Metal:** cap `filament_retraction_speed` at 30 mm/s for 0.6/0.8mm
-- **Translucent:** fan −10pp extra, MVS −20% extra
+- **Translucent (clarity mode):** fan = 0% all layers, flow ratio +0.03 at 0.4mm, MVS = 8 mm³/s (0.4mm), 10 (0.6mm), 12 (0.8mm)
 
 ### PETG Group (Regular, High-Flow/Rapid, Translucent)
 
@@ -153,7 +153,7 @@ Subtype overrides (stacked on table above):
 
 Subtype overrides:
 - **High-Flow (Rapid, GF):** MVS result ×1.2
-- **Translucent:** fan = 0%, MVS = 0.4mm value ×0.7
+- **Translucent (clarity mode):** fan = 0% all layers, MVS = 5 mm³/s (0.4mm), 6.25 (0.6mm), 7.5 (0.8mm). KS1 base 260°C, KX base 252°C (cooler to prevent heat-creep in ACE toolhead)
 
 ### TPU Group (95A, HS, High Speed)
 
@@ -198,18 +198,20 @@ Calibrated baselines for high-speed Klipper printers:
 | Standard PLA+ | 16 | 19 |
 | Standard PLA | 13 | 16 |
 | Matte PLA | 14 | 16 |
-| Translucent PLA | 15 | 17 |
+| Translucent PLA | 8 | 8 |
 | Silk / Metal PLA | 10 | 12 |
 | Galaxy / Glitter PLA | 13 | 15 |
 | Glow in Dark PLA | 13 | 15 |
 | PLA-CF | 16 | 19 |
 | Rapid PETG / HF / HS | 18 | 21 |
 | Standard PETG | 13 | 15 |
-| Translucent PETG | 11 | 13 |
+| Translucent PETG | 5 | 5 |
 | PETG GF (Glass Fibre) | 11 | 13 |
 | PETG CF (Carbon Fibre) | 12 | 14 |
 | TPU Standard 95A | 4 | 5 |
 | TPU High Speed | 8 | 10 |
+
+*Translucent values are clarity-mode caps (fan=0%, high temp). Standard translucent at normal speed would be ~15–17 PLA / 11–13 PETG.*
 
 **KX note:** KX values are reference baselines (not individually calibrated). **KS1 values are from actual print calibration — do not change KS1 MVS without test print evidence.**
 

@@ -1,6 +1,6 @@
 # Anycubic Custom Profiles - User 651589
 
-Last updated: 2026-05-27
+Last updated: 2026-06-02
 
 ## Repository Purpose
 
@@ -25,11 +25,11 @@ Design goal:
 ## Process Profile Status
 
 Process library families:
-- Base profiles (@ AC Base): 31 profiles, shared KS1+KX intent
+- Base profiles (@ AC Base): 33 profiles, shared KS1+KX intent
 - 0.6mm profiles (@ AC 0.6mm): 24 profiles
 - 0.8mm profiles (@ AC 0.8mm): 2 profiles (Large Object family)
 - 0.25mm profiles (@ AC 0.25mm): 13 profiles
-- Named specialty: 6 profiles
+- Named specialty: 8 profiles
 
 ### Quick Selection
 
@@ -48,6 +48,8 @@ Default profile: 0.20mm HQ @AC Base
 | PETG quality | `0.20mm HQ PETG @ AC Base` |
 | PETG speed / Rapid PETG | `0.20mm Optimal PETG @ AC Base` |
 | PETG draft | `0.24mm Draft PETG @ AC Base` |
+| Translucent vase/hollow | `0.10mm Translucent Vase @ AC Base` |
+| Translucent solid | `0.10mm Translucent Solid @ AC Base` |
 | ABS / ASA | `0.20mm ABS-ASA @ AC Base` (KS1 only) |
 | Miniatures | `Miniatures @ AC Base` |
 
@@ -75,6 +77,8 @@ Current model:
 - KS1 0.4mm and KX 0.4mm are the base custom overlays for each printer family.
 - 0.25mm, 0.6mm, and 0.8mm variants inherit from same-printer 0.4mm overlays.
 - Standard PLA brands inherit from `Improved PLA @AC KS1/KX 0.4mm` rather than directly from the system parent, giving a deeper chain that carries calibrated retraction, z-hop, fan, and temperature settings.
+- Translucent PLA profiles inherit from `Improved PLA Translucent @AC KS1/KX 0.4mm` (fan=0%, 230/235°C, flow 1.01, MVS 8 mm³/s).
+- Translucent PETG brand profiles (Prusament, ESun, Sovol, IEMAI) inherit from `Improved PETG Translucent @AC KS1/KX 0.4mm` (fan=0%, 260°C KS1 / 252°C KX, MVS 5 mm³/s).
 - Variant files keep only keys that differ from their 0.4mm parent.
 - Keep version in all filament profiles.
 
