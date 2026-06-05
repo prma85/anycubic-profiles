@@ -17,9 +17,6 @@
     "fan_min_speed_HS": [
         "100"
     ],
-    "filament_cost": [
-        "22"
-    ],
     "filament_deretraction_speed": [
         "0"
     ],
@@ -56,12 +53,6 @@
     "hot_plate_temp_initial_layer": [
         "60"
     ],
-    "nozzle_temperature": [
-        "200"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "200"
-    ],
     "nozzle_temperature_range_high": [
         "220"
     ],
@@ -91,6 +82,9 @@
     ],
     "filament_vendor": [
         "Generic"
+    ],
+    "filament_cost": [
+        "22"
     ],
     "from": "User",
     "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",

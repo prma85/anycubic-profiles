@@ -53,9 +53,6 @@
     "hot_plate_temp_initial_layer": [
         "60"
     ],
-    "nozzle_temperature": [
-        "200"
-    ],
     "nozzle_temperature_initial_layer": [
         "210"
     ],
