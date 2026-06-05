@@ -2,8 +2,14 @@
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
     ],
-    "compatible_printers": [
-        "Anycubic Kobra X 0.6 nozzle"
+    "complete_print_exhaust_fan_speed": [
+        "70"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "70"
+    ],
+    "enable_pressure_advance": [
+        "1"
     ],
     "fan_cooling_layer_time": [
         "100"
@@ -11,8 +17,29 @@
     "fan_max_speed": [
         "100"
     ],
+    "fan_min_speed": [
+        "100"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode "
+    ],
+    "filament_flow_ratio": [
+        "1.029"
+    ],
     "filament_max_volumetric_speed": [
         "5"
+    ],
+    "filament_retraction_length": [
+        "1.1"
+    ],
+    "filament_retraction_speed": [
+        "30"
+    ],
+    "hot_plate_temp": [
+        "50"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "50"
     ],
     "nozzle_temperature": [
         "225"
@@ -29,8 +56,26 @@
     "nozzle_temperature_range_high": [
         "240"
     ],
+    "nozzle_temperature_range_low": [
+        "210"
+    ],
     "pressure_advance": [
         "0.049"
+    ],
+    "required_nozzle_HRC": [
+        "3"
+    ],
+    "slow_down_min_speed": [
+        "10"
+    ],
+    "temperature_vitrification": [
+        "30"
+    ],
+    "textured_plate_temp": [
+        "55"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "55"
     ],
     "filament_settings_id": [
         "Sovol TPU HS @AC KX 0.6mm"
@@ -39,8 +84,11 @@
         "SUNLU"
     ],
     "from": "User",
-    "inherits": "Sovol TPU HS @AC KX 0.4mm",
+    "inherits": "Anycubic TPU 95A @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
+    "compatible_printers": [
+        "Anycubic Kobra X 0.6 nozzle"
+    ],
     "name": "Sovol TPU HS @AC KX 0.6mm",
     "version": "1.3.2602.11"
 }

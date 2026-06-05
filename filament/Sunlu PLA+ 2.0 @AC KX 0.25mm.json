@@ -1,15 +1,42 @@
 {
-    "compatible_printers": [
-        "Anycubic Kobra X 0.25 nozzle"
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "40"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "enable_pressure_advance": [
+        "0"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "100"
     ],
     "fan_max_speed": [
         "80"
     ],
+    "fan_max_speed_HS": [
+        "100"
+    ],
     "fan_min_speed": [
         "60"
     ],
+    "fan_min_speed_HS": [
+        "100"
+    ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_density": [
+        "1.21"
+    ],
+    "filament_deretraction_speed": [
+        "0"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode "
     ],
     "filament_flow_ratio": [
         "1.01"
@@ -17,8 +44,38 @@
     "filament_max_volumetric_speed": [
         "3"
     ],
+    "filament_retract_before_wipe": [
+        "0%"
+    ],
+    "filament_retract_lift_below": [
+        "249"
+    ],
+    "filament_retract_restart_extra": [
+        "0"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
     "filament_retraction_length": [
         "0.1"
+    ],
+    "filament_retraction_minimum_travel": [
+        "1"
+    ],
+    "filament_retraction_speed": [
+        "30"
+    ],
+    "filament_start_gcode": [
+        "; filament start gcode\n{if  (bed_temperature[current_extruder] >55)||(bed_temperature_initial_layer[current_extruder] >55)}M106 P3 S200\n{elsif(bed_temperature[current_extruder] >50)||(bed_temperature_initial_layer[current_extruder] >50)}M106 P3 S150\n{elsif(bed_temperature[current_extruder] >45)||(bed_temperature_initial_layer[current_extruder] >45)}M106 P3 S50\n{endif}\n\n{if activate_air_filtration[current_extruder] && support_air_filtration}\nM106 P3 S{during_print_exhaust_fan_speed_num[current_extruder]} \n{endif}"
+    ],
+    "filament_z_hop": [
+        "0.4"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
     ],
     "nozzle_temperature": [
         "215"
@@ -35,8 +92,29 @@
     "nozzle_temperature_range_high": [
         "220"
     ],
+    "nozzle_temperature_range_high_HS": [
+        "240"
+    ],
+    "nozzle_temperature_range_low": [
+        "205"
+    ],
+    "nozzle_temperature_range_low_HS": [
+        "190"
+    ],
     "pressure_advance": [
         "0.044"
+    ],
+    "slow_down_layer_time_HS": [
+        "8"
+    ],
+    "temperature_vitrification": [
+        "54"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
     ],
     "filament_settings_id": [
         "Sunlu PLA+ 2.0 @AC KX 0.25mm"
@@ -45,8 +123,11 @@
         "Sunlu"
     ],
     "from": "User",
-    "inherits": "Sunlu PLA+ 2.0 @AC KX 0.4mm",
+    "inherits": "Anycubic PLA+ @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
+    "compatible_printers": [
+        "Anycubic Kobra X 0.25 nozzle"
+    ],
     "name": "Sunlu PLA+ 2.0 @AC KX 0.25mm",
     "version": "1.3.2602.11"
 }

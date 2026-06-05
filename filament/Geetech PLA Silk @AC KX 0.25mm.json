@@ -1,15 +1,30 @@
 {
-    "compatible_printers": [
-        "Anycubic Kobra X 0.25 nozzle"
+    "cool_plate_temp_initial_layer": [
+        "40"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "50"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "100"
     ],
     "fan_max_speed": [
         "80"
     ],
+    "fan_max_speed_HS": [
+        "100"
+    ],
     "fan_min_speed": [
         "60"
     ],
+    "fan_min_speed_HS": [
+        "100"
+    ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode "
     ],
     "filament_flow_ratio": [
         "0.9505"
@@ -19,6 +34,15 @@
     ],
     "filament_retraction_length": [
         "0.6"
+    ],
+    "filament_retraction_speed": [
+        "nil"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
     ],
     "nozzle_temperature": [
         "215"
@@ -35,8 +59,29 @@
     "nozzle_temperature_range_high": [
         "225"
     ],
+    "nozzle_temperature_range_high_HS": [
+        "240"
+    ],
+    "nozzle_temperature_range_low_HS": [
+        "190"
+    ],
     "pressure_advance": [
         "0.033"
+    ],
+    "slow_down_layer_time": [
+        "8"
+    ],
+    "slow_down_layer_time_HS": [
+        "8"
+    ],
+    "temperature_vitrification": [
+        "45"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
     ],
     "filament_settings_id": [
         "Geetech PLA Silk @AC KX 0.25mm"
@@ -45,8 +90,11 @@
         "Geetech"
     ],
     "from": "User",
-    "inherits": "Geetech PLA Silk @AC KX 0.4mm",
+    "inherits": "Anycubic PLA Silk @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
+    "compatible_printers": [
+        "Anycubic Kobra X 0.25 nozzle"
+    ],
     "name": "Geetech PLA Silk @AC KX 0.25mm",
     "version": "1.3.2602.11"
 }

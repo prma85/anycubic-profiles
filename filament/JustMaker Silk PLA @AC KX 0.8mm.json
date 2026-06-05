@@ -1,15 +1,36 @@
 {
-    "compatible_printers": [
-        "Anycubic Kobra X 0.8 nozzle"
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "40"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "100"
     ],
     "fan_max_speed": [
+        "100"
+    ],
+    "fan_max_speed_HS": [
         "100"
     ],
     "fan_min_speed": [
         "100"
     ],
+    "fan_min_speed_HS": [
+        "100"
+    ],
     "filament_change_length": [
         "10"
+    ],
+    "filament_deretraction_speed": [
+        "0"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode "
     ],
     "filament_flow_ratio": [
         "0.95"
@@ -17,11 +38,38 @@
     "filament_max_volumetric_speed": [
         "15"
     ],
+    "filament_retract_lift_below": [
+        "249"
+    ],
+    "filament_retract_restart_extra": [
+        "0"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
     "filament_retraction_length": [
         "1.2"
     ],
+    "filament_retraction_minimum_travel": [
+        "1"
+    ],
     "filament_retraction_speed": [
         "30"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "filament_wipe_distance": [
+        "1"
+    ],
+    "filament_z_hop": [
+        "0.4"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
     ],
     "nozzle_temperature": [
         "230"
@@ -38,8 +86,29 @@
     "nozzle_temperature_range_high": [
         "245"
     ],
+    "nozzle_temperature_range_high_HS": [
+        "240"
+    ],
+    "nozzle_temperature_range_low_HS": [
+        "190"
+    ],
     "pressure_advance": [
         "0.013"
+    ],
+    "slow_down_layer_time": [
+        "8"
+    ],
+    "slow_down_layer_time_HS": [
+        "8"
+    ],
+    "temperature_vitrification": [
+        "45"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
     ],
     "filament_settings_id": [
         "JustMaker Silk PLA @AC KX 0.8mm"
@@ -48,8 +117,11 @@
         "JustMaker"
     ],
     "from": "User",
-    "inherits": "JustMaker Silk PLA @AC KX 0.4mm",
+    "inherits": "Anycubic PLA Silk @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
+    "compatible_printers": [
+        "Anycubic Kobra X 0.8 nozzle"
+    ],
     "name": "JustMaker Silk PLA @AC KX 0.8mm",
     "version": "1.3.2503.03"
 }

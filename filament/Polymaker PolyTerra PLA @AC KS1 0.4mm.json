@@ -2,13 +2,14 @@
     "additional_cooling_fan_speed": [
         "70"
     ],
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.4 nozzle",
-        "Anycubic Kobra S1 0.4 nozzle - Brass",
-        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+    "close_fan_the_first_x_layers": [
+        "4"
     ],
     "complete_print_exhaust_fan_speed": [
         "70"
+    ],
+    "cool_plate_temp": [
+        "45"
     ],
     "cool_plate_temp_initial_layer": [
         "40"
@@ -16,17 +17,32 @@
     "during_print_exhaust_fan_speed": [
         "70"
     ],
+    "fan_cooling_layer_time": [
+        "80"
+    ],
     "fan_cooling_layer_time_BRASS": [
         "80"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "80"
+    ],
+    "fan_max_speed": [
+        "100"
     ],
     "fan_max_speed_BRASS": [
         "80"
     ],
+    "fan_max_speed_HS": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "60"
+    ],
     "fan_min_speed_BRASS": [
         "60"
     ],
-    "filament_cost": [
-        "25.4"
+    "fan_min_speed_HS": [
+        "60"
     ],
     "filament_density": [
         "1.31"
@@ -70,6 +86,15 @@
     "filament_z_hop": [
         "0.4"
     ],
+    "full_fan_speed_layer": [
+        "8"
+    ],
+    "hot_plate_temp": [
+        "55"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
     "nozzle_temperature": [
         "220"
     ],
@@ -100,15 +125,29 @@
     "temperature_vitrification": [
         "45"
     ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
+    ],
     "filament_settings_id": [
         "Polymaker PolyTerra PLA @AC KS1 0.4mm"
     ],
     "filament_vendor": [
         "Polymaker"
     ],
+    "filament_cost": [
+        "25.4"
+    ],
     "from": "User",
-    "inherits": "Improved PLA @AC KS1 0.4mm",
+    "inherits": "Anycubic PLA @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Brass",
+        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+    ],
     "name": "Polymaker PolyTerra PLA @AC KS1 0.4mm",
     "version": "1.3.2602.11"
 }

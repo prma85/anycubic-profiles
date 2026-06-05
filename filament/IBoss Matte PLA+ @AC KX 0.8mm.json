@@ -1,6 +1,15 @@
 {
-    "compatible_printers": [
-        "Anycubic Kobra X 0.8 nozzle"
+    "close_fan_the_first_x_layers": [
+        "4"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "40"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
     ],
     "fan_max_speed": [
         "100"
@@ -8,14 +17,65 @@
     "fan_min_speed": [
         "100"
     ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode "
+    ],
     "filament_flow_ratio": [
         "0.93"
     ],
     "filament_max_volumetric_speed": [
         "21"
     ],
+    "filament_retract_before_wipe": [
+        "0%"
+    ],
+    "filament_retract_lift_above": [
+        "0.3"
+    ],
+    "filament_retract_lift_below": [
+        "249"
+    ],
+    "filament_retract_lift_enforce": [
+        "All Surfaces"
+    ],
+    "filament_retract_restart_extra": [
+        "0"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
     "filament_retraction_length": [
         "0.9"
+    ],
+    "filament_retraction_minimum_travel": [
+        "1.5"
+    ],
+    "filament_retraction_speed": [
+        "35"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "filament_wipe_distance": [
+        "1"
+    ],
+    "filament_z_hop": [
+        "0.6"
+    ],
+    "filament_z_hop_types": [
+        "Slope Lift"
+    ],
+    "full_fan_speed_layer": [
+        "8"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
     ],
     "nozzle_temperature": [
         "220"
@@ -35,6 +95,21 @@
     "pressure_advance": [
         "0.010"
     ],
+    "slow_down_layer_time": [
+        "8"
+    ],
+    "slow_down_layer_time_HS": [
+        "8"
+    ],
+    "temperature_vitrification": [
+        "45"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
+    ],
     "filament_settings_id": [
         "IBoss Matte PLA+ @AC KX 0.8mm"
     ],
@@ -42,8 +117,11 @@
         "IBoss"
     ],
     "from": "User",
-    "inherits": "IBoss Matte PLA+ @AC KX 0.4mm",
+    "inherits": "Anycubic PLA Matte @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
+    "compatible_printers": [
+        "Anycubic Kobra X 0.8 nozzle"
+    ],
     "name": "IBoss Matte PLA+ @AC KX 0.8mm",
     "version": "1.3.2503.03"
 }

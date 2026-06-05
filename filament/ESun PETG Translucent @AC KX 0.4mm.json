@@ -1,10 +1,15 @@
 {
-    "compatible_printers": [
-        "Anycubic Kobra X 0.4 nozzle",
-        "Anycubic Kobra X 0.4 nozzle - Stainless Steel"
+    "cool_plate_temp": [
+        "50"
     ],
-    "filament_cost": [
-        "25"
+    "cool_plate_temp_initial_layer": [
+        "50"
+    ],
+    "fan_max_speed": [
+        "0"
+    ],
+    "fan_min_speed": [
+        "0"
     ],
     "filament_max_volumetric_speed": [
         "3"
@@ -14,6 +19,24 @@
     ],
     "filament_z_hop": [
         "0.6"
+    ],
+    "hot_plate_temp": [
+        "70"
+    ],
+    "nozzle_temperature": [
+        "252"
+    ],
+    "nozzle_temperature_HS": [
+        "262"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "252"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "262"
+    ],
+    "nozzle_temperature_range_high": [
+        "270"
     ],
     "pressure_advance": [
         "0.058"
@@ -27,9 +50,16 @@
     "filament_vendor": [
         "ESun"
     ],
+    "filament_cost": [
+        "25"
+    ],
     "from": "User",
-    "inherits": "Improved PETG Translucent @AC KX 0.4mm",
+    "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
+    "compatible_printers": [
+        "Anycubic Kobra X 0.4 nozzle",
+        "Anycubic Kobra X 0.4 nozzle - Stainless Steel"
+    ],
     "name": "ESun PETG Translucent @AC KX 0.4mm",
     "version": "1.3.2602.11"
 }

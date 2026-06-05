@@ -1,17 +1,24 @@
 {
+    "activate_air_filtration": [
+        "1"
+    ],
     "adaptive_pressure_advance_model": [
         "0,0,0\n0,0,0"
     ],
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.25 nozzle",
-        "Anycubic Kobra S1 0.25 nozzle - Brass",
-        "Anycubic Kobra S1 0.25 nozzle - Hardened Steel"
+    "additional_cooling_fan_speed": [
+        "80"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
     ],
     "cool_plate_temp": [
         "35"
     ],
     "cool_plate_temp_initial_layer": [
         "40"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
     ],
     "fan_max_speed": [
         "20"
@@ -22,6 +29,9 @@
     "filament_density": [
         "1.27"
     ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
     "filament_end_gcode": [
         "; filament end gcode "
     ],
@@ -31,14 +41,29 @@
     "filament_max_volumetric_speed": [
         "3"
     ],
+    "filament_minimal_purge_on_wipe_tower": [
+        "10"
+    ],
     "filament_retract_before_wipe": [
         "0%"
+    ],
+    "filament_retract_lift_below": [
+        "249"
+    ],
+    "filament_retract_lift_enforce": [
+        "All Surfaces"
     ],
     "filament_retract_when_changing_layer": [
         "1"
     ],
     "filament_retraction_length": [
         "0.6"
+    ],
+    "filament_retraction_minimum_travel": [
+        "1.5"
+    ],
+    "filament_retraction_speed": [
+        "35"
     ],
     "filament_start_gcode": [
         "; filament start gcode\n"
@@ -48,6 +73,15 @@
     ],
     "filament_wipe_distance": [
         "2"
+    ],
+    "filament_z_hop": [
+        "0.6"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "65"
     ],
     "nozzle_temperature": [
         "200"
@@ -70,6 +104,9 @@
     "nozzle_temperature_range_high": [
         "225"
     ],
+    "nozzle_temperature_range_low": [
+        "205"
+    ],
     "overhang_fan_speed": [
         "90"
     ],
@@ -79,6 +116,12 @@
     "temperature_vitrification": [
         "70"
     ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
+    ],
     "filament_settings_id": [
         "Creality Hyper PLA Galaxy @AC KS1 0.25mm"
     ],
@@ -86,8 +129,13 @@
         "Creality"
     ],
     "from": "User",
-    "inherits": "Creality Hyper PLA Galaxy @AC KS1 0.4mm",
+    "inherits": "Anycubic PLA Galaxy @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.25 nozzle",
+        "Anycubic Kobra S1 0.25 nozzle - Brass",
+        "Anycubic Kobra S1 0.25 nozzle - Hardened Steel"
+    ],
     "name": "Creality Hyper PLA Galaxy @AC KS1 0.25mm",
     "version": "1.3.2503.03"
 }

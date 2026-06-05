@@ -1,14 +1,66 @@
 {
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.8 nozzle",
-        "Anycubic Kobra S1 0.8 nozzle - Brass",
-        "Anycubic Kobra S1 0.8 nozzle - Hardened Steel"
+    "close_fan_the_first_x_layers": [
+        "2"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "40"
+    ],
+    "fan_min_speed_BRASS": [
+        "50"
     ],
     "filament_flow_ratio": [
         "1.02"
     ],
     "filament_max_volumetric_speed": [
         "22.5"
+    ],
+    "filament_shrink": [
+        "102%"
+    ],
+    "filament_shrinkage_compensation_z": [
+        "102%"
+    ],
+    "filament_z_hop": [
+        "0.8"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "65"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "220"
+    ],
+    "nozzle_temperature_range_high": [
+        "220"
+    ],
+    "nozzle_temperature_range_low": [
+        "210"
+    ],
+    "temperature_vitrification": [
+        "63"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
     ],
     "filament_settings_id": [
         "Polymaker Polychrome Glow @AC KS1 0.8mm"
@@ -17,8 +69,13 @@
         "Polymaker"
     ],
     "from": "User",
-    "inherits": "Polymaker Polychrome Glow @AC KS1 0.4mm",
+    "inherits": "Anycubic PLA Glow @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.8 nozzle",
+        "Anycubic Kobra S1 0.8 nozzle - Brass",
+        "Anycubic Kobra S1 0.8 nozzle - Hardened Steel"
+    ],
     "name": "Polymaker Polychrome Glow @AC KS1 0.8mm",
     "version": "1.3.2602.11"
 }
