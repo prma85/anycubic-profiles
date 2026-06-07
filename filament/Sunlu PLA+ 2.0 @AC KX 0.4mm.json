@@ -14,12 +14,6 @@
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "fan_max_speed_HS": [
-        "100"
-    ],
-    "fan_min_speed_HS": [
-        "100"
-    ],
     "filament_density": [
         "1.21"
     ],

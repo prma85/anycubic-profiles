@@ -1,4 +1,7 @@
 {
+    "close_fan_the_first_x_layers": [
+        "3"
+    ],
     "complete_print_exhaust_fan_speed": [
         "100"
     ],
@@ -14,14 +17,8 @@
     "fan_max_speed": [
         "80"
     ],
-    "fan_max_speed_HS": [
-        "100"
-    ],
     "fan_min_speed": [
         "60"
-    ],
-    "fan_min_speed_HS": [
-        "100"
     ],
     "filament_change_length": [
         "10"
@@ -105,7 +102,7 @@
         "60"
     ],
     "textured_plate_temp_initial_layer": [
-        "60"
+        "65"
     ],
     "filament_settings_id": [
         "Improved PLA @AC KX 0.25mm"
