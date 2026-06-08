@@ -10,10 +10,10 @@
         "80"
     ],
     "cool_plate_temp": [
-        "30"
+        "0"
     ],
     "cool_plate_temp_initial_layer": [
-        "30"
+        "0"
     ],
     "default_filament_colour": [
         "#E0E0E0"
@@ -62,6 +62,9 @@
     ],
     "filament_cooling_moves": [
         "4"
+    ],
+    "filament_density": [
+        "1.18"
     ],
     "filament_end_gcode": [
         "; filament end gcode \nM106 P3 S0\n"
@@ -170,6 +173,9 @@
     ],
     "filament_vendor": [
         "Generic"
+    ],
+    "filament_cost": [
+        "25"
     ],
     "from": "User",
     "inherits": "Anycubic TPU @Anycubic Kobra S1 0.4 nozzle",

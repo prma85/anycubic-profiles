@@ -1,6 +1,9 @@
 {
+    "compatible_printers": [
+        "Anycubic Kobra X 0.8 nozzle"
+    ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
     "fan_cooling_layer_time_HS": [
         "100"
@@ -83,9 +86,6 @@
     "from": "User",
     "inherits": "Anycubic PLA Silk @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
-    "compatible_printers": [
-        "Anycubic Kobra X 0.8 nozzle"
-    ],
     "name": "Generic Silk PLA @AC KX 0.8mm",
     "version": "1.3.2602.11"
 }

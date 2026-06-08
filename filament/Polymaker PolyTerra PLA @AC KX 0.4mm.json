@@ -6,7 +6,7 @@
         "70"
     ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
     "during_print_exhaust_fan_speed": [
         "70"
@@ -108,7 +108,7 @@
         "Polymaker"
     ],
     "filament_cost": [
-        "25.4"
+        "20"
     ],
     "from": "User",
     "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",

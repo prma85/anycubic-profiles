@@ -5,14 +5,18 @@
     "close_fan_the_first_x_layers": [
         "4"
     ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Improved"
+    ],
     "complete_print_exhaust_fan_speed": [
         "100"
     ],
     "cool_plate_temp": [
-        "45"
+        "40"
     ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
@@ -43,6 +47,9 @@
     ],
     "fan_min_speed_HS": [
         "60"
+    ],
+    "filament_density": [
+        "1.24"
     ],
     "filament_deretraction_speed": [
         "25"
@@ -105,15 +112,11 @@
         "Creality"
     ],
     "filament_cost": [
-        "31"
+        "20"
     ],
     "from": "User",
     "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.4 nozzle",
-        "Anycubic Kobra S1 0.4 nozzle - Improved"
-    ],
     "name": "Creality PLA+ @AC KS1 0.4mm",
     "version": "1.3.2503.03"
 }

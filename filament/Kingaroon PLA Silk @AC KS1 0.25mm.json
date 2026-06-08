@@ -1,6 +1,10 @@
 {
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.25 nozzle",
+        "Anycubic Kobra S1 0.25 nozzle - Improved"
+    ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
     "fan_max_speed": [
         "80"
@@ -83,10 +87,6 @@
     "from": "User",
     "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.25 nozzle",
-        "Anycubic Kobra S1 0.25 nozzle - Improved"
-    ],
     "name": "Kingaroon PLA Silk @AC KS1 0.25mm",
     "version": "0.0.0.00"
 }

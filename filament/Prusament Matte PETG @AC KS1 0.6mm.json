@@ -8,14 +8,18 @@
     "additional_cooling_fan_speed": [
         "10"
     ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.6 nozzle",
+        "Anycubic Kobra S1 0.6 nozzle - Improved"
+    ],
     "complete_print_exhaust_fan_speed": [
         "100"
     ],
     "cool_plate_temp": [
-        "50"
+        "55"
     ],
     "cool_plate_temp_initial_layer": [
-        "50"
+        "60"
     ],
     "dont_slow_down_outer_wall": [
         "1"
@@ -146,10 +150,6 @@
     "from": "User",
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.6 nozzle",
-        "Anycubic Kobra S1 0.6 nozzle - Improved"
-    ],
     "name": "Prusament Matte PETG @AC KS1 0.6mm",
     "version": "1.3.2602.11"
 }

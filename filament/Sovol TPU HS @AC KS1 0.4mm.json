@@ -12,8 +12,8 @@
     "fan_min_speed_BRASS": [
         "40"
     ],
-    "filament_cost": [
-        "35"
+    "filament_density": [
+        "1.18"
     ],
     "filament_flow_ratio": [
         "1.029"
@@ -68,6 +68,9 @@
     ],
     "filament_vendor": [
         "SUNLU"
+    ],
+    "filament_cost": [
+        "30"
     ],
     "from": "User",
     "inherits": "Anycubic TPU @Anycubic Kobra S1 0.4 nozzle",

@@ -4,7 +4,7 @@
         "Anycubic Kobra S1 0.4 nozzle - Improved"
     ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
     "fan_max_speed_BRASS": [
         "60"
@@ -12,8 +12,8 @@
     "fan_min_speed_BRASS": [
         "40"
     ],
-    "filament_cost": [
-        "25"
+    "filament_density": [
+        "1.20"
     ],
     "filament_max_volumetric_speed": [
         "8"
@@ -74,6 +74,9 @@
     ],
     "filament_vendor": [
         "Anycubic"
+    ],
+    "filament_cost": [
+        "18"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",

@@ -1,6 +1,6 @@
 {
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
     "during_print_exhaust_fan_speed": [
         "50"
@@ -8,8 +8,8 @@
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "filament_cost": [
-        "25"
+    "filament_density": [
+        "1.20"
     ],
     "filament_end_gcode": [
         "; filament end gcode "
@@ -70,6 +70,9 @@
     ],
     "filament_vendor": [
         "Geetech"
+    ],
+    "filament_cost": [
+        "20"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Silk @Anycubic Kobra X 0.4 nozzle",

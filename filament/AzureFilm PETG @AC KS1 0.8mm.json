@@ -11,14 +11,18 @@
     "close_fan_the_first_x_layers": [
         "3"
     ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.8 nozzle",
+        "Anycubic Kobra S1 0.8 nozzle - Improved"
+    ],
     "complete_print_exhaust_fan_speed": [
         "100"
     ],
     "cool_plate_temp": [
-        "50"
+        "55"
     ],
     "cool_plate_temp_initial_layer": [
-        "50"
+        "60"
     ],
     "dont_slow_down_outer_wall": [
         "1"
@@ -146,10 +150,6 @@
     "from": "User",
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.8 nozzle",
-        "Anycubic Kobra S1 0.8 nozzle - Improved"
-    ],
     "name": "AzureFilm PETG @AC KS1 0.8mm",
     "version": "1.3.2602.11"
 }

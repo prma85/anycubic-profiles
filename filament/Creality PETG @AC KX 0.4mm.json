@@ -3,16 +3,13 @@
         "2"
     ],
     "cool_plate_temp": [
-        "50"
+        "55"
     ],
     "cool_plate_temp_initial_layer": [
-        "50"
+        "60"
     ],
     "dont_slow_down_outer_wall": [
         "1"
-    ],
-    "filament_cost": [
-        "24"
     ],
     "filament_density": [
         "1.27"
@@ -121,6 +118,9 @@
     ],
     "filament_vendor": [
         "Creality "
+    ],
+    "filament_cost": [
+        "20"
     ],
     "from": "User",
     "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",

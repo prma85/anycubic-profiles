@@ -31,7 +31,7 @@
         "5"
     ],
     "filament_density": [
-        "1.07"
+        "1.05"
     ],
     "filament_max_volumetric_speed": [
         "8"
@@ -80,6 +80,9 @@
     ],
     "filament_vendor": [
         "Anycubic"
+    ],
+    "filament_cost": [
+        "22"
     ],
     "from": "User",
     "inherits": "Anycubic ABS @Anycubic Kobra S1 0.4 nozzle",

@@ -3,13 +3,13 @@
         "2"
     ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "filament_cost": [
-        "25"
+    "filament_density": [
+        "1.24"
     ],
     "filament_deretraction_speed": [
         "nil"
@@ -91,6 +91,9 @@
     ],
     "filament_vendor": [
         "Polymaker"
+    ],
+    "filament_cost": [
+        "25"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Glow @Anycubic Kobra X 0.4 nozzle",

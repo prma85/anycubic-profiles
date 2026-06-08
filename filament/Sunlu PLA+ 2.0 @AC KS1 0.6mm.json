@@ -2,14 +2,18 @@
     "close_fan_the_first_x_layers": [
         "4"
     ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.6 nozzle",
+        "Anycubic Kobra S1 0.6 nozzle - Improved"
+    ],
     "complete_print_exhaust_fan_speed": [
         "100"
     ],
     "cool_plate_temp": [
-        "45"
+        "40"
     ],
     "cool_plate_temp_initial_layer": [
-        "50"
+        "45"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
@@ -122,10 +126,6 @@
     "from": "User",
     "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.6 nozzle",
-        "Anycubic Kobra S1 0.6 nozzle - Improved"
-    ],
     "name": "Sunlu PLA+ 2.0 @AC KS1 0.6mm",
     "version": "1.3.2602.11"
 }

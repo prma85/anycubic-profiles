@@ -10,7 +10,7 @@
         "100"
     ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
@@ -18,8 +18,8 @@
     "fan_min_speed_BRASS": [
         "50"
     ],
-    "filament_cost": [
-        "24"
+    "filament_density": [
+        "1.20"
     ],
     "filament_deretraction_speed": [
         "0"
@@ -101,6 +101,9 @@
     ],
     "filament_vendor": [
         "JustMaker"
+    ],
+    "filament_cost": [
+        "22"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",

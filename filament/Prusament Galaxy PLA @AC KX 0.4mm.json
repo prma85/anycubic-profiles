@@ -6,7 +6,7 @@
         "100"
     ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
@@ -16,6 +16,9 @@
     ],
     "fan_min_speed": [
         "100"
+    ],
+    "filament_density": [
+        "1.24"
     ],
     "filament_deretraction_speed": [
         "0"
@@ -105,7 +108,7 @@
         "Prusament"
     ],
     "filament_cost": [
-        "29"
+        "36"
     ],
     "from": "User",
     "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",

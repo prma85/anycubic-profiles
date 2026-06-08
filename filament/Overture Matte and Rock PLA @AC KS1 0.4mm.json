@@ -13,7 +13,7 @@
         "Anycubic Kobra S1 0.4 nozzle - Improved"
     ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
     "fan_cooling_layer_time_BRASS": [
         "100"
@@ -24,8 +24,8 @@
     "fan_min_speed_BRASS": [
         "100"
     ],
-    "filament_cost": [
-        "25"
+    "filament_density": [
+        "1.24"
     ],
     "filament_flow_ratio": [
         "0.98"
@@ -92,6 +92,9 @@
     ],
     "filament_vendor": [
         "Overture"
+    ],
+    "filament_cost": [
+        "17"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Matte @Anycubic Kobra S1 0.4 nozzle",

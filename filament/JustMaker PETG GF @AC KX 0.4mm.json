@@ -3,10 +3,10 @@
         "70"
     ],
     "cool_plate_temp": [
-        "50"
+        "55"
     ],
     "cool_plate_temp_initial_layer": [
-        "50"
+        "60"
     ],
     "during_print_exhaust_fan_speed": [
         "70"
@@ -26,11 +26,8 @@
     "filament_adhesiveness_category": [
         "400"
     ],
-    "filament_cost": [
-        "25"
-    ],
     "filament_density": [
-        "1.27"
+        "1.35"
     ],
     "filament_deretraction_speed": [
         "25"
@@ -124,6 +121,9 @@
     ],
     "filament_vendor": [
         "JustMaker"
+    ],
+    "filament_cost": [
+        "25"
     ],
     "from": "User",
     "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",

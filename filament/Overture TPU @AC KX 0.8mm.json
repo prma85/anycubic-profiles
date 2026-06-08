@@ -8,11 +8,14 @@
     "chamber_temperature": [
         "35"
     ],
+    "compatible_printers": [
+        "Anycubic Kobra X 0.8 nozzle"
+    ],
     "cool_plate_temp": [
-        "30"
+        "0"
     ],
     "cool_plate_temp_initial_layer": [
-        "30"
+        "0"
     ],
     "default_filament_colour": [
         "#0F80FF"
@@ -158,9 +161,6 @@
     "from": "User",
     "inherits": "Anycubic TPU 95A @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
-    "compatible_printers": [
-        "Anycubic Kobra X 0.8 nozzle"
-    ],
     "name": "Overture TPU @AC KX 0.8mm",
     "version": "1.5.0.61"
 }

@@ -8,14 +8,18 @@
     "additional_cooling_fan_speed": [
         "100"
     ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.8 nozzle",
+        "Anycubic Kobra S1 0.8 nozzle - Improved"
+    ],
     "complete_print_exhaust_fan_speed": [
         "80"
     ],
     "cool_plate_temp": [
-        "30"
+        "0"
     ],
     "cool_plate_temp_initial_layer": [
-        "30"
+        "0"
     ],
     "default_filament_colour": [
         "#E0E0E0"
@@ -188,10 +192,6 @@
     "from": "User",
     "inherits": "Anycubic TPU @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
-    "compatible_printers": [
-        "Anycubic Kobra S1 0.8 nozzle",
-        "Anycubic Kobra S1 0.8 nozzle - Improved"
-    ],
     "name": "Overture TPU HS @AC KS1 0.8mm",
     "version": "1.5.0.61"
 }

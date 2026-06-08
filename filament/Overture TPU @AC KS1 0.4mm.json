@@ -13,10 +13,10 @@
         "80"
     ],
     "cool_plate_temp": [
-        "30"
+        "0"
     ],
     "cool_plate_temp_initial_layer": [
-        "30"
+        "0"
     ],
     "default_filament_colour": [
         "#0F80FF"
@@ -66,8 +66,8 @@
     "filament_cooling_moves": [
         "4"
     ],
-    "filament_cost": [
-        "30"
+    "filament_density": [
+        "1.20"
     ],
     "filament_end_gcode": [
         "; filament end gcode \nM106 P3 S0\n"
@@ -170,6 +170,9 @@
     ],
     "filament_vendor": [
         "Overture"
+    ],
+    "filament_cost": [
+        "23"
     ],
     "from": "User",
     "inherits": "Anycubic TPU @Anycubic Kobra S1 0.4 nozzle",

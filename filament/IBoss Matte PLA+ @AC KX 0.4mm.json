@@ -6,19 +6,13 @@
         "100"
     ],
     "cool_plate_temp_initial_layer": [
-        "40"
-    ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
+        "45"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
     ],
-    "filament_cost": [
-        "25"
+    "filament_density": [
+        "1.24"
     ],
     "filament_deretraction_speed": [
         "25"
@@ -71,6 +65,12 @@
     "full_fan_speed_layer": [
         "8"
     ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
     "slow_down_layer_time": [
         "8"
     ],
@@ -91,6 +91,9 @@
     ],
     "filament_vendor": [
         "IBoss"
+    ],
+    "filament_cost": [
+        "22"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Matte @Anycubic Kobra X 0.4 nozzle",

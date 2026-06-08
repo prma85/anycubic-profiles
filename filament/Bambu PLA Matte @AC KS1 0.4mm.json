@@ -7,10 +7,10 @@
         "Anycubic Kobra S1 0.4 nozzle - Improved"
     ],
     "cool_plate_temp": [
-        "45"
+        "40"
     ],
     "cool_plate_temp_initial_layer": [
-        "50"
+        "45"
     ],
     "fan_cooling_layer_time": [
         "80"
@@ -39,11 +39,8 @@
     "fan_min_speed_HS": [
         "60"
     ],
-    "filament_cost": [
-        "27.99"
-    ],
     "filament_density": [
-        "1.32"
+        "1.24"
     ],
     "filament_max_volumetric_speed": [
         "14"
@@ -101,6 +98,9 @@
     ],
     "filament_vendor": [
         "Bambu Lab"
+    ],
+    "filament_cost": [
+        "21"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Matte @Anycubic Kobra S1 0.4 nozzle",

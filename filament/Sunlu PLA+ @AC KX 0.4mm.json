@@ -3,7 +3,7 @@
         "100"
     ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
@@ -102,7 +102,7 @@
         "Sunlu"
     ],
     "filament_cost": [
-        "18"
+        "15"
     ],
     "from": "User",
     "inherits": "Anycubic PLA+ @Anycubic Kobra X 0.4 nozzle",

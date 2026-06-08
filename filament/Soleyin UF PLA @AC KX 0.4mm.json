@@ -6,13 +6,16 @@
         "100"
     ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
     "during_print_exhaust_fan_speed": [
         "50"
     ],
     "fan_cooling_layer_time_HS": [
         "100"
+    ],
+    "filament_density": [
+        "1.24"
     ],
     "filament_deretraction_speed": [
         "0"

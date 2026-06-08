@@ -6,8 +6,8 @@
     "enable_pressure_advance": [
         "1"
     ],
-    "filament_cost": [
-        "35"
+    "filament_density": [
+        "1.20"
     ],
     "filament_flow_ratio": [
         "1.029"
@@ -62,6 +62,9 @@
     ],
     "filament_vendor": [
         "SUNLU"
+    ],
+    "filament_cost": [
+        "17"
     ],
     "from": "User",
     "inherits": "Anycubic TPU @Anycubic Kobra S1 0.4 nozzle",

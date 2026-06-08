@@ -11,8 +11,8 @@
     "fan_min_speed": [
         "100"
     ],
-    "filament_cost": [
-        "35"
+    "filament_density": [
+        "1.18"
     ],
     "filament_end_gcode": [
         "; filament end gcode "
@@ -76,6 +76,9 @@
     ],
     "filament_vendor": [
         "SUNLU"
+    ],
+    "filament_cost": [
+        "30"
     ],
     "from": "User",
     "inherits": "Anycubic TPU 95A @Anycubic Kobra X 0.4 nozzle",

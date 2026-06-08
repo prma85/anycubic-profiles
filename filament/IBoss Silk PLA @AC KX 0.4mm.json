@@ -1,9 +1,9 @@
 {
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
-    "filament_cost": [
-        "25"
+    "filament_density": [
+        "1.20"
     ],
     "filament_end_gcode": [
         "; filament end gcode "
@@ -58,6 +58,9 @@
     ],
     "filament_vendor": [
         "IBoss"
+    ],
+    "filament_cost": [
+        "22"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Silk @Anycubic Kobra X 0.4 nozzle",

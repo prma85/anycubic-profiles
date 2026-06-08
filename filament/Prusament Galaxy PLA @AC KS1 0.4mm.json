@@ -7,10 +7,10 @@
         "Anycubic Kobra S1 0.4 nozzle - Improved"
     ],
     "cool_plate_temp_initial_layer": [
-        "40"
+        "45"
     ],
-    "filament_cost": [
-        "29"
+    "filament_density": [
+        "1.24"
     ],
     "filament_max_volumetric_speed": [
         "21"
@@ -62,6 +62,9 @@
     ],
     "filament_vendor": [
         "Prusament"
+    ],
+    "filament_cost": [
+        "36"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Galaxy @Anycubic Kobra S1 0.4 nozzle",

@@ -13,10 +13,10 @@
         "100"
     ],
     "cool_plate_temp": [
-        "50"
+        "55"
     ],
     "cool_plate_temp_initial_layer": [
-        "50"
+        "60"
     ],
     "dont_slow_down_outer_wall": [
         "1"
@@ -30,8 +30,8 @@
     "fan_max_speed_BRASS": [
         "60"
     ],
-    "filament_cost": [
-        "23"
+    "filament_density": [
+        "1.27"
     ],
     "filament_deretraction_speed": [
         "25"
@@ -107,6 +107,9 @@
     ],
     "filament_vendor": [
         "Prusament"
+    ],
+    "filament_cost": [
+        "38"
     ],
     "from": "User",
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",

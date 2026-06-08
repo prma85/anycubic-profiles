@@ -1,9 +1,9 @@
 {
     "cool_plate_temp": [
-        "30"
+        "0"
     ],
     "cool_plate_temp_initial_layer": [
-        "30"
+        "0"
     ],
     "default_filament_colour": [
         "#E0E0E0"
@@ -41,8 +41,8 @@
     "filament_cooling_moves": [
         "4"
     ],
-    "filament_cost": [
-        "30"
+    "filament_density": [
+        "1.18"
     ],
     "filament_deretraction_speed": [
         "0"
@@ -142,6 +142,9 @@
     ],
     "filament_vendor": [
         "Overture"
+    ],
+    "filament_cost": [
+        "25"
     ],
     "from": "User",
     "inherits": "Anycubic TPU 95A @Anycubic Kobra X 0.4 nozzle",

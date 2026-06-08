@@ -12,6 +12,12 @@
     "complete_print_exhaust_fan_speed": [
         "100"
     ],
+    "cool_plate_temp": [
+        "55"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "60"
+    ],
     "dont_slow_down_outer_wall": [
         "1"
     ],
@@ -27,11 +33,8 @@
     "fan_max_speed_HS": [
         "40"
     ],
-    "filament_cost": [
-        "22"
-    ],
     "filament_density": [
-        "1.24"
+        "1.27"
     ],
     "filament_deretraction_speed": [
         "25"
@@ -54,31 +57,21 @@
     "filament_retract_when_changing_layer": [
         "1"
     ],
-    "filament_settings_id": [
-        "Improved PETG @AC KS1 0.4mm"
-    ],
-    "filament_vendor": [
-        "Generic"
-    ],
     "filament_z_hop": [
         "0.6"
     ],
     "filament_z_hop_types": [
         "Slope Lift"
     ],
-    "from": "User",
     "hot_plate_temp": [
         "70"
     ],
     "idle_temperature": [
         "175"
     ],
-    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
     "internal_bridge_fan_speed": [
         "100"
     ],
-    "is_custom_defined": "0",
-    "name": "Improved PETG @AC KS1 0.4mm",
     "nozzle_temperature": [
         "235"
     ],
@@ -115,11 +108,18 @@
     "textured_plate_temp": [
         "70"
     ],
-    "version": "1.3.2503.03",
-    "cool_plate_temp": [
-        "50"
+    "filament_settings_id": [
+        "Improved PETG @AC KS1 0.4mm"
     ],
-    "cool_plate_temp_initial_layer": [
-        "50"
-    ]
+    "filament_vendor": [
+        "Generic"
+    ],
+    "filament_cost": [
+        "20"
+    ],
+    "from": "User",
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Improved PETG @AC KS1 0.4mm",
+    "version": "1.3.2503.03"
 }

@@ -6,10 +6,10 @@
         "100"
     ],
     "cool_plate_temp": [
-        "45"
+        "40"
     ],
     "cool_plate_temp_initial_layer": [
-        "50"
+        "45"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
@@ -40,6 +40,9 @@
     ],
     "fan_min_speed_HS": [
         "60"
+    ],
+    "filament_density": [
+        "1.24"
     ],
     "filament_deretraction_speed": [
         "0"
@@ -110,8 +113,11 @@
     "filament_settings_id": [
         "EconoFil PLA @AC KS1 0.4mm"
     ],
+    "filament_vendor": [
+        "FilamentsCA"
+    ],
     "filament_cost": [
-        "16"
+        "10"
     ],
     "from": "User",
     "inherits": "Anycubic PLA @Anycubic Kobra S1 0.4 nozzle",
