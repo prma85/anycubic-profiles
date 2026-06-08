@@ -148,8 +148,7 @@
     "is_custom_defined": "0",
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
-        "Anycubic Kobra S1 0.4 nozzle - Brass",
-        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+        "Anycubic Kobra S1 0.4 nozzle - Improved"
     ],
     "name": "Polymaker PolyChroma PLA @AC KS1 0.4mm",
     "version": "1.3.2602.11"

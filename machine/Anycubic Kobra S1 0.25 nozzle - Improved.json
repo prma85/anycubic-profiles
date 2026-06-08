@@ -7,9 +7,9 @@
     "min_layer_height": [
         "0.04"
     ],
-    "name": "Anycubic Kobra S1 0.2 nozzle - Brass",
-    "printer_settings_id": "Anycubic Kobra S1 0.2 nozzle - Brass",
+    "name": "Anycubic Kobra S1 0.25 nozzle - Improved",
     "printer_flush_multiplier": "0.9",
+    "printer_settings_id": "Anycubic Kobra S1 0.25 nozzle - Improved",
     "retraction_length": [
         "0.4"
     ],

@@ -1,0 +1,8 @@
+{
+    "from": "User",
+    "inherits": "Anycubic Kobra X 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Anycubic Kobra X 0.4 nozzle - Improved",
+    "printer_settings_id": "Anycubic Kobra X 0.4 nozzle - Improved",
+    "version": "1.3.2604.24"
+}

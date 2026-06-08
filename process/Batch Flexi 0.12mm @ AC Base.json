@@ -6,9 +6,9 @@
     "brim_object_gap": "0.14",
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
-        "Anycubic Kobra S1 0.4 nozzle - Brass",
-        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel",
-        "Anycubic Kobra X 0.4 nozzle"
+        "Anycubic Kobra S1 0.4 nozzle - Improved",
+        "Anycubic Kobra X 0.4 nozzle",
+        "Anycubic Kobra X 0.4 nozzle - Improved"
     ],
     "default_acceleration": "4000",
     "from": "User",

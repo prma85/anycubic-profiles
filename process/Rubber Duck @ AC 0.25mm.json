@@ -19,8 +19,7 @@
     "brim_width": "5",
     "compatible_printers": [
         "Anycubic Kobra S1 0.25 nozzle",
-        "Anycubic Kobra S1 0.25 nozzle - Brass",
-        "Anycubic Kobra S1 0.25 nozzle - Hardened Steel",
+        "Anycubic Kobra S1 0.25 nozzle - Improved",
         "Anycubic Kobra X 0.25 nozzle"
     ],
     "compatible_printers_condition": "",

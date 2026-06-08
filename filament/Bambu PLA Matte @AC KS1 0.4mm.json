@@ -4,8 +4,7 @@
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
-        "Anycubic Kobra S1 0.4 nozzle - Brass",
-        "Anycubic Kobra S1 0.4 nozzle - Hardened Steel"
+        "Anycubic Kobra S1 0.4 nozzle - Improved"
     ],
     "cool_plate_temp": [
         "45"

@@ -1,10 +1,9 @@
 {
     "from": "User",
     "inherits": "Anycubic Kobra S1 0.6 nozzle",
-    "name": "Anycubic Kobra S1 0.6 nozzle - Brass",
-    "nozzle_type": "brass",
+    "name": "Anycubic Kobra S1 0.6 nozzle - Improved",
     "printer_flush_multiplier": "0.9",
-    "printer_settings_id": "Anycubic Kobra S1 0.6 nozzle - Brass",
+    "printer_settings_id": "Anycubic Kobra S1 0.6 nozzle - Improved",
     "retract_restart_extra": [
         "0.06"
     ],

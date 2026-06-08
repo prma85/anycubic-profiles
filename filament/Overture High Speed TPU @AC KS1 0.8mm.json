@@ -193,8 +193,7 @@
     "is_custom_defined": "0",
     "compatible_printers": [
         "Anycubic Kobra S1 0.8 nozzle",
-        "Anycubic Kobra S1 0.8 nozzle - Brass",
-        "Anycubic Kobra S1 0.8 nozzle - Hardened Steel"
+        "Anycubic Kobra S1 0.8 nozzle - Improved"
     ],
     "name": "Overture High Speed TPU @AC KS1 0.8mm",
     "version": "1.5.0.61"
