@@ -1,0 +1,49 @@
+{
+    "cool_plate_temp_initial_layer": [
+        "40"
+    ],
+    "filament_max_volumetric_speed": [
+        "10"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_length": [
+        "0.9"
+    ],
+    "filament_wipe": [
+        "1"
+    ],
+    "filament_z_hop": [
+        "0.4"
+    ],
+    "filament_z_hop_types": [
+        "Spiral Lift"
+    ],
+    "hot_plate_temp": [
+        "60"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "60"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "60"
+    ],
+    "filament_cost": [
+        "25"
+    ],
+    "filament_settings_id": [
+        "Improved PLA Silk Dual @AC KX 0.4mm"
+    ],
+    "filament_vendor": [
+        "Anycubic"
+    ],
+    "from": "User",
+    "inherits": "Anycubic PLA Silk @Anycubic Kobra X 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Improved PLA Silk Dual @AC KX 0.4mm",
+    "version": "1.3.2602.11"
+}
