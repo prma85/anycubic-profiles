@@ -1,7 +1,6 @@
 {
     "compatible_printers": [
-        "Anycubic Kobra X 0.4 nozzle",
-        "Anycubic Kobra X 0.4 nozzle - Improved"
+        "Anycubic Kobra X 0.4 nozzle"
     ],
     "complete_print_exhaust_fan_speed": [
         "100"

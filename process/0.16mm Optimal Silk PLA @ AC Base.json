@@ -8,8 +8,7 @@
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Improved",
-        "Anycubic Kobra X 0.4 nozzle",
-        "Anycubic Kobra X 0.4 nozzle - Improved"
+        "Anycubic Kobra X 0.4 nozzle"
     ],
     "default_acceleration": "5000",
     "filename_format": "S1_{input_filename_base}_{filament_type[0]}_{print_time}.gcode",

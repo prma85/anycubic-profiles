@@ -53,8 +53,7 @@
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Improved",
-        "Anycubic Kobra X 0.4 nozzle",
-        "Anycubic Kobra X 0.4 nozzle - Improved"
+        "Anycubic Kobra X 0.4 nozzle"
     ],
     "name": "Batch Flexi 0.16mm @ AC Base",
     "version": "1.3.2503.03"
