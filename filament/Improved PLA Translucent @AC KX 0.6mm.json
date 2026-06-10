@@ -63,34 +63,22 @@
         "60"
     ],
     "nozzle_temperature": [
-        "235"
-    ],
-    "nozzle_temperature_BRASS": [
-        "235"
-    ],
-    "nozzle_temperature_HS": [
-        "240"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "240"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "240"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "245"
-    ],
-    "nozzle_temperature_range_high": [
         "220"
     ],
-    "nozzle_temperature_range_high_HS": [
-        "240"
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "230"
     ],
     "nozzle_temperature_range_low": [
         "200"
-    ],
-    "nozzle_temperature_range_low_HS": [
-        "190"
     ],
     "slow_down_layer_time_HS": [
         "12"

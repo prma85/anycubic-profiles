@@ -2,6 +2,12 @@
     "cool_plate_temp_initial_layer": [
         "40"
     ],
+    "fan_max_speed": [
+        "80"
+    ],
+    "fan_min_speed": [
+        "60"
+    ],
     "filament_max_volumetric_speed": [
         "10"
     ],

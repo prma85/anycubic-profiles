@@ -6,7 +6,7 @@
         "100"
     ],
     "cool_plate_temp_initial_layer": [
-        "45"
+        "40"
     ],
     "during_print_exhaust_fan_speed": [
         "100"
@@ -14,8 +14,8 @@
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "filament_density": [
-        "1.24"
+    "filament_cost": [
+        "16"
     ],
     "filament_deretraction_speed": [
         "0"
@@ -38,6 +38,12 @@
     "filament_retraction_speed": [
         "40"
     ],
+    "filament_settings_id": [
+        "EconoFil PLA @AC KX 0.4mm"
+    ],
+    "filament_vendor": [
+        "Generic"
+    ],
     "filament_wipe": [
         "1"
     ],
@@ -47,6 +53,10 @@
     "filament_z_hop": [
         "0.4"
     ],
+    "from": "User",
+    "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "EconoFil PLA @AC KX 0.4mm",
     "nozzle_temperature_HS": [
         "210"
     ],
@@ -68,18 +78,5 @@
     "temperature_vitrification": [
         "55"
     ],
-    "filament_settings_id": [
-        "EconoFil PLA @AC KX 0.4mm"
-    ],
-    "filament_vendor": [
-        "Generic"
-    ],
-    "filament_cost": [
-        "10"
-    ],
-    "from": "User",
-    "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",
-    "is_custom_defined": "0",
-    "name": "EconoFil PLA @AC KX 0.4mm",
     "version": "1.3.2602.11"
 }
