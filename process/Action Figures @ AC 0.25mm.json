@@ -82,7 +82,7 @@
     "travel_speed": "400",
     "tree_support_angle_slow": "45",
     "tree_support_branch_angle_organic": "55",
-    "tree_support_branch_diameter_angle": "10",
+    "tree_support_branch_diameter_angle": "5",
     "tree_support_tip_diameter": "1.3",
     "tree_support_top_rate": "20%",
     "version": "2.3.0.03",

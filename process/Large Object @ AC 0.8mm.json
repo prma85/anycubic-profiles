@@ -42,7 +42,7 @@
     "support_bottom_z_distance": "0.16",
     "support_interface_bottom_layers": "2",
     "support_interface_pattern": "rectilinear_interlaced",
-    "support_interface_spacing": "0.2",
+    "support_interface_spacing": "0.5",
     "support_interface_speed": "50",
     "support_interface_top_layers": "3",
     "support_object_xy_distance": "0.55",
