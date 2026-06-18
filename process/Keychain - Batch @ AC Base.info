@@ -1,3 +1,5 @@
-sync_info = create
-user_id =
+sync_info = update
+user_id = 
 setting_id = Keychain - Batch @ AC Base
+base_id = GP004
+updated_time = 1781065911

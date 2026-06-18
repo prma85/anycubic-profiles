@@ -1,11 +1,12 @@
 {
-    "bridge_flow": "1.4",
+    "bridge_flow": "1.2",
     "bridge_speed": "20",
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",
         "Anycubic Kobra S1 0.4 nozzle - Improved",
         "Anycubic Kobra X 0.4 nozzle"
     ],
+    "default_acceleration": "6500",
     "enable_support": "1",
     "from": "User",
     "infill_combination": "1",
@@ -26,7 +27,7 @@
     "reduce_infill_retraction": "0",
     "sparse_infill_pattern": "crosshatch",
     "support_base_pattern": "rectilinear",
-    "support_bottom_z_distance": "0.31",
+    "support_bottom_z_distance": "0.20",
     "support_interface_bottom_layers": "2",
     "support_interface_pattern": "rectilinear_interlaced",
     "support_interface_spacing": "0.5",
@@ -34,7 +35,7 @@
     "support_interface_top_layers": "3",
     "support_object_xy_distance": "0.7",
     "support_speed": "120",
-    "support_top_z_distance": "0.31",
+    "support_top_z_distance": "0.22",
     "travel_speed": "400",
     "tree_support_angle_slow": "45",
     "tree_support_branch_angle_organic": "45",

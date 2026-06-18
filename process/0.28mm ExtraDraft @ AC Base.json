@@ -1,5 +1,5 @@
 {
-    "bridge_flow": "1.4",
+    "bridge_flow": "1.2",
     "bridge_no_support": "1",
     "bridge_speed": "20",
     "brim_type": "no_brim",
@@ -8,6 +8,7 @@
         "Anycubic Kobra S1 0.4 nozzle - Improved",
         "Anycubic Kobra X 0.4 nozzle"
     ],
+    "default_acceleration": "6500",
     "enable_support": "1",
     "from": "User",
     "gap_infill_speed": "250",
@@ -36,7 +37,7 @@
     "sparse_infill_pattern": "crosshatch",
     "sparse_infill_speed": "350",
     "support_base_pattern": "rectilinear",
-    "support_bottom_z_distance": "0.36",
+    "support_bottom_z_distance": "0.20",
     "support_interface_bottom_layers": "2",
     "support_interface_pattern": "rectilinear_interlaced",
     "support_interface_spacing": "0.5",
@@ -44,7 +45,7 @@
     "support_interface_top_layers": "3",
     "support_object_xy_distance": "0.7",
     "support_speed": "120",
-    "support_top_z_distance": "0.36",
+    "support_top_z_distance": "0.22",
     "top_shell_layers": "3",
     "top_surface_speed": "150",
     "travel_speed": "400",

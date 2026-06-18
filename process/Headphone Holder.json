@@ -1,6 +1,6 @@
 {
     "bottom_shell_layers": "5",
-    "bridge_flow": "1.4",
+    "bridge_flow": "1.2",
     "bridge_no_support": "1",
     "bridge_speed": "20",
     "brim_type": "no_brim",
