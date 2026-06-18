@@ -188,9 +188,39 @@ When creating a KX profile based on a KS1 profile:
 ## Process Profile Rules
 
 - `compatible_printers` for 0.4mm base: include Kobra S1 (plain, Brass, Hardened Steel) and Kobra X
-- 0.6mm safety rule: `support_bottom_z_distance` ≥ effective layer height
 - HQ vs Optimal (0.25mm): must differ in exactly 8 keys — see `SKILLS.md` Section 9
 - PETG process variants intentionally diverge in bridge and support — do not force to match regular
+
+### Support Z distances
+
+- `support_bottom_z_distance` = layer_height, capped at **0.20mm**
+- `support_top_z_distance` (HQ profiles) = same as bottom
+- `support_top_z_distance` (Optimal/SD/Draft profiles) = bottom + 0.02mm (max 0.22mm)
+
+| Layer | Bottom | Top HQ | Top Optimal/Draft |
+|---|---|---|---|
+| 0.06mm | 0.06 | 0.06 | 0.08 |
+| 0.08mm | 0.08 | 0.08 | 0.10 |
+| 0.10mm | 0.10 | 0.10 | 0.12 |
+| 0.12mm | 0.12 | 0.12 | 0.14 |
+| 0.14mm | 0.14 | 0.14 | 0.16 |
+| 0.16mm | 0.16 | 0.16 | 0.18 |
+| 0.18mm | 0.18 | 0.18 | 0.20 |
+| 0.20mm | 0.20 | 0.20 | 0.22 |
+| 0.24mm+ | 0.20 (cap) | 0.20 (cap) | 0.22 (cap) |
+
+PETG profiles deviate intentionally (larger gaps to prevent fusing) — do not force to match PLA.
+
+### Acceleration
+
+- **HQ** profiles: `default_acceleration: 4000`
+- **Optimal / SD / Draft** profiles: `default_acceleration: 6500` — always set explicitly; system Standard parent inherits 10000 which exceeds Kobra X limit
+- **HQ** profiles: `smooth_coefficient: 30` — reduces ringing from abrupt speed changes; system default 80 is too loose for slow HQ printing
+
+### Bridge flow
+
+- `bridge_flow: 1.2` on all PLA/TPU/ABS profiles — 1.4 caused failures on some filaments
+- PETG profiles use `bridge_flow: 0.94` — do not change
 
 ---
 
@@ -256,5 +286,9 @@ After any change:
 - [ ] Hardened Steel temps correct
 - [ ] `nozzle_temperature_initial_layer_HS` ≤ `nozzle_temperature_range_high`
 - [ ] Layer height ≤ 0.75 × nozzle diameter
-- [ ] For 0.6mm process: `support_bottom_z_distance` ≥ layer height
+- [ ] `support_bottom_z_distance` = layer_height (capped 0.20)
+- [ ] `support_top_z_distance` = HQ: same as bottom; Optimal/Draft: bottom + 0.02
+- [ ] `default_acceleration`: HQ = 4000, Optimal/Draft = 6500 (never rely on inherited 10000)
+- [ ] `smooth_coefficient: 30` present in all HQ profiles
+- [ ] `bridge_flow: 1.2` on all non-PETG profiles
 - [ ] For matte PLA: `close_fan_the_first_x_layers=4`, `full_fan_speed_layer=8`, `filament_z_hop=0.6`

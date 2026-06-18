@@ -150,29 +150,42 @@ These are explicit in every non-excluded profile (not relying on system defaults
 | `seam_gap` | `10%` | Consistent seam closure across all profiles |
 | `wipe_on_loops` | `1` | Wipes nozzle tip before each outer wall (excluded: 0.06/0.08mm fine detail) |
 
-## Support Settings (standardised 2026-05-27)
+## Support Settings (updated 2026-06-17)
 
 All support-enabled profiles (non-TPU, non-vase, non-flexi) use:
 
 | Setting | Value | Rationale |
 |---|---|---|
 | `support_interface_top_layers` | `3` | Dense separation surface for clean removal |
-| `support_interface_bottom_layers` | `3` | Match top layers — explicit, not -1 |
-| `support_interface_spacing` | `0.2mm` | Dense (vs system default 0.5mm) — flat peelable surface |
+| `support_interface_bottom_layers` | `2` or `3` | Match top layers — explicit, not -1 |
+| `support_interface_spacing` | `0.5mm` | Standard spacing; 0.2mm was too dense and caused adhesion |
 | `support_interface_pattern` | `rectilinear_interlaced` | Alternating perpendicular layers, no gaps |
 | `support_interface_speed` | `40mm/s` (0.4mm), `45` (0.6mm), `50` (0.8mm) | Slow = flat interface, no curl; primary anti-adhesion mechanism |
 | `support_speed` | `120` (0.4mm), `150` (0.6mm), `180` (0.8mm) | Body scaffolding can be fast |
+| `bridge_flow` | `1.2` | Tested safe across all filament types (1.4 caused failures on some materials) |
 
-**Z-distance by layer height** (fixed values, NOT proportional to layer):
+**Z-distance rule** (proportional to layer height, capped):
 
-| Layer height | `support_top_z_distance` | `support_bottom_z_distance` |
-|---|---|---|
-| 0.06–0.10mm | 0.10 | 0.10 |
-| 0.12–0.16mm | 0.14 | 0.14 |
-| 0.18–0.28mm | 0.16 | 0.16 |
-| 0.30mm+ | 0.20 | 0.16 |
+- `support_bottom_z_distance` = layer_height, capped at **0.20mm**
+- `support_top_z_distance`:
+  - **HQ profiles** = same as bottom (= layer_height, capped 0.20)
+  - **Optimal / SD / Draft profiles** = bottom + 0.02mm
 
-Setting `top_z = layer_height` is wrong — it creates gaps up to 0.50mm at large layer heights, causing sagging before bridging can start. PETG profiles keep their larger gaps (0.24–0.30mm) to prevent PETG fusing to the part.
+| Layer | Bottom (all) | Top HQ | Top Optimal/Draft |
+|---|---|---|---|
+| 0.06mm | 0.06 | 0.06 | 0.08 |
+| 0.08mm | 0.08 | 0.08 | 0.10 |
+| 0.10mm | 0.10 | 0.10 | 0.12 |
+| 0.12mm | 0.12 | 0.12 | 0.14 |
+| 0.14mm | 0.14 | 0.14 | 0.16 |
+| 0.16mm | 0.16 | 0.16 | 0.18 |
+| 0.18mm (0.6mm nozzle) | 0.18 | 0.18 | 0.20 |
+| 0.20mm | 0.20 | 0.20 | 0.22 |
+| 0.24mm+ | **0.20** (capped) | **0.20** | **0.22** |
+
+Rationale: bottom_z = layer_height means the support contacts at exactly one layer thickness — the minimum that prevents bonding while ensuring the first bridging layer lands on a stable surface. The +0.02 on top for Optimal/Draft accounts for slightly higher print speeds that can cause minor drooping.
+
+PETG profiles intentionally deviate — they need larger z-gaps (0.16–0.20) to prevent PETG fusing to the support. Do not force PETG to match PLA values.
 
 ## HQ vs Optimal vs Draft
 
@@ -181,10 +194,15 @@ Setting `top_z = layer_height` is wrong — it creates gaps up to 0.50mm at larg
 `inner_wall_acceleration`, `inner_wall_speed`,
 `gap_infill_speed`, `internal_solid_infill_speed`, `sparse_infill_speed`
 
+**Acceleration rules:**
+- **HQ profiles** — `default_acceleration: 4000`, `outer_wall_acceleration: 2000`. Low to avoid ringing at slow outer wall speeds.
+- **Optimal / SD / Draft profiles** — `default_acceleration: 6500`. This is the Kobra X maximum; the S1 can go higher but profiles are shared, so 6500 is the ceiling. System Standard parents default to 10000 — always override explicitly.
+- `smooth_coefficient: 30` on all HQ profiles (system default 80 causes visible layer marks at speed transitions on slow HQ prints; 30 ramps speed changes more gradually).
+
 **PETG family:**
 - **HQ** — quality/slow: outer 60–80, inner 70–150, `top_surface_speed` 45–60. Conservative acceleration (2000 outer, 4000 default).
-- **Optimal** — fast, MVS-capped: outer 150, inner 200, infill 300. `default_acceleration: 6000`. With regular PETG (MVS 10–12) the slicer auto-caps speeds to ~120mm/s. With Rapid PETG (MVS 18–21) speeds are fully unleashed.
-- **Draft** (0.24mm+) — max throughput: outer 200, inner 300–350. `default_acceleration: 8000`. Always MVS-capped regardless of filament.
+- **Optimal** — fast, MVS-capped: outer 150, inner 200, infill 300. `default_acceleration: 6500`. With regular PETG (MVS 10–12) the slicer auto-caps speeds to ~120mm/s. With Rapid PETG (MVS 18–21) speeds are fully unleashed.
+- **Draft** (0.24mm+) — max throughput: outer 200, inner 300–350. `default_acceleration: 6500`. Always MVS-capped regardless of filament.
 
 **ABS/ASA family:**
 - `0.20mm ABS-ASA @ AC Base` — slow speeds (outer 70, inner 110), jerk 6, accel 3500, 4 walls, 5 shells. KS1 only.
@@ -209,8 +227,9 @@ Before accepting any new or edited process profile:
 - `print_settings_id` is unique and coherent
 - `inherits` points to an existing parent
 - `compatible_printers` covers both S1 and X for that nozzle size
-- `support_top_z_distance` follows the layer-height table above, not `= layer_height`
-- `support_interface_spacing` is `0.2` (or intentional exception documented)
+- `support_bottom_z_distance` = layer_height (capped 0.20)
+- `support_top_z_distance` = layer_height for HQ, layer_height+0.02 for Optimal/Draft (both capped 0.20/0.22)
+- `support_interface_spacing` is `0.5` (standard; 0.2mm was too dense)
 - `reduce_crossing_wall: 1`, `reduce_infill_retraction: 0`, `max_travel_detour_distance: 300` present
 - `seam_gap: 10%` and `wipe_on_loops: 1` present (except 0.06/0.08mm fine detail profiles)
 - Matching `.info` file exists with aligned `setting_id`
