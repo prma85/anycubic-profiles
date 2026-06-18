@@ -194,20 +194,24 @@ When creating a KX profile based on a KS1 profile:
 ### Support Z distances
 
 - `support_bottom_z_distance` = layer_height, capped at **0.20mm**
-- `support_top_z_distance` (HQ profiles) = same as bottom
-- `support_top_z_distance` (Optimal/SD/Draft profiles) = bottom + 0.02mm (max 0.22mm)
+- `support_top_z_distance`:
+  - **HQ profiles** = layer_height + 0.02mm
+  - **Optimal / SD / Draft profiles** = layer_height + 0.05mm, capped at:
+    - 0.30mm for 0.4mm and 0.25mm nozzle
+    - 0.34mm for 0.6mm nozzle
+    - 0.36mm for 0.8mm nozzle
 
-| Layer | Bottom | Top HQ | Top Optimal/Draft |
+| Layer | Bottom | Top HQ | Top Optimal/Draft (0.4mm) |
 |---|---|---|---|
-| 0.06mm | 0.06 | 0.06 | 0.08 |
-| 0.08mm | 0.08 | 0.08 | 0.10 |
-| 0.10mm | 0.10 | 0.10 | 0.12 |
-| 0.12mm | 0.12 | 0.12 | 0.14 |
-| 0.14mm | 0.14 | 0.14 | 0.16 |
-| 0.16mm | 0.16 | 0.16 | 0.18 |
-| 0.18mm | 0.18 | 0.18 | 0.20 |
-| 0.20mm | 0.20 | 0.20 | 0.22 |
-| 0.24mm+ | 0.20 (cap) | 0.20 (cap) | 0.22 (cap) |
+| 0.06mm | 0.06 | 0.08 | 0.11 |
+| 0.08mm | 0.08 | 0.10 | 0.13 |
+| 0.10mm | 0.10 | 0.12 | 0.15 |
+| 0.12mm | 0.12 | 0.14 | 0.17 |
+| 0.14mm | 0.14 | 0.16 | 0.19 |
+| 0.16mm | 0.16 | 0.18 | 0.21 |
+| 0.18mm | 0.18 | 0.20 | 0.23 |
+| 0.20mm | 0.20 | 0.22 | 0.25 |
+| 0.24mm+ | 0.20 (cap) | 0.26 | 0.29–0.30 (cap) |
 
 PETG profiles deviate intentionally (larger gaps to prevent fusing) — do not force to match PLA.
 
@@ -287,7 +291,7 @@ After any change:
 - [ ] `nozzle_temperature_initial_layer_HS` ≤ `nozzle_temperature_range_high`
 - [ ] Layer height ≤ 0.75 × nozzle diameter
 - [ ] `support_bottom_z_distance` = layer_height (capped 0.20)
-- [ ] `support_top_z_distance` = HQ: same as bottom; Optimal/Draft: bottom + 0.02
+- [ ] `support_top_z_distance` = HQ: layer+0.02; Optimal/Draft: layer+0.05 (cap 0.30/0.34/0.36 by nozzle)
 - [ ] `default_acceleration`: HQ = 4000, Optimal/Draft = 6500 (never rely on inherited 10000)
 - [ ] `smooth_coefficient: 30` present in all HQ profiles
 - [ ] `bridge_flow: 1.2` on all non-PETG profiles

@@ -168,24 +168,28 @@ All support-enabled profiles (non-TPU, non-vase, non-flexi) use:
 
 - `support_bottom_z_distance` = layer_height, capped at **0.20mm**
 - `support_top_z_distance`:
-  - **HQ profiles** = same as bottom (= layer_height, capped 0.20)
-  - **Optimal / SD / Draft profiles** = bottom + 0.02mm
+  - **HQ profiles** = layer_height + 0.02mm
+  - **Optimal / SD / Draft profiles** = layer_height + 0.05mm, capped at 0.30mm (0.4mm/0.25mm nozzle), 0.34mm (0.6mm nozzle), 0.36mm (0.8mm nozzle)
 
-| Layer | Bottom (all) | Top HQ | Top Optimal/Draft |
-|---|---|---|---|
-| 0.06mm | 0.06 | 0.06 | 0.08 |
-| 0.08mm | 0.08 | 0.08 | 0.10 |
-| 0.10mm | 0.10 | 0.10 | 0.12 |
-| 0.12mm | 0.12 | 0.12 | 0.14 |
-| 0.14mm | 0.14 | 0.14 | 0.16 |
-| 0.16mm | 0.16 | 0.16 | 0.18 |
-| 0.18mm (0.6mm nozzle) | 0.18 | 0.18 | 0.20 |
-| 0.20mm | 0.20 | 0.20 | 0.22 |
-| 0.24mm+ | **0.20** (capped) | **0.20** | **0.22** |
+| Layer | Bottom (all) | Top HQ | Top Optimal/Draft (0.4mm) | Top Optimal/Draft (0.6mm) |
+|---|---|---|---|---|
+| 0.06mm | 0.06 | 0.08 | 0.11 | — |
+| 0.08mm | 0.08 | 0.10 | 0.13 | — |
+| 0.10mm | 0.10 | 0.12 | 0.15 | — |
+| 0.12mm | 0.12 | 0.14 | 0.17 | — |
+| 0.14mm | 0.14 | 0.16 | 0.19 | — |
+| 0.16mm | 0.16 | 0.18 | 0.21 | — |
+| 0.18mm | 0.18 | 0.20 | — | 0.23 |
+| 0.20mm | 0.20 | 0.22 | 0.25 | 0.25 |
+| 0.24mm | **0.20** (cap) | 0.26 | 0.29 | 0.29 |
+| 0.28mm | **0.20** (cap) | 0.30 (cap) | 0.30 (cap) | 0.33 |
+| 0.30mm | **0.20** (cap) | 0.32 | — | **0.34** (cap) |
+| 0.32mm | **0.20** (cap) | 0.34 | — | **0.34** (cap) / 0.36 (0.8mm) |
+| 0.38mm | **0.20** (cap) | 0.40 | — | **0.34** (cap) |
 
-Rationale: bottom_z = layer_height means the support contacts at exactly one layer thickness — the minimum that prevents bonding while ensuring the first bridging layer lands on a stable surface. The +0.02 on top for Optimal/Draft accounts for slightly higher print speeds that can cause minor drooping.
+Rationale: bottom_z = layer_height = minimum distance that prevents bonding while keeping the first bridging layer stable. HQ gets a small +0.02mm top gap for clean surface quality. Optimal/Draft gets +0.05mm for easier removal (faster prints leave slightly rougher support tops).
 
-PETG profiles intentionally deviate — they need larger z-gaps (0.16–0.20) to prevent PETG fusing to the support. Do not force PETG to match PLA values.
+PETG profiles intentionally deviate — they need larger z-gaps to prevent PETG fusing to the support. Do not force PETG to match PLA values.
 
 ## HQ vs Optimal vs Draft
 
