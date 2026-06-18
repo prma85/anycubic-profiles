@@ -1,0 +1,14 @@
+{
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Improved",
+        "Anycubic Kobra X 0.4 nozzle"
+    ],
+    "from": "User",
+    "inherits": "0.16mm Optimal @ AC Base",
+    "name": "Helmet @ AC Base",
+    "print_settings_id": "Helmet @ AC Base",
+    "seam_position": "rear",
+    "version": "1.3.2503.03",
+    "wall_loops": "4"
+}
