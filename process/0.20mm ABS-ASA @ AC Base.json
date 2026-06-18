@@ -54,7 +54,7 @@
     "support_object_xy_distance": "0.7",
     "support_on_build_plate_only": "1",
     "support_speed": "120",
-    "support_top_z_distance": "0.22",
+    "support_top_z_distance": "0.25",
     "top_bottom_infill_wall_overlap": "20%",
     "top_shell_layers": "5",
     "top_shell_thickness": "1.0",

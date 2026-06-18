@@ -47,7 +47,7 @@
     "support_object_first_layer_gap": "0.5",
     "support_object_xy_distance": "0.7",
     "support_speed": "120",
-    "support_top_z_distance": "0.14",
+    "support_top_z_distance": "0.17",
     "top_shell_layers": "3",
     "travel_speed": "400",
     "tree_support_angle_slow": "45",

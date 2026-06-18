@@ -46,7 +46,7 @@
     "support_on_build_plate_only": "1",
     "support_remove_small_overhang": "1",
     "support_speed": "120",
-    "support_top_z_distance": "0.10",
+    "support_top_z_distance": "0.13",
     "top_shell_layers": "3",
     "top_surface_speed": "150",
     "travel_speed": "400",

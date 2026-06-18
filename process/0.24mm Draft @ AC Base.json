@@ -35,7 +35,7 @@
     "support_interface_top_layers": "3",
     "support_object_xy_distance": "0.7",
     "support_speed": "120",
-    "support_top_z_distance": "0.22",
+    "support_top_z_distance": "0.29",
     "travel_speed": "400",
     "tree_support_angle_slow": "45",
     "tree_support_branch_angle_organic": "45",

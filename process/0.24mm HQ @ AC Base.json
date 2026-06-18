@@ -45,7 +45,7 @@
     "support_interface_top_layers": "3",
     "support_object_xy_distance": "0.7",
     "support_speed": "120",
-    "support_top_z_distance": "0.20",
+    "support_top_z_distance": "0.26",
     "top_bottom_infill_wall_overlap": "20%",
     "travel_acceleration": "5000",
     "travel_speed": "400",
