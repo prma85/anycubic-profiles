@@ -14,9 +14,6 @@
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "fan_max_speed": [
-        "100"
-    ],
     "fan_min_speed": [
         "100"
     ],
@@ -50,9 +47,6 @@
     "filament_retraction_minimum_travel": [
         "1"
     ],
-    "filament_retraction_speed": [
-        "30"
-    ],
     "filament_wipe": [
         "1"
     ],
@@ -70,9 +64,6 @@
     ],
     "nozzle_temperature": [
         "225"
-    ],
-    "nozzle_temperature_HS": [
-        "230"
     ],
     "nozzle_temperature_initial_layer": [
         "225"

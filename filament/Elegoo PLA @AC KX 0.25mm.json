@@ -62,23 +62,11 @@
     "filament_z_hop": [
         "0.4"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
     "nozzle_temperature": [
         "215"
     ],
-    "nozzle_temperature_HS": [
-        "220"
-    ],
     "nozzle_temperature_initial_layer": [
         "215"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "220"
     ],
     "nozzle_temperature_range_high": [
         "220"
@@ -103,12 +91,6 @@
     ],
     "temperature_vitrification": [
         "55"
-    ],
-    "textured_plate_temp": [
-        "60"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "60"
     ],
     "filament_settings_id": [
         "Elegoo PLA @AC KX 0.25mm"

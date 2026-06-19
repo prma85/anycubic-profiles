@@ -2,26 +2,14 @@
     "activate_chamber_temp_control": [
         "1"
     ],
-    "close_fan_the_first_x_layers": [
-        "3"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.8 nozzle"
-    ],
-    "complete_print_exhaust_fan_speed": [
-        "80"
     ],
     "cool_plate_temp": [
         "55"
     ],
     "cool_plate_temp_initial_layer": [
         "60"
-    ],
-    "during_print_exhaust_fan_speed": [
-        "60"
-    ],
-    "fan_cooling_layer_time": [
-        "20"
     ],
     "fan_max_speed": [
         "100"

@@ -74,12 +74,6 @@
     "full_fan_speed_layer": [
         "8"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
     "nozzle_temperature": [
         "205"
     ],
@@ -106,12 +100,6 @@
     ],
     "temperature_vitrification": [
         "45"
-    ],
-    "textured_plate_temp": [
-        "60"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "60"
     ],
     "filament_settings_id": [
         "IBoss Matte PLA+ @AC KX 0.25mm"

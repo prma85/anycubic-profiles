@@ -11,9 +11,6 @@
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "filament_density": [
-        "1.24"
-    ],
     "filament_deretraction_speed": [
         "25"
     ],
@@ -47,12 +44,6 @@
     "filament_z_hop": [
         "0.4"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
     "nozzle_temperature_HS": [
         "205"
     ],
@@ -82,12 +73,6 @@
     ],
     "temperature_vitrification": [
         "45"
-    ],
-    "textured_plate_temp": [
-        "60"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "60"
     ],
     "filament_settings_id": [
         "UJoyBio PLA+ @AC KX 0.4mm"

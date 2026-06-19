@@ -1,10 +1,4 @@
 {
-    "activate_air_filtration": [
-        "0"
-    ],
-    "adaptive_pressure_advance_model": [
-        "0,0,0\n0,0,0"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.8 nozzle"
     ],
@@ -16,9 +10,6 @@
     ],
     "enable_pressure_advance": [
         "1"
-    ],
-    "fan_max_speed": [
-        "100"
     ],
     "fan_min_speed": [
         "100"

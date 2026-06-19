@@ -20,9 +20,6 @@
     "fan_max_speed": [
         "80"
     ],
-    "fan_min_speed": [
-        "80"
-    ],
     "filament_cooling_final_speed": [
         "3.4"
     ],

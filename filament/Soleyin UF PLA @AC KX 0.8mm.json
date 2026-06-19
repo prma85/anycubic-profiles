@@ -14,13 +14,7 @@
     "during_print_exhaust_fan_speed": [
         "50"
     ],
-    "fan_cooling_layer_time": [
-        "100"
-    ],
     "fan_cooling_layer_time_HS": [
-        "100"
-    ],
-    "fan_max_speed": [
         "100"
     ],
     "fan_min_speed": [
@@ -65,12 +59,6 @@
     "filament_z_hop": [
         "0.4"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
     "nozzle_temperature": [
         "230"
     ],
@@ -98,20 +86,11 @@
     "pressure_advance": [
         "0.007"
     ],
-    "slow_down_layer_time": [
-        "8"
-    ],
     "slow_down_layer_time_HS": [
         "12"
     ],
     "temperature_vitrification": [
         "55"
-    ],
-    "textured_plate_temp": [
-        "60"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "60"
     ],
     "filament_settings_id": [
         "Soleyin UF PLA @AC KX 0.8mm"

@@ -8,9 +8,6 @@
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "filament_density": [
-        "1.24"
-    ],
     "filament_deretraction_speed": [
         "nil"
     ],
@@ -59,9 +56,6 @@
     "filament_z_hop_types": [
         "nil"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
     "hot_plate_temp_initial_layer": [
         "65"
     ],
@@ -79,9 +73,6 @@
     ],
     "temperature_vitrification": [
         "63"
-    ],
-    "textured_plate_temp": [
-        "60"
     ],
     "textured_plate_temp_initial_layer": [
         "65"

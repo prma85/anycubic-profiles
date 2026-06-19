@@ -5,19 +5,10 @@
     "compatible_printers": [
         "Anycubic Kobra X 0.6 nozzle"
     ],
-    "complete_print_exhaust_fan_speed": [
-        "80"
-    ],
     "cool_plate_temp_initial_layer": [
         "45"
     ],
-    "during_print_exhaust_fan_speed": [
-        "60"
-    ],
     "fan_cooling_layer_time_HS": [
-        "100"
-    ],
-    "fan_max_speed": [
         "100"
     ],
     "fan_min_speed": [
@@ -62,9 +53,6 @@
     "filament_z_hop": [
         "0.4"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
     "hot_plate_temp_initial_layer": [
         "65"
     ],
@@ -100,9 +88,6 @@
     ],
     "temperature_vitrification": [
         "70"
-    ],
-    "textured_plate_temp": [
-        "60"
     ],
     "textured_plate_temp_initial_layer": [
         "65"

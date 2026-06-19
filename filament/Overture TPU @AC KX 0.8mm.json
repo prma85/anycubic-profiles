@@ -1,10 +1,4 @@
 {
-    "activate_air_filtration": [
-        "0"
-    ],
-    "adaptive_pressure_advance_model": [
-        "0,0,0\n0,0,0"
-    ],
     "chamber_temperature": [
         "35"
     ],
@@ -30,9 +24,6 @@
         "30"
     ],
     "fan_cooling_layer_time_HS": [
-        "100"
-    ],
-    "fan_max_speed": [
         "100"
     ],
     "fan_max_speed_HS": [
@@ -109,9 +100,6 @@
     ],
     "hot_plate_temp_initial_layer": [
         "35"
-    ],
-    "internal_bridge_fan_speed": [
-        "-1"
     ],
     "nozzle_temperature": [
         "260"

@@ -11,9 +11,6 @@
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "fan_max_speed": [
-        "100"
-    ],
     "fan_min_speed": [
         "100"
     ],
@@ -31,9 +28,6 @@
     ],
     "filament_retraction_length": [
         "1.2"
-    ],
-    "filament_retraction_speed": [
-        "30"
     ],
     "hot_plate_temp": [
         "60"

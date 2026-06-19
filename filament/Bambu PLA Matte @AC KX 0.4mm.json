@@ -20,9 +20,6 @@
     "fan_min_speed": [
         "60"
     ],
-    "filament_density": [
-        "1.24"
-    ],
     "filament_max_volumetric_speed": [
         "14"
     ],

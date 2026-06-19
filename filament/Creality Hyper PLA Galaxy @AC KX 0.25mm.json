@@ -1,7 +1,4 @@
 {
-    "adaptive_pressure_advance_model": [
-        "0,0,0\n0,0,0"
-    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.25 nozzle"
     ],
@@ -16,9 +13,6 @@
     ],
     "fan_min_speed": [
         "0"
-    ],
-    "filament_density": [
-        "1.24"
     ],
     "filament_deretraction_speed": [
         "25"
@@ -62,17 +56,11 @@
     "filament_wipe": [
         "1"
     ],
-    "filament_wipe_distance": [
-        "2"
-    ],
     "filament_z_hop": [
         "0.6"
     ],
     "filament_z_hop_types": [
         "Slope Lift"
-    ],
-    "hot_plate_temp": [
-        "60"
     ],
     "hot_plate_temp_initial_layer": [
         "65"
@@ -103,9 +91,6 @@
     ],
     "temperature_vitrification": [
         "70"
-    ],
-    "textured_plate_temp": [
-        "60"
     ],
     "textured_plate_temp_initial_layer": [
         "65"

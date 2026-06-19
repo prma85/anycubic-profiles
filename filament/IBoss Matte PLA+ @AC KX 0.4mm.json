@@ -11,9 +11,6 @@
     "during_print_exhaust_fan_speed": [
         "100"
     ],
-    "filament_density": [
-        "1.24"
-    ],
     "filament_deretraction_speed": [
         "25"
     ],
@@ -65,12 +62,6 @@
     "full_fan_speed_layer": [
         "8"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
     "slow_down_layer_time": [
         "8"
     ],
@@ -79,12 +70,6 @@
     ],
     "temperature_vitrification": [
         "45"
-    ],
-    "textured_plate_temp": [
-        "60"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "60"
     ],
     "filament_settings_id": [
         "IBoss Matte PLA+ @AC KX 0.4mm"

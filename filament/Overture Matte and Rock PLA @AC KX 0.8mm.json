@@ -11,9 +11,6 @@
     "cool_plate_temp_initial_layer": [
         "45"
     ],
-    "fan_max_speed": [
-        "100"
-    ],
     "fan_min_speed": [
         "100"
     ],
@@ -74,12 +71,6 @@
     "full_fan_speed_layer": [
         "8"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
     "nozzle_temperature": [
         "220"
     ],
@@ -106,12 +97,6 @@
     ],
     "temperature_vitrification": [
         "75"
-    ],
-    "textured_plate_temp": [
-        "60"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "60"
     ],
     "filament_settings_id": [
         "Overture Matte and Rock PLA @AC KX 0.8mm"

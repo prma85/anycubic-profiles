@@ -1,15 +1,9 @@
 {
-    "adaptive_pressure_advance_model": [
-        "0,0,0\n0,0,0"
-    ],
     "chamber_temperature": [
         "35"
     ],
     "compatible_printers": [
         "Anycubic Kobra X 0.6 nozzle"
-    ],
-    "complete_print_exhaust_fan_speed": [
-        "80"
     ],
     "cool_plate_temp": [
         "0"
@@ -20,9 +14,6 @@
     "default_filament_colour": [
         "#0F80FF"
     ],
-    "during_print_exhaust_fan_speed": [
-        "60"
-    ],
     "enable_pressure_advance": [
         "1"
     ],
@@ -32,13 +23,7 @@
     "eng_plate_temp_initial_layer": [
         "30"
     ],
-    "fan_cooling_layer_time": [
-        "100"
-    ],
     "fan_cooling_layer_time_HS": [
-        "100"
-    ],
-    "fan_max_speed": [
         "100"
     ],
     "fan_max_speed_HS": [

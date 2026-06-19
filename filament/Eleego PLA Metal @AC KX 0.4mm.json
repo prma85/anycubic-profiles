@@ -17,9 +17,6 @@
     "fan_min_speed": [
         "100"
     ],
-    "filament_density": [
-        "1.24"
-    ],
     "filament_deretraction_speed": [
         "25"
     ],
@@ -40,9 +37,6 @@
     ],
     "filament_wipe_distance": [
         "nil"
-    ],
-    "hot_plate_temp": [
-        "60"
     ],
     "hot_plate_temp_initial_layer": [
         "65"
@@ -67,9 +61,6 @@
     ],
     "temperature_vitrification": [
         "55"
-    ],
-    "textured_plate_temp": [
-        "60"
     ],
     "textured_plate_temp_initial_layer": [
         "65"

@@ -59,9 +59,6 @@
     "filament_z_hop_types": [
         "nil"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
     "hot_plate_temp_initial_layer": [
         "65"
     ],
@@ -82,9 +79,6 @@
     ],
     "temperature_vitrification": [
         "63"
-    ],
-    "textured_plate_temp": [
-        "60"
     ],
     "textured_plate_temp_initial_layer": [
         "65"

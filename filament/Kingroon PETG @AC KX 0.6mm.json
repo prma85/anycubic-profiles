@@ -5,14 +5,8 @@
     "nozzle_temperature": [
         "250"
     ],
-    "nozzle_temperature_HS": [
-        "255"
-    ],
     "nozzle_temperature_initial_layer": [
         "250"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "255"
     ],
     "filament_settings_id": [
         "Kingroon PETG @AC KX 0.6mm"

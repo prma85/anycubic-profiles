@@ -5,22 +5,13 @@
     "compatible_printers": [
         "Anycubic Kobra X 0.25 nozzle"
     ],
-    "complete_print_exhaust_fan_speed": [
-        "80"
-    ],
     "cool_plate_temp_initial_layer": [
         "45"
-    ],
-    "during_print_exhaust_fan_speed": [
-        "60"
     ],
     "fan_cooling_layer_time_HS": [
         "100"
     ],
     "fan_max_speed": [
-        "80"
-    ],
-    "fan_min_speed": [
         "80"
     ],
     "filament_change_length": [
@@ -62,23 +53,14 @@
     "filament_z_hop": [
         "0.4"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
     "hot_plate_temp_initial_layer": [
         "65"
     ],
     "nozzle_temperature": [
         "215"
     ],
-    "nozzle_temperature_HS": [
-        "220"
-    ],
     "nozzle_temperature_initial_layer": [
         "215"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "220"
     ],
     "nozzle_temperature_range_high": [
         "245"
@@ -100,9 +82,6 @@
     ],
     "temperature_vitrification": [
         "70"
-    ],
-    "textured_plate_temp": [
-        "60"
     ],
     "textured_plate_temp_initial_layer": [
         "65"

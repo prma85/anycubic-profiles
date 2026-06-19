@@ -17,9 +17,6 @@
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "fan_max_speed": [
-        "100"
-    ],
     "fan_min_speed": [
         "100"
     ],
@@ -62,12 +59,6 @@
     "filament_z_hop": [
         "0.4"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
     "nozzle_temperature": [
         "215"
     ],
@@ -100,9 +91,6 @@
     ],
     "temperature_vitrification": [
         "45"
-    ],
-    "textured_plate_temp": [
-        "60"
     ],
     "textured_plate_temp_initial_layer": [
         "65"

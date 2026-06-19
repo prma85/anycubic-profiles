@@ -20,9 +20,6 @@
     "fan_max_speed": [
         "80"
     ],
-    "fan_min_speed": [
-        "80"
-    ],
     "filament_change_length": [
         "10"
     ],
@@ -46,9 +43,6 @@
     ],
     "filament_wipe_distance": [
         "nil"
-    ],
-    "hot_plate_temp": [
-        "60"
     ],
     "hot_plate_temp_initial_layer": [
         "65"
@@ -85,9 +79,6 @@
     ],
     "temperature_vitrification": [
         "55"
-    ],
-    "textured_plate_temp": [
-        "60"
     ],
     "textured_plate_temp_initial_layer": [
         "65"

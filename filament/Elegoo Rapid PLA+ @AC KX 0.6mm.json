@@ -14,9 +14,6 @@
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "fan_max_speed": [
-        "100"
-    ],
     "fan_min_speed": [
         "100"
     ],
@@ -68,12 +65,6 @@
     "filament_z_hop_types": [
         "Slope Lift"
     ],
-    "hot_plate_temp": [
-        "60"
-    ],
-    "hot_plate_temp_initial_layer": [
-        "60"
-    ],
     "nozzle_temperature": [
         "225"
     ],
@@ -106,12 +97,6 @@
     ],
     "temperature_vitrification": [
         "57"
-    ],
-    "textured_plate_temp": [
-        "60"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "60"
     ],
     "filament_settings_id": [
         "Elegoo Rapid PLA+ @AC KX 0.6mm"
