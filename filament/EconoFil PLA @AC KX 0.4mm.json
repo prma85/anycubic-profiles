@@ -1,7 +1,4 @@
 {
-    "compatible_printers": [
-        "Anycubic Kobra X 0.4 nozzle"
-    ],
     "complete_print_exhaust_fan_speed": [
         "100"
     ],
@@ -63,9 +60,6 @@
     "nozzle_temperature_BRASS": [
         "215"
     ],
-    "nozzle_temperature_HS": [
-        "220"
-    ],
     "nozzle_temperature_initial_layer": [
         "220"
     ],
@@ -75,8 +69,8 @@
     "nozzle_temperature_initial_layer_HS": [
         "225"
     ],
-    "nozzle_temperature_range_high": [
-        "230"
+    "pressure_advance": [
+        "0.04"
     ],
     "slow_down_layer_time_HS": [
         "12"
