@@ -33,7 +33,7 @@
         "1"
     ],
     "filament_retraction_minimum_travel": [
-        "1"
+        "2"
     ],
     "filament_retraction_speed": [
         "40"
@@ -57,20 +57,26 @@
     "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "EconoFil PLA @AC KX 0.4mm",
-    "nozzle_temperature_HS": [
-        "210"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "210"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "210"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
+    "nozzle_temperature": [
         "215"
     ],
-    "nozzle_temperature_range_high": [
+    "nozzle_temperature_BRASS": [
+        "215"
+    ],
+    "nozzle_temperature_HS": [
         "220"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
+    ],
+    "nozzle_temperature_range_high": [
+        "230"
     ],
     "slow_down_layer_time_HS": [
         "12"
