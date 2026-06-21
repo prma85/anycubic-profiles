@@ -74,22 +74,22 @@
     "is_custom_defined": "0",
     "name": "Improved PETG @AC KS1 0.4mm",
     "nozzle_temperature": [
-        "235"
+        "240"
     ],
     "nozzle_temperature_BRASS": [
         "240"
     ],
     "nozzle_temperature_HS": [
-        "245"
+        "250"
     ],
     "nozzle_temperature_initial_layer": [
-        "240"
+        "245"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
         "245"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "245"
+        "255"
     ],
     "pressure_advance": [
         "0.064"

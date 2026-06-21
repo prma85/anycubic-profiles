@@ -69,13 +69,13 @@
         "Slope Lift"
     ],
     "nozzle_temperature": [
-        "215"
+        "220"
     ],
     "nozzle_temperature_HS": [
         "220"
     ],
     "nozzle_temperature_initial_layer": [
-        "215"
+        "220"
     ],
     "nozzle_temperature_range_high": [
         "225"

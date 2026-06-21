@@ -69,13 +69,13 @@
         "175"
     ],
     "nozzle_temperature": [
-        "235"
+        "240"
     ],
     "nozzle_temperature_HS": [
         "240"
     ],
     "nozzle_temperature_initial_layer": [
-        "235"
+        "245"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "245"
