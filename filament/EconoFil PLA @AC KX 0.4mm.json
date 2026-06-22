@@ -55,16 +55,16 @@
     "is_custom_defined": "0",
     "name": "EconoFil PLA @AC KX 0.4mm",
     "nozzle_temperature_BRASS": [
-        "200"
+        "205"
     ],
     "nozzle_temperature_HS": [
-        "210"
+        "215"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "210"
+        "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "215"
+        "220"
     ],
     "pressure_advance": [
         "0.04"

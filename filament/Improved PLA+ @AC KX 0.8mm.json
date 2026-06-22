@@ -60,16 +60,16 @@
         "0.4"
     ],
     "nozzle_temperature": [
-        "215"
+        "220"
     ],
     "nozzle_temperature_HS": [
-        "215"
+        "220"
     ],
     "nozzle_temperature_initial_layer": [
-        "215"
+        "225"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "215"
+        "225"
     ],
     "nozzle_temperature_range_high": [
         "220"
@@ -105,5 +105,11 @@
     "inherits": "Anycubic PLA+ @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Improved PLA+ @AC KX 0.8mm",
-    "version": "1.3.2503.03"
+    "version": "1.3.2503.03",
+    "nozzle_temperature_BRASS": [
+        "215"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
+    ]
 }

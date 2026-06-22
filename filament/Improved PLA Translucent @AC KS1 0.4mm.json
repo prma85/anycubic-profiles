@@ -94,22 +94,22 @@
         "60"
     ],
     "nozzle_temperature": [
-        "230"
+        "235"
     ],
     "nozzle_temperature_BRASS": [
-        "230"
+        "235"
     ],
     "nozzle_temperature_HS": [
-        "235"
+        "240"
     ],
     "nozzle_temperature_initial_layer": [
-        "235"
+        "240"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "235"
+        "240"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "240"
+        "245"
     ],
     "textured_plate_temp": [
         "60"

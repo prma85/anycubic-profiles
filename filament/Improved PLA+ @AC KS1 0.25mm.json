@@ -76,22 +76,22 @@
         "60"
     ],
     "nozzle_temperature": [
-        "200"
+        "205"
     ],
     "nozzle_temperature_BRASS": [
-        "200"
+        "205"
     ],
     "nozzle_temperature_HS": [
-        "205"
+        "210"
     ],
     "nozzle_temperature_initial_layer": [
-        "200"
+        "210"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "200"
+        "210"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "205"
+        "215"
     ],
     "nozzle_temperature_range_high": [
         "205"

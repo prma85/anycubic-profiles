@@ -85,22 +85,22 @@
     "is_custom_defined": "0",
     "name": "EconoFil PLA @AC KS1 0.4mm",
     "nozzle_temperature": [
-        "200"
+        "205"
     ],
     "nozzle_temperature_BRASS": [
-        "200"
+        "205"
     ],
     "nozzle_temperature_HS": [
-        "205"
+        "210"
     ],
     "nozzle_temperature_initial_layer": [
-        "205"
+        "210"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "205"
+        "210"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "215"
+        "220"
     ],
     "nozzle_temperature_range_high": [
         "210"
