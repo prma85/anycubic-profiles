@@ -96,12 +96,6 @@
     "nozzle_temperature_initial_layer_HS": [
         "205"
     ],
-    "nozzle_temperature_range_high": [
-        "225"
-    ],
-    "nozzle_temperature_range_low": [
-        "205"
-    ],
     "pressure_advance": [
         "0.060"
     ],

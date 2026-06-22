@@ -77,9 +77,6 @@
     "nozzle_temperature_initial_layer_HS": [
         "200"
     ],
-    "nozzle_temperature_range_high": [
-        "225"
-    ],
     "overhang_fan_threshold": [
         "10%"
     ],

@@ -14,12 +14,6 @@
     "nozzle_temperature_initial_layer": [
         "245"
     ],
-    "nozzle_temperature_range_high": [
-        "270"
-    ],
-    "nozzle_temperature_range_low": [
-        "230"
-    ],
     "filament_settings_id": [
         "Bambu PETG Basic @AC KX 0.4mm"
     ],

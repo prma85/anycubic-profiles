@@ -90,12 +90,6 @@
     "nozzle_temperature_initial_layer_HS": [
         "255"
     ],
-    "nozzle_temperature_range_high": [
-        "270"
-    ],
-    "nozzle_temperature_range_low": [
-        "230"
-    ],
     "reduce_fan_stop_start_freq": [
         "0"
     ],

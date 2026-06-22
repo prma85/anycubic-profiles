@@ -120,12 +120,6 @@
     "nozzle_temperature_initial_layer_HS": [
         "240"
     ],
-    "nozzle_temperature_range_high": [
-        "281"
-    ],
-    "nozzle_temperature_range_low": [
-        "230"
-    ],
     "overhang_fan_speed": [
         "90"
     ],

@@ -65,12 +65,6 @@
     "nozzle_temperature_initial_layer_HS": [
         "210"
     ],
-    "nozzle_temperature_range_high_HS": [
-        "240"
-    ],
-    "nozzle_temperature_range_low_HS": [
-        "190"
-    ],
     "slow_down_layer_time": [
         "8"
     ],
