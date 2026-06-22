@@ -72,7 +72,7 @@
         "Bambu Lab"
     ],
     "filament_cost": [
-        "21"
+        "32"
     ],
     "from": "User",
     "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",

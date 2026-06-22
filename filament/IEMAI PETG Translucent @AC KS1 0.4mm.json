@@ -70,7 +70,7 @@
         "IEMAI"
     ],
     "filament_cost": [
-        "35"
+        "39"
     ],
     "from": "User",
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",

@@ -60,7 +60,7 @@
         "Generic"
     ],
     "filament_cost": [
-        "20"
+        "27"
     ],
     "from": "User",
     "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",

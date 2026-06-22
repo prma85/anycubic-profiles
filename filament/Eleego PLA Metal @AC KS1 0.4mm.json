@@ -67,7 +67,7 @@
         "ELEGOO"
     ],
     "filament_cost": [
-        "25"
+        "35"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Metal @Anycubic Kobra S1 0.4 nozzle",

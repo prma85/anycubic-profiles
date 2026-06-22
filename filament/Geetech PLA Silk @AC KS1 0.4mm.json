@@ -67,7 +67,7 @@
         "Geetech"
     ],
     "filament_cost": [
-        "20"
+        "30"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",

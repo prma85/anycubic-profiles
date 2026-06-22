@@ -117,7 +117,7 @@
         "Creality "
     ],
     "filament_cost": [
-        "25"
+        "35"
     ],
     "from": "User",
     "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",

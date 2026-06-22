@@ -87,7 +87,7 @@
         "JustMaker"
     ],
     "filament_cost": [
-        "22"
+        "30"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Silk @Anycubic Kobra X 0.4 nozzle",

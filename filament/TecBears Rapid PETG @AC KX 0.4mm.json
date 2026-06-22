@@ -108,7 +108,7 @@
         "TecBears"
     ],
     "filament_cost": [
-        "19"
+        "30"
     ],
     "from": "User",
     "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",

@@ -144,7 +144,7 @@
         "Overture"
     ],
     "filament_cost": [
-        "25"
+        "38"
     ],
     "from": "User",
     "inherits": "Anycubic TPU 95A @Anycubic Kobra X 0.4 nozzle",

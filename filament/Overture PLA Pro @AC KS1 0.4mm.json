@@ -109,7 +109,7 @@
         "Overture"
     ],
     "filament_cost": [
-        "19"
+        "36"
     ],
     "from": "User",
     "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
