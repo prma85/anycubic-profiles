@@ -58,7 +58,7 @@
         "SUNLU"
     ],
     "filament_cost": [
-        "35"
+        "17"
     ],
     "from": "User",
     "inherits": "Anycubic TPU @Anycubic Kobra S1 0.4 nozzle",

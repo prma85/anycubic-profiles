@@ -78,7 +78,7 @@
         "IBoss"
     ],
     "filament_cost": [
-        "33"
+        "22"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Matte @Anycubic Kobra X 0.4 nozzle",

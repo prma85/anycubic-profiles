@@ -102,7 +102,7 @@
         "Esun"
     ],
     "filament_cost": [
-        "38"
+        "16"
     ],
     "from": "User",
     "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",

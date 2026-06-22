@@ -63,7 +63,7 @@
         "Creality"
     ],
     "filament_cost": [
-        "29"
+        "20"
     ],
     "from": "User",
     "inherits": "Anycubic PLA+ @Anycubic Kobra X 0.4 nozzle",

@@ -21,7 +21,7 @@
         "Bambu Lab"
     ],
     "filament_cost": [
-        "32"
+        "24.99"
     ],
     "from": "User",
     "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",

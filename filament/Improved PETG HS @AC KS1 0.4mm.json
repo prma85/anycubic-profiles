@@ -106,7 +106,7 @@
         "Generic"
     ],
     "filament_cost": [
-        "33"
+        "20"
     ],
     "from": "User",
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",

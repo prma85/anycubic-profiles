@@ -106,7 +106,7 @@
         "Elegoo"
     ],
     "filament_cost": [
-        "30"
+        "13"
     ],
     "from": "User",
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
