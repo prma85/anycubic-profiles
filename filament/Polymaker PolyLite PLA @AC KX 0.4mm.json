@@ -84,7 +84,7 @@
         "Polymaker"
     ],
     "filament_cost": [
-        "31"
+        "27"
     ],
     "from": "User",
     "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",

@@ -61,7 +61,7 @@
         "Anycubic"
     ],
     "filament_cost": [
-        "18"
+        "22"
     ],
     "from": "User",
     "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",

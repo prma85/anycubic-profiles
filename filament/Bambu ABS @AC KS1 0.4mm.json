@@ -18,7 +18,7 @@
         "Bambu Lab"
     ],
     "filament_cost": [
-        "24.99"
+        "36"
     ],
     "from": "User",
     "inherits": "Anycubic ABS @Anycubic Kobra S1 0.4 nozzle",

@@ -76,7 +76,7 @@
         "Anycubic"
     ],
     "filament_cost": [
-        "22"
+        "50"
     ],
     "from": "User",
     "inherits": "Anycubic ABS @Anycubic Kobra S1 0.4 nozzle",
