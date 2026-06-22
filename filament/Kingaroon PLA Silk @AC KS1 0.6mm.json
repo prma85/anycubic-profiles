@@ -85,5 +85,8 @@
     "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Kingaroon PLA Silk @AC KS1 0.6mm",
-    "version": "0.0.0.00"
+    "version": "0.0.0.00",
+    "filament_cost": [
+        "19"
+    ]
 }

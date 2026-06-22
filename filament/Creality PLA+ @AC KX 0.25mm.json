@@ -90,5 +90,8 @@
     "inherits": "Anycubic PLA+ @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Creality PLA+ @AC KX 0.25mm",
-    "version": "1.3.2503.03"
+    "version": "1.3.2503.03",
+    "filament_cost": [
+        "33"
+    ]
 }

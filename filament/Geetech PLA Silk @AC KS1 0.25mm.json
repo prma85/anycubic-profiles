@@ -73,5 +73,8 @@
     "inherits": "Anycubic PLA Silk @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Geetech PLA Silk @AC KS1 0.25mm",
-    "version": "1.3.2602.11"
+    "version": "1.3.2602.11",
+    "filament_cost": [
+        "31"
+    ]
 }

@@ -102,5 +102,8 @@
     ],
     "nozzle_temperature_initial_layer_BRASS": [
         "205"
+    ],
+    "filament_cost": [
+        "20"
     ]
 }

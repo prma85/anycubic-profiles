@@ -80,5 +80,8 @@
     "version": "1.3.2602.11",
     "nozzle_temperature_initial_layer_HS": [
         "215"
+    ],
+    "filament_cost": [
+        "15"
     ]
 }

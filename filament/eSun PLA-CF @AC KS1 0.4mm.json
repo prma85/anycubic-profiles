@@ -85,7 +85,7 @@
         "Esun"
     ],
     "filament_cost": [
-        "16"
+        "28"
     ],
     "from": "User",
     "inherits": "Anycubic PLA-CF @Anycubic Kobra S1 0.4 nozzle",

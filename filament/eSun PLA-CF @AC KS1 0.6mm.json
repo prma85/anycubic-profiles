@@ -100,5 +100,8 @@
     "inherits": "Anycubic PLA-CF @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "ESun PLA-CF @AC KS1 0.6mm",
-    "version": "1.3.2602.11"
+    "version": "1.3.2602.11",
+    "filament_cost": [
+        "28"
+    ]
 }

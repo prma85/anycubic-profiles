@@ -121,5 +121,8 @@
     "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Sunlu PLA+ 2.0 @AC KS1 0.25mm",
-    "version": "1.3.2602.11"
+    "version": "1.3.2602.11",
+    "filament_cost": [
+        "29"
+    ]
 }

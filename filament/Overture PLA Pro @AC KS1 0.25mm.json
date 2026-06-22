@@ -115,5 +115,8 @@
     "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Overture PLA Pro @AC KS1 0.25mm",
-    "version": "1.3.2602.11"
+    "version": "1.3.2602.11",
+    "filament_cost": [
+        "36"
+    ]
 }

@@ -147,5 +147,8 @@
     "inherits": "Anycubic TPU 95A @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Overture High Speed TPU @AC KX 0.6mm",
-    "version": "1.5.0.61"
+    "version": "1.5.0.61",
+    "filament_cost": [
+        "38"
+    ]
 }

@@ -99,5 +99,8 @@
     "inherits": "Anycubic PLA Silk @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "JustMaker Silk PLA @AC KX 0.6mm",
-    "version": "1.3.2503.03"
+    "version": "1.3.2503.03",
+    "filament_cost": [
+        "27"
+    ]
 }

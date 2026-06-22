@@ -100,7 +100,7 @@
         "IBoss"
     ],
     "filament_cost": [
-        "20"
+        "28"
     ],
     "from": "User",
     "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
