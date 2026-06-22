@@ -5,7 +5,6 @@
     "bridge_flow": "0.94",
     "bridge_speed": "30",
     "brim_object_gap": "0.12",
-    "brim_type": "outer_only",
     "brim_width": "10",
     "compatible_printers": [
         "Anycubic Kobra S1 0.4 nozzle",

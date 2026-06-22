@@ -1,5 +1,6 @@
 {
     "bottom_shell_layers": "4",
+    "bottom_shell_thickness": "0.6",
     "bridge_flow": "1.2",
     "bridge_no_support": "1",
     "bridge_speed": "20",
@@ -39,14 +40,14 @@
     "reduce_crossing_wall": "1",
     "reduce_infill_retraction": "0",
     "slow_down_layers": "4",
-    "sparse_infill_pattern": "honeycomb",
+    "sparse_infill_density": "10%",
     "sparse_infill_speed": "180",
     "top_bottom_infill_wall_overlap": "20%",
+    "top_shell_layers": "4",
     "top_surface_speed": "60",
     "travel_acceleration": "5000",
-    "travel_speed": "150",
+    "travel_speed": "400",
     "version": "1.3.2503.03",
-    "wall_loops": "3",
     "wall_sequence": "inner-outer-inner wall",
     "wipe_on_loops": "1"
 }
