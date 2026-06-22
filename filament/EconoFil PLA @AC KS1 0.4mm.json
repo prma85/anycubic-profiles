@@ -23,15 +23,6 @@
     "fan_cooling_layer_time_HS": [
         "80"
     ],
-    "fan_max_speed": [
-        "100"
-    ],
-    "fan_max_speed_BRASS": [
-        "100"
-    ],
-    "fan_max_speed_HS": [
-        "100"
-    ],
     "fan_min_speed": [
         "60"
     ],
@@ -41,8 +32,8 @@
     "fan_min_speed_HS": [
         "60"
     ],
-    "filament_density": [
-        "1.24"
+    "filament_cost": [
+        "14"
     ],
     "filament_deretraction_speed": [
         "0"
@@ -68,6 +59,12 @@
     "filament_retraction_speed": [
         "40"
     ],
+    "filament_settings_id": [
+        "EconoFil PLA @AC KS1 0.4mm"
+    ],
+    "filament_vendor": [
+        "FilamentsCA"
+    ],
     "filament_wipe": [
         "1"
     ],
@@ -77,17 +74,24 @@
     "filament_z_hop": [
         "0.4"
     ],
+    "from": "User",
     "full_fan_speed_layer": [
         "8"
-    ],
-    "hot_plate_temp": [
-        "55"
     ],
     "hot_plate_temp_initial_layer": [
         "60"
     ],
+    "inherits": "Anycubic PLA @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "EconoFil PLA @AC KS1 0.4mm",
+    "nozzle_temperature": [
+        "200"
+    ],
     "nozzle_temperature_BRASS": [
         "200"
+    ],
+    "nozzle_temperature_HS": [
+        "205"
     ],
     "nozzle_temperature_initial_layer": [
         "210"
@@ -101,27 +105,11 @@
     "nozzle_temperature_range_high": [
         "210"
     ],
-    "nozzle_temperature_range_low": [
-        "190"
-    ],
     "textured_plate_temp": [
         "60"
     ],
     "textured_plate_temp_initial_layer": [
         "65"
     ],
-    "filament_settings_id": [
-        "EconoFil PLA @AC KS1 0.4mm"
-    ],
-    "filament_vendor": [
-        "FilamentsCA"
-    ],
-    "filament_cost": [
-        "10"
-    ],
-    "from": "User",
-    "inherits": "Anycubic PLA @Anycubic Kobra S1 0.4 nozzle",
-    "is_custom_defined": "0",
-    "name": "EconoFil PLA @AC KS1 0.4mm",
     "version": "1.3.2602.11"
 }

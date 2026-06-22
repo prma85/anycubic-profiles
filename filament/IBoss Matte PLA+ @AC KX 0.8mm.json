@@ -72,16 +72,16 @@
         "8"
     ],
     "nozzle_temperature": [
-        "225"
+        "215"
     ],
     "nozzle_temperature_HS": [
-        "225"
+        "215"
     ],
     "nozzle_temperature_initial_layer": [
-        "235"
+        "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "235"
+        "215"
     ],
     "pressure_advance": [
         "0.010"

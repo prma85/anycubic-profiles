@@ -39,7 +39,7 @@
         "EconoFil PLA @AC KX 0.4mm"
     ],
     "filament_vendor": [
-        "Generic"
+        "FilamentsCA"
     ],
     "filament_wipe": [
         "1"
@@ -55,22 +55,22 @@
     "is_custom_defined": "0",
     "name": "EconoFil PLA @AC KX 0.4mm",
     "nozzle_temperature": [
-        "220"
+        "200"
     ],
     "nozzle_temperature_BRASS": [
-        "215"
+        "200"
     ],
     "nozzle_temperature_HS": [
-        "220"
+        "200"
     ],
     "nozzle_temperature_initial_layer": [
-        "225"
+        "210"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "220"
+        "210"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "225"
+        "210"
     ],
     "pressure_advance": [
         "0.04"

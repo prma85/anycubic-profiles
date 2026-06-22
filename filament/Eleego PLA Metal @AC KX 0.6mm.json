@@ -48,16 +48,16 @@
         "65"
     ],
     "nozzle_temperature": [
-        "215"
+        "210"
     ],
     "nozzle_temperature_HS": [
-        "215"
+        "210"
     ],
     "nozzle_temperature_initial_layer": [
-        "215"
+        "210"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "215"
+        "210"
     ],
     "nozzle_temperature_range_high": [
         "235"
