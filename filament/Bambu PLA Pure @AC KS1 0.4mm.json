@@ -27,5 +27,11 @@
     "inherits": "Anycubic PLA @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Bambu PLA Pure @AC KS1 0.4mm",
-    "version": "1.3.2602.11"
+    "version": "1.3.2602.11",
+    "nozzle_temperature_initial_layer_BRASS": [
+        "210"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "210"
+    ]
 }

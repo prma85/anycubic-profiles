@@ -56,7 +56,7 @@
         "205"
     ],
     "nozzle_temperature_initial_layer": [
-        "215"
+        "210"
     ],
     "nozzle_temperature_range_high": [
         "220"
@@ -86,5 +86,8 @@
     "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "EconoFil PLA @AC KX 0.6mm",
-    "version": "1.3.2602.11"
+    "version": "1.3.2602.11",
+    "nozzle_temperature_initial_layer_HS": [
+        "210"
+    ]
 }

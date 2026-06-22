@@ -54,23 +54,17 @@
     "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "EconoFil PLA @AC KX 0.4mm",
-    "nozzle_temperature": [
-        "200"
-    ],
     "nozzle_temperature_BRASS": [
         "200"
     ],
     "nozzle_temperature_HS": [
-        "200"
-    ],
-    "nozzle_temperature_initial_layer": [
         "210"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
         "210"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "210"
+        "215"
     ],
     "pressure_advance": [
         "0.04"

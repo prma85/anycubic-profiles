@@ -45,7 +45,7 @@
         "0.4"
     ],
     "nozzle_temperature_initial_layer": [
-        "210"
+        "215"
     ],
     "nozzle_temperature_range_high": [
         "240"
@@ -81,5 +81,8 @@
     "inherits": "Anycubic PLA+ @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Creality PLA+ @AC KX 0.4mm",
-    "version": "1.3.2503.03"
+    "version": "1.3.2503.03",
+    "nozzle_temperature_initial_layer_HS": [
+        "215"
+    ]
 }
