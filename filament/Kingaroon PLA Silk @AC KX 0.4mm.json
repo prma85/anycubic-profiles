@@ -1,4 +1,7 @@
 {
+    "cool_plate_temp": [
+        "45"
+    ],
     "cool_plate_temp_initial_layer": [
         "45"
     ],
@@ -30,10 +33,10 @@
         "60"
     ],
     "hot_plate_temp_initial_layer": [
-        "60"
+        "65"
     ],
     "nozzle_temperature_initial_layer": [
-        "215"
+        "225"
     ],
     "pressure_advance": [
         "0.024"
@@ -69,5 +72,20 @@
     "inherits": "Anycubic PLA Silk @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Kingaroon PLA Silk @AC KX 0.4mm",
-    "version": "0.0.0.00"
+    "version": "0.0.0.00",
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "230"
+    ]
 }

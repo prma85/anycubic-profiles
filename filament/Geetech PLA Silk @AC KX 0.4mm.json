@@ -1,4 +1,7 @@
 {
+    "cool_plate_temp": [
+        "45"
+    ],
     "cool_plate_temp_initial_layer": [
         "45"
     ],
@@ -30,16 +33,16 @@
         "60"
     ],
     "hot_plate_temp_initial_layer": [
-        "60"
+        "65"
     ],
     "nozzle_temperature_HS": [
-        "225"
+        "220"
     ],
     "nozzle_temperature_initial_layer": [
         "220"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "220"
+        "225"
     ],
     "pressure_advance": [
         "0.022"

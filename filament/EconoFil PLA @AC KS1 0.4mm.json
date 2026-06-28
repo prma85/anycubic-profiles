@@ -6,7 +6,7 @@
         "100"
     ],
     "cool_plate_temp": [
-        "40"
+        "45"
     ],
     "cool_plate_temp_initial_layer": [
         "45"
@@ -79,25 +79,25 @@
         "8"
     ],
     "hot_plate_temp_initial_layer": [
-        "60"
+        "65"
     ],
     "inherits": "Anycubic PLA @Anycubic Kobra S1 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "EconoFil PLA @AC KS1 0.4mm",
     "nozzle_temperature": [
-        "205"
+        "210"
     ],
     "nozzle_temperature_BRASS": [
-        "205"
+        "210"
     ],
     "nozzle_temperature_HS": [
-        "210"
+        "215"
     ],
     "nozzle_temperature_initial_layer": [
-        "210"
+        "215"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "210"
+        "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
         "220"

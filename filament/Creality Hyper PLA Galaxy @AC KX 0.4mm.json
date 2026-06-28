@@ -1,4 +1,7 @@
 {
+    "cool_plate_temp": [
+        "45"
+    ],
     "cool_plate_temp_initial_layer": [
         "45"
     ],
@@ -60,7 +63,7 @@
         "205"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "205"
+        "210"
     ],
     "overhang_fan_threshold": [
         "10%"

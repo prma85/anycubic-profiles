@@ -10,7 +10,7 @@
         "100"
     ],
     "cool_plate_temp": [
-        "40"
+        "45"
     ],
     "cool_plate_temp_initial_layer": [
         "45"
@@ -88,7 +88,7 @@
         "55"
     ],
     "hot_plate_temp_initial_layer": [
-        "60"
+        "65"
     ],
     "textured_plate_temp": [
         "60"
