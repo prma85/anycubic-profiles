@@ -63,7 +63,7 @@
         "215"
     ],
     "nozzle_temperature_HS": [
-        "215"
+        "220"
     ],
     "nozzle_temperature_initial_layer": [
         "215"
@@ -90,5 +90,8 @@
     "version": "1.3.2602.11",
     "filament_cost": [
         "36"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "220"
     ]
 }

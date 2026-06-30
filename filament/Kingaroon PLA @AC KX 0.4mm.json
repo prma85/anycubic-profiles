@@ -80,9 +80,9 @@
     "name": "Kingaroon PLA @AC KX 0.4mm",
     "version": "0.0.0.00",
     "nozzle_temperature_HS": [
-        "210"
+        "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "215"
+        "220"
     ]
 }

@@ -27,5 +27,11 @@
     "inherits": "Anycubic PETG @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
     "name": "Bambu PETG HF @AC KX 0.4mm",
-    "version": "1.3.2602.11"
+    "version": "1.3.2602.11",
+    "nozzle_temperature_HS": [
+        "245"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "245"
+    ]
 }

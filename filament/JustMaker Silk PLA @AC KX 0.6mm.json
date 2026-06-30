@@ -69,7 +69,7 @@
         "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "215"
+        "220"
     ],
     "pressure_advance": [
         "0.027"
@@ -102,5 +102,8 @@
     "version": "1.3.2503.03",
     "filament_cost": [
         "27"
+    ],
+    "nozzle_temperature_HS": [
+        "220"
     ]
 }

@@ -45,13 +45,13 @@
         "250"
     ],
     "nozzle_temperature_HS": [
-        "250"
+        "255"
     ],
     "nozzle_temperature_initial_layer": [
         "250"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "250"
+        "255"
     ],
     "pressure_advance": [
         "0.034"

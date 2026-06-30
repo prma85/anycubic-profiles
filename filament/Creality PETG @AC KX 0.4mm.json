@@ -78,13 +78,13 @@
         "235"
     ],
     "nozzle_temperature_HS": [
-        "235"
+        "240"
     ],
     "nozzle_temperature_initial_layer": [
         "235"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "235"
+        "240"
     ],
     "overhang_fan_speed": [
         "100"

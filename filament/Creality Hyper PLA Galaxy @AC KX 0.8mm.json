@@ -72,13 +72,13 @@
         "215"
     ],
     "nozzle_temperature_HS": [
-        "215"
+        "220"
     ],
     "nozzle_temperature_initial_layer": [
         "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "215"
+        "220"
     ],
     "overhang_fan_threshold": [
         "10%"
