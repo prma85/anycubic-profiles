@@ -11,12 +11,6 @@
     "dont_slow_down_outer_wall": [
         "1"
     ],
-    "fan_max_speed": [
-        "100"
-    ],
-    "fan_min_speed": [
-        "45"
-    ],
     "filament_change_length": [
         "10"
     ],

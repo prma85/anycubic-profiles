@@ -1,15 +1,9 @@
 {
-    "complete_print_exhaust_fan_speed": [
-        "70"
-    ],
     "cool_plate_temp": [
         "55"
     ],
     "cool_plate_temp_initial_layer": [
         "60"
-    ],
-    "during_print_exhaust_fan_speed": [
-        "70"
     ],
     "fan_cooling_layer_time": [
         "30"
@@ -19,9 +13,6 @@
     ],
     "fan_max_speed_HS": [
         "60"
-    ],
-    "fan_min_speed": [
-        "30"
     ],
     "filament_adhesiveness_category": [
         "400"

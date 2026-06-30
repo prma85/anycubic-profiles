@@ -1,15 +1,9 @@
 {
-    "complete_print_exhaust_fan_speed": [
-        "100"
-    ],
     "cool_plate_temp": [
         "45"
     ],
     "cool_plate_temp_initial_layer": [
         "45"
-    ],
-    "during_print_exhaust_fan_speed": [
-        "100"
     ],
     "enable_pressure_advance": [
         "0"

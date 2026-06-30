@@ -1,7 +1,4 @@
 {
-    "complete_print_exhaust_fan_speed": [
-        "100"
-    ],
     "cool_plate_temp": [
         "55"
     ],
@@ -10,9 +7,6 @@
     ],
     "dont_slow_down_outer_wall": [
         "1"
-    ],
-    "during_print_exhaust_fan_speed": [
-        "100"
     ],
     "fan_max_speed": [
         "30"

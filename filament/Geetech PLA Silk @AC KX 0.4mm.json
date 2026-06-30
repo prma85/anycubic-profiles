@@ -5,9 +5,6 @@
     "cool_plate_temp_initial_layer": [
         "45"
     ],
-    "during_print_exhaust_fan_speed": [
-        "50"
-    ],
     "fan_cooling_layer_time_HS": [
         "100"
     ],

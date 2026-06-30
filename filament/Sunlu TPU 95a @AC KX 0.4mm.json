@@ -1,15 +1,6 @@
 {
-    "complete_print_exhaust_fan_speed": [
-        "70"
-    ],
-    "during_print_exhaust_fan_speed": [
-        "70"
-    ],
     "enable_pressure_advance": [
         "1"
-    ],
-    "fan_min_speed": [
-        "100"
     ],
     "filament_density": [
         "1.20"

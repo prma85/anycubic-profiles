@@ -2,19 +2,10 @@
     "compatible_printers": [
         "Anycubic Kobra X 0.6 nozzle"
     ],
-    "complete_print_exhaust_fan_speed": [
-        "70"
-    ],
     "cool_plate_temp_initial_layer": [
         "45"
     ],
-    "during_print_exhaust_fan_speed": [
-        "70"
-    ],
     "fan_cooling_layer_time_HS": [
-        "100"
-    ],
-    "fan_min_speed": [
         "100"
     ],
     "filament_change_length": [
