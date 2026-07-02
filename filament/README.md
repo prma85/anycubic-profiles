@@ -1,6 +1,6 @@
 # Filament Configuration Guide - User 651589
 
-Last updated: 2026-06-02
+Last updated: 2026-07-01
 Framework: Anycubic Slicer Next (OrcaSlicer-based)
 Scope: Custom filament profiles for Anycubic Kobra S1 and Anycubic Kobra X
 
@@ -134,12 +134,22 @@ KS1 uses higher textured first-layer temp to lock filament into the texture ridg
 
 KX uses flat 60°C because bedslinger thermal cycling during oscillation requires consistent bed heat. No first-layer/other-layer differentiation needed on smooth plate. Filled materials still get 65°C first layer to compensate particle heatsinks.
 
-### Improved PLA nozzle temperatures (KS1 calibrated)
+### EconoFil PLA (calibrated reference profile, 2026-07-01)
 
-- `nozzle_temperature`: 200°C, `nozzle_temperature_initial_layer`: 200°C
-- `nozzle_temperature_BRASS`: 215°C, `nozzle_temperature_initial_layer_BRASS`: 220°C
-- `nozzle_temperature_HS`: 220°C, `nozzle_temperature_initial_layer_HS`: 220°C
-- `nozzle_temperature_range_high`: 230°C, `nozzle_temperature_range_low`: 200°C
+EconoFil is the calibrated reference for economic-tier PLA. Values below are 0.4mm anchors — apply CLAUDE.md PLA nozzle transition rules for other sizes.
+
+**KS1 0.4mm (brass nozzle)**:
+- `nozzle_temperature`: 210°C, `nozzle_temperature_initial_layer_BRASS`: 220°C (first layer needs +10°C for PEI adhesion)
+- `nozzle_temperature_HS`: 215°C (+5°C HS delta)
+- `filament_flow_ratio`: 0.99, `pressure_advance`: 0.04, `filament_max_volumetric_speed`: 12
+- Retraction: length 0.8, speed 40, deretraction 0, no wipe, no layer-change retract
+
+**KX 0.4mm (hardened steel nozzle)**:
+- `nozzle_temperature`: 210°C (this IS the HS print temp — the +5°C bump is baked in vs KS1's brass print value 205°C, since KX prints via HS keys)
+- `filament_flow_ratio`: 0.99, `pressure_advance`: 0.025, `filament_max_volumetric_speed`: 12
+- Retraction: length 1.2, speed 45, deretraction 30, z_hop_types "Slope Lift" (HS strings more; needs more aggressive retraction)
+
+**Bed temps** (both printers): textured 65/70, hot 60-65/65, cool 45/45
 
 ### Improved PLA+ nozzle temperatures (KS1 calibrated, raised to KS1 high-speed spec)
 
@@ -147,6 +157,40 @@ KX uses flat 60°C because bedslinger thermal cycling during oscillation require
 - `nozzle_temperature_range_high`: 240°C, `nozzle_temperature_range_low`: 225°C
 
 (PLA+ at 205°C was calibrated for bedslingers — KS1 at 600mm/s needs 225°C minimum to maintain melt quality.)
+
+## Improved Profile Baseline (2026-07-01)
+
+Improved profiles act as the parent overlay for third-party filament of each material tier. When adding a new brand, inherit from `Improved [material] @AC [printer] 0.4mm` and only override truly brand-specific keys (density, cost, calibration deltas).
+
+### Bed temperatures by material family
+
+| Family | Textured (body/init) | Smooth PEI (body/init) | Cool plate (body/init) |
+|---|---|---|---|
+| PLA / PLA+ / PLA Silk Dual / PLA Translucent | 65 / 70 | 65 / 65 | 45 / 45 |
+| PETG / PETG HS / PETG Translucent | (inherit 75) | (inherit 75) | 55 / 60 |
+
+**PLA rationale**: textured init +5°C above body for reliable first-layer bond (validated against EconoFil calibration where 65°C init detached, 70°C held).
+**PETG rationale**: leave hot/textured inheriting from Anycubic parent (75°C — correct for PETG). Cool plate 55/60 explicit because system defaults are wrong for PETG.
+
+### PLA-family retraction pattern (EconoFil-calibrated)
+
+Applied to Improved PLA, PLA+, PLA Silk Dual, PLA Translucent. Nozzle-transition on retraction_length only (0.25 −0.2, 0.6 +0.2, 0.8 +0.4). PLA Silk Dual keeps `filament_z_hop_types: "Spiral Lift"` (multi-color needs spiral for color-swap wipe reduction) — all others use "Slope Lift".
+
+| Key | KS1 (brass) | KX (HS) |
+|---|---|---|
+| `filament_retraction_length` | 0.8 | 1.2 |
+| `filament_retraction_speed` | 40 | 45 |
+| `filament_deretraction_speed` | 0 | 30 |
+| `filament_retract_when_changing_layer` | 0 | 0 |
+| `filament_retraction_minimum_travel` | 1 | 1 |
+| `filament_wipe` | 0 | 0 |
+| `filament_z_hop` | 0.4 | 0.4 |
+
+KX values are more aggressive because HS nozzle strings more than brass at equivalent print temp.
+
+### PETG-family retraction
+
+PETG retraction is material-specific and left untouched by the Improved baseline — PETG runs cooler and wetter than PLA, needs slower/lower-magnitude retraction (deret 25, ret_spd 30). Only spurious "0" values are corrected (removed to allow parent inheritance).
 
 ## Hardened Steel Temperature Rules (within a single nozzle size)
 
