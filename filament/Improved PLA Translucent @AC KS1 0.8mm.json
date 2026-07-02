@@ -10,7 +10,7 @@
         "100"
     ],
     "cool_plate_temp": [
-        "40"
+        "45"
     ],
     "cool_plate_temp_initial_layer": [
         "45"
@@ -61,10 +61,10 @@
         "0"
     ],
     "filament_retract_when_changing_layer": [
-        "1"
+        "0"
     ],
     "filament_retraction_length": [
-        "0.8"
+        "1.2"
     ],
     "filament_retraction_minimum_travel": [
         "1"
@@ -73,7 +73,7 @@
         "40"
     ],
     "filament_wipe": [
-        "1"
+        "0"
     ],
     "filament_wipe_distance": [
         "1"
@@ -85,10 +85,10 @@
         "8"
     ],
     "hot_plate_temp": [
-        "55"
+        "65"
     ],
     "hot_plate_temp_initial_layer": [
-        "60"
+        "65"
     ],
     "nozzle_temperature": [
         "245"
@@ -109,10 +109,10 @@
         "255"
     ],
     "textured_plate_temp": [
-        "60"
+        "65"
     ],
     "textured_plate_temp_initial_layer": [
-        "65"
+        "70"
     ],
     "filament_settings_id": [
         "Improved PLA Translucent @AC KS1 0.8mm"

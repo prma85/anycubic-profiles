@@ -49,34 +49,34 @@
         "1.24"
     ],
     "filament_deretraction_speed": [
-        "25"
+        "0"
     ],
     "filament_max_volumetric_speed": [
         "19"
     ],
     "filament_retract_when_changing_layer": [
-        "1"
+        "0"
     ],
     "filament_retraction_minimum_travel": [
-        "1.5"
+        "1"
     ],
     "filament_retraction_speed": [
-        "35"
+        "40"
     ],
     "full_fan_speed_layer": [
         "8"
     ],
     "hot_plate_temp": [
-        "55"
+        "65"
     ],
     "hot_plate_temp_initial_layer": [
         "65"
     ],
     "textured_plate_temp": [
-        "60"
+        "65"
     ],
     "textured_plate_temp_initial_layer": [
-        "65"
+        "70"
     ],
     "filament_settings_id": [
         "Improved PLA+ @AC KS1 0.4mm"
@@ -109,5 +109,11 @@
     ],
     "nozzle_temperature_initial_layer_HS": [
         "220"
+    ],
+    "filament_retraction_length": [
+        "0.8"
+    ],
+    "filament_wipe": [
+        "0"
     ]
 }

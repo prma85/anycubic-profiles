@@ -68,9 +68,6 @@
     "filament_z_hop_types": [
         "Slope Lift"
     ],
-    "hot_plate_temp": [
-        "70"
-    ],
     "idle_temperature": [
         "175"
     ],
@@ -100,9 +97,6 @@
     ],
     "slow_down_layer_time": [
         "12"
-    ],
-    "textured_plate_temp": [
-        "70"
     ],
     "filament_settings_id": [
         "Improved PETG @AC KX 0.4mm"

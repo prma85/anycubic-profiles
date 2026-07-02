@@ -12,7 +12,7 @@
         "100"
     ],
     "filament_deretraction_speed": [
-        "25"
+        "30"
     ],
     "filament_end_gcode": [
         "; filament end gcode "
@@ -33,13 +33,13 @@
         "0"
     ],
     "filament_retract_when_changing_layer": [
-        "1"
+        "0"
     ],
     "filament_retraction_minimum_travel": [
-        "1.5"
+        "1"
     ],
     "filament_retraction_speed": [
-        "35"
+        "45"
     ],
     "filament_z_hop": [
         "0.4"
@@ -51,7 +51,7 @@
         "45"
     ],
     "textured_plate_temp_initial_layer": [
-        "65"
+        "70"
     ],
     "filament_settings_id": [
         "Improved PLA+ @AC KX 0.4mm"
@@ -84,5 +84,23 @@
     ],
     "nozzle_temperature_initial_layer_BRASS": [
         "210"
+    ],
+    "textured_plate_temp": [
+        "65"
+    ],
+    "hot_plate_temp": [
+        "65"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "65"
+    ],
+    "filament_retraction_length": [
+        "1.2"
+    ],
+    "filament_wipe": [
+        "0"
+    ],
+    "filament_z_hop_types": [
+        "Slope Lift"
     ]
 }

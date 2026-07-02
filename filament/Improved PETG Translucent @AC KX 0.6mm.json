@@ -23,9 +23,6 @@
     "filament_retraction_length": [
         "1.2"
     ],
-    "hot_plate_temp": [
-        "70"
-    ],
     "nozzle_temperature": [
         "272"
     ],

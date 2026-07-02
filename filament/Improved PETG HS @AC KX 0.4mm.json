@@ -68,9 +68,6 @@
     "filament_z_hop_types": [
         "Slope Lift"
     ],
-    "hot_plate_temp": [
-        "70"
-    ],
     "idle_temperature": [
         "175"
     ],
@@ -102,9 +99,6 @@
         "12"
     ],
     "temperature_vitrification": [
-        "70"
-    ],
-    "textured_plate_temp": [
         "70"
     ],
     "filament_settings_id": [

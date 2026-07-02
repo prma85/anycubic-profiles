@@ -61,7 +61,7 @@
         "0"
     ],
     "filament_retract_when_changing_layer": [
-        "1"
+        "0"
     ],
     "filament_retraction_length": [
         "0.8"
@@ -73,7 +73,7 @@
         "40"
     ],
     "filament_wipe": [
-        "1"
+        "0"
     ],
     "filament_wipe_distance": [
         "1"
@@ -85,16 +85,16 @@
         "8"
     ],
     "hot_plate_temp": [
-        "55"
+        "65"
     ],
     "hot_plate_temp_initial_layer": [
         "65"
     ],
     "textured_plate_temp": [
-        "60"
+        "65"
     ],
     "textured_plate_temp_initial_layer": [
-        "65"
+        "70"
     ],
     "filament_settings_id": [
         "Improved PLA @AC KS1 0.4mm"
