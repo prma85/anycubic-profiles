@@ -10,7 +10,7 @@
         "100"
     ],
     "cool_plate_temp": [
-        "40"
+        "45"
     ],
     "cool_plate_temp_initial_layer": [
         "45"
@@ -49,10 +49,10 @@
         "0"
     ],
     "filament_flow_ratio": [
-        "0.97"
+        "0.98"
     ],
     "filament_max_volumetric_speed": [
-        "20"
+        "15"
     ],
     "filament_retract_lift_below": [
         "249"
@@ -61,10 +61,10 @@
         "0"
     ],
     "filament_retract_when_changing_layer": [
-        "1"
+        "0"
     ],
     "filament_retraction_length": [
-        "1"
+        "1.0"
     ],
     "filament_retraction_minimum_travel": [
         "1"
@@ -73,7 +73,7 @@
         "40"
     ],
     "filament_wipe": [
-        "1"
+        "0"
     ],
     "filament_wipe_distance": [
         "1"
@@ -91,31 +91,31 @@
         "60"
     ],
     "nozzle_temperature": [
-        "210"
+        "215"
     ],
     "nozzle_temperature_BRASS": [
-        "210"
+        "215"
     ],
     "nozzle_temperature_HS": [
-        "215"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "215"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "215"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
         "220"
     ],
+    "nozzle_temperature_initial_layer": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "230"
+    ],
     "pressure_advance": [
-        "0.023"
+        "0.027"
     ],
     "textured_plate_temp": [
-        "60"
+        "65"
     ],
     "textured_plate_temp_initial_layer": [
-        "65"
+        "70"
     ],
     "filament_settings_id": [
         "EconoFil PLA @AC KS1 0.6mm"

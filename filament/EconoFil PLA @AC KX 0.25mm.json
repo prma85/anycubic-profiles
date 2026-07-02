@@ -11,10 +11,10 @@
         "100"
     ],
     "filament_deretraction_speed": [
-        "0"
+        "30"
     ],
     "filament_flow_ratio": [
-        "0.99"
+        "1.0"
     ],
     "filament_max_volumetric_speed": [
         "3"
@@ -26,16 +26,16 @@
         "0"
     ],
     "filament_retract_when_changing_layer": [
-        "1"
+        "0"
     ],
     "filament_retraction_minimum_travel": [
         "1"
     ],
     "filament_retraction_speed": [
-        "40"
+        "45"
     ],
     "filament_wipe": [
-        "1"
+        "0"
     ],
     "filament_wipe_distance": [
         "1"
@@ -44,19 +44,19 @@
         "0.4"
     ],
     "nozzle_temperature": [
-        "210"
+        "205"
     ],
     "nozzle_temperature_HS": [
-        "215"
+        "205"
     ],
     "nozzle_temperature_initial_layer": [
         "215"
     ],
     "nozzle_temperature_initial_layer_HS": [
-        "220"
+        "215"
     ],
     "pressure_advance": [
-        "0.053"
+        "0.038"
     ],
     "slow_down_layer_time_HS": [
         "12"
@@ -79,9 +79,24 @@
         "15"
     ],
     "nozzle_temperature_BRASS": [
-        "210"
+        "205"
     ],
     "nozzle_temperature_initial_layer_BRASS": [
         "215"
+    ],
+    "filament_retraction_length": [
+        "1.0"
+    ],
+    "filament_z_hop_types": [
+        "Slope Lift"
+    ],
+    "textured_plate_temp": [
+        "65"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "70"
+    ],
+    "cool_plate_temp": [
+        "45"
     ]
 }
