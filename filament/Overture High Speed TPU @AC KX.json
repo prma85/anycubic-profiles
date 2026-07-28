@@ -1,0 +1,156 @@
+{
+    "cool_plate_temp": [
+        "0"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "0"
+    ],
+    "default_filament_colour": [
+        "#E0E0E0"
+    ],
+    "enable_pressure_advance": [
+        "1"
+    ],
+    "eng_plate_temp": [
+        "30"
+    ],
+    "eng_plate_temp_initial_layer": [
+        "30"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "100"
+    ],
+    "fan_max_speed_HS": [
+        "100"
+    ],
+    "filament_adhesiveness_category": [
+        "0"
+    ],
+    "filament_change_length": [
+        "10"
+    ],
+    "filament_cooling_final_speed": [
+        "3.4"
+    ],
+    "filament_cooling_initial_speed": [
+        "2.2"
+    ],
+    "filament_cooling_moves": [
+        "4"
+    ],
+    "filament_density": [
+        "1.18"
+    ],
+    "filament_deretraction_speed": [
+        "0"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode \nM106 P3 S0\n"
+    ],
+    "filament_flow_ratio": [
+        "0.985"
+    ],
+    "filament_flush_temp": [
+        "0"
+    ],
+    "filament_flush_volumetric_speed": [
+        "0"
+    ],
+    "filament_loading_speed": [
+        "28"
+    ],
+    "filament_loading_speed_start": [
+        "3"
+    ],
+    "filament_max_volumetric_speed": [
+        "8"
+    ],
+    "filament_multitool_ramming_flow": [
+        "10"
+    ],
+    "filament_multitool_ramming_volume": [
+        "10"
+    ],
+    "filament_prime_volume": [
+        "45"
+    ],
+    "filament_ramming_volumetric_speed": [
+        "-1"
+    ],
+    "filament_retraction_length": [
+        "0.5"
+    ],
+    "filament_start_gcode": [
+        "; filament start gcode\n{if (bed_temperature[current_extruder] >35)||(bed_temperature_initial_layer[current_extruder] >35)}M106 P3 S255\n{elsif (bed_temperature[current_extruder] >30)||(bed_temperature_initial_layer[current_extruder] >30)}M106 P3 S180\n{endif}"
+    ],
+    "filament_unloading_speed": [
+        "90"
+    ],
+    "filament_unloading_speed_start": [
+        "100"
+    ],
+    "filament_z_hop_types": [
+        "Slope Lift"
+    ],
+    "hot_plate_temp": [
+        "35"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "35"
+    ],
+    "nozzle_temperature": [
+        "250"
+    ],
+    "nozzle_temperature_HS": [
+        "255"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "250"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "255"
+    ],
+    "nozzle_temperature_range_high": [
+        "255"
+    ],
+    "nozzle_temperature_range_low": [
+        "200"
+    ],
+    "pressure_advance": [
+        "0.1"
+    ],
+    "required_nozzle_HRC": [
+        "3"
+    ],
+    "slow_down_layer_time_HS": [
+        "8"
+    ],
+    "temperature_vitrification": [
+        "35"
+    ],
+    "textured_plate_temp": [
+        "35"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "35"
+    ],
+    "filament_settings_id": [
+        "Overture High Speed TPU @AC KX"
+    ],
+    "filament_vendor": [
+        "Overture"
+    ],
+    "filament_cost": [
+        "38"
+    ],
+    "from": "User",
+    "inherits": "Anycubic TPU 95A @Anycubic Kobra X 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Overture High Speed TPU @AC KX",
+    "version": "1.5.0.61",
+    "compatible_printers": [
+        "Anycubic Kobra X 0.4 nozzle",
+        "Anycubic Kobra X 0.6 nozzle",
+        "Anycubic Kobra X 0.8 nozzle"
+    ]
+}

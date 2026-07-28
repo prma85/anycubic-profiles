@@ -1,0 +1,39 @@
+{
+    "filament_density": [
+        "1.28"
+    ],
+    "filament_flow_ratio": [
+        "0.94"
+    ],
+    "filament_max_volumetric_speed": [
+        "16"
+    ],
+    "nozzle_temperature": [
+        "240"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "240"
+    ],
+    "filament_settings_id": [
+        "Bambu PETG HF @AC KS1"
+    ],
+    "filament_vendor": [
+        "Bambu Lab"
+    ],
+    "filament_cost": [
+        "36"
+    ],
+    "from": "User",
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Bambu PETG HF @AC KS1",
+    "version": "1.3.2602.11",
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Improved",
+        "Anycubic Kobra S1 0.6 nozzle",
+        "Anycubic Kobra S1 0.6 nozzle - Improved",
+        "Anycubic Kobra S1 0.8 nozzle",
+        "Anycubic Kobra S1 0.8 nozzle - Improved"
+    ]
+}

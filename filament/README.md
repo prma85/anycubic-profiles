@@ -1,45 +1,43 @@
 # Filament Configuration Guide - User 651589
 
-Last updated: 2026-07-01
+Last updated: 2026-07-28
 Framework: Anycubic Slicer Next (OrcaSlicer-based)
 Scope: Custom filament profiles for Anycubic Kobra S1 and Anycubic Kobra X
 
 ## Architecture Summary
 
-Filaments are printer-scoped and nozzle-scoped.
+Filaments are printer-scoped. One profile per material per printer covers 0.4mm, 0.6mm, and 0.8mm nozzles via `compatible_printers`. A separate 0.25mm child profile captures the only genuine nozzle-size dependency.
 
 Current inheritance model:
-- KS1 0.4mm and KX 0.4mm are custom overlay parents per material.
-- KS1 0.25mm, 0.6mm, 0.8mm inherit from matching KS1 0.4mm.
-- KX 0.25mm, 0.6mm, 0.8mm inherit from matching KX 0.4mm.
-- **Brand PLA profiles** inherit from `Improved PLA @AC KS1/KX 0.4mm` (not directly from system parent).
-- **Brand PLA+ profiles** inherit from `Improved PLA+ @AC KS1/KX 0.4mm`.
+- KS1 and KX each have one base profile per material (no nozzle suffix for 0.4/0.6/0.8).
+- 0.25mm inherits from the matching multi-nozzle parent and carries only its deltas.
+- **Brand PLA profiles** inherit from `Improved PLA @AC KS1/KX` (not directly from system parent).
+- **Brand PLA+ profiles** inherit from `Improved PLA+ @AC KS1/KX`.
 - `EconoFil PLA` inherits from `Improved PLA` directly (already correct parent).
-- **PLA Translucent profiles** inherit from `Improved PLA Translucent @AC KS1/KX 0.4mm`.
-- **Brand PETG Translucent profiles** (Prusament, ESun, Sovol, IEMAI) inherit from `Improved PETG Translucent @AC KS1/KX 0.4mm` (not directly from system parent).
+- **PLA Translucent profiles** inherit from `Improved PLA Translucent @AC KS1/KX`.
+- **Brand PETG Translucent profiles** (Prusament, ESun, Sovol, IEMAI) inherit from `Improved PETG Translucent @AC KS1/KX` (not directly from system parent).
 - Specialty PLA (Matte, Silk, Galaxy, Metal, Glow) retain system specialty parents with explicit bed temp overrides.
-- Non-0.4 variants keep only keys that differ from their 0.4 parent.
+- 0.25mm variants keep only keys that differ from their multi-nozzle parent.
 - version is always retained.
 
 This inheritance model was tested and confirmed to load correctly in the slicer UI.
 
 ## Naming Convention
 
-[Material] @AC [Printer] [Nozzle Size]
+Multi-nozzle profile (covers 0.4mm + 0.6mm + 0.8mm): `[Material] @AC [Printer]`
+0.25mm child profile: `[Material] @AC [Printer] 0.25mm`
 
 Examples:
-- Creality PLA @AC KS1 0.4mm
-- Creality PLA @AC KS1 0.6mm
-- Creality PLA @AC KX 0.4mm
-- Creality PLA @AC KX 0.8mm
+- Creality PLA @AC KS1
+- Creality PLA @AC KS1 0.25mm
+- Creality PLA @AC KX
+- Creality PLA @AC KX 0.25mm
 
 ## Inventory Snapshot
 
-Nozzle-family counts currently present:
-- 0.4mm: 104
+Profile counts currently present:
+- Multi-nozzle (0.4/0.6/0.8mm): 104
 - 0.25mm: 90
-- 0.6mm: 104
-- 0.8mm: 102
 
 ## Key Rules
 
@@ -50,61 +48,27 @@ Nozzle-family counts currently present:
 5. Keep profile overrides minimal and intentional.
 6. Never remove version.
 
-## Nozzle Transition Rules
+## Nozzle Transition Rules (updated 2026-07-28)
 
-All non-0.4mm variants are derived from the matching 0.4mm parent by applying these deltas.
-Rationale: larger nozzles extrude more plastic per unit time — the heater needs to be hotter to keep the melt fluid, the larger bead needs more cooling to solidify cleanly, wider orifices reduce pressure buildup (lower PA needed), and the larger melt reservoir increases oozing risk (more retraction). (Based on Prusa nozzle guide, Polymaker retraction wiki, Flashforge nozzle size guide.)
+Research finding: nozzle diameter does not require changes to temperature, MVS, flow ratio, or pressure advance when max volumetric speed is held constant. Filament dwell time in the melt zone depends on MVS / filament_cross_section — both independent of nozzle orifice size. Anycubic's own KX system profiles confirm this: flow, MVS, and PA are flat across 0.4/0.6/0.8mm; PETG temperature is identical at 230°C across all nozzle sizes.
 
-### PLA group (Regular, Matte, Silk, Metal, Glow, Translucent, CF)
+**Profile structure:** One profile per material per printer covers 0.4mm + 0.6mm + 0.8mm via compatible_printers. A separate 0.25mm profile captures the only genuine nozzle-size dependency.
 
-| Parameter              | 0.25mm  | 0.6mm  | 0.8mm  |
-|------------------------|---------|--------|--------|
-| Pressure Advance       | ×1.5    | ×0.667 | ×0.333 |
-| Flow Ratio             | +0.01   | −0.01  | −0.02  |
-| Retraction Length      | −0.2mm  | +0.2mm | +0.4mm |
-| Max Volumetric Speed   | cap 3   | ×1.25  | ×1.50  |
-| All Nozzle Temp keys   | −5°C    | +5°C   | +10°C  |
-| Fan Speed (max & min)  | −20pp   | +20pp  | +40pp  |
+### 0.25mm deltas (vs the multi-nozzle parent profile)
 
-Subtype overrides (stacked on top of the table above):
-- **Matte:** extra −0.01 flow (matte particles expand more)
-- **Silk/Metal:** cap `filament_retraction_speed` at 30 mm/s for 0.6/0.8mm — these break if retracted too fast when cold
-- **Translucent (clarity mode):** fan = 0% all layers, flow +0.03 (1.01 at 0.4mm), MVS = 8 mm³/s (0.4mm) — see Translucent Clarity Profile Rules below
+| Parameter | 0.25mm |
+|-----------|--------|
+| Nozzle Temp (all keys) | −5°C |
+| Max Volumetric Speed | cap 3 mm³/s |
+| Retraction Length | −0.2mm |
+| Flow Ratio | inherit (no change) |
+| Pressure Advance | inherit (no change) |
 
-### PETG group (Regular, High-Flow/Rapid, Translucent)
+Temperature delta shifts all of: `nozzle_temperature`, `nozzle_temperature_initial_layer`, `nozzle_temperature_HS`, `nozzle_temperature_initial_layer_HS`, `nozzle_temperature_range_high`, `nozzle_temperature_BRASS`, `nozzle_temperature_initial_layer_BRASS` — **never** change `nozzle_temperature_range_low`.
 
-| Parameter              | 0.6mm   | 0.8mm  |
-|------------------------|---------|--------|
-| Pressure Advance       | ×0.60   | ×0.30  |
-| Flow Ratio             | −0.02   | −0.04  |
-| Retraction Length      | +0.4mm  | +0.8mm |
-| Max Volumetric Speed   | ×1.25   | ×1.5   |
-| All Nozzle Temp keys   | +10°C   | +15°C  |
-| Fan Speed (max & min)  | +30pp   | +50pp  |
+### 0.6mm and 0.8mm
 
-Subtype overrides:
-- **High-Flow (Rapid, GF):** MVS result ×1.2
-- **Translucent (clarity mode):** fan = 0% all layers, MVS = 5 mm³/s (0.4mm) — see Translucent Clarity Profile Rules below
-
-### TPU group (95A, HS, High Speed)
-
-| Parameter              | 0.6mm  | 0.8mm  |
-|------------------------|--------|--------|
-| Pressure Advance       | ×0.50  | 0.000  |
-| Flow Ratio             | none   | −0.01  |
-| Retraction Length      | keep   | keep   |
-| Max Volumetric Speed   | cap 5  | cap 7  |
-| All Nozzle Temp keys   | +5°C   | +10°C  |
-| Fan Speed (max & min)  | +20pp  | +40pp  |
-
-Note: TPU is extruder-grip limited — even on 0.8mm nozzle, keep print speed ≤ 40–50 mm/s on the Kobra S1.
-
-### Application notes
-
-- "pp" = percentage points absolute (e.g. 40% + 20pp = 60%); fan clamped 0–100
-- If 0.4mm retraction is nil/absent, use 0.8 mm as the baseline before applying the delta
-- Temperature: shift all of `nozzle_temperature`, `nozzle_temperature_initial_layer`, `nozzle_temperature_HS`, `nozzle_temperature_initial_layer_HS`, `nozzle_temperature_range_high`, `nozzle_temperature_BRASS`, `nozzle_temperature_initial_layer_BRASS` — **never** change `nozzle_temperature_range_low`
-- Round PA to 3 decimal places; flow ratio to 4 decimal places
+No changes from the multi-nozzle parent profile values. These nozzle sizes are covered by the same profile file via compatible_printers.
 
 ## Bed Temperature Rules by Printer and Plate Type
 
@@ -136,7 +100,7 @@ KX uses flat 60°C because bedslinger thermal cycling during oscillation require
 
 ### EconoFil PLA (calibrated reference profile, 2026-07-01)
 
-EconoFil is the calibrated reference for economic-tier PLA. Values below are 0.4mm anchors — apply CLAUDE.md PLA nozzle transition rules for other sizes.
+EconoFil is the calibrated reference for economic-tier PLA. Values below are the multi-nozzle profile anchors (apply unchanged to 0.4mm, 0.6mm, and 0.8mm). The 0.25mm child applies the standard 0.25mm deltas.
 
 **KS1 0.4mm (brass nozzle)**:
 - `nozzle_temperature`: 210°C, `nozzle_temperature_initial_layer_BRASS`: 220°C (first layer needs +10°C for PEI adhesion)
@@ -174,7 +138,7 @@ Improved profiles act as the parent overlay for third-party filament of each mat
 
 ### PLA-family retraction pattern (EconoFil-calibrated)
 
-Applied to Improved PLA, PLA+, PLA Silk Dual, PLA Translucent. Nozzle-transition on retraction_length only (0.25 −0.2, 0.6 +0.2, 0.8 +0.4). PLA Silk Dual keeps `filament_z_hop_types: "Spiral Lift"` (multi-color needs spiral for color-swap wipe reduction) — all others use "Slope Lift".
+Applied to Improved PLA, PLA+, PLA Silk Dual, PLA Translucent. The multi-nozzle parent carries the 0.4mm retraction anchor; the 0.25mm child applies −0.2mm retraction delta. PLA Silk Dual keeps `filament_z_hop_types: "Spiral Lift"` (multi-color needs spiral for color-swap wipe reduction) — all others use "Slope Lift".
 
 | Key | KS1 (brass) | KX (HS) |
 |---|---|---|
@@ -290,8 +254,8 @@ Cooling fan freezes the extruded bead before it can fully flatten and fuse with 
 | `nozzle_temperature_initial_layer` | 235°C (Brass) |
 | `nozzle_temperature_HS` / `_initial_layer_HS` | +5°C on each |
 | `fan_max_speed` / `fan_min_speed` | 0% (all nozzle types) |
-| `filament_flow_ratio` | 1.01 at 0.4mm, 1.00 at 0.6mm, 0.99 at 0.8mm |
-| `filament_max_volumetric_speed` | 8 / 10 / 12 mm³/s (0.4/0.6/0.8mm) |
+| `filament_flow_ratio` | 1.01 |
+| `filament_max_volumetric_speed` | 8 mm³/s (flat across all nozzle sizes) |
 
 ### PETG Translucent settings (Improved PETG Translucent base)
 | Parameter | KS1 value | KX value |
@@ -300,28 +264,21 @@ Cooling fan freezes the extruded bead before it can fully flatten and fuse with 
 | `nozzle_temperature_initial_layer` | 260°C | 252°C |
 | `nozzle_temperature_HS` / `_initial_layer_HS` | +10°C | +10°C |
 | `fan_max_speed` / `fan_min_speed` | 0% | 0% |
-| `filament_max_volumetric_speed` | 5 / 6.25 / 7.5 mm³/s | 5 / 6.25 / 7.5 mm³/s |
+| `filament_max_volumetric_speed` | 5 mm³/s (flat across all nozzle sizes) | 5 mm³/s (flat across all nozzle sizes) |
 
 KX runs ~8°C cooler than KS1 to prevent heat-creep in the multi-channel ACE toolhead at slow print speeds.
 
-### Nozzle temperature scaling for translucent variants
-Both PLA and PETG translucent variants follow the same ×+5°C/+10°C/+15°C nozzle delta rules as the rest of their material group.
+### Nozzle size and translucent variants
+Translucent profiles use the same temperature and MVS values for 0.4mm, 0.6mm, and 0.8mm nozzles. The 0.25mm child inherits the standard 0.25mm deltas (−5°C, MVS cap 3 mm³/s, −0.2mm retraction).
 
 ### Brand profiles
 All brand PETG translucent profiles (Prusament, ESun, Sovol, IEMAI) inherit from `Improved PETG Translucent @AC KS1/KX 0.4mm`. Brands with their own calibrated temps (Sovol 235°C, IEMAI 250°C) keep explicit temp overrides in their profiles.
 
-## Nozzle MVS Scaling Rules
+## Nozzle MVS Rules (updated 2026-07-28)
 
-When deriving nozzle variants from the 0.4mm parent MVS:
+MVS is flat across 0.4mm, 0.6mm, and 0.8mm nozzles — no multipliers apply. Dwell time in the melt zone is determined by MVS / filament_cross_section, which is independent of nozzle orifice size at constant MVS.
 
-| Nozzle  | Multiplier | Notes |
-|---------|-----------|-------|
-| 0.25mm  | ×0.50     | **Always cap at 3 mm³/s** regardless of calculation |
-| 0.4mm   | ×1.00     | baseline |
-| 0.6mm   | ×1.25     | reduced wall friction |
-| 0.8mm   | ×1.50     | much less back-pressure |
-
-Physics: larger nozzle orifice → less wall friction → higher achievable flow. But thermal capacity limits still apply — the multipliers assume the same hotend.
+The only adjustment is for 0.25mm: MVS is capped at 3 mm³/s regardless of the parent profile value (fine nozzle throughput constraint, not a thermal limit).
 
 ## Profile Format Rules (slicer-compatible simplified format)
 
@@ -334,11 +291,10 @@ As of 2026-05-25 all profiles use the simplified format that matches what the sl
 
 ## Editing Workflow
 
-1. Edit 0.4mm parent for shared material behavior.
-2. Derive 0.25mm/0.6mm/0.8mm variants by applying the delta tables above.
-3. Remove child keys identical to 0.4mm parent (keep only intentional differences).
-4. Validate inheritance targets and JSON syntax.
-5. Refresh .info timestamps when bulk updates are made.
+1. Edit the multi-nozzle parent (no nozzle suffix) for all shared material behavior — this covers 0.4mm, 0.6mm, and 0.8mm nozzles.
+2. If a 0.25mm child exists, verify it contains only: −5°C temp, MVS cap 3 mm³/s, −0.2mm retraction length. Remove any other keys that now match the parent.
+3. Validate inheritance targets and JSON syntax.
+4. Refresh .info timestamps when bulk updates are made.
 
 ## Validation Checklist
 

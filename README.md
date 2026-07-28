@@ -1,6 +1,6 @@
 # Anycubic Custom Profiles - User 651589
 
-Last updated: 2026-06-02
+Last updated: 2026-07-28
 
 ## Repository Purpose
 
@@ -71,15 +71,15 @@ PETG process variants intentionally diverge in bridge and support behavior. Pres
 
 ## Filament Strategy Summary
 
-Filaments are printer and nozzle scoped because thermal and cooling behavior is hardware dependent.
+Filaments are printer-scoped. One profile per material per printer covers 0.4mm, 0.6mm, and 0.8mm nozzles via compatible_printers. A separate 0.25mm child captures the only genuine nozzle-size dependency (−5°C temp, MVS cap 3 mm³/s, −0.2mm retraction).
 
-Current model:
-- KS1 0.4mm and KX 0.4mm are the base custom overlays for each printer family.
-- 0.25mm, 0.6mm, and 0.8mm variants inherit from same-printer 0.4mm overlays.
-- Standard PLA brands inherit from `Improved PLA @AC KS1/KX 0.4mm` rather than directly from the system parent, giving a deeper chain that carries calibrated retraction, z-hop, fan, and temperature settings.
-- Translucent PLA profiles inherit from `Improved PLA Translucent @AC KS1/KX 0.4mm` (fan=0%, 230/235°C, flow 1.01, MVS 8 mm³/s).
-- Translucent PETG brand profiles (Prusament, ESun, Sovol, IEMAI) inherit from `Improved PETG Translucent @AC KS1/KX 0.4mm` (fan=0%, 260°C KS1 / 252°C KX, MVS 5 mm³/s).
-- Variant files keep only keys that differ from their 0.4mm parent.
+Current model (updated 2026-07-28):
+- KS1 and KX each have one multi-nozzle base profile per material (no nozzle suffix for 0.4/0.6/0.8).
+- 0.25mm child inherits from the multi-nozzle parent and carries only its deltas.
+- Standard PLA brands inherit from `Improved PLA @AC KS1/KX` rather than directly from the system parent, giving a deeper chain that carries calibrated retraction, z-hop, fan, and temperature settings.
+- Translucent PLA profiles inherit from `Improved PLA Translucent @AC KS1/KX` (fan=0%, 230/235°C, flow 1.01, MVS 8 mm³/s flat).
+- Translucent PETG brand profiles (Prusament, ESun, Sovol, IEMAI) inherit from `Improved PETG Translucent @AC KS1/KX` (fan=0%, 260°C KS1 / 252°C KX, MVS 5 mm³/s flat).
+- 0.25mm variants keep only keys that differ from the multi-nozzle parent.
 - Keep version in all filament profiles.
 
 For full details and inventory, see filament/README.md.

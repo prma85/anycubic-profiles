@@ -1,0 +1,81 @@
+{
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Improved",
+        "Anycubic Kobra S1 0.6 nozzle",
+        "Anycubic Kobra S1 0.6 nozzle - Improved",
+        "Anycubic Kobra S1 0.8 nozzle",
+        "Anycubic Kobra S1 0.8 nozzle - Improved"
+    ],
+    "cool_plate_temp": [
+        "55"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "60"
+    ],
+    "fan_max_speed": [
+        "0"
+    ],
+    "fan_min_speed": [
+        "0"
+    ],
+    "filament_density": [
+        "1.27"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
+    "filament_max_volumetric_speed": [
+        "3"
+    ],
+    "filament_z_hop": [
+        "0.2"
+    ],
+    "hot_plate_temp": [
+        "70"
+    ],
+    "idle_temperature": [
+        "175"
+    ],
+    "nozzle_temperature": [
+        "235"
+    ],
+    "nozzle_temperature_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_HS": [
+        "245"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "235"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "245"
+    ],
+    "pressure_advance": [
+        "0.064"
+    ],
+    "temperature_vitrification": [
+        "80"
+    ],
+    "filament_settings_id": [
+        "Sovol PETG Translucent @AC KS1"
+    ],
+    "filament_vendor": [
+        "Sovol"
+    ],
+    "filament_cost": [
+        "26"
+    ],
+    "from": "User",
+    "inherits": "Anycubic PETG @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Sovol PETG Translucent @AC KS1",
+    "version": "1.3.2503.03"
+}

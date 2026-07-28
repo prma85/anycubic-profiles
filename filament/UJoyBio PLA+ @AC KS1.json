@@ -1,0 +1,117 @@
+{
+    "close_fan_the_first_x_layers": [
+        "4"
+    ],
+    "compatible_printers": [
+        "Anycubic Kobra S1 0.4 nozzle",
+        "Anycubic Kobra S1 0.4 nozzle - Improved",
+        "Anycubic Kobra S1 0.6 nozzle",
+        "Anycubic Kobra S1 0.6 nozzle - Improved",
+        "Anycubic Kobra S1 0.8 nozzle",
+        "Anycubic Kobra S1 0.8 nozzle - Improved"
+    ],
+    "complete_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "cool_plate_temp": [
+        "45"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "45"
+    ],
+    "during_print_exhaust_fan_speed": [
+        "100"
+    ],
+    "fan_cooling_layer_time": [
+        "80"
+    ],
+    "fan_cooling_layer_time_BRASS": [
+        "80"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "80"
+    ],
+    "fan_max_speed": [
+        "100"
+    ],
+    "fan_max_speed_BRASS": [
+        "100"
+    ],
+    "fan_max_speed_HS": [
+        "100"
+    ],
+    "fan_min_speed": [
+        "60"
+    ],
+    "fan_min_speed_BRASS": [
+        "60"
+    ],
+    "fan_min_speed_HS": [
+        "60"
+    ],
+    "filament_density": [
+        "1.24"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_flow_ratio": [
+        "0.98"
+    ],
+    "filament_max_volumetric_speed": [
+        "19"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_minimum_travel": [
+        "1.5"
+    ],
+    "filament_retraction_speed": [
+        "40"
+    ],
+    "full_fan_speed_layer": [
+        "8"
+    ],
+    "hot_plate_temp": [
+        "55"
+    ],
+    "hot_plate_temp_initial_layer": [
+        "65"
+    ],
+    "nozzle_temperature_BRASS": [
+        "205"
+    ],
+    "nozzle_temperature_HS": [
+        "210"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "210"
+    ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "210"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "215"
+    ],
+    "textured_plate_temp": [
+        "60"
+    ],
+    "textured_plate_temp_initial_layer": [
+        "65"
+    ],
+    "filament_settings_id": [
+        "UJoyBio PLA+ @AC KS1"
+    ],
+    "filament_vendor": [
+        "UJoyBio "
+    ],
+    "filament_cost": [
+        "22"
+    ],
+    "from": "User",
+    "inherits": "Anycubic PLA+ @Anycubic Kobra S1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "UJoyBio PLA+ @AC KS1",
+    "version": "1.3.2503.03"
+}

@@ -1,0 +1,84 @@
+{
+    "cool_plate_temp": [
+        "45"
+    ],
+    "cool_plate_temp_initial_layer": [
+        "45"
+    ],
+    "fan_cooling_layer_time_HS": [
+        "100"
+    ],
+    "filament_deretraction_speed": [
+        "25"
+    ],
+    "filament_end_gcode": [
+        "; filament end gcode "
+    ],
+    "filament_flow_ratio": [
+        "0.96"
+    ],
+    "filament_max_volumetric_speed": [
+        "16"
+    ],
+    "filament_retract_before_wipe": [
+        "0%"
+    ],
+    "filament_retract_lift_below": [
+        "249"
+    ],
+    "filament_retract_restart_extra": [
+        "0"
+    ],
+    "filament_retract_when_changing_layer": [
+        "1"
+    ],
+    "filament_retraction_minimum_travel": [
+        "1.5"
+    ],
+    "filament_retraction_speed": [
+        "35"
+    ],
+    "filament_z_hop": [
+        "0.4"
+    ],
+    "nozzle_temperature": [
+        "220"
+    ],
+    "nozzle_temperature_HS": [
+        "225"
+    ],
+    "nozzle_temperature_initial_layer": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
+    ],
+    "pressure_advance": [
+        "0.03"
+    ],
+    "slow_down_layer_time_HS": [
+        "8"
+    ],
+    "temperature_vitrification": [
+        "70"
+    ],
+    "filament_settings_id": [
+        "Overture PLA Pro @AC KX"
+    ],
+    "filament_vendor": [
+        "Overture"
+    ],
+    "filament_cost": [
+        "36"
+    ],
+    "from": "User",
+    "inherits": "Anycubic PLA+ @Anycubic Kobra X 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Overture PLA Pro @AC KX",
+    "version": "1.3.2602.11",
+    "compatible_printers": [
+        "Anycubic Kobra X 0.4 nozzle",
+        "Anycubic Kobra X 0.6 nozzle",
+        "Anycubic Kobra X 0.8 nozzle"
+    ]
+}
