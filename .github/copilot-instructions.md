@@ -46,8 +46,9 @@ Do not mix responsibilities between layers.
 ## Naming Rules
 
 ### Filament
-- Pattern: `[Brand] [Material] @AC [Printer] [Nozzle]`
-- Examples: `Elegoo PLA @AC KS1 0.4mm`, `Bambu PLA Matte @AC KX 0.4mm`
+- Pattern: `[Brand] [Material] @AC [Printer]`
+- For 0.25mm: `[Brand] [Material] @AC [Printer] 0.25mm`
+- Examples: `Bambu PLA Matte @AC KX`, `Soleyin UF PLA @AC KS1`, `Bambu PLA Matte @AC KX 0.25mm`
 - **Brand/material names MUST start with uppercase** (ESun not eSun, IBoss not iBOSS)
 - KS1 and KX are separate — never merge into one file
 
@@ -66,78 +67,46 @@ Do not mix responsibilities between layers.
 
 ```
 KS1 system parent
-    └── KS1 user 0.4mm (editable parent overlay)
-            ├── KS1 user 0.25mm  ← inherits KS1 0.4mm
-            ├── KS1 user 0.6mm   ← inherits KS1 0.4mm
-            └── KS1 user 0.8mm   ← inherits KS1 0.4mm
+    └── KS1 user profile  ← covers 0.4mm + 0.6mm + 0.8mm via compatible_printers
+            └── KS1 user 0.25mm profile  ← inherits KS1 user profile
 
 KX system parent
-    └── KX user 0.4mm (editable parent overlay)
-            ├── KX user 0.25mm  ← inherits KX 0.4mm
-            ├── KX user 0.6mm   ← inherits KX 0.4mm
-            └── KX user 0.8mm   ← inherits KX 0.4mm
-```
-
-Deeper chain for standard PLA brands:
-```
-System parent
-    └── Improved PLA @AC KS1/KX 0.4mm  ← calibrated user base
-            └── [Brand] PLA @AC KS1/KX 0.4mm  ← brand overlay
-                    ├── [Brand] PLA @AC KS1/KX 0.25mm
-                    ├── [Brand] PLA @AC KS1/KX 0.6mm
-                    └── [Brand] PLA @AC KS1/KX 0.8mm
+    └── KX user profile  ← covers 0.4mm + 0.6mm + 0.8mm via compatible_printers
+            └── KX user 0.25mm profile  ← inherits KX user profile
 ```
 
 - KX must **never** inherit from KS1 user profiles
-- Non-0.4mm variants keep only keys that differ from their 0.4mm parent
+- 0.25mm profiles keep only keys that differ from their parent (temp −5°C, MVS cap 3, retraction −0.2mm)
 - `version` is always retained in every file
 
 ---
 
 ## Nozzle Transition Rules
 
-Applied relative to the 0.4mm parent of the same material+printer. Full tables in `SKILLS.md` Section 4.
+**Research-backed finding (2026-07):** Nozzle diameter does not require changes to temperature, MVS, flow ratio, or pressure advance when max volumetric speed is held constant. At identical MVS, filament dwell time in the melt zone is determined only by MVS / filament_cross_section — both independent of nozzle orifice size. Anycubic's own KX system profiles confirm this: flow, MVS, and PA are identical across 0.4/0.6/0.8mm for every material; PETG temp is flat at 230°C across all nozzle sizes.
 
-**PLA group** (Regular, Matte, Silk, Metal, Glow, Translucent, CF):
+**Profile consolidation:** A single filament profile per material per printer covers 0.4mm, 0.6mm, and 0.8mm nozzles via `compatible_printers`. A separate 0.25mm profile is kept because it genuinely caps MVS and drops temp slightly.
 
-| Parameter | 0.25mm | 0.6mm | 0.8mm |
-|-----------|--------|-------|-------|
-| Pressure Advance | ×1.5 | ×0.667 | ×0.333 |
-| Flow Ratio | +0.01 | −0.01 | −0.02 |
-| Retraction Length | −0.2mm | +0.2mm | +0.4mm |
-| Max Volumetric Speed | ×0.50, cap 3 | ×1.25 | ×1.50 |
-| Nozzle Temp (all keys) | −5°C | +5°C | +10°C |
-| Fan Speed (max & min) | −20pp | +20pp | +40pp |
+### Deltas applied only at 0.25mm (vs 0.4mm parent)
 
-Subtype: Matte adds extra −0.01 flow. Silk/Metal cap retraction speed at 30 mm/s for 0.6/0.8mm.
+| Parameter | 0.25mm |
+|-----------|--------|
+| Nozzle Temp (all keys) | −5°C |
+| Max Volumetric Speed | cap 3 mm³/s |
+| Retraction Length | −0.2mm |
+| Flow Ratio | inherit (no change) |
+| Pressure Advance | inherit (no change) |
 
-**PETG group** (Regular, High-Flow/Rapid, Translucent):
+### What does NOT change between 0.4/0.6/0.8mm
 
-| Parameter | 0.6mm | 0.8mm |
-|-----------|-------|-------|
-| Pressure Advance | ×0.60 | ×0.30 |
-| Flow Ratio | −0.02 | −0.04 |
-| Retraction Length | +0.4mm | +0.8mm |
-| Max Volumetric Speed | ×1.25 | ×1.5 |
-| Nozzle Temp (all keys) | +10°C | +15°C |
-| Fan Speed (max & min) | +30pp | +50pp |
+- Temperature: no change
+- MVS: no change
+- Flow ratio: no change
+- Pressure advance: no change
+- Retraction: inherit from parent (Anycubic uses nil for 0.6/0.8mm — same effect)
+- Fan speeds: no systematic delta (0.8mm cooling behaviour is hotend/material-specific, not a rule)
 
-**TPU group** (95A, HS, High Speed):
-
-| Parameter | 0.6mm | 0.8mm |
-|-----------|-------|-------|
-| Pressure Advance | ×0.50 | 0.000 |
-| Flow Ratio | none | −0.01 |
-| Retraction Length | keep | keep |
-| Max Volumetric Speed | cap 5 | cap 7 |
-| Nozzle Temp (all keys) | +5°C | +10°C |
-| Fan Speed (max & min) | +20pp | +40pp |
-
-**Application notes:**
-- "pp" = percentage points absolute; fan clamped 0–100
-- Temperature delta shifts ALL of: `nozzle_temperature`, `nozzle_temperature_initial_layer`, `nozzle_temperature_HS`, `nozzle_temperature_initial_layer_HS`, `nozzle_temperature_range_high`, `nozzle_temperature_BRASS`, `nozzle_temperature_initial_layer_BRASS` — **never** `nozzle_temperature_range_low`
-- Round PA to 3 dp; flow ratio to 4 dp
-- If 0.4mm retraction is nil/absent, use 0.8mm as baseline before delta
+**If retraction needs adjustment for a specific nozzle after empirical testing:** add it to the single multi-nozzle profile as an explicit override for that compatible_printers entry, or create a nozzle-specific variant only when empirically justified.
 
 ---
 

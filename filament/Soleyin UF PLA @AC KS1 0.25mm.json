@@ -3,7 +3,7 @@
         "10"
     ],
     "close_fan_the_first_x_layers": [
-        "4"
+        "3"
     ],
     "compatible_printers": [
         "Anycubic Kobra S1 0.25 nozzle",
@@ -49,10 +49,10 @@
         "100"
     ],
     "filament_deretraction_speed": [
-        "0"
+        "30"
     ],
     "filament_flow_ratio": [
-        "0.9508"
+        "0.9896"
     ],
     "filament_max_volumetric_speed": [
         "3"
@@ -64,16 +64,16 @@
         "0"
     ],
     "filament_retract_when_changing_layer": [
-        "1"
+        "0"
     ],
     "filament_retraction_length": [
-        "0.4"
+        "0.2"
     ],
     "filament_retraction_minimum_travel": [
         "1"
     ],
     "filament_retraction_speed": [
-        "40"
+        "45"
     ],
     "filament_wipe": [
         "1"
@@ -84,44 +84,47 @@
     "filament_z_hop": [
         "0.4"
     ],
+    "filament_z_hop_types": [
+        "Slope Lift"
+    ],
     "full_fan_speed_layer": [
         "8"
     ],
     "hot_plate_temp": [
-        "55"
+        "65"
     ],
     "hot_plate_temp_initial_layer": [
         "60"
     ],
     "nozzle_temperature": [
-        "215"
+        "220"
     ],
     "nozzle_temperature_BRASS": [
-        "215"
+        "220"
     ],
     "nozzle_temperature_HS": [
         "220"
     ],
     "nozzle_temperature_initial_layer": [
-        "215"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "215"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
         "220"
     ],
+    "nozzle_temperature_initial_layer_BRASS": [
+        "220"
+    ],
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
+    ],
     "pressure_advance": [
-        "0.033"
+        "0.063"
     ],
     "slow_down_layer_time_HS": [
         "12"
     ],
     "textured_plate_temp": [
-        "60"
+        "65"
     ],
     "textured_plate_temp_initial_layer": [
-        "65"
+        "70"
     ],
     "filament_settings_id": [
         "Soleyin UF PLA @AC KS1 0.25mm"
