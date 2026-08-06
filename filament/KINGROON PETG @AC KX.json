@@ -4,41 +4,14 @@
         "Anycubic Kobra X 0.6 nozzle",
         "Anycubic Kobra X 0.8 nozzle"
     ],
-    "filament_flow_ratio": [
-        "0.95"
+    "cool_plate_temp": [
+        "50"
     ],
-    "filament_max_volumetric_speed": [
-        "13"
-    ],
-    "filament_retraction_length": [
-        "1"
-    ],
-    "nozzle_temperature": [
-        "240"
-    ],
-    "nozzle_temperature_BRASS": [
-        "240"
-    ],
-    "nozzle_temperature_HS": [
-        "240"
-    ],
-    "nozzle_temperature_initial_layer": [
-        "240"
-    ],
-    "nozzle_temperature_initial_layer_BRASS": [
-        "240"
-    ],
-    "nozzle_temperature_initial_layer_HS": [
-        "240"
-    ],
-    "pressure_advance": [
-        "0.04"
+    "cool_plate_temp_initial_layer": [
+        "50"
     ],
     "filament_settings_id": [
         "KINGROON PETG @AC KX"
-    ],
-    "filament_vendor": [
-        "KINGROON"
     ],
     "from": "User",
     "inherits": "KINGROON PETG @Anycubic Kobra S1 0.4 nozzle",
