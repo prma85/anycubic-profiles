@@ -2,11 +2,10 @@
     "close_fan_the_first_x_layers": [
         "3"
     ],
-    "cool_plate_temp": [
-        "45"
-    ],
-    "cool_plate_temp_initial_layer": [
-        "45"
+    "compatible_printers": [
+        "Anycubic Kobra X 0.4 nozzle",
+        "Anycubic Kobra X 0.6 nozzle",
+        "Anycubic Kobra X 0.8 nozzle"
     ],
     "filament_deretraction_speed": [
         "30"
@@ -22,6 +21,9 @@
     ],
     "filament_retract_when_changing_layer": [
         "0"
+    ],
+    "filament_retraction_length": [
+        "1.2"
     ],
     "filament_retraction_minimum_travel": [
         "1"
@@ -44,35 +46,27 @@
     "filament_z_hop": [
         "0.4"
     ],
+    "filament_z_hop_types": [
+        "Slope Lift"
+    ],
     "from": "User",
-    "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",
-    "is_custom_defined": "0",
-    "name": "Improved PLA @AC KX",
-    "nozzle_temperature_initial_layer_HS": [
-        "225"
-    ],
-    "textured_plate_temp_initial_layer": [
-        "70"
-    ],
-    "version": "1.3.2503.03",
-    "textured_plate_temp": [
-        "65"
-    ],
     "hot_plate_temp": [
         "65"
     ],
     "hot_plate_temp_initial_layer": [
         "65"
     ],
-    "filament_retraction_length": [
-        "1.2"
+    "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Improved PLA @AC KX",
+    "nozzle_temperature_initial_layer_HS": [
+        "225"
     ],
-    "filament_z_hop_types": [
-        "Slope Lift"
+    "textured_plate_temp": [
+        "65"
     ],
-    "compatible_printers": [
-        "Anycubic Kobra X 0.4 nozzle",
-        "Anycubic Kobra X 0.6 nozzle",
-        "Anycubic Kobra X 0.8 nozzle"
-    ]
+    "textured_plate_temp_initial_layer": [
+        "70"
+    ],
+    "version": "1.3.2503.03"
 }
