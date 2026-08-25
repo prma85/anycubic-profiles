@@ -1,4 +1,7 @@
 {
+    "close_fan_the_first_x_layers": [
+        "3"
+    ],
     "compatible_printers": [
         "Anycubic Kobra X 0.4 nozzle",
         "Anycubic Kobra X 0.6 nozzle",
@@ -7,17 +10,20 @@
     "fan_cooling_layer_time_HS": [
         "100"
     ],
-    "filament_cost": [
-        "15"
-    ],
     "filament_deretraction_speed": [
         "30"
     ],
+    "filament_end_gcode": [
+        "; filament end gcode "
+    ],
     "filament_flow_ratio": [
-        "0.99"
+        "0.96"
     ],
     "filament_max_volumetric_speed": [
-        "12"
+        "13"
+    ],
+    "filament_retract_before_wipe": [
+        "0%"
     ],
     "filament_retract_lift_below": [
         "249"
@@ -28,9 +34,6 @@
     "filament_retract_when_changing_layer": [
         "0"
     ],
-    "filament_retraction_length": [
-        "1.2"
-    ],
     "filament_retraction_minimum_travel": [
         "1"
     ],
@@ -38,16 +41,10 @@
         "45"
     ],
     "filament_settings_id": [
-        "EconoFil PLA @AC KX"
-    ],
-    "filament_vendor": [
-        "FilamentsCA"
+        "Duramic PLA+ @AC KX"
     ],
     "filament_wipe": [
         "0"
-    ],
-    "filament_wipe_distance": [
-        "1"
     ],
     "filament_z_hop": [
         "0.4"
@@ -62,32 +59,32 @@
     "hot_plate_temp_initial_layer": [
         "65"
     ],
-    "inherits": "Anycubic PLA @Anycubic Kobra X 0.4 nozzle",
+    "inherits": "Anycubic PLA+ @Anycubic Kobra X 0.4 nozzle",
     "is_custom_defined": "0",
-    "name": "EconoFil PLA @AC KX",
+    "name": "Duramic PLA+ @AC KX",
     "nozzle_temperature": [
         "210"
     ],
     "nozzle_temperature_BRASS": [
-        "210"
-    ],
-    "nozzle_temperature_HS": [
         "205"
     ],
+    "nozzle_temperature_HS": [
+        "230"
+    ],
     "nozzle_temperature_initial_layer_BRASS": [
-        "215"
+        "210"
     ],
     "nozzle_temperature_initial_layer_HS": [
+        "235"
+    ],
+    "nozzle_temperature_range_high": [
+        "235"
+    ],
+    "nozzle_temperature_range_low": [
         "210"
     ],
     "pressure_advance": [
-        "0.025"
-    ],
-    "slow_down_layer_time_HS": [
-        "12"
-    ],
-    "temperature_vitrification": [
-        "55"
+        "0.034"
     ],
     "textured_plate_temp": [
         "65"
@@ -95,5 +92,5 @@
     "textured_plate_temp_initial_layer": [
         "70"
     ],
-    "version": "1.3.2602.11"
+    "version": "1.3.2503.03"
 }
