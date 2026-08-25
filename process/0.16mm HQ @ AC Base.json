@@ -23,6 +23,7 @@
     "max_travel_detour_distance": "300",
     "name": "0.16mm HQ @ AC Base",
     "outer_wall_acceleration": "2000",
+    "outer_wall_line_width": "0.45",
     "outer_wall_speed": "60",
     "overhang_reverse": "1",
     "precise_outer_wall": "1",
@@ -51,7 +52,7 @@
     "tree_support_branch_distance_organic": "5",
     "tree_support_top_rate": "12%",
     "version": "1.3.2503.03",
+    "wall_generator": "arachne",
     "wall_loops": "3",
-    "wall_sequence": "inner-outer-inner wall",
     "wipe_on_loops": "1"
 }
